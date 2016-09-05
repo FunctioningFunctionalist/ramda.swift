@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  Ramda
 //
-//  Created by Justin Guedes on 2016/09/04.
-//  Copyright © 2016 NPO. All rights reserved.
+//  Created by JustinGuedes on 09/05/2016.
+//  Copyright (c) 2016 JustinGuedes. All rights reserved.
 //
 
 import UIKit
