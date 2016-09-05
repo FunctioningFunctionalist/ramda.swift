@@ -15,9 +15,4 @@ target 'Ramda' do
 
   end
 
-  target 'RamdaUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
 end

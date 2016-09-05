@@ -8,13 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		227299AC5E5E9296037C9144 /* Pods_RamdaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE672D03C7747619E15F1EC1 /* Pods_RamdaUITests.framework */; };
-		8C69A2EA1D7C5FC6004E69A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C69A2E91D7C5FC6004E69A5 /* AppDelegate.swift */; };
-		8C69A2EC1D7C5FC6004E69A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C69A2EB1D7C5FC6004E69A5 /* ViewController.swift */; };
-		8C69A2EF1D7C5FC6004E69A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C69A2ED1D7C5FC6004E69A5 /* Main.storyboard */; };
-		8C69A2F11D7C5FC6004E69A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C69A2F01D7C5FC6004E69A5 /* Assets.xcassets */; };
-		8C69A2F41D7C5FC6004E69A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C69A2F21D7C5FC6004E69A5 /* LaunchScreen.storyboard */; };
 		8C69A2FF1D7C5FC7004E69A5 /* RamdaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C69A2FE1D7C5FC7004E69A5 /* RamdaTests.swift */; };
-		8C69A30A1D7C5FC7004E69A5 /* RamdaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C69A3091D7C5FC7004E69A5 /* RamdaUITests.swift */; };
 		BDCDA0D005C3D3395EA443CA /* Pods_RamdaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 547FD573CE96CFED17FEEE1A /* Pods_RamdaTests.framework */; };
 		BE35D8D40AB2029C510113F5 /* Pods_Ramda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29DF23EBF1A70BA0E5B77F0B /* Pods_Ramda.framework */; };
 /* End PBXBuildFile section */
@@ -41,18 +35,11 @@
 		547FD573CE96CFED17FEEE1A /* Pods_RamdaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RamdaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		877683FC06E8CE89E8AC0958 /* Pods-Ramda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ramda.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ramda/Pods-Ramda.release.xcconfig"; sourceTree = "<group>"; };
 		8C69A2E61D7C5FC6004E69A5 /* Ramda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ramda.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C69A2E91D7C5FC6004E69A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8C69A2EB1D7C5FC6004E69A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8C69A2EE1D7C5FC6004E69A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8C69A2F01D7C5FC6004E69A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8C69A2F31D7C5FC6004E69A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C69A2F51D7C5FC6004E69A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C69A2FA1D7C5FC7004E69A5 /* RamdaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RamdaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C69A2FE1D7C5FC7004E69A5 /* RamdaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamdaTests.swift; sourceTree = "<group>"; };
 		8C69A3001D7C5FC7004E69A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C69A3051D7C5FC7004E69A5 /* RamdaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RamdaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C69A3091D7C5FC7004E69A5 /* RamdaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamdaUITests.swift; sourceTree = "<group>"; };
-		8C69A30B1D7C5FC7004E69A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		977A61BC7369239AFF210C9D /* Pods-RamdaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RamdaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RamdaTests/Pods-RamdaTests.release.xcconfig"; sourceTree = "<group>"; };
 		A48857EFB471738936D4E3CB /* Pods-Ramda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ramda.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ramda/Pods-Ramda.debug.xcconfig"; sourceTree = "<group>"; };
 		AE672D03C7747619E15F1EC1 /* Pods_RamdaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RamdaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,7 +91,6 @@
 			children = (
 				8C69A2E81D7C5FC6004E69A5 /* Ramda */,
 				8C69A2FD1D7C5FC7004E69A5 /* RamdaTests */,
-				8C69A3081D7C5FC7004E69A5 /* RamdaUITests */,
 				8C69A2E71D7C5FC6004E69A5 /* Products */,
 				8D4C7849BED1059816B6CA8B /* Pods */,
 				200A40A00C9D699DAD6053D8 /* Frameworks */,
@@ -124,11 +110,6 @@
 		8C69A2E81D7C5FC6004E69A5 /* Ramda */ = {
 			isa = PBXGroup;
 			children = (
-				8C69A2E91D7C5FC6004E69A5 /* AppDelegate.swift */,
-				8C69A2EB1D7C5FC6004E69A5 /* ViewController.swift */,
-				8C69A2ED1D7C5FC6004E69A5 /* Main.storyboard */,
-				8C69A2F01D7C5FC6004E69A5 /* Assets.xcassets */,
-				8C69A2F21D7C5FC6004E69A5 /* LaunchScreen.storyboard */,
 				8C69A2F51D7C5FC6004E69A5 /* Info.plist */,
 			);
 			path = Ramda;
@@ -141,15 +122,6 @@
 				8C69A3001D7C5FC7004E69A5 /* Info.plist */,
 			);
 			path = RamdaTests;
-			sourceTree = "<group>";
-		};
-		8C69A3081D7C5FC7004E69A5 /* RamdaUITests */ = {
-			isa = PBXGroup;
-			children = (
-				8C69A3091D7C5FC7004E69A5 /* RamdaUITests.swift */,
-				8C69A30B1D7C5FC7004E69A5 /* Info.plist */,
-			);
-			path = RamdaUITests;
 			sourceTree = "<group>";
 		};
 		8D4C7849BED1059816B6CA8B /* Pods */ = {
@@ -172,12 +144,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C69A30E1D7C5FC7004E69A5 /* Build configuration list for PBXNativeTarget "Ramda" */;
 			buildPhases = (
-				ABB6725736B189A08B3BD736 /* 📦 Check Pods Manifest.lock */,
+				ABB6725736B189A08B3BD736 /* [CP] Check Pods Manifest.lock */,
 				8C69A2E21D7C5FC6004E69A5 /* Sources */,
 				8C69A2E31D7C5FC6004E69A5 /* Frameworks */,
 				8C69A2E41D7C5FC6004E69A5 /* Resources */,
-				613666614E069DE4CD907834 /* 📦 Embed Pods Frameworks */,
-				50992B02857D736066F701D8 /* 📦 Copy Pods Resources */,
+				613666614E069DE4CD907834 /* [CP] Embed Pods Frameworks */,
+				50992B02857D736066F701D8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,12 +164,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C69A3111D7C5FC7004E69A5 /* Build configuration list for PBXNativeTarget "RamdaTests" */;
 			buildPhases = (
-				456CB68E6C045F8FD568D596 /* 📦 Check Pods Manifest.lock */,
+				456CB68E6C045F8FD568D596 /* [CP] Check Pods Manifest.lock */,
 				8C69A2F61D7C5FC7004E69A5 /* Sources */,
 				8C69A2F71D7C5FC7004E69A5 /* Frameworks */,
 				8C69A2F81D7C5FC7004E69A5 /* Resources */,
-				E9461146F02A0EFEE9018129 /* 📦 Embed Pods Frameworks */,
-				B9F46B2AC95CBC7337D315CB /* 📦 Copy Pods Resources */,
+				E9461146F02A0EFEE9018129 /* [CP] Embed Pods Frameworks */,
+				B9F46B2AC95CBC7337D315CB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,11 +185,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C69A3141D7C5FC7004E69A5 /* Build configuration list for PBXNativeTarget "RamdaUITests" */;
 			buildPhases = (
-				C859765B25052AF50D113E7A /* 📦 Check Pods Manifest.lock */,
+				C859765B25052AF50D113E7A /* [CP] Check Pods Manifest.lock */,
 				8C69A3011D7C5FC7004E69A5 /* Sources */,
 				8C69A3021D7C5FC7004E69A5 /* Frameworks */,
 				8C69A3031D7C5FC7004E69A5 /* Resources */,
-				8028EA9EC808C966EB499E60 /* 📦 Copy Pods Resources */,
+				8028EA9EC808C966EB499E60 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -277,9 +249,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C69A2F41D7C5FC6004E69A5 /* LaunchScreen.storyboard in Resources */,
-				8C69A2F11D7C5FC6004E69A5 /* Assets.xcassets in Resources */,
-				8C69A2EF1D7C5FC6004E69A5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,14 +269,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		456CB68E6C045F8FD568D596 /* 📦 Check Pods Manifest.lock */ = {
+		456CB68E6C045F8FD568D596 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,14 +284,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		50992B02857D736066F701D8 /* 📦 Copy Pods Resources */ = {
+		50992B02857D736066F701D8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,14 +299,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ramda/Pods-Ramda-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		613666614E069DE4CD907834 /* 📦 Embed Pods Frameworks */ = {
+		613666614E069DE4CD907834 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,14 +314,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ramda/Pods-Ramda-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8028EA9EC808C966EB499E60 /* 📦 Copy Pods Resources */ = {
+		8028EA9EC808C966EB499E60 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,14 +329,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RamdaUITests/Pods-RamdaUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		ABB6725736B189A08B3BD736 /* 📦 Check Pods Manifest.lock */ = {
+		ABB6725736B189A08B3BD736 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,14 +344,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		B9F46B2AC95CBC7337D315CB /* 📦 Copy Pods Resources */ = {
+		B9F46B2AC95CBC7337D315CB /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,14 +359,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RamdaTests/Pods-RamdaTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C859765B25052AF50D113E7A /* 📦 Check Pods Manifest.lock */ = {
+		C859765B25052AF50D113E7A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,14 +374,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		E9461146F02A0EFEE9018129 /* 📦 Embed Pods Frameworks */ = {
+		E9461146F02A0EFEE9018129 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,8 +396,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C69A2EC1D7C5FC6004E69A5 /* ViewController.swift in Sources */,
-				8C69A2EA1D7C5FC6004E69A5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,7 +411,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C69A30A1D7C5FC7004E69A5 /* RamdaUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,25 +428,6 @@
 			targetProxy = 8C69A3061D7C5FC7004E69A5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		8C69A2ED1D7C5FC6004E69A5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8C69A2EE1D7C5FC6004E69A5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8C69A2F21D7C5FC6004E69A5 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8C69A2F31D7C5FC6004E69A5 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8C69A30C1D7C5FC7004E69A5 /* Debug */ = {
