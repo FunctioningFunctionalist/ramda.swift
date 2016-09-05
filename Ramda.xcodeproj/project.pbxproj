@@ -102,7 +102,7 @@
 		8C69A2DD1D7C5FC6004E69A5 = {
 			isa = PBXGroup;
 			children = (
-				8C69A2E81D7C5FC6004E69A5 /* Ramda */,
+				8C69A2E81D7C5FC6004E69A5 /* RamdaApp */,
 				8C69A2FD1D7C5FC7004E69A5 /* RamdaTests */,
 				8C69A3081D7C5FC7004E69A5 /* RamdaUITests */,
 				8C69A2E71D7C5FC6004E69A5 /* Products */,
@@ -121,7 +121,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8C69A2E81D7C5FC6004E69A5 /* Ramda */ = {
+		8C69A2E81D7C5FC6004E69A5 /* RamdaApp */ = {
 			isa = PBXGroup;
 			children = (
 				8C69A2E91D7C5FC6004E69A5 /* AppDelegate.swift */,
@@ -131,7 +131,7 @@
 				8C69A2F21D7C5FC6004E69A5 /* LaunchScreen.storyboard */,
 				8C69A2F51D7C5FC6004E69A5 /* Info.plist */,
 			);
-			path = Ramda;
+			path = RamdaApp;
 			sourceTree = "<group>";
 		};
 		8C69A2FD1D7C5FC7004E69A5 /* RamdaTests */ = {
