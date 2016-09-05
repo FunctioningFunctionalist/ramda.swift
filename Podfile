@@ -7,17 +7,14 @@ target 'Ramda' do
 
   # Pods for Ramda
 
+  pod 'Ramda', :path => '.'
+
   target 'RamdaTests' do
     inherit! :search_paths
     # Pods for testing
 
     pod 'Fox', '1.0.1'
 
-  end
-
-  target 'RamdaUITests' do
-    inherit! :search_paths
-    # Pods for testing
   end
 
 end

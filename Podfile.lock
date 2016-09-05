@@ -1,12 +1,19 @@
 PODS:
   - Fox (1.0.1)
+  - Ramda (0.1.0)
 
 DEPENDENCIES:
   - Fox (= 1.0.1)
+  - Ramda (from `.`)
+
+EXTERNAL SOURCES:
+  Ramda:
+    :path: "."
 
 SPEC CHECKSUMS:
   Fox: 804de9bf8d6101f26772b26700365c0582f6d942
+  Ramda: 001664a711a5e931370763114fdcc25759e92547
 
-PODFILE CHECKSUM: fbf5d89d37fc45ba1e06661f5a620c7d2087ffc0
+PODFILE CHECKSUM: 34b90be9e0ca3fae10b97fb549b9a9b4a4a1a6de
 
 COCOAPODS: 1.0.0
