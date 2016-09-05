@@ -7,27 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		227299AC5E5E9296037C9144 /* Pods_RamdaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE672D03C7747619E15F1EC1 /* Pods_RamdaUITests.framework */; };
 		8C69A2EA1D7C5FC6004E69A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C69A2E91D7C5FC6004E69A5 /* AppDelegate.swift */; };
 		8C69A2EC1D7C5FC6004E69A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C69A2EB1D7C5FC6004E69A5 /* ViewController.swift */; };
 		8C69A2EF1D7C5FC6004E69A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C69A2ED1D7C5FC6004E69A5 /* Main.storyboard */; };
 		8C69A2F11D7C5FC6004E69A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C69A2F01D7C5FC6004E69A5 /* Assets.xcassets */; };
 		8C69A2F41D7C5FC6004E69A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C69A2F21D7C5FC6004E69A5 /* LaunchScreen.storyboard */; };
 		8C69A2FF1D7C5FC7004E69A5 /* RamdaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C69A2FE1D7C5FC7004E69A5 /* RamdaTests.swift */; };
-		8C69A30A1D7C5FC7004E69A5 /* RamdaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C69A3091D7C5FC7004E69A5 /* RamdaUITests.swift */; };
 		BDCDA0D005C3D3395EA443CA /* Pods_RamdaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 547FD573CE96CFED17FEEE1A /* Pods_RamdaTests.framework */; };
 		BE35D8D40AB2029C510113F5 /* Pods_Ramda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29DF23EBF1A70BA0E5B77F0B /* Pods_Ramda.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		8C69A2FB1D7C5FC7004E69A5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8C69A2DE1D7C5FC6004E69A5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8C69A2E51D7C5FC6004E69A5;
-			remoteInfo = Ramda;
-		};
-		8C69A3061D7C5FC7004E69A5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8C69A2DE1D7C5FC6004E69A5 /* Project object */;
 			proxyType = 1;
@@ -50,9 +41,6 @@
 		8C69A2FA1D7C5FC7004E69A5 /* RamdaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RamdaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C69A2FE1D7C5FC7004E69A5 /* RamdaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamdaTests.swift; sourceTree = "<group>"; };
 		8C69A3001D7C5FC7004E69A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8C69A3051D7C5FC7004E69A5 /* RamdaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RamdaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C69A3091D7C5FC7004E69A5 /* RamdaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamdaUITests.swift; sourceTree = "<group>"; };
-		8C69A30B1D7C5FC7004E69A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		977A61BC7369239AFF210C9D /* Pods-RamdaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RamdaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RamdaTests/Pods-RamdaTests.release.xcconfig"; sourceTree = "<group>"; };
 		A48857EFB471738936D4E3CB /* Pods-Ramda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ramda.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ramda/Pods-Ramda.debug.xcconfig"; sourceTree = "<group>"; };
 		AE672D03C7747619E15F1EC1 /* Pods_RamdaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RamdaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,14 +66,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8C69A3021D7C5FC7004E69A5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				227299AC5E5E9296037C9144 /* Pods_RamdaUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -104,7 +84,6 @@
 			children = (
 				8C69A2E81D7C5FC6004E69A5 /* RamdaApp */,
 				8C69A2FD1D7C5FC7004E69A5 /* RamdaTests */,
-				8C69A3081D7C5FC7004E69A5 /* RamdaUITests */,
 				8C69A2E71D7C5FC6004E69A5 /* Products */,
 				8D4C7849BED1059816B6CA8B /* Pods */,
 				200A40A00C9D699DAD6053D8 /* Frameworks */,
@@ -116,7 +95,6 @@
 			children = (
 				8C69A2E61D7C5FC6004E69A5 /* Ramda.app */,
 				8C69A2FA1D7C5FC7004E69A5 /* RamdaTests.xctest */,
-				8C69A3051D7C5FC7004E69A5 /* RamdaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,15 +119,6 @@
 				8C69A3001D7C5FC7004E69A5 /* Info.plist */,
 			);
 			path = RamdaTests;
-			sourceTree = "<group>";
-		};
-		8C69A3081D7C5FC7004E69A5 /* RamdaUITests */ = {
-			isa = PBXGroup;
-			children = (
-				8C69A3091D7C5FC7004E69A5 /* RamdaUITests.swift */,
-				8C69A30B1D7C5FC7004E69A5 /* Info.plist */,
-			);
-			path = RamdaUITests;
 			sourceTree = "<group>";
 		};
 		8D4C7849BED1059816B6CA8B /* Pods */ = {
@@ -209,26 +178,6 @@
 			productReference = 8C69A2FA1D7C5FC7004E69A5 /* RamdaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8C69A3041D7C5FC7004E69A5 /* RamdaUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8C69A3141D7C5FC7004E69A5 /* Build configuration list for PBXNativeTarget "RamdaUITests" */;
-			buildPhases = (
-				C859765B25052AF50D113E7A /* 📦 Check Pods Manifest.lock */,
-				8C69A3011D7C5FC7004E69A5 /* Sources */,
-				8C69A3021D7C5FC7004E69A5 /* Frameworks */,
-				8C69A3031D7C5FC7004E69A5 /* Resources */,
-				8028EA9EC808C966EB499E60 /* 📦 Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8C69A3071D7C5FC7004E69A5 /* PBXTargetDependency */,
-			);
-			name = RamdaUITests;
-			productName = RamdaUITests;
-			productReference = 8C69A3051D7C5FC7004E69A5 /* RamdaUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -243,10 +192,6 @@
 						CreatedOnToolsVersion = 7.3;
 					};
 					8C69A2F91D7C5FC7004E69A5 = {
-						CreatedOnToolsVersion = 7.3;
-						TestTargetID = 8C69A2E51D7C5FC6004E69A5;
-					};
-					8C69A3041D7C5FC7004E69A5 = {
 						CreatedOnToolsVersion = 7.3;
 						TestTargetID = 8C69A2E51D7C5FC6004E69A5;
 					};
@@ -267,7 +212,6 @@
 			targets = (
 				8C69A2E51D7C5FC6004E69A5 /* Ramda */,
 				8C69A2F91D7C5FC7004E69A5 /* RamdaTests */,
-				8C69A3041D7C5FC7004E69A5 /* RamdaUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -284,13 +228,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		8C69A2F81D7C5FC7004E69A5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8C69A3031D7C5FC7004E69A5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -345,21 +282,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ramda/Pods-Ramda-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8028EA9EC808C966EB499E60 /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RamdaUITests/Pods-RamdaUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		ABB6725736B189A08B3BD736 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -388,21 +310,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RamdaTests/Pods-RamdaTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C859765B25052AF50D113E7A /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		E9461146F02A0EFEE9018129 /* 📦 Embed Pods Frameworks */ = {
@@ -440,14 +347,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8C69A3011D7C5FC7004E69A5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8C69A30A1D7C5FC7004E69A5 /* RamdaUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -455,11 +354,6 @@
 			isa = PBXTargetDependency;
 			target = 8C69A2E51D7C5FC6004E69A5 /* Ramda */;
 			targetProxy = 8C69A2FB1D7C5FC7004E69A5 /* PBXContainerItemProxy */;
-		};
-		8C69A3071D7C5FC7004E69A5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8C69A2E51D7C5FC6004E69A5 /* Ramda */;
-			targetProxy = 8C69A3061D7C5FC7004E69A5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -573,7 +467,7 @@
 			baseConfigurationReference = A48857EFB471738936D4E3CB /* Pods-Ramda.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Ramda/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/RamdaApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = swift.port.Ramda;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -585,7 +479,7 @@
 			baseConfigurationReference = 877683FC06E8CE89E8AC0958 /* Pods-Ramda.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Ramda/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/RamdaApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = swift.port.Ramda;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -618,30 +512,6 @@
 			};
 			name = Release;
 		};
-		8C69A3151D7C5FC7004E69A5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C66E914D81DEDABA8F420C43 /* Pods-RamdaUITests.debug.xcconfig */;
-			buildSettings = {
-				INFOPLIST_FILE = RamdaUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = swift.port.RamdaUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = Ramda;
-			};
-			name = Debug;
-		};
-		8C69A3161D7C5FC7004E69A5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA1787519236A8D40E0272AD /* Pods-RamdaUITests.release.xcconfig */;
-			buildSettings = {
-				INFOPLIST_FILE = RamdaUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = swift.port.RamdaUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = Ramda;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -668,15 +538,6 @@
 			buildConfigurations = (
 				8C69A3121D7C5FC7004E69A5 /* Debug */,
 				8C69A3131D7C5FC7004E69A5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8C69A3141D7C5FC7004E69A5 /* Build configuration list for PBXNativeTarget "RamdaUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8C69A3151D7C5FC7004E69A5 /* Debug */,
-				8C69A3161D7C5FC7004E69A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
