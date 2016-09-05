@@ -20,9 +20,10 @@ it, simply add the following line to your Podfile:
 pod "Ramda"
 ```
 
-## Author
+## Authors
 
-JustinGuedes, justin.guedes@gmail.com
+Justin Guedes
+Tyrone Avnit
 
 ## License
 
