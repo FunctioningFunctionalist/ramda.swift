@@ -1,22 +1,19 @@
 PODS:
-  - Nimble (3.2.0)
-  - Quick (0.9.3)
+  - Fox (1.0.1)
   - Ramda (0.1.0)
 
 DEPENDENCIES:
-  - Nimble (~> 3.0)
-  - Quick (~> 0.8)
+  - Fox (~> 1.0.0)
   - Ramda (from `../`)
 
 EXTERNAL SOURCES:
   Ramda:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
-  Quick: 13a2a2b19a5d8e3ed4fd0c36ee46597fd77ebf71
+  Fox: 804de9bf8d6101f26772b26700365c0582f6d942
   Ramda: f425a115d38c6998b7c0c58f5369c455e4b1c6b6
 
-PODFILE CHECKSUM: d74503e9a664c3295e550f26a69fb8a8545764c4
+PODFILE CHECKSUM: 85add41a4e9e9fe42d44bd9a6d27de7a3665137e
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.0.0

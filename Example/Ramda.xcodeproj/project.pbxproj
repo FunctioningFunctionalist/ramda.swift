@@ -82,12 +82,12 @@
 			path = FoxHelper;
 			sourceTree = "<group>";
 		};
-		34C07C5E13C9DA1CB7A784DE /* extensions */ = {
+		34C07C5E13C9DA1CB7A784DE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				34C07BED8A7252F5AFC0691C /* addTests.swift */,
 			);
-			path = extensions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		576A2109E24B43C9F5936CE9 /* Pods */ = {
@@ -148,7 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACE91AFB9204008FA782 /* Supporting Files */,
-				34C07C5E13C9DA1CB7A784DE /* extensions */,
+				34C07C5E13C9DA1CB7A784DE /* Extensions */,
 				34C077864FA35A811B57EF6D /* FoxHelper */,
 			);
 			path = Tests;

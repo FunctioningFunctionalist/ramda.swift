@@ -8,7 +8,7 @@ import Fox
 
 class FoxTester {
 
-    static let numberOfTests : UInt = 100
+    static let numberOfTests : UInt = 25
 
     static func assert(foxParam: IFoxGeneratorParam) -> Bool {
         let runner = FOXRunner()
