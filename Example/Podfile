@@ -7,6 +7,5 @@ end
 target 'Ramda_Tests' do
   inherit! :search_paths
   pod 'Ramda', :path => '../'
-  pod 'Quick', '~> 0.8'
-  pod 'Nimble', '~> 3.0'
+  pod 'Fox', '~> 1.0.0'
 end

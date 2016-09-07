@@ -9,109 +9,63 @@
 import Foundation
 
 extension R {
-    
+
     /**
 
-     Adds two integer values.
+     Adds two values.
      
-     - returns: A partial function that accepts another integer to produce the addition result.
+     - returns: A partial function that accepts another value to produce the result.
 
     */
  
-    public class func add(x: Int) -> (y: Int) -> Int {
+    public class func add<T: AdditionArithmeticType>(x: T) -> (y: T) -> T {
         return { y in
             return x + y
         }
     }
-    
+
     /**
-     
-     Adds two unsigned integer values.
-     
-     - returns: A partial function that accepts another unsigned integer to produce the addition result.
-     
-     */
-    
-    public class func add(x: UInt) -> (y: UInt) -> UInt {
-        return { y in
-            return x + y
-        }
-    }
-    
-    /**
-     
-     Adds two float values.
-     
-     - returns: A partial function that accepts another float to produce the addition result.
-     
-     */
-    
-    public class func add(x: Float) -> (y: Float) -> Float {
-        return { y in
-            return x + y
-        }
-    }
-    
-    /**
-     
-     Adds two double values.
-     
-     - returns: A partial function that accepts another double to produce the addition result.
-     
-     */
-    
-    public class func add(x: Double) -> (y: Double) -> Double {
-        return { y in
-            return x + y
-        }
-    }
-    
-    /**
-     
-     Adds two integer values.
-     
-     - returns: The result of the two integers.
-     
-     */
-    
-    public class func add(x: Int, y: Int) -> Int {
-        return add(x)(y: y)
-    }
-    
-    /**
-     
-     Adds two unsigned integer values.
-     
-     - returns: The result of the two unsigned integers.
-     
-     */
-    
-    public class func add(x: UInt, y: UInt) -> UInt {
-        return add(x)(y: y)
-    }
-    
-    /**
-     
-     Adds two float values.
-     
-     - returns: The result of the two floats.
-     
-     */
-    
-    public class func add(x: Float, y: Float) -> Float {
-        return add(x)(y: y)
-    }
-    
-    /**
-     
-     Adds two double values.
-     
-     - returns: The result of the two doubles.
-     
-     */
-    
-    public class func add(x: Double, y: Double) -> Double {
+
+     Adds two values.
+
+     - returns: The sum of the two values.
+
+    */
+
+    public class func add<T: AdditionArithmeticType>(x: T, y: T) -> T {
         return add(x)(y: y)
     }
     
 }
+
+/**
+
+ Protocol for types that support addition arithmetic
+
+*/
+
+public protocol AdditionArithmeticType {
+
+    /**
+
+     Adds "lhs" and "rhs", returning a result of same type
+
+    */
+
+    func +(lhs: Self, rhs: Self) -> Self
+
+}
+
+extension Int : AdditionArithmeticType {}
+extension Int8 : AdditionArithmeticType {}
+extension Int16 : AdditionArithmeticType {}
+extension Int32 : AdditionArithmeticType {}
+extension Int64 : AdditionArithmeticType {}
+extension UInt : AdditionArithmeticType {}
+extension UInt8 : AdditionArithmeticType {}
+extension UInt16 : AdditionArithmeticType {}
+extension UInt32 : AdditionArithmeticType {}
+extension UInt64 : AdditionArithmeticType {}
+extension Float : AdditionArithmeticType {}
+extension Double : AdditionArithmeticType {}
+extension String : AdditionArithmeticType {}
