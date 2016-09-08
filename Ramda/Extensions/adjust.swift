@@ -12,15 +12,15 @@ extension R {
 
     /**
 
-     Applies a function to the value at the given index of an array,
-     returning a new copy of the array with the element at the given
-     index replaced with the result of the function application.
+        Applies a function to the value at the given index of an array,
+        returning a new copy of the array with the element at the given
+        index replaced with the result of the function application.
 
-     - parameter function: The function to apply.
+        - parameter function: The function to apply.
 
-     - returns: A copy of the supplied array-like object with the element
-                at index replaced with the value returned by applying function
-                to the existing element.
+        - returns: A copy of the supplied array-like object with the element
+                    at index replaced with the value returned by applying function
+                    to the existing element.
 
      */
 
@@ -38,16 +38,16 @@ extension R {
 
     /**
 
-     Applies a function to the value at the given index of an array,
-     returning a new copy of the array with the element at the given
-     index replaced with the result of the function application.
+        Applies a function to the value at the given index of an array,
+        returning a new copy of the array with the element at the given
+        index replaced with the result of the function application.
 
-     - parameter function: The function to apply.
-     - parameter index: The index of the object.
+        - parameter function: The function to apply.
+        - parameter index: The index of the object.
 
-     - returns: A copy of the supplied array-like object with the element
-                at index replaced with the value returned by applying function
-                to the existing element.
+        - returns: A copy of the supplied array-like object with the element
+                    at index replaced with the value returned by applying function
+                    to the existing element.
 
      */
 
@@ -57,17 +57,17 @@ extension R {
 
     /**
 
-     Applies a function to the value at the given index of an array,
-     returning a new copy of the array with the element at the given
-     index replaced with the result of the function application.
+        Applies a function to the value at the given index of an array,
+        returning a new copy of the array with the element at the given
+        index replaced with the result of the function application.
 
-     - parameter function: The function to apply.
-     - parameter index: The index of the object.
-     - parameter array: An array whose value at the supplied index will be replaced.
+        - parameter function: The function to apply.
+        - parameter index: The index of the object.
+        - parameter array: An array whose value at the supplied index will be replaced.
 
-     - returns: A copy of the supplied array-like object with the element
-                at index replaced with the value returned by applying function
-                to the existing element.
+        - returns: A copy of the supplied array-like object with the element
+                    at index replaced with the value returned by applying function
+                    to the existing element.
 
      */
 
