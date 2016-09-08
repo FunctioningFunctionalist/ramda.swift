@@ -8,14 +8,18 @@ extension R {
 
     /**
 
-     Creates a function that returns the value passed in as an argument. This function is known as const, constant, or K (for K combinator) in other languages and libraries.
+        Creates a function that returns the value passed in as an argument.
+        This function is known as const, constant, or K (for K combinator)
+        in other languages and libraries.
 
-     - returns: A function that returns "value"
+        - parameter value: The value that will be returned from the result function.
+
+        - returns: A function that returns "value"
 
     */
 
     public class func always<T>(value: T) -> () -> T {
         return { value }
     }
-    
+
 }

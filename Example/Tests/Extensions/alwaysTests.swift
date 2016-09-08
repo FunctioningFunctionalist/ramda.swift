@@ -1,5 +1,5 @@
 //
-//  alwaysTests.swift
+//  AlwaysTests.swift
 //  Ramda
 //
 //  Created by Justin Guedes on 2016/09/07.
@@ -10,8 +10,8 @@ import XCTest
 import Fox
 import Ramda
 
-class alwaysTests: XCTestCase {
-    
+class AlwaysTests: XCTestCase {
+
     func testShouldCreateSimpleTypeConstantsThatAlwaysReturnsTheCopiedSimpleType() {
 
         let simpleTypeGenerator = FoxGeneratorParam1(FOXInteger()) { (number: Int) in
@@ -25,13 +25,15 @@ class alwaysTests: XCTestCase {
 
         }
 
-        FoxTester.assert(simpleTypeGenerator);
+        FoxTester.assert(simpleTypeGenerator)
 
     }
 
     func testShouldCreateCompositeTypeConstantsThatAlwaysReturnsTheCopiedCompositeType() {
 
-        let complexTypeGenerator = FoxGeneratorParam1(FOXArray(FOXString())) { (strings: [String]) in
+        let complexTypeGenerator = FoxGeneratorParam1(FOXArray(FOXString())) {
+
+            (strings: [String]) in
 
             let constant = R.always(strings)
             let result = constant()
@@ -42,6 +44,8 @@ class alwaysTests: XCTestCase {
 
         }
 
+        FoxTester.assert(complexTypeGenerator)
+
     }
 
     func testShouldCreateObjectReferenceTypeThatAlwaysReturnsTheReferenceToTheObject() {
@@ -50,11 +54,10 @@ class alwaysTests: XCTestCase {
         let changeString = "This is the changed string"
         let constant = R.always(ObjectRef(refString: initialString))
 
-        var result = constant()
-        result.refString = changeString
-        let result2 = constant()
+        constant().refString = changeString
+        let result = constant()
 
-        XCTAssertEqual(changeString, result2.refString)
+        XCTAssertEqual(changeString, result.refString)
 
     }
 
@@ -67,5 +70,5 @@ class alwaysTests: XCTestCase {
         }
 
     }
-    
+
 }

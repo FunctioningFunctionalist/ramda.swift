@@ -9,7 +9,7 @@ extension R {
     public class func all<T>(function: (T) -> Bool) -> (array: [T]) -> Bool {
         return { array in
             for element in array {
-                if(!function(element)) {
+                if !function(element) {
                     return false
                 }
             }

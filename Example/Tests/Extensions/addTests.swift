@@ -1,5 +1,5 @@
 //
-//  addTests.swift
+//  AddTests.swift
 //  Ramda
 //
 //  Created by Justin Guedes on 2016/09/06.
@@ -10,14 +10,16 @@ import XCTest
 import Fox
 import Ramda
 
-class addTests: XCTestCase {
+class AddTests: XCTestCase {
 
     func testShouldAddIntegersTogether() {
 
-        let integerGenerator = FoxGeneratorParam2(FOXInteger(), FOXInteger()) { (x: Int, y: Int) in
+        let integerGenerator = FoxGeneratorParam2(FOXInteger(), FOXInteger()) {
 
-            let result = R.add(x, y: y)
-            return result == (x + y)
+            (lhs: Int, rhs: Int) in
+
+            let result = R.add(lhs, rhs: rhs)
+            return result == (lhs + rhs)
 
         }
 
@@ -27,15 +29,19 @@ class addTests: XCTestCase {
 
     func testShouldAddIntegersTogetherWithPartialFunctions() {
 
-        let partialGenerator = FoxGeneratorParam1(FOXInteger()) { (x: Int) in
+        let partialGenerator = FoxGeneratorParam1(FOXInteger()) {
 
-            let partial = R.add(x)
+            (lhs: Int) in
 
-            let integerGenerator = FoxGeneratorParam1(FOXInteger()) { (y: Int) in
+            let partial = R.add(lhs)
 
-                let result = partial(y: y)
+            let integerGenerator = FoxGeneratorParam1(FOXInteger()) {
 
-                return result == (x + y)
+                (rhs: Int) in
+
+                let result = partial(rhs: rhs)
+
+                return result == (lhs + rhs)
 
             }
 
@@ -49,10 +55,12 @@ class addTests: XCTestCase {
 
     func testShouldAddFloatsTogether() {
 
-        let floatGenerator = FoxGeneratorParam2(FOXFloat(), FOXFloat()) { (x: Float, y: Float) in
+        let floatGenerator = FoxGeneratorParam2(FOXFloat(), FOXFloat()) {
 
-            let result = R.add(x, y: y)
-            return result == (x + y)
+            (lhs: Float, rhs: Float) in
+
+            let result = R.add(lhs, rhs: rhs)
+            return result == (lhs + rhs)
 
         }
 
@@ -62,15 +70,19 @@ class addTests: XCTestCase {
 
     func testShouldAddFloatsTogetherWithPartialFunctions() {
 
-        let partialGenerator = FoxGeneratorParam1(FOXFloat()) { (x: Float) in
+        let partialGenerator = FoxGeneratorParam1(FOXFloat()) {
 
-            let partial = R.add(x)
+            (lhs: Float) in
 
-            let floatGenerator = FoxGeneratorParam1(FOXFloat()) { (y: Float) in
+            let partial = R.add(lhs)
 
-                let result = partial(y: y)
+            let floatGenerator = FoxGeneratorParam1(FOXFloat()) {
 
-                return result == (x + y)
+                (rhs: Float) in
+
+                let result = partial(rhs: rhs)
+
+                return result == (lhs + rhs)
 
             }
 
@@ -84,10 +96,12 @@ class addTests: XCTestCase {
 
     func testShouldAddDoublesTogether() {
 
-        let doubleGenerator = FoxGeneratorParam2(FOXDouble(), FOXDouble()) { (x: Double, y: Double) in
+        let doubleGenerator = FoxGeneratorParam2(FOXDouble(), FOXDouble()) {
 
-            let result = R.add(x, y: y)
-            return result == (x + y)
+            (lhs: Double, rhs: Double) in
+
+            let result = R.add(lhs, rhs: rhs)
+            return result == (lhs + rhs)
 
         }
 
@@ -97,15 +111,19 @@ class addTests: XCTestCase {
 
     func testShouldAddDoublesTogetherWithPartialFunctions() {
 
-        let partialGenerator = FoxGeneratorParam1(FOXDouble()) { (x: Double) in
+        let partialGenerator = FoxGeneratorParam1(FOXDouble()) {
 
-            let partial = R.add(x)
+            (lhs: Double) in
 
-            let doubleGenerator = FoxGeneratorParam1(FOXDouble()) { (y: Double) in
+            let partial = R.add(lhs)
 
-                let result = partial(y: y)
+            let doubleGenerator = FoxGeneratorParam1(FOXDouble()) {
 
-                return result == (x + y)
+                (rhs: Double) in
+
+                let result = partial(rhs: rhs)
+
+                return result == (lhs + rhs)
 
             }
 
@@ -119,10 +137,12 @@ class addTests: XCTestCase {
 
     func testShouldAddStringsTogether() {
 
-        let stringGenerator = FoxGeneratorParam2(FOXString(), FOXString()) { (x: String, y: String) in
+        let stringGenerator = FoxGeneratorParam2(FOXString(), FOXString()) {
 
-            let result = R.add(x, y: y)
-            return result == (x + y)
+            (lhs: String, rhs: String) in
+
+            let result = R.add(lhs, rhs: rhs)
+            return result == (lhs + rhs)
 
         }
 
@@ -132,15 +152,19 @@ class addTests: XCTestCase {
 
     func testShouldAddStringsTogetherWithPartialFunctions() {
 
-        let partialGenerator = FoxGeneratorParam1(FOXString()) { (x: String) in
+        let partialGenerator = FoxGeneratorParam1(FOXString()) {
 
-            let partial = R.add(x)
+            (lhs: String) in
 
-            let stringGenerator = FoxGeneratorParam1(FOXString()) { (y: String) in
+            let partial = R.add(lhs)
 
-                let result = partial(y: y)
+            let stringGenerator = FoxGeneratorParam1(FOXString()) {
 
-                return result == (x + y)
+                (rhs: String) in
+
+                let result = partial(rhs: rhs)
+
+                return result == (lhs + rhs)
 
             }
 

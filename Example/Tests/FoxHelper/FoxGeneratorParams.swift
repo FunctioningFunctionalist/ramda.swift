@@ -12,6 +12,10 @@ protocol IFoxGeneratorParam {
 
 }
 
+// swiftlint:disable force_cast
+// swiftlint:disable line_length
+// swiftlint:disable function_parameter_count
+
 class FoxGeneratorParam<T> : IFoxGeneratorParam {
 
     private let tupleGenerator: FOXGenerator
@@ -34,7 +38,7 @@ class FoxGeneratorParam<T> : IFoxGeneratorParam {
 
     private func executeFunc(validation: T -> Bool, generations: [AnyObject]) -> Bool {
 
-        return false;
+        return false
 
     }
 
@@ -99,3 +103,7 @@ class FoxGeneratorParam5<A, B, C, D, E> : FoxGeneratorParam<(A, B, C, D, E)> {
     }
 
 }
+
+// swiftlint:enable function_parameter_count
+// swiftlint:enable line_length
+// swiftlint:enable force_cast
