@@ -45,7 +45,7 @@ extension R {
 
 /**
 
- Protocol for types that support addition arithmetic
+ Protocol for types that support addition arithmetic.
 
 */
 
@@ -53,7 +53,12 @@ public protocol AdditionArithmeticType {
 
     /**
 
-     Adds "lhs" and "rhs", returning a result of same type
+        Adds "lhs" and "rhs", returning a result of same type.
+
+        - parameter lhs: The left hand side operand.
+        - parameter rhs: The right hand side operand.
+
+        - returns: The sum of the two values.
 
     */
 
@@ -72,4 +77,3 @@ extension UInt32 : AdditionArithmeticType {}
 extension UInt64 : AdditionArithmeticType {}
 extension Float : AdditionArithmeticType {}
 extension Double : AdditionArithmeticType {}
-extension String : AdditionArithmeticType {}
