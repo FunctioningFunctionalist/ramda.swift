@@ -40,6 +40,7 @@ extension R {
     public class func add<T: AdditionArithmeticType>(lhs: T, rhs: T) -> T {
         return add(lhs)(rhs: rhs)
     }
+
 }
 
 /**

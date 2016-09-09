@@ -46,4 +46,5 @@ extension R {
     public class func all<T>(function: (T) -> Bool, array: [T]) -> Bool {
         return all(function)(array: array)
     }
+
 }

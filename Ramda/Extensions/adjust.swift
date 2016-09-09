@@ -72,4 +72,5 @@ extension R {
     public class func adjust<A>(function: (A) -> A, index: Int, array: [A]) -> [A] {
         return adjust(function)(index: index)(array: array)
     }
+
 }
