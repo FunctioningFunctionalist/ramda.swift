@@ -28,5 +28,5 @@ class AllTests: XCTestCase {
 
         XCTAssertFalse(result)
     }
-    
+
 }
