@@ -27,7 +27,7 @@ extension R {
         return { index in
             return { array in
                 var result: [A] = array
-                if index >= array.count && index > -1 {
+                if index < array.count && index > -1 {
                     result[index] = function(result[index])
                 }
                 return result
