@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		34C072A5564236DC405279F0 /* AdjustTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07971BE93E3701F7C575D /* AdjustTests.swift */; };
+		34C075521EBE9991E02E8CDD /* ApTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0782BD35F0332384F2642 /* ApTests.swift */; };
 		34C076BED0B747DC365D4788 /* ConcatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07F8578907F95C0E9E0B6 /* ConcatTests.swift */; };
 		34C0772F08833B9057739F5E /* AddTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07BED8A7252F5AFC0691C /* AddTests.swift */; };
 		34C079ECAA0CBB4462E35799 /* AlwaysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07E10C38112B16BDFBDF2 /* AlwaysTests.swift */; };
@@ -40,6 +41,7 @@
 		0FB3BFA567572DDF6B6D6B93 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		2174DD057618ED66D09ADCC8 /* Pods-Ramda_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ramda_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ramda_Example/Pods-Ramda_Example.release.xcconfig"; sourceTree = "<group>"; };
 		34C07128985B79B979FB8931 /* FoxGeneratorParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoxGeneratorParams.swift; sourceTree = "<group>"; };
+		34C0782BD35F0332384F2642 /* ApTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApTests.swift; sourceTree = "<group>"; };
 		34C0783285334AFE41A2CA51 /* AndTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AndTests.swift; sourceTree = "<group>"; };
 		34C07971BE93E3701F7C575D /* AdjustTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdjustTests.swift; sourceTree = "<group>"; };
 		34C07BED8A7252F5AFC0691C /* AddTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTests.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				34C07E4CB36C2BC180765C47 /* ComposeTests.swift */,
 				34C07F8578907F95C0E9E0B6 /* ConcatTests.swift */,
 				34C07971BE93E3701F7C575D /* AdjustTests.swift */,
+				34C0782BD35F0332384F2642 /* ApTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -599,6 +602,7 @@
 				34C07C26A54EFFEDD500346C /* ComposeTests.swift in Sources */,
 				34C076BED0B747DC365D4788 /* ConcatTests.swift in Sources */,
 				34C072A5564236DC405279F0 /* AdjustTests.swift in Sources */,
+				34C075521EBE9991E02E8CDD /* ApTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
