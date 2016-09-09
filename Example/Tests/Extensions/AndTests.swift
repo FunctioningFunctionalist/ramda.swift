@@ -15,15 +15,12 @@ class AndTests: XCTestCase {
     func testShouldAndBothFunctionsAndProduceCorrectResultWithPartialFunctions() {
 
         let partialGenerator = FoxGeneratorParam1(FOXBoolean()) {
-
             (lhs: Bool) in
 
             let lhsFunc = { return lhs }
-
             let partial = R.and(lhsFunc)
 
             let booleanGenerator = FoxGeneratorParam1(FOXBoolean()) {
-
                 (rhs: Bool) in
 
                 let rhsFunc = { return rhs }
@@ -31,21 +28,17 @@ class AndTests: XCTestCase {
                 let result = partial(rhs: rhsFunc)
 
                 return result == (lhs && rhs)
-
             }
 
             return FoxTester.assert(booleanGenerator)
-
         }
 
         FoxTester.assert(partialGenerator)
-
     }
 
     func testShouldAndBothFunctionsAndProduceCorrectResult() {
 
         let booleanGenerator = FoxGeneratorParam2(FOXBoolean(), FOXBoolean()) {
-
             (lhs: Bool, rhs: Bool) in
 
             let lhsFunc = { return lhs }
@@ -54,11 +47,9 @@ class AndTests: XCTestCase {
             let result = R.and(lhsFunc, rhs: rhsFunc)
 
             return result == (lhs && rhs)
-
         }
 
         FoxTester.assert(booleanGenerator)
-
     }
 
     func testShouldAndBothConditionsAndProduceCorrectResultWithPartialFunctions() {
@@ -70,83 +61,63 @@ class AndTests: XCTestCase {
             let partial = R.and(lhs)
 
             let booleanGenerator = FoxGeneratorParam1(FOXBoolean()) {
-
                 (rhs: Bool) in
 
                 let result = partial(rhs: rhs)
-
                 return result == (lhs && rhs)
-
             }
 
             return FoxTester.assert(booleanGenerator)
-
         }
 
         FoxTester.assert(partialGenerator)
-
     }
 
     func testShouldAndBothConditionsAndProduceCorrectResult() {
 
         let booleanGenerator = FoxGeneratorParam2(FOXBoolean(), FOXBoolean()) {
-
             (lhs: Bool, rhs: Bool) in
 
             let result = R.and(lhs, rhs: rhs)
-
             return result == (lhs && rhs)
-
         }
 
         FoxTester.assert(booleanGenerator)
-
     }
 
     func testShouldNotExecuteSecondConditionIfFirstConditionIsFalse() {
 
         let lhsFunc: () -> Bool = {
-
             return false
-
         }
 
         var executed = false
         let rhsFunc: () -> Bool = {
-
             executed = true
             return true
-
         }
 
         let result = R.and(lhsFunc, rhs: rhsFunc)
 
         XCTAssertFalse(result)
         XCTAssertFalse(executed)
-
     }
 
     func testShouldExecuteSecondConditionIfFirstConditionIsTrue() {
 
         let lhsFunc: () -> Bool = {
-
             return true
-
         }
 
         var executed = false
         let rhsFunc: () -> Bool = {
-
             executed = true
             return false
-
         }
 
         let result = R.and(lhsFunc, rhs: rhsFunc)
 
         XCTAssertFalse(result)
         XCTAssertTrue(executed)
-
     }
-
 }

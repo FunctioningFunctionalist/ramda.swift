@@ -14,7 +14,8 @@ class AlwaysTests: XCTestCase {
 
     func testShouldCreateSimpleTypeConstantsThatAlwaysReturnsTheCopiedSimpleType() {
 
-        let simpleTypeGenerator = FoxGeneratorParam1(FOXInteger()) { (number: Int) in
+        let simpleTypeGenerator = FoxGeneratorParam1(FOXInteger()) {
+            (number: Int) in
 
             let constant = R.always(number)
             let result = constant()
@@ -22,17 +23,14 @@ class AlwaysTests: XCTestCase {
             result2 += 2
 
             return result == number && result2 != result
-
         }
 
         FoxTester.assert(simpleTypeGenerator)
-
     }
 
     func testShouldCreateCompositeTypeConstantsThatAlwaysReturnsTheCopiedCompositeType() {
 
         let complexTypeGenerator = FoxGeneratorParam1(FOXArray(FOXString())) {
-
             (strings: [String]) in
 
             let constant = R.always(strings)
@@ -45,7 +43,6 @@ class AlwaysTests: XCTestCase {
         }
 
         FoxTester.assert(complexTypeGenerator)
-
     }
 
     func testShouldCreateObjectReferenceTypeThatAlwaysReturnsTheReferenceToTheObject() {
@@ -58,7 +55,6 @@ class AlwaysTests: XCTestCase {
         let result = constant()
 
         XCTAssertEqual(changeString, result.refString)
-
     }
 
     class ObjectRef {
@@ -68,7 +64,5 @@ class AlwaysTests: XCTestCase {
         init(refString: String) {
             self.refString = refString
         }
-
     }
-
 }
