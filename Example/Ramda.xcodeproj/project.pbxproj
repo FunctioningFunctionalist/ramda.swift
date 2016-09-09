@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		34C0772F08833B9057739F5E /* AddTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07BED8A7252F5AFC0691C /* AddTests.swift */; };
 		34C079ECAA0CBB4462E35799 /* AlwaysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07E10C38112B16BDFBDF2 /* AlwaysTests.swift */; };
+		34C07CDF4D014311A557B1F4 /* AndTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0783285334AFE41A2CA51 /* AndTests.swift */; };
 		34C07D0C2A570623F83E76BC /* FoxGeneratorParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07128985B79B979FB8931 /* FoxGeneratorParams.swift */; };
 		34C07E1A4F7459BD3B1D399A /* FoxTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07C40531CF0BDCDF372FC /* FoxTester.swift */; };
 		36A481EE709388A3F1DE4B9C /* Pods_Ramda_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F96CE4DCDD485B92E79353 /* Pods_Ramda_Example.framework */; };
@@ -36,6 +37,7 @@
 		0FB3BFA567572DDF6B6D6B93 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		2174DD057618ED66D09ADCC8 /* Pods-Ramda_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ramda_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ramda_Example/Pods-Ramda_Example.release.xcconfig"; sourceTree = "<group>"; };
 		34C07128985B79B979FB8931 /* FoxGeneratorParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoxGeneratorParams.swift; sourceTree = "<group>"; };
+		34C0783285334AFE41A2CA51 /* AndTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AndTests.swift; sourceTree = "<group>"; };
 		34C07BED8A7252F5AFC0691C /* AddTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTests.swift; sourceTree = "<group>"; };
 		34C07C40531CF0BDCDF372FC /* FoxTester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoxTester.swift; sourceTree = "<group>"; };
 		34C07E10C38112B16BDFBDF2 /* AlwaysTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlwaysTests.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			children = (
 				34C07BED8A7252F5AFC0691C /* AddTests.swift */,
 				34C07E10C38112B16BDFBDF2 /* AlwaysTests.swift */,
+				34C0783285334AFE41A2CA51 /* AndTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -553,6 +556,7 @@
 				34C07E1A4F7459BD3B1D399A /* FoxTester.swift in Sources */,
 				34C07D0C2A570623F83E76BC /* FoxGeneratorParams.swift in Sources */,
 				34C079ECAA0CBB4462E35799 /* AlwaysTests.swift in Sources */,
+				34C07CDF4D014311A557B1F4 /* AndTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
