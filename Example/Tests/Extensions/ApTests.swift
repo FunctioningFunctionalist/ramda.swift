@@ -51,7 +51,6 @@ class ApTests: XCTestCase {
         let result = R.ap(R.add(10), R.add(25))(array: values)
 
         XCTAssertEqual(expectedResult, result)
-        self.d(R.add(6))
     }
 
     func createResultFromFunctions(functions: [Int -> Int], with numbers: [Int]) -> [Int] {
