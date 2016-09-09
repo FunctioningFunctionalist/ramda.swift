@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		34C0772F08833B9057739F5E /* AddTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07BED8A7252F5AFC0691C /* AddTests.swift */; };
 		34C079ECAA0CBB4462E35799 /* AlwaysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07E10C38112B16BDFBDF2 /* AlwaysTests.swift */; };
+		34C07C26A54EFFEDD500346C /* ComposeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07E4CB36C2BC180765C47 /* ComposeTests.swift */; };
 		34C07CDF4D014311A557B1F4 /* AndTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0783285334AFE41A2CA51 /* AndTests.swift */; };
 		34C07D0C2A570623F83E76BC /* FoxGeneratorParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07128985B79B979FB8931 /* FoxGeneratorParams.swift */; };
 		34C07E1A4F7459BD3B1D399A /* FoxTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07C40531CF0BDCDF372FC /* FoxTester.swift */; };
@@ -41,6 +42,7 @@
 		34C07BED8A7252F5AFC0691C /* AddTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTests.swift; sourceTree = "<group>"; };
 		34C07C40531CF0BDCDF372FC /* FoxTester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoxTester.swift; sourceTree = "<group>"; };
 		34C07E10C38112B16BDFBDF2 /* AlwaysTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlwaysTests.swift; sourceTree = "<group>"; };
+		34C07E4CB36C2BC180765C47 /* ComposeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeTests.swift; sourceTree = "<group>"; };
 		419FFE55846CA50DFA74371A /* Ramda.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Ramda.podspec; path = ../Ramda.podspec; sourceTree = "<group>"; };
 		4C32FAB1AA0212E8E9E08135 /* Pods-Ramda_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ramda_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ramda_Example/Pods-Ramda_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		59F96CE4DCDD485B92E79353 /* Pods_Ramda_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ramda_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +94,7 @@
 				34C07BED8A7252F5AFC0691C /* AddTests.swift */,
 				34C07E10C38112B16BDFBDF2 /* AlwaysTests.swift */,
 				34C0783285334AFE41A2CA51 /* AndTests.swift */,
+				34C07E4CB36C2BC180765C47 /* ComposeTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				C3DE3DD838FFB323F19C5CBF /* [CP] Copy Pods Resources */,
 				8693BFE637D2E955A4B9CD0A /* 📦 Embed Pods Frameworks */,
 				2912E3FCAE4C31062AED3B1E /* 📦 Copy Pods Resources */,
+				8C4A392E1D82FD7700F62107 /* SwiftLint Autocorrect */,
 				8CF8F1E61D81AE00003E114C /* SwiftLint Ramda Check */,
 				8C5A81CB1D81A98B00040ED6 /* SwiftLint Project Check */,
 			);
@@ -228,6 +232,7 @@
 				3C5195EFD25E7CC1F97EE486 /* [CP] Copy Pods Resources */,
 				8CD36EDD88AB20CEEF28EE1D /* 📦 Embed Pods Frameworks */,
 				A1BB9E555E0BEE5E6A95726E /* 📦 Copy Pods Resources */,
+				8C4A392F1D82FD9A00F62107 /* SwiftLint Autocorrect */,
 				8CF8F1E51D81ADC2003E114C /* SwiftLint Ramda Check */,
 				8C5A81CA1D81A96900040ED6 /* SwiftLint Project Check */,
 			);
@@ -405,6 +410,34 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ramda_Example/Pods-Ramda_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8C4A392E1D82FD7700F62107 /* SwiftLint Autocorrect */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftLint Autocorrect";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint autocorrect\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		8C4A392F1D82FD9A00F62107 /* SwiftLint Autocorrect */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftLint Autocorrect";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint autocorrect\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
 		8C5A81CA1D81A96900040ED6 /* SwiftLint Project Check */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -460,7 +493,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    cd ../Ramda\n    swiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\n    cd ../Ramda\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		8CF8F1E61D81AE00003E114C /* SwiftLint Ramda Check */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -474,7 +507,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    cd ../Ramda\n    swiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\n    cd ../Ramda\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		A1BB9E555E0BEE5E6A95726E /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -557,6 +590,7 @@
 				34C07D0C2A570623F83E76BC /* FoxGeneratorParams.swift in Sources */,
 				34C079ECAA0CBB4462E35799 /* AlwaysTests.swift in Sources */,
 				34C07CDF4D014311A557B1F4 /* AndTests.swift in Sources */,
+				34C07C26A54EFFEDD500346C /* ComposeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
