@@ -40,7 +40,6 @@ extension R {
     public class func add<T: AdditionArithmeticType>(lhs: T, rhs: T) -> T {
         return add(lhs)(rhs: rhs)
     }
-
 }
 
 /**
@@ -58,7 +57,6 @@ public protocol AdditionArithmeticType {
     */
 
     func + (lhs: Self, rhs: Self) -> Self
-
 }
 
 extension Int : AdditionArithmeticType {}

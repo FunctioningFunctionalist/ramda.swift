@@ -79,7 +79,6 @@ extension R {
     public class func compose<A, B, C, D>(first: C -> D, second: B -> C, third: A -> B) -> A -> D {
         return first <<< second <<< third
     }
-
 }
 
 // swiftlint:enable valid_docs

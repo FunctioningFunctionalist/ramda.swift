@@ -65,5 +65,4 @@ extension R {
     public class func and(lhs: Bool, rhs: Bool) -> Bool {
         return and(lhs)(rhs: rhs)
     }
-
 }

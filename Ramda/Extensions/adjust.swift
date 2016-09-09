@@ -18,9 +18,8 @@ extension R {
 
         - parameter function: The function to apply.
 
-        - returns: A copy of the supplied array-like object with the element
-                    at index replaced with the value returned by applying function
-                    to the existing element.
+        - returns: A partial function that accepts the second condition to produce
+                    the result
 
      */
 
@@ -45,9 +44,8 @@ extension R {
         - parameter function: The function to apply.
         - parameter index: The index of the object.
 
-        - returns: A copy of the supplied array-like object with the element
-                    at index replaced with the value returned by applying function
-                    to the existing element.
+        - returns: A partial function that accepts the third condition to produce
+                    the result
 
      */
 
@@ -74,5 +72,4 @@ extension R {
     public class func adjust<A>(function: (A) -> A, index: Int, array: [A]) -> [A] {
         return adjust(function)(index: index)(array: array)
     }
-
 }
