@@ -39,4 +39,37 @@ extension R {
         }
     }
 
+    /**
+
+        Returns a new list containing the contents of the given list, followed by the given element.
+
+        - parameter elements: The elements to append to the list.
+        - parameter array: The list to append the elements to.
+
+        - returns: The new list with the appended elements.
+
+    */
+
+    public class func append<T>(elements: [T], array: [T]) -> [T] {
+        var result = array
+        result.appendContentsOf(elements)
+        return result
+    }
+
+    /**
+
+        Returns a new list containing the contents of the given list, followed by the given element.
+
+        - parameter elements: The elements to append to the list.
+
+        - returns: The new list with the appended elements.
+
+    */
+
+    public class func append<T>(elements: [T]) -> (array: [T]) -> [T] {
+        return { array in
+            return append(elements, array: array)
+        }
+    }
+
 }

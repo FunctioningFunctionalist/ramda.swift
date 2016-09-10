@@ -33,4 +33,25 @@ class AppendTests: XCTestCase {
         XCTAssertEqual(expectedResult, result)
     }
 
+    func testShouldAppendArrayOfStringsToListOfStrings() {
+        let expectedResult = ["This", "is", "a", "list", "of", "strings"]
+        let input = ["list", "of", "strings"]
+        let array = ["This", "is", "a"]
+
+        let result = R.append(input, array: array)
+
+        XCTAssertEqual(expectedResult, result)
+    }
+
+    func testShouldAppendArrayOfStringsToListOfStringsUsingPartialFunctions() {
+        let expectedResult = ["This", "is", "a", "list", "of", "strings"]
+        let input = ["list", "of", "strings"]
+        let array = ["This", "is", "a"]
+
+        let partial = R.append(input)
+        let result = partial(array: array)
+
+        XCTAssertEqual(expectedResult, result)
+    }
+
 }
