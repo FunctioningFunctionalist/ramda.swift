@@ -11,7 +11,7 @@ import Ramda
 
 class AddIndexTests: XCTestCase {
 
-    func testShouldAdjustTheValueAtTheSpecifiedIndex() {
+    func testShouldAddIndexWhenMappingOverSequence() {
         let sequence = ["a", "b", "c"]
         let expectedResult = [0, 1, 2]
         
