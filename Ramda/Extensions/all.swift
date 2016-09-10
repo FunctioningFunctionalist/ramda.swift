@@ -13,21 +13,19 @@ extension R {
         Acts as a transducer if a transformer is given in list position
 
         - parameter function: The predicate function.
+        - parameter array: The array to consider.
 
-        - returns: A partial function that accepts the second condition to produce
-                    the result
+        - returns: true if the predicate is satisfied by every element, false otherwise.
 
      */
 
-    public class func all<T>(function: (T) -> Bool) -> (array: [T]) -> Bool {
-        return { array in
-            for element in array {
-                if !function(element) {
-                    return false
-                }
+    public class func all<T>(function: (T) -> Bool, array: [T]) -> Bool {
+        for element in array {
+            if !function(element) {
+                return false
             }
-            return true
         }
+        return true
     }
 
     /**
@@ -37,14 +35,16 @@ extension R {
         Acts as a transducer if a transformer is given in list position
 
         - parameter function: The predicate function.
-        - parameter array: The array to consider.
 
-        - returns: true if the predicate is satisfied by every element, false otherwise.
+        - returns: A partial function that accepts the second condition to produce
+                    the result
 
      */
 
-    public class func all<T>(function: (T) -> Bool, array: [T]) -> Bool {
-        return all(function)(array: array)
+    public class func all<T>(function: (T) -> Bool) -> (array: [T]) -> Bool {
+        return { array in
+            return all(function, array: array)
+        }
     }
 
 }

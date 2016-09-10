@@ -15,22 +15,6 @@ extension R {
         Adds two values.
 
         - parameter lhs: The left hand side operand.
-
-        - returns: A partial function that accepts another value to produce the result.
-
-    */
-
-    public class func add<T: AdditionArithmeticType>(lhs: T) -> (rhs: T) -> T {
-        return { rhs in
-            return lhs + rhs
-        }
-    }
-
-    /**
-
-        Adds two values.
-
-        - parameter lhs: The left hand side operand.
         - parameter rhs: The right hand side operand.
 
         - returns: The sum of the two values.
@@ -38,7 +22,23 @@ extension R {
     */
 
     public class func add<T: AdditionArithmeticType>(lhs: T, rhs: T) -> T {
-        return add(lhs)(rhs: rhs)
+        return lhs + rhs
+    }
+
+    /**
+
+        Adds two values.
+
+        - parameter lhs: The left hand side operand.
+
+        - returns: A partial function that accepts another value to produce the result.
+
+    */
+
+    public class func add<T: AdditionArithmeticType>(lhs: T) -> (rhs: T) -> T {
+        return { rhs in
+            return add(lhs, rhs: rhs)
+        }
     }
 
 }

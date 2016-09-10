@@ -17,22 +17,21 @@ extension R {
         index replaced with the result of the function application.
 
         - parameter function: The function to apply.
+        - parameter index: The index of the object.
+        - parameter array: An array whose value at the supplied index will be replaced.
 
-        - returns: A partial function that accepts the second condition to produce
-                    the result
+        - returns: A copy of the supplied array-like object with the element
+                    at index replaced with the value returned by applying function
+                    to the existing element.
 
      */
 
-    public class func adjust<A>(function: (A) -> A) -> (index: Int) -> (array: [A]) -> [A] {
-        return { index in
-            return { array in
-                var result: [A] = array
-                if index < array.count && index > -1 {
-                    result[index] = function(result[index])
-                }
-                return result
-            }
+    public class func adjust<A>(function: (A) -> A, index: Int, array: [A]) -> [A] {
+        var result: [A] = array
+        if index < array.count && index > -1 {
+            result[index] = function(result[index])
         }
+        return result
     }
 
     /**
@@ -50,7 +49,9 @@ extension R {
      */
 
     public class func adjust<A>(function: (A) -> A, index: Int) -> (array: [A]) -> [A] {
-        return adjust(function)(index: index)
+        return { array in
+            return adjust(function, index: index, array: array)
+        }
     }
 
     /**
@@ -60,17 +61,18 @@ extension R {
         index replaced with the result of the function application.
 
         - parameter function: The function to apply.
-        - parameter index: The index of the object.
-        - parameter array: An array whose value at the supplied index will be replaced.
 
-        - returns: A copy of the supplied array-like object with the element
-                    at index replaced with the value returned by applying function
-                    to the existing element.
+        - returns: A partial function that accepts the second condition to produce
+                    the result
 
      */
 
-    public class func adjust<A>(function: (A) -> A, index: Int, array: [A]) -> [A] {
-        return adjust(function)(index: index)(array: array)
+    public class func adjust<A>(function: (A) -> A) -> (index: Int) -> (array: [A]) -> [A] {
+        return { index in
+            return { array in
+                return adjust(function, index: index, array: array)
+            }
+        }
     }
 
 }
