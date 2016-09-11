@@ -29,6 +29,7 @@
 		34C07D4BEB79ED0EACA1D451 /* SubtractTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0750029956B67A784FC1E /* SubtractTests.swift */; };
 		34C07D55EB99B3E4129F5C30 /* CurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0725431AB2E4DA5D091DA /* CurryTests.swift */; };
 		34C07E1A4F7459BD3B1D399A /* FoxTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07C40531CF0BDCDF372FC /* FoxTester.swift */; };
+		34C07EA34C80187D8D02F974 /* UpdateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0773357DD9F37BB207B14 /* UpdateTests.swift */; };
 		34C07EE689E2ACFF6EC2B7B2 /* ClampTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07E3FA7BFC67AE14D4D8C /* ClampTests.swift */; };
 		36A481EE709388A3F1DE4B9C /* Pods_Ramda_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F96CE4DCDD485B92E79353 /* Pods_Ramda_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
@@ -62,6 +63,7 @@
 		34C0750029956B67A784FC1E /* SubtractTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtractTests.swift; sourceTree = "<group>"; };
 		34C075A6799E8CA389B30A9D /* DecTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecTests.swift; sourceTree = "<group>"; };
 		34C076D1113D8A244D5CEFAF /* AllTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllTests.swift; sourceTree = "<group>"; };
+		34C0773357DD9F37BB207B14 /* UpdateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTests.swift; sourceTree = "<group>"; };
 		34C0780D1838BA43D44FE2EC /* ChainTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChainTests.swift; sourceTree = "<group>"; };
 		34C078159FCD9D4251EBDC94 /* BothTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BothTests.swift; sourceTree = "<group>"; };
 		34C0782BD35F0332384F2642 /* ApTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApTests.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				34C075A6799E8CA389B30A9D /* DecTests.swift */,
 				34C07DF8BCAC8CC328F9B1D8 /* DefaultToTests.swift */,
 				34C0750029956B67A784FC1E /* SubtractTests.swift */,
+				34C0773357DD9F37BB207B14 /* UpdateTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -663,6 +666,7 @@
 				34C070BDB4EE8BC1FF3B7283 /* DecTests.swift in Sources */,
 				34C075CDAB6329178FBC167A /* DefaultToTests.swift in Sources */,
 				34C07D4BEB79ED0EACA1D451 /* SubtractTests.swift in Sources */,
+				34C07EA34C80187D8D02F974 /* UpdateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
