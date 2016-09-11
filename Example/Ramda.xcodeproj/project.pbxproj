@@ -26,6 +26,7 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		63FE4D571D8426C2001BDF4B /* AddIndexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FE4D561D8426C2001BDF4B /* AddIndexTests.swift */; };
 		DA9085197A1A303CB1D92785 /* Pods_Ramda_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E95F54F31639C4E774191B /* Pods_Ramda_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* Ramda_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Ramda_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63FE4D561D8426C2001BDF4B /* AddIndexTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddIndexTests.swift; sourceTree = "<group>"; };
 		99E95F54F31639C4E774191B /* Pods_Ramda_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ramda_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F52F67119E2A13F596D153D /* Pods-Ramda_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ramda_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ramda_Tests/Pods-Ramda_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +114,7 @@
 				34C07F8578907F95C0E9E0B6 /* ConcatTests.swift */,
 				34C07971BE93E3701F7C575D /* AdjustTests.swift */,
 				34C0782BD35F0332384F2642 /* ApTests.swift */,
+				63FE4D561D8426C2001BDF4B /* AddIndexTests.swift */,
 				34C07A609663E419A15F8311 /* BindTests.swift */,
 				34C07A4CDB706D43493CFD07 /* AppendTests.swift */,
 				34C078159FCD9D4251EBDC94 /* BothTests.swift */,
@@ -218,7 +221,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Ramda_Example" */;
 			buildPhases = (
-				DD4A51FF193AA336E0351563 /* 📦 Check Pods Manifest.lock */,
+				DD4A51FF193AA336E0351563 /* [CP] Check Pods Manifest.lock */,
 				B52D24DDCFBFC751AC22DDE3 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
@@ -244,7 +247,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Ramda_Tests" */;
 			buildPhases = (
-				60B8A83F0289887946975361 /* 📦 Check Pods Manifest.lock */,
+				60B8A83F0289887946975361 /* [CP] Check Pods Manifest.lock */,
 				28CCAF4ED0DBEF53B1F78AC1 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
@@ -401,14 +404,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ramda_Tests/Pods-Ramda_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		60B8A83F0289887946975361 /* 📦 Check Pods Manifest.lock */ = {
+		60B8A83F0289887946975361 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -575,14 +578,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ramda_Example/Pods-Ramda_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DD4A51FF193AA336E0351563 /* 📦 Check Pods Manifest.lock */ = {
+		DD4A51FF193AA336E0351563 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -614,6 +617,7 @@
 				34C07C26A54EFFEDD500346C /* ComposeTests.swift in Sources */,
 				34C076BED0B747DC365D4788 /* ConcatTests.swift in Sources */,
 				34C072A5564236DC405279F0 /* AdjustTests.swift in Sources */,
+				63FE4D571D8426C2001BDF4B /* AddIndexTests.swift in Sources */,
 				34C075521EBE9991E02E8CDD /* ApTests.swift in Sources */,
 				34C075C889BF4DD52FBD64A4 /* BindTests.swift in Sources */,
 				34C0757D86E5E4454D1A3CEC /* AppendTests.swift in Sources */,
