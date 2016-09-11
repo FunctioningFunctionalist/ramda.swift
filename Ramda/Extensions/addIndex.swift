@@ -5,17 +5,17 @@
 import Foundation
 
 extension R {
-    
+
     /**
-     
-     Creates a new list iteration function from an existing one by adding two new parameters to its callback function:
-     the current index, and the entire list.
-     
-     - parameter SequenceType: A value type that conforms to the protocol SequenceType
-     
-     - returns: An altered list iteration function that passes (index, list) to its callback
-     
-     */
+
+        Creates a new list iteration function from an existing one by adding two new parameters
+        to its callback function: the current index, and the entire list.
+
+        - parameter sequence: A value type that conforms to the protocol SequenceType
+
+        - returns: An altered list iteration function that passes (index, list) to its callback
+
+    */
 
     public class func addIndex<T: SequenceType>(sequence: T) -> EnumerateSequence<T> {
         return sequence.enumerate()
