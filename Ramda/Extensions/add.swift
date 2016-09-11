@@ -21,7 +21,7 @@ extension R {
 
     */
 
-    public class func add<T: AdditionArithmeticType>(lhs: T, rhs: T) -> T {
+    public class func add<T: AdditionArithmeticType>(lhs: T, to rhs: T) -> T {
         return lhs + rhs
     }
 
@@ -35,10 +35,8 @@ extension R {
 
     */
 
-    public class func add<T: AdditionArithmeticType>(lhs: T) -> (rhs: T) -> T {
-        return { rhs in
-            return add(lhs, rhs: rhs)
-        }
+    public class func add<T: AdditionArithmeticType>(lhs: T) -> (to: T) -> T {
+        return curry(add)(lhs)
     }
 
 }

@@ -16,7 +16,7 @@ extension R {
 
     */
 
-    public class func and(lhs: () -> Bool, rhs: () -> Bool) -> Bool {
+    public class func and(lhs: () -> Bool, and rhs: () -> Bool) -> Bool {
         return lhs() && rhs()
     }
 
@@ -30,10 +30,8 @@ extension R {
 
     */
 
-    public class func and(lhs: () -> Bool) -> (rhs: () -> Bool) -> Bool {
-        return { rhs in
-            return and(lhs, rhs: rhs)
-        }
+    public class func and(lhs: () -> Bool) -> (and: () -> Bool) -> Bool {
+        return curry(and)(lhs)
     }
 
     /**
@@ -46,7 +44,7 @@ extension R {
 
     */
 
-    public class func and(lhs: Bool, rhs: Bool) -> Bool {
+    public class func and(lhs: Bool, and rhs: Bool) -> Bool {
         return lhs && rhs
     }
 
@@ -60,10 +58,8 @@ extension R {
 
     */
 
-    public class func and(lhs: Bool) -> (rhs: Bool) -> Bool {
-        return { rhs in
-            return and(lhs, rhs: rhs)
-        }
+    public class func and(lhs: Bool) -> (and: Bool) -> Bool {
+        return curry(and)(lhs)
     }
 
 }

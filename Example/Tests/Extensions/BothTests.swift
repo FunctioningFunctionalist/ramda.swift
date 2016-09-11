@@ -26,7 +26,7 @@ class BothTests: XCTestCase {
         let integerGenerator = FoxGeneratorParam1(FOXInteger()) { (number: Int) in
             let expectedResult = self.isGreaterThan10(number) && self.isEven(number)
 
-            let both = R.both(self.isGreaterThan10, rhs: self.isEven)
+            let both = R.both(self.isGreaterThan10, and: self.isEven)
             let result = both(number)
 
             return result == expectedResult
@@ -44,7 +44,7 @@ class BothTests: XCTestCase {
                 return true
             }
 
-            let both = R.both(self.isGreaterThan10, rhs: rhs)
+            let both = R.both(self.isGreaterThan10, and: rhs)
             both(number)
 
             return result == expectedResult
@@ -58,7 +58,7 @@ class BothTests: XCTestCase {
             let expectedResult = self.isGreaterThan10(number) && self.isEven(number)
 
             let partial = R.both(self.isGreaterThan10)
-            let both = partial(rhs: self.isEven)
+            let both = partial(and: self.isEven)
             let result = both(number)
 
             return result == expectedResult

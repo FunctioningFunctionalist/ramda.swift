@@ -17,7 +17,7 @@ extension R {
 
      */
 
-    public class func any<T>(function: T -> Bool, array: [T]) -> Bool {
+    public class func any<T>(function: T -> Bool, in array: [T]) -> Bool {
         for value in array {
             if function(value) {
                 return true
@@ -36,10 +36,8 @@ extension R {
 
      */
 
-    public class func any<T>(function: T -> Bool) -> (array: [T]) -> Bool {
-        return { array in
-            return any(function, array: array)
-        }
+    public class func any<T>(function: T -> Bool) -> (in: [T]) -> Bool {
+        return curry(any)(function)
     }
 
 }

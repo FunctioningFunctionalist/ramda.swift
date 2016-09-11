@@ -17,7 +17,7 @@ extension R {
 
     */
 
-    public class func concat<T: Concatenate>(lhs: T, rhs: T) -> T {
+    public class func concat<T: Concatenate>(lhs: T, with rhs: T) -> T {
         return lhs + rhs
     }
 
@@ -31,10 +31,8 @@ extension R {
 
     */
 
-    public class func concat<T: Concatenate>(lhs: T) -> (rhs: T) -> T {
-        return { rhs in
-            return concat(lhs, rhs: rhs)
-        }
+    public class func concat<T: Concatenate>(lhs: T) -> (with: T) -> T {
+        return curry(concat)(lhs)
     }
 
 }

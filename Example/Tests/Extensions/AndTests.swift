@@ -25,7 +25,7 @@ class AndTests: XCTestCase {
 
                 let rhsFunc = { return rhs }
 
-                let result = partial(rhs: rhsFunc)
+                let result = partial(and: rhsFunc)
 
                 return result == (lhs && rhs)
             }
@@ -44,7 +44,7 @@ class AndTests: XCTestCase {
             let lhsFunc = { return lhs }
             let rhsFunc = { return rhs }
 
-            let result = R.and(lhsFunc, rhs: rhsFunc)
+            let result = R.and(lhsFunc, and: rhsFunc)
 
             return result == (lhs && rhs)
         }
@@ -63,7 +63,7 @@ class AndTests: XCTestCase {
             let booleanGenerator = FoxGeneratorParam1(FOXBoolean()) {
                 (rhs: Bool) in
 
-                let result = partial(rhs: rhs)
+                let result = partial(and: rhs)
                 return result == (lhs && rhs)
             }
 
@@ -78,7 +78,7 @@ class AndTests: XCTestCase {
         let booleanGenerator = FoxGeneratorParam2(FOXBoolean(), FOXBoolean()) {
             (lhs: Bool, rhs: Bool) in
 
-            let result = R.and(lhs, rhs: rhs)
+            let result = R.and(lhs, and: rhs)
             return result == (lhs && rhs)
         }
 
@@ -97,7 +97,7 @@ class AndTests: XCTestCase {
             return true
         }
 
-        let result = R.and(lhsFunc, rhs: rhsFunc)
+        let result = R.and(lhsFunc, and: rhsFunc)
 
         XCTAssertFalse(result)
         XCTAssertFalse(executed)
@@ -115,7 +115,7 @@ class AndTests: XCTestCase {
             return false
         }
 
-        let result = R.and(lhsFunc, rhs: rhsFunc)
+        let result = R.and(lhsFunc, and: rhsFunc)
 
         XCTAssertFalse(result)
         XCTAssertTrue(executed)

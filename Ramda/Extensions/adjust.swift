@@ -26,32 +26,12 @@ extension R {
 
      */
 
-    public class func adjust<A>(function: (A) -> A, index: Int, array: [A]) -> [A] {
+    public class func adjust<A>(function: (A) -> A, at index: Int, in array: [A]) -> [A] {
         var result: [A] = array
         if index < array.count && index > -1 {
             result[index] = function(result[index])
         }
         return result
-    }
-
-    /**
-
-        Applies a function to the value at the given index of an array,
-        returning a new copy of the array with the element at the given
-        index replaced with the result of the function application.
-
-        - parameter function: The function to apply.
-        - parameter index: The index of the object.
-
-        - returns: A partial function that accepts the third condition to produce
-                    the result
-
-     */
-
-    public class func adjust<A>(function: (A) -> A, index: Int) -> (array: [A]) -> [A] {
-        return { array in
-            return adjust(function, index: index, array: array)
-        }
     }
 
     /**
@@ -67,12 +47,8 @@ extension R {
 
      */
 
-    public class func adjust<A>(function: (A) -> A) -> (index: Int) -> (array: [A]) -> [A] {
-        return { index in
-            return { array in
-                return adjust(function, index: index, array: array)
-            }
-        }
+    public class func adjust<A>(function: (A) -> A) -> (at: Int) -> (in: [A]) -> [A] {
+        return curry(adjust)(function)
     }
 
 }

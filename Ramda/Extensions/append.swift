@@ -17,7 +17,7 @@ extension R {
 
     */
 
-    public class func append<T>(element: T, array: [T]) -> [T] {
+    public class func append<T>(element: T, to array: [T]) -> [T] {
         var result = array
         result.append(element)
         return result
@@ -33,10 +33,8 @@ extension R {
 
     */
 
-    public class func append<T>(element: T) -> (array: [T]) -> [T] {
-        return { array in
-            return append(element, array: array)
-        }
+    public class func append<T>(element: T) -> (to: [T]) -> [T] {
+        return curry(append)(element)
     }
 
     /**
@@ -50,7 +48,7 @@ extension R {
 
     */
 
-    public class func append<T>(elements: [T], array: [T]) -> [T] {
+    public class func append<T>(elements: [T], to array: [T]) -> [T] {
         var result = array
         result.appendContentsOf(elements)
         return result
@@ -66,10 +64,8 @@ extension R {
 
     */
 
-    public class func append<T>(elements: [T]) -> (array: [T]) -> [T] {
-        return { array in
-            return append(elements, array: array)
-        }
+    public class func append<T>(elements: [T]) -> (to: [T]) -> [T] {
+        return curry(append)(elements)
     }
 
 }

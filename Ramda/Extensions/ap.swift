@@ -17,7 +17,7 @@ extension R {
 
     */
 
-    public class func ap<A, B>(functions: [A -> B], array: [A]) -> [B] {
+    public class func ap<A, B>(functions: [A -> B], to array: [A]) -> [B] {
         return functions.flatMap { (function: A -> B) in
             array.map { (element: A) in
                 function(element)
@@ -35,10 +35,8 @@ extension R {
 
     */
 
-    public class func ap<A, B>(functions: (A -> B)...) -> (array: [A]) -> [B] {
-        return { (array: [A]) in
-            return ap(functions, array: array)
-        }
+    public class func ap<A, B>(functions: (A -> B)...) -> (to: [A]) -> [B] {
+        return curry(ap)(functions)
     }
 
     /**
@@ -51,10 +49,8 @@ extension R {
 
     */
 
-    public class func ap<A, B>(functions: [A -> B]) -> (array: [A]) -> [B] {
-        return { (array: [A]) in
-            return ap(functions, array: array)
-        }
+    public class func ap<A, B>(functions: [A -> B]) -> (to: [A]) -> [B] {
+        return curry(ap)(functions)
     }
 
 }

@@ -20,7 +20,7 @@ extension R {
 
      */
 
-    public class func all<T>(function: (T) -> Bool, array: [T]) -> Bool {
+    public class func all<T>(function: (T) -> Bool, in array: [T]) -> Bool {
         for element in array {
             if !function(element) {
                 return false
@@ -43,10 +43,8 @@ extension R {
 
      */
 
-    public class func all<T>(function: (T) -> Bool) -> (array: [T]) -> Bool {
-        return { array in
-            return all(function, array: array)
-        }
+    public class func all<T>(function: (T) -> Bool) -> (in: [T]) -> Bool {
+        return curry(all)(function)
     }
 
 }

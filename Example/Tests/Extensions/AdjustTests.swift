@@ -16,7 +16,7 @@ class AdjustTests: XCTestCase {
         let index = 1
         let array = [4, 5, 6]
 
-        let result = R.adjust(incrementByOne, index: index, array: array)
+        let result = R.adjust(incrementByOne, at: index, in: array)
 
         XCTAssertEqual(incrementByOne(array[index]), result[index])
     }
@@ -26,7 +26,7 @@ class AdjustTests: XCTestCase {
         let indexOutOfRange = 3
         let array = [4, 5, 6]
 
-        let result = R.adjust(incrementByOne, index: indexOutOfRange, array: array)
+        let result = R.adjust(incrementByOne, at: indexOutOfRange, in: array)
 
         XCTAssertEqual(array, result)
     }
@@ -36,7 +36,7 @@ class AdjustTests: XCTestCase {
         let indexOutOfRange = -1
         let array = [4, 5, 6]
 
-        let result = R.adjust(incrementByOne, index: indexOutOfRange, array: array)
+        let result = R.adjust(incrementByOne, at: indexOutOfRange, in: array)
 
         XCTAssertEqual(array, result)
     }

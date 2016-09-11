@@ -19,7 +19,7 @@ class ApTests: XCTestCase {
             let functions: [Int -> Int] = [R.add(10), R.add(25)]
             let expectedResult = self.createResultFromFunctions(functions, with: numbers)
 
-            let actualResult = R.ap(functions, array: numbers)
+            let actualResult = R.ap(functions, to: numbers)
 
             return expectedResult == actualResult
         }
@@ -34,7 +34,7 @@ class ApTests: XCTestCase {
             let arrayGenerator = FoxGeneratorParam1(FOXArray(FOXInteger())) { (numbers: [Int]) in
                 let expectedResult = self.createResultFromFunctions(functions, with: numbers)
 
-                let actualResult = partial(array: numbers)
+                let actualResult = partial(to: numbers)
 
                 return expectedResult == actualResult
             }
@@ -48,7 +48,7 @@ class ApTests: XCTestCase {
     func testShouldAllowFunctionsToBePassedAsVarargs() {
         let expectedResult = [11, 12, 13, 26, 27, 28]
         let values = [1, 2, 3]
-        let result = R.ap(R.add(10), R.add(25))(array: values)
+        let result = R.ap(R.add(10), R.add(25))(to: values)
 
         XCTAssertEqual(expectedResult, result)
     }

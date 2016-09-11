@@ -17,7 +17,7 @@ class AppendTests: XCTestCase {
         let input = "strings"
         let array = ["This", "is", "a", "list", "of"]
 
-        let result = R.append(input, array: array)
+        let result = R.append(input, to: array)
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -28,7 +28,7 @@ class AppendTests: XCTestCase {
         let array = ["This", "is", "a", "list", "of"]
 
         let partial = R.append(input)
-        let result = partial(array: array)
+        let result = partial(to: array)
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -38,7 +38,7 @@ class AppendTests: XCTestCase {
         let input = ["list", "of", "strings"]
         let array = ["This", "is", "a"]
 
-        let result = R.append(input, array: array)
+        let result = R.append(input, to: array)
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -49,7 +49,7 @@ class AppendTests: XCTestCase {
         let array = ["This", "is", "a"]
 
         let partial = R.append(input)
-        let result = partial(array: array)
+        let result = partial(to: array)
 
         XCTAssertEqual(expectedResult, result)
     }

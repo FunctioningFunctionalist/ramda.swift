@@ -18,7 +18,7 @@ extension R {
 
     */
 
-    public class func both<T>(lhs: T -> Bool, rhs: T -> Bool) -> (T) -> Bool {
+    public class func both<T>(lhs: T -> Bool, and rhs: T -> Bool) -> (T) -> Bool {
         return { input in
             return lhs(input) && rhs(input)
         }
@@ -35,10 +35,8 @@ extension R {
 
     */
 
-    public class func both<T>(lhs: T -> Bool) -> (rhs: T -> Bool) -> (T) -> Bool {
-        return { rhs in
-            return both(lhs, rhs: rhs)
-        }
+    public class func both<T>(lhs: T -> Bool) -> (and: T -> Bool) -> (T) -> Bool {
+        return curry(both)(lhs)
     }
 
 }

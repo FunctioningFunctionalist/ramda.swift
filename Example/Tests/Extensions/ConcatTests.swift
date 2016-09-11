@@ -18,7 +18,7 @@ class ConcatTests: XCTestCase {
 
             (lhs: String, rhs: String) in
 
-            let result = R.concat(lhs, rhs: rhs)
+            let result = R.concat(lhs, with: rhs)
 
             return result == (lhs + rhs)
 
@@ -40,7 +40,7 @@ class ConcatTests: XCTestCase {
 
                 (rhs: String) in
 
-                let result = partial(rhs: rhs)
+                let result = partial(with: rhs)
 
                 return result == (lhs + rhs)
 
@@ -59,7 +59,7 @@ class ConcatTests: XCTestCase {
 
             (lhs: [Int], rhs: [Int]) in
 
-            let result = R.concat(lhs, rhs: rhs)
+            let result = R.concat(lhs, with: rhs)
 
             return result == (lhs + rhs)
 
@@ -81,7 +81,7 @@ class ConcatTests: XCTestCase {
 
                 (rhs: [Int]) in
 
-                let result = partial(rhs: rhs)
+                let result = partial(with: rhs)
 
                 return result == (lhs + rhs)
 

@@ -15,7 +15,7 @@ class AllTests: XCTestCase {
         let lessThanSix = { $0 < 6 }
         let array = [4, 2, 3]
 
-        let result = R.all(lessThanSix, array: array)
+        let result = R.all(lessThanSix, in: array)
 
         XCTAssertTrue(result)
     }
@@ -24,7 +24,7 @@ class AllTests: XCTestCase {
         let lessThanSix = { $0 < 6 }
         let array = [4, 2, 6]
 
-        let result = R.all(lessThanSix, array: array)
+        let result = R.all(lessThanSix, in: array)
 
         XCTAssertFalse(result)
     }
