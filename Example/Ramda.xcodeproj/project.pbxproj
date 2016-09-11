@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34C070BDB4EE8BC1FF3B7283 /* DecTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C075A6799E8CA389B30A9D /* DecTests.swift */; };
 		34C07170584603BA3B8A034B /* AllTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C076D1113D8A244D5CEFAF /* AllTests.swift */; };
 		34C072A5564236DC405279F0 /* AdjustTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07971BE93E3701F7C575D /* AdjustTests.swift */; };
 		34C075521EBE9991E02E8CDD /* ApTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0782BD35F0332384F2642 /* ApTests.swift */; };
 		34C0757D86E5E4454D1A3CEC /* AppendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07A4CDB706D43493CFD07 /* AppendTests.swift */; };
 		34C075C889BF4DD52FBD64A4 /* BindTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07A609663E419A15F8311 /* BindTests.swift */; };
+		34C075CDAB6329178FBC167A /* DefaultToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07DF8BCAC8CC328F9B1D8 /* DefaultToTests.swift */; };
 		34C076BED0B747DC365D4788 /* ConcatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07F8578907F95C0E9E0B6 /* ConcatTests.swift */; };
 		34C0772F08833B9057739F5E /* AddTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07BED8A7252F5AFC0691C /* AddTests.swift */; };
+		34C077520D1C23CD67B1BDAF /* ContainsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07D0AAF9F9B791691B6CC /* ContainsTests.swift */; };
 		34C077C6291CED6E375217FB /* ChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0780D1838BA43D44FE2EC /* ChainTests.swift */; };
 		34C078BAC208D0D5708D8B31 /* ApplyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0792D4D71888CAA080CCB /* ApplyTests.swift */; };
 		34C0794A54DFB808E8B39179 /* BothTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C078159FCD9D4251EBDC94 /* BothTests.swift */; };
 		34C079ECAA0CBB4462E35799 /* AlwaysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07E10C38112B16BDFBDF2 /* AlwaysTests.swift */; };
+		34C07A97577D168565C294A3 /* ComplementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C073FF1B031932DD2F9D86 /* ComplementTests.swift */; };
 		34C07B07BDD70FFDAEFD7CB8 /* AnyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07350020DBB7EFAFA674F /* AnyTests.swift */; };
 		34C07C26A54EFFEDD500346C /* ComposeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07E4CB36C2BC180765C47 /* ComposeTests.swift */; };
 		34C07CDF4D014311A557B1F4 /* AndTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0783285334AFE41A2CA51 /* AndTests.swift */; };
@@ -54,6 +58,8 @@
 		34C07128985B79B979FB8931 /* FoxGeneratorParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoxGeneratorParams.swift; sourceTree = "<group>"; };
 		34C0725431AB2E4DA5D091DA /* CurryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurryTests.swift; sourceTree = "<group>"; };
 		34C07350020DBB7EFAFA674F /* AnyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyTests.swift; sourceTree = "<group>"; };
+		34C073FF1B031932DD2F9D86 /* ComplementTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplementTests.swift; sourceTree = "<group>"; };
+		34C075A6799E8CA389B30A9D /* DecTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecTests.swift; sourceTree = "<group>"; };
 		34C076D1113D8A244D5CEFAF /* AllTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllTests.swift; sourceTree = "<group>"; };
 		34C0780D1838BA43D44FE2EC /* ChainTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChainTests.swift; sourceTree = "<group>"; };
 		34C078159FCD9D4251EBDC94 /* BothTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BothTests.swift; sourceTree = "<group>"; };
@@ -65,6 +71,8 @@
 		34C07A609663E419A15F8311 /* BindTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindTests.swift; sourceTree = "<group>"; };
 		34C07BED8A7252F5AFC0691C /* AddTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTests.swift; sourceTree = "<group>"; };
 		34C07C40531CF0BDCDF372FC /* FoxTester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoxTester.swift; sourceTree = "<group>"; };
+		34C07D0AAF9F9B791691B6CC /* ContainsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainsTests.swift; sourceTree = "<group>"; };
+		34C07DF8BCAC8CC328F9B1D8 /* DefaultToTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultToTests.swift; sourceTree = "<group>"; };
 		34C07E10C38112B16BDFBDF2 /* AlwaysTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlwaysTests.swift; sourceTree = "<group>"; };
 		34C07E3FA7BFC67AE14D4D8C /* ClampTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClampTests.swift; sourceTree = "<group>"; };
 		34C07E4CB36C2BC180765C47 /* ComposeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeTests.swift; sourceTree = "<group>"; };
@@ -646,6 +654,10 @@
 				34C078BAC208D0D5708D8B31 /* ApplyTests.swift in Sources */,
 				34C07EE689E2ACFF6EC2B7B2 /* ClampTests.swift in Sources */,
 				34C077C6291CED6E375217FB /* ChainTests.swift in Sources */,
+				34C07A97577D168565C294A3 /* ComplementTests.swift in Sources */,
+				34C077520D1C23CD67B1BDAF /* ContainsTests.swift in Sources */,
+				34C070BDB4EE8BC1FF3B7283 /* DecTests.swift in Sources */,
+				34C075CDAB6329178FBC167A /* DefaultToTests.swift in Sources */,
 				6C4879B6462B6CC69717522E /* AllPassTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
