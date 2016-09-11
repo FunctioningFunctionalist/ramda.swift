@@ -143,4 +143,5 @@ class AddTests: XCTestCase {
 
         FoxTester.assert(partialGenerator)
     }
+
 }

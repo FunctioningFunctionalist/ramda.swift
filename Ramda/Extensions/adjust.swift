@@ -17,51 +17,6 @@ extension R {
         index replaced with the result of the function application.
 
         - parameter function: The function to apply.
-
-        - returns: A copy of the supplied array-like object with the element
-                    at index replaced with the value returned by applying function
-                    to the existing element.
-
-     */
-
-    public class func adjust<A>(function: (A) -> A) -> (index: Int) -> (array: [A]) -> [A] {
-        return { index in
-            return { array in
-                var result: [A] = array
-                if index >= array.count && index > -1 {
-                    result[index] = function(result[index])
-                }
-                return result
-            }
-        }
-    }
-
-    /**
-
-        Applies a function to the value at the given index of an array,
-        returning a new copy of the array with the element at the given
-        index replaced with the result of the function application.
-
-        - parameter function: The function to apply.
-        - parameter index: The index of the object.
-
-        - returns: A copy of the supplied array-like object with the element
-                    at index replaced with the value returned by applying function
-                    to the existing element.
-
-     */
-
-    public class func adjust<A>(function: (A) -> A, index: Int) -> (array: [A]) -> [A] {
-        return adjust(function)(index: index)
-    }
-
-    /**
-
-        Applies a function to the value at the given index of an array,
-        returning a new copy of the array with the element at the given
-        index replaced with the result of the function application.
-
-        - parameter function: The function to apply.
         - parameter index: The index of the object.
         - parameter array: An array whose value at the supplied index will be replaced.
 
@@ -72,7 +27,52 @@ extension R {
      */
 
     public class func adjust<A>(function: (A) -> A, index: Int, array: [A]) -> [A] {
-        return adjust(function)(index: index)(array: array)
+        var result: [A] = array
+        if index < array.count && index > -1 {
+            result[index] = function(result[index])
+        }
+        return result
+    }
+
+    /**
+
+        Applies a function to the value at the given index of an array,
+        returning a new copy of the array with the element at the given
+        index replaced with the result of the function application.
+
+        - parameter function: The function to apply.
+        - parameter index: The index of the object.
+
+        - returns: A partial function that accepts the third condition to produce
+                    the result
+
+     */
+
+    public class func adjust<A>(function: (A) -> A, index: Int) -> (array: [A]) -> [A] {
+        return { array in
+            return adjust(function, index: index, array: array)
+        }
+    }
+
+    /**
+
+        Applies a function to the value at the given index of an array,
+        returning a new copy of the array with the element at the given
+        index replaced with the result of the function application.
+
+        - parameter function: The function to apply.
+
+        - returns: A partial function that accepts the second condition to produce
+                    the result
+
+     */
+
+    public class func adjust<A>(function: (A) -> A) -> (index: Int) -> (array: [A]) -> [A] {
+        return { index in
+            return { array in
+                return adjust(function, index: index, array: array)
+            }
+        }
     }
 
 }
