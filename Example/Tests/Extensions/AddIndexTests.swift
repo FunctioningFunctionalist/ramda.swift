@@ -14,9 +14,9 @@ class AddIndexTests: XCTestCase {
     func testShouldAddIndexWhenMappingOverSequence() {
         let sequence = ["a", "b", "c"]
         let expectedResult = [0, 1, 2]
-        
+
         let result = R.addIndex(sequence).map { (index, element) in return index }
-        
+
         XCTAssertEqual(result, expectedResult)
     }
 

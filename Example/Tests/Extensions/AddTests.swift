@@ -112,36 +112,4 @@ class AddTests: XCTestCase {
         FoxTester.assert(partialGenerator)
     }
 
-    func testShouldAddStringsTogether() {
-
-        let stringGenerator = FoxGeneratorParam2(FOXString(), FOXString()) {
-            (lhs: String, rhs: String) in
-
-            let result = R.add(lhs, rhs: rhs)
-            return result == (lhs + rhs)
-        }
-
-        FoxTester.assert(stringGenerator)
-    }
-
-    func testShouldAddStringsTogetherWithPartialFunctions() {
-
-        let partialGenerator = FoxGeneratorParam1(FOXString()) {
-            (lhs: String) in
-
-            let partial = R.add(lhs)
-
-            let stringGenerator = FoxGeneratorParam1(FOXString()) {
-                (rhs: String) in
-
-                let result = partial(rhs: rhs)
-                return result == (lhs + rhs)
-            }
-
-            return FoxTester.assert(stringGenerator)
-        }
-
-        FoxTester.assert(partialGenerator)
-    }
-
 }
