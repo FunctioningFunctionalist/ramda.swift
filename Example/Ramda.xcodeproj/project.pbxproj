@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34C070BDB4EE8BC1FF3B7283 /* DecTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C075A6799E8CA389B30A9D /* DecTests.swift */; };
 		34C07170584603BA3B8A034B /* AllTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C076D1113D8A244D5CEFAF /* AllTests.swift */; };
 		34C072A5564236DC405279F0 /* AdjustTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07971BE93E3701F7C575D /* AdjustTests.swift */; };
 		34C075521EBE9991E02E8CDD /* ApTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0782BD35F0332384F2642 /* ApTests.swift */; };
@@ -56,6 +57,7 @@
 		34C0725431AB2E4DA5D091DA /* CurryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurryTests.swift; sourceTree = "<group>"; };
 		34C07350020DBB7EFAFA674F /* AnyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyTests.swift; sourceTree = "<group>"; };
 		34C073FF1B031932DD2F9D86 /* ComplementTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplementTests.swift; sourceTree = "<group>"; };
+		34C075A6799E8CA389B30A9D /* DecTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecTests.swift; sourceTree = "<group>"; };
 		34C076D1113D8A244D5CEFAF /* AllTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllTests.swift; sourceTree = "<group>"; };
 		34C0780D1838BA43D44FE2EC /* ChainTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChainTests.swift; sourceTree = "<group>"; };
 		34C078159FCD9D4251EBDC94 /* BothTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BothTests.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				34C0780D1838BA43D44FE2EC /* ChainTests.swift */,
 				34C073FF1B031932DD2F9D86 /* ComplementTests.swift */,
 				34C07D0AAF9F9B791691B6CC /* ContainsTests.swift */,
+				34C075A6799E8CA389B30A9D /* DecTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -651,6 +654,7 @@
 				34C077C6291CED6E375217FB /* ChainTests.swift in Sources */,
 				34C07A97577D168565C294A3 /* ComplementTests.swift in Sources */,
 				34C077520D1C23CD67B1BDAF /* ContainsTests.swift in Sources */,
+				34C070BDB4EE8BC1FF3B7283 /* DecTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
