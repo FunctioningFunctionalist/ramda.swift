@@ -11,22 +11,6 @@ extension R {
         Concatenates two values.
 
         - parameter lhs: The left hand side operand.
-
-        - returns: The concatenated value of the two operands.
-
-    */
-
-    public class func concat<T: Concatenate>(lhs: T) -> (rhs: T) -> T {
-        return { rhs in
-            return lhs + rhs
-        }
-    }
-
-    /**
-
-        Concatenates two values.
-
-        - parameter lhs: The left hand side operand.
         - parameter rhs: The right hand side operand.
 
         - returns: The concatenated value of the two operands.
@@ -34,7 +18,23 @@ extension R {
     */
 
     public class func concat<T: Concatenate>(lhs: T, rhs: T) -> T {
-        return concat(lhs)(rhs: rhs)
+        return lhs + rhs
+    }
+
+    /**
+
+        Concatenates two values.
+
+        - parameter lhs: The left hand side operand.
+
+        - returns: The concatenated value of the two operands.
+
+    */
+
+    public class func concat<T: Concatenate>(lhs: T) -> (rhs: T) -> T {
+        return { rhs in
+            return concat(lhs, rhs: rhs)
+        }
     }
 
 }

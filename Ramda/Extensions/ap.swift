@@ -8,6 +8,25 @@ extension R {
 
     /**
 
+       Applies a list of functions to a list of values.
+
+        - parameter functions: An array of functions to apply to each value.
+        - parameter array: An array of values.
+
+        - returns: An array of results of applying each of the functions to all of values in turn.
+
+    */
+
+    public class func ap<A, B>(functions: [A -> B], array: [A]) -> [B] {
+        return functions.flatMap { (function: A -> B) in
+            array.map { (element: A) in
+                function(element)
+            }
+        }
+    }
+
+    /**
+
         Applies a list of functions to a list of values.
 
         - parameter functions: The functions to apply to each value.
@@ -18,11 +37,7 @@ extension R {
 
     public class func ap<A, B>(functions: (A -> B)...) -> (array: [A]) -> [B] {
         return { (array: [A]) in
-            functions.flatMap { (function: A -> B) in
-                array.map { (element: A) in
-                    function(element)
-                }
-            }
+            return ap(functions, array: array)
         }
     }
 
@@ -38,27 +53,8 @@ extension R {
 
     public class func ap<A, B>(functions: [A -> B]) -> (array: [A]) -> [B] {
         return { (array: [A]) in
-            functions.flatMap { (function: A -> B) in
-                array.map { (element: A) in
-                    function(element)
-                }
-            }
+            return ap(functions, array: array)
         }
-    }
-
-    /**
-
-       Applies a list of functions to a list of values.
-
-        - parameter functions: An array of functions to apply to each value.
-        - parameter array: An array of values.
-
-        - returns: An array of results of applying each of the functions to all of values in turn.
-
-    */
-
-    public class func ap<A, B>(functions: [A -> B], array: [A]) -> [B] {
-        return ap(functions)(array: array)
     }
 
 }
