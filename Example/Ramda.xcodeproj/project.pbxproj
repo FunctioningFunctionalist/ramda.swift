@@ -23,6 +23,7 @@
 		34C07D0C2A570623F83E76BC /* FoxGeneratorParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07128985B79B979FB8931 /* FoxGeneratorParams.swift */; };
 		34C07D55EB99B3E4129F5C30 /* CurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0725431AB2E4DA5D091DA /* CurryTests.swift */; };
 		34C07E1A4F7459BD3B1D399A /* FoxTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07C40531CF0BDCDF372FC /* FoxTester.swift */; };
+		34C07EE689E2ACFF6EC2B7B2 /* ClampTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07E3FA7BFC67AE14D4D8C /* ClampTests.swift */; };
 		36A481EE709388A3F1DE4B9C /* Pods_Ramda_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F96CE4DCDD485B92E79353 /* Pods_Ramda_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -62,6 +63,7 @@
 		34C07BED8A7252F5AFC0691C /* AddTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTests.swift; sourceTree = "<group>"; };
 		34C07C40531CF0BDCDF372FC /* FoxTester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoxTester.swift; sourceTree = "<group>"; };
 		34C07E10C38112B16BDFBDF2 /* AlwaysTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlwaysTests.swift; sourceTree = "<group>"; };
+		34C07E3FA7BFC67AE14D4D8C /* ClampTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClampTests.swift; sourceTree = "<group>"; };
 		34C07E4CB36C2BC180765C47 /* ComposeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeTests.swift; sourceTree = "<group>"; };
 		34C07F8578907F95C0E9E0B6 /* ConcatTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcatTests.swift; sourceTree = "<group>"; };
 		419FFE55846CA50DFA74371A /* Ramda.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Ramda.podspec; path = ../Ramda.podspec; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				34C076D1113D8A244D5CEFAF /* AllTests.swift */,
 				34C0725431AB2E4DA5D091DA /* CurryTests.swift */,
 				34C0792D4D71888CAA080CCB /* ApplyTests.swift */,
+				34C07E3FA7BFC67AE14D4D8C /* ClampTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -635,6 +638,7 @@
 				34C07170584603BA3B8A034B /* AllTests.swift in Sources */,
 				34C07D55EB99B3E4129F5C30 /* CurryTests.swift in Sources */,
 				34C078BAC208D0D5708D8B31 /* ApplyTests.swift in Sources */,
+				34C07EE689E2ACFF6EC2B7B2 /* ClampTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
