@@ -1,10 +1,10 @@
 # Ramda
 
 [![Build Status](https://travis-ci.org/FunctioningFunctionalist/ramda.swift.svg?branch=master)](https://travis-ci.org/FunctioningFunctionalist/ramda.swift)
+[![codecov](https://codecov.io/gh/FunctioningFunctionalist/ramda.swift/branch/master/graph/badge.svg)](https://codecov.io/gh/FunctioningFunctionalist/ramda.swift)
 [![Version](https://img.shields.io/cocoapods/v/Ramda.svg?style=flat)](http://cocoapods.org/pods/Ramda)
 [![License](https://img.shields.io/cocoapods/l/Ramda.svg?style=flat)](http://cocoapods.org/pods/Ramda)
 [![Platform](https://img.shields.io/cocoapods/p/Ramda.svg?style=flat)](http://cocoapods.org/pods/Ramda)
-[![Coverage Status](https://coveralls.io/repos/github/FunctioningFunctionalist/ramda.swift/badge.svg?branch=master)](https://coveralls.io/github/FunctioningFunctionalist/ramda.swift?branch=master)
 
 ## Example
 
