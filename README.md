@@ -1,6 +1,6 @@
 # Ramda
 
-[![CI Status](http://img.shields.io/travis/JustinGuedes/Ramda.svg?style=flat)](https://travis-ci.org/JustinGuedes/Ramda)
+[![Build Status](https://travis-ci.org/FunctioningFunctionalist/ramda.swift.svg?branch=master)](https://travis-ci.org/FunctioningFunctionalist/ramda.swift)
 [![Version](https://img.shields.io/cocoapods/v/Ramda.svg?style=flat)](http://cocoapods.org/pods/Ramda)
 [![License](https://img.shields.io/cocoapods/l/Ramda.svg?style=flat)](http://cocoapods.org/pods/Ramda)
 [![Platform](https://img.shields.io/cocoapods/p/Ramda.svg?style=flat)](http://cocoapods.org/pods/Ramda)
