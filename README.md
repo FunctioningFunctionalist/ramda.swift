@@ -5,6 +5,7 @@
 [![Version](https://img.shields.io/cocoapods/v/Ramda.svg?style=flat)](http://cocoapods.org/pods/Ramda)
 [![License](https://img.shields.io/cocoapods/l/Ramda.svg?style=flat)](http://cocoapods.org/pods/Ramda)
 [![Platform](https://img.shields.io/cocoapods/p/Ramda.svg?style=flat)](http://cocoapods.org/pods/Ramda)
+[![Code Climate](https://codeclimate.com/github/FunctioningFunctionalist/ramda.swift/badges/gpa.svg)](https://codeclimate.com/github/FunctioningFunctionalist/ramda.swift)
 
 ## Example
 
