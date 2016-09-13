@@ -16,3 +16,8 @@ script:
 
 after_success:
   - bash <(curl -s https://codecov.io/bash) -J 'Ramda'
+
+notifications:
+  email:
+    - tyronemichael@gmail.com
+    - justin.guedes@gmail.com
