@@ -19,7 +19,7 @@ class AnyTests: XCTestCase {
     func testShouldReturnTrueIfAnyValueInListMatchesPredicate() {
         let values = [1, 3, 5, 6, 7]
 
-        let result = R.any(self.isEven, in: values)
+        let result = R.any(self.isEven)(in: values)
 
         XCTAssertTrue(result)
     }
@@ -27,7 +27,7 @@ class AnyTests: XCTestCase {
     func testShouldReturnFalseIsNoValueInListMatchesPredicate() {
         let values = [1, 3, 5, 7, 9]
 
-        let result = R.any(self.isEven, in: values)
+        let result = R.any(self.isEven)(in: values)
 
         XCTAssertFalse(result)
     }

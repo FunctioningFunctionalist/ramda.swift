@@ -34,7 +34,7 @@ extension R {
 
     */
 
-    public class func bind<A, B>(function: (A) -> B) -> (first: A) -> () -> B {
+    public class func bind<A, B>(function: (A) -> B) -> (with: A) -> () -> B {
         return curry(bind)(function)
     }
 

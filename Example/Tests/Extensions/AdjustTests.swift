@@ -16,7 +16,7 @@ class AdjustTests: XCTestCase {
         let index = 1
         let array = [4, 5, 6]
 
-        let result = R.adjust(incrementByOne, at: index, in: array)
+        let result = R.adjust(incrementByOne)(at: index)(in: array)
 
         XCTAssertEqual(incrementByOne(array[index]), result[index])
     }

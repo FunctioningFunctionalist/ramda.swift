@@ -19,7 +19,7 @@ class ApTests: XCTestCase {
             let functions: [Int -> Int] = [R.add(10), R.add(25)]
             let expectedResult = self.createResultFromFunctions(functions, with: numbers)
 
-            let actualResult = R.ap(functions, to: numbers)
+            let actualResult = R.ap(functions)(to: numbers)
 
             return expectedResult == actualResult
         }

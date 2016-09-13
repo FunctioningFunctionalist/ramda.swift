@@ -24,20 +24,20 @@ class ChainTests: XCTestCase {
         return Int(string)
     }
 
-    func testShouldChainFunctionForArrayOfValues() {
+    func testShouldChainFunctionForArrayOfValues() throws {
         let expectedResult = [2, 4, 5, 3]
         let input = ["2", "4", "5", "3"]
 
-        let result = R.chain(convert, for: input)
+        let result = try R.chain(convert)(for: input)
 
         XCTAssertEqual(expectedResult, result)
     }
 
-    func testShouldChainOptionalFunctionForArrayOfValues() {
+    func testShouldChainOptionalFunctionForArrayOfValues() throws {
         let expectedResult = [2, 5]
         let input = ["2", "a", "5", "k"]
 
-        let result = R.chain(optionalConvert, for: input)
+        let result = try R.chain(optionalConvert)(for: input)
 
         XCTAssertEqual(expectedResult, result)
     }

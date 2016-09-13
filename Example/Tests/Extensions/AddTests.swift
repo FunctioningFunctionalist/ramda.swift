@@ -17,7 +17,7 @@ class AddTests: XCTestCase {
         let integerGenerator = FoxGeneratorParam2(FOXInteger(), FOXInteger()) {
             (lhs: Int, rhs: Int) in
 
-            let result = R.add(lhs, to: rhs)
+            let result = R.add(lhs)(to: rhs)
             return result == (lhs + rhs)
 
         }
@@ -51,7 +51,7 @@ class AddTests: XCTestCase {
         let floatGenerator = FoxGeneratorParam2(FOXFloat(), FOXFloat()) {
             (lhs: Float, rhs: Float) in
 
-            let result = R.add(lhs, to: rhs)
+            let result = R.add(lhs)(to: rhs)
             return result == (lhs + rhs)
 
         }
@@ -85,7 +85,7 @@ class AddTests: XCTestCase {
         let doubleGenerator = FoxGeneratorParam2(FOXDouble(), FOXDouble()) {
             (lhs: Double, rhs: Double) in
 
-            let result = R.add(lhs, to: rhs)
+            let result = R.add(lhs)(to: rhs)
             return result == (lhs + rhs)
         }
 

@@ -15,7 +15,7 @@ class ClampTests: XCTestCase {
     func testShouldReturnMaxIntegerWhenClampingIntegerThatIsGreaterThanMaxInteger() throws {
         let expectedResult = 10
 
-        let result = try R.clamp(0, and: 10, with: 20)
+        let result = try R.clamp(0)(and: 10)(with: 20)
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -23,7 +23,7 @@ class ClampTests: XCTestCase {
     func testShouldReturnMinIntegerWhenClampingIntegerThatIsLessThanMinInteger() throws {
         let expectedResult = 0
 
-        let result = try R.clamp(0, and: 10, with: -5)
+        let result = try R.clamp(0)(and: 10)(with: -5)
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -31,19 +31,19 @@ class ClampTests: XCTestCase {
     func testShouldReturnIntegerWhenClampingIntegerThatIsBetweenTheMinAndMax() throws {
         let expectedResult = 6
 
-        let result = try R.clamp(0, and: 10, with: 6)
+        let result = try R.clamp(0)(and: 10)(with: 6)
 
         XCTAssertEqual(expectedResult, result)
     }
 
     func testShouldThrowFatalExceptionWhenMinIsGreaterThanMax() throws {
-        XCTAssertThrowsError(try R.clamp(10, and: 0, with: 5))
+        XCTAssertThrowsError(try R.clamp(10)(and: 0)(with: 5))
     }
 
     func testShouldReturnStringClosestToTheMinAndMaxString() throws {
         let expectedResult = "Te"
 
-        let result = try R.clamp("String", and: "Test", with: "Te")
+        let result = try R.clamp("String")(and: "Test")(with: "Te")
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -51,7 +51,7 @@ class ClampTests: XCTestCase {
     func testShouldReturnAnotherStringClosestToTheMinAndMaxString() throws {
         let expectedResult = "String"
 
-        let result = try R.clamp("String", and: "Test", with: "Str")
+        let result = try R.clamp("String")(and: "Test")(with: "Str")
 
         XCTAssertEqual(expectedResult, result)
     }
