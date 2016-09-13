@@ -18,7 +18,7 @@ extension R {
 
     */
 
-    public class func always<T>(value: T) -> () -> T {
+    public class func always<Element>(value: Element) -> () -> Element {
         return { value }
     }
 

@@ -26,10 +26,14 @@ extension R {
 
      */
 
-    public class func adjust<A>(function: (A) -> A, at index: Int, in array: [A]) -> [A] {
-        var result: [A] = array
-        if index < array.count && index > -1 {
-            result[index] = function(result[index])
+    public class func adjust<Element, Collection, Index
+                            where Collection: RangeReplaceableCollectionType,
+                            Element == Collection.Generator.Element,
+                            Index == Collection.Index>(function: Element -> Element, at index: Index, in collection: Collection) -> Collection {
+        var result = collection
+        if collection.indices.contains(index) {
+            let newValue = function(result[index])
+            result.insert(newValue, atIndex: index)
         }
         return result
     }
@@ -47,7 +51,7 @@ extension R {
 
      */
 
-    public class func adjust<A>(function: (A) -> A) -> (at: Int) -> (in: [A]) -> [A] {
+    public class func adjust<Element>(function: Element -> Element) -> (at: Int) -> (in: [Element]) -> [Element] {
         return curry(adjust)(function)
     }
 

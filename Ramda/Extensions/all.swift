@@ -20,8 +20,8 @@ extension R {
 
      */
 
-    public class func all<T>(function: (T) -> Bool, in array: [T]) -> Bool {
-        for element in array {
+    public class func all<Element, Collection where Collection: CollectionType, Element == Collection.Generator.Element>(function: Element -> Bool, in collection: Collection) -> Bool {
+        for element in collection {
             if !function(element) {
                 return false
             }
@@ -43,7 +43,7 @@ extension R {
 
      */
 
-    public class func all<T>(function: (T) -> Bool) -> (in: [T]) -> Bool {
+    public class func all<Element>(function: Element -> Bool) -> (in: [Element]) -> Bool {
         return curry(all)(function)
     }
 

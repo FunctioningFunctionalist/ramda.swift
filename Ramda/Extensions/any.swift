@@ -17,8 +17,8 @@ extension R {
 
      */
 
-    public class func any<T>(function: T -> Bool, in array: [T]) -> Bool {
-        for value in array {
+    public class func any<Element, Collection where Collection: CollectionType, Element == Collection.Generator.Element>(function: Element -> Bool, in collection: Collection) -> Bool {
+        for value in collection {
             if function(value) {
                 return true
             }
@@ -36,7 +36,7 @@ extension R {
 
      */
 
-    public class func any<T>(function: T -> Bool) -> (in: [T]) -> Bool {
+    public class func any<Element>(function: Element -> Bool) -> (in: [Element]) -> Bool {
         return curry(any)(function)
     }
 

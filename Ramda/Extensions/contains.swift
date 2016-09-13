@@ -17,8 +17,8 @@ extension R {
 
     */
 
-    public class func contains<T: Comparable>(element: T, in array: [T]) -> Bool {
-        return any({ $0 == element }, in: array)
+    public class func contains<T: Comparable, U: CollectionType where T == U.Generator.Element>(element: T, in collection: U) -> Bool {
+        return any({ $0 == element }, in: collection)
     }
 
     /**
