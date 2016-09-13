@@ -8,6 +8,9 @@ install:
 
 script:
 - swiftlint
+- cd Example 
+- pod install
+- cd ..
 - xcodebuild -workspace Example/Ramda.xcworkspace -scheme Ramda_Tests -sdk iphonesimulator  ONLY_ACTIVE_ARCH=YES clean build test
 
 after_success:
