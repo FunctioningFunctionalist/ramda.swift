@@ -12,7 +12,7 @@ script:
 - cd Example 
 - pod install
 - cd ..
-- xcodebuild -workspace Example/Ramda.xcworkspace -scheme Ramda_Tests -sdk iphonesimulator  ONLY_ACTIVE_ARCH=YES clean build test | xcpretty
+- xcodebuild -workspace Example/Ramda.xcworkspace -scheme Ramda_Tests -sdk iphonesimulator  ONLY_ACTIVE_ARCH=YES clean test | xcpretty
 
 after_success:
   - bash <(curl -s https://codecov.io/bash) -J 'Ramda'
