@@ -27,7 +27,8 @@ extension R {
 
         - parameter defaultValue: Default value to return if value is not null.
 
-        - returns: Returns 'value' is not null, else default value.
+        - returns: A curried function that accepts the value and returns 'value'
+        is not null, else default value.
 
     */
 

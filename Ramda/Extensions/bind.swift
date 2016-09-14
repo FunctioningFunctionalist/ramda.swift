@@ -15,7 +15,7 @@ extension R {
         - parameter function: The function to bind.
         - parameter first: First parameter for the function.
 
-        - returns: The function that executes the bound function with the parameters.
+        - returns: The function that executes the bound function with the parameter.
 
     */
 
@@ -30,7 +30,8 @@ extension R {
 
         - parameter function: The function to bind.
 
-        - returns: The function that executes the bound function with the parameters.
+        - returns: A curried function that accepts the first parameter and returns the function
+        that executes the bound function with the parameter.
 
     */
 
@@ -62,7 +63,8 @@ extension R {
 
         - parameter function: The function to bind.
 
-        - returns: The function that executes the bound function with the parameters.
+        - returns: A curried function that accepts the first and second parameter and returns
+        the function that executes the bound function with the parameters.
 
     */
 
@@ -95,7 +97,8 @@ extension R {
 
         - parameter function: The function to bind.
 
-        - returns: The function that executes the bound function with the parameters.
+        - returns: A curried function that accepts the first, second and third parameters and returns
+        the function that executes the bound function with the parameters.
 
     */
 
@@ -129,7 +132,8 @@ extension R {
 
         - parameter function: The function to bind.
 
-        - returns: The function that executes the bound function with the parameters.
+        - returns: A curried function that accepts the first, second, third and fourth parameters and returns
+        the function that executes the bound function with the parameters.
 
     */
 
@@ -162,7 +166,8 @@ extension R {
 
         - parameter function: The function to bind.
 
-        - returns: The function that executes the bound function with the parameters.
+        - returns: A curried function that accepts the vararg parameter and returns
+        the function that executes the bound function with the parameters.
 
     */
 

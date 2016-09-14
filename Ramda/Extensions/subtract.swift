@@ -27,7 +27,8 @@ extension R {
 
         - parameter lhs: The left hand side operand.
 
-        - returns: Returns the difference between the 'rhs' and the 'lhs'.
+        - returns: A curried function that accepts the last operand and returns
+        the difference between the 'rhs' and the 'lhs'.
 
     */
 

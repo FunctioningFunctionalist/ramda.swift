@@ -31,7 +31,7 @@ extension R {
 
         - parameter lhs: The left hand side operand.
 
-        - returns: A partial function that accepts another value to produce the result.
+        - returns: A curried function that accepts another value to produce the result.
 
     */
 

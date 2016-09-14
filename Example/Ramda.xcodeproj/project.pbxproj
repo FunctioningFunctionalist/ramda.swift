@@ -24,6 +24,7 @@
 		34C07A97577D168565C294A3 /* ComplementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C073FF1B031932DD2F9D86 /* ComplementTests.swift */; };
 		34C07B07BDD70FFDAEFD7CB8 /* AnyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07350020DBB7EFAFA674F /* AnyTests.swift */; };
 		34C07C26A54EFFEDD500346C /* ComposeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07E4CB36C2BC180765C47 /* ComposeTests.swift */; };
+		34C07C350253DD4AF5B2327F /* DifferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C077D91B33FADE4F179FE0 /* DifferenceTests.swift */; };
 		34C07CDF4D014311A557B1F4 /* AndTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0783285334AFE41A2CA51 /* AndTests.swift */; };
 		34C07D0C2A570623F83E76BC /* FoxGeneratorParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07128985B79B979FB8931 /* FoxGeneratorParams.swift */; };
 		34C07D4BEB79ED0EACA1D451 /* SubtractTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0750029956B67A784FC1E /* SubtractTests.swift */; };
@@ -65,6 +66,7 @@
 		34C075A6799E8CA389B30A9D /* DecTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecTests.swift; sourceTree = "<group>"; };
 		34C076D1113D8A244D5CEFAF /* AllTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllTests.swift; sourceTree = "<group>"; };
 		34C0773357DD9F37BB207B14 /* UpdateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTests.swift; sourceTree = "<group>"; };
+		34C077D91B33FADE4F179FE0 /* DifferenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DifferenceTests.swift; sourceTree = "<group>"; };
 		34C0780D1838BA43D44FE2EC /* ChainTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChainTests.swift; sourceTree = "<group>"; };
 		34C078159FCD9D4251EBDC94 /* BothTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BothTests.swift; sourceTree = "<group>"; };
 		34C0782BD35F0332384F2642 /* ApTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApTests.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				34C07DF8BCAC8CC328F9B1D8 /* DefaultToTests.swift */,
 				34C0750029956B67A784FC1E /* SubtractTests.swift */,
 				34C0773357DD9F37BB207B14 /* UpdateTests.swift */,
+				34C077D91B33FADE4F179FE0 /* DifferenceTests.swift */,
 				6C487C732354FDF457157B7D /* AllPassTests.swift */,
 			);
 			path = Extensions;
@@ -257,6 +260,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Ramda_Example" */;
 			buildPhases = (
+				F2E86A55D062B5E3D8ED380E /* 📦 Check Pods Manifest.lock */,
 				DD4A51FF193AA336E0351563 /* [CP] Check Pods Manifest.lock */,
 				B52D24DDCFBFC751AC22DDE3 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
@@ -283,6 +287,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Ramda_Tests" */;
 			buildPhases = (
+				60280A7F082D74B643517E44 /* 📦 Check Pods Manifest.lock */,
 				60B8A83F0289887946975361 /* [CP] Check Pods Manifest.lock */,
 				28CCAF4ED0DBEF53B1F78AC1 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
@@ -438,6 +443,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ramda_Tests/Pods-Ramda_Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60280A7F082D74B643517E44 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		60B8A83F0289887946975361 /* [CP] Check Pods Manifest.lock */ = {
@@ -629,6 +649,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		F2E86A55D062B5E3D8ED380E /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -670,6 +705,7 @@
 				34C075CDAB6329178FBC167A /* DefaultToTests.swift in Sources */,
 				34C07D4BEB79ED0EACA1D451 /* SubtractTests.swift in Sources */,
 				34C07EA34C80187D8D02F974 /* UpdateTests.swift in Sources */,
+				34C07C350253DD4AF5B2327F /* DifferenceTests.swift in Sources */,
 				6C487A0A13683BE0EC3944E1 /* AllPassTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

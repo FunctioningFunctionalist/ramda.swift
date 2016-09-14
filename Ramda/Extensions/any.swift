@@ -4,6 +4,8 @@
 
 import Foundation
 
+// swiftlint:disable line_length
+
 extension R {
 
     /**
@@ -11,14 +13,14 @@ extension R {
         Returns true if any elements of the list match the predicate, false if all don't.
 
         - parameter function: The predicate function.
-        - parameter array: The list of values.
+        - parameter collection: The list of values.
 
-        - returns: true if the predicate is true for any value, false is all don't.
+        - returns: True if the predicate is true for any value, false is all don't.
 
      */
 
-    public class func any<T>(function: T -> Bool, in array: [T]) -> Bool {
-        for value in array {
+    public class func any<A, B where B: CollectionType, A == B.Generator.Element>(function: A -> Bool, in collection: B) -> Bool {
+        for value in collection {
             if function(value) {
                 return true
             }
@@ -32,7 +34,8 @@ extension R {
 
         - parameter function: The predicate function.
 
-        - returns: true if the predicate is true for any value, false is all don't.
+        - returns: A curried function that accepts an array and returns true if the predicate i
+        s true for any value, false is all don't.
 
      */
 
@@ -41,3 +44,5 @@ extension R {
     }
 
 }
+
+// swiftlint:enable line_length

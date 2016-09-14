@@ -25,7 +25,7 @@ extension R {
 
         - parameter lhs: Bool function for the first condition.
 
-        - returns: A partial function that accepts the second condition to produce
+        - returns: A curried function that accepts the second condition to produce
                     the result.
 
     */
@@ -53,7 +53,7 @@ extension R {
 
         - parameter lhs: Bool for the first condition.
 
-        - returns: A partial function that accepts the second condition to produce
+        - returns: A curried function that accepts the second condition to produce
                     the result.
 
     */

@@ -35,7 +35,7 @@ class AnyTests: XCTestCase {
     func testShouldReturnTrueIfAnyValueInListMatchesPredicateUsingPartialFunctions() {
         let values = [1, 3, 5, 6, 7]
 
-        let any = R.any(self.isEven)
+        let any: (in: [Int]) -> Bool = R.any(self.isEven)
         let result = any(in: values)
 
         XCTAssertTrue(result)
