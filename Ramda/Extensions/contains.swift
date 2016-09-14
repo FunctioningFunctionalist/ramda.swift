@@ -4,6 +4,8 @@
 
 import Foundation
 
+// swiftlint:disable line_length
+
 extension R {
 
     /**
@@ -11,13 +13,13 @@ extension R {
         Returns true is the element exists in the list.
 
         - parameter element: The element to find in the list.
-        - parameter array: The list to search for the element.
+        - parameter collection: The list to search for the element.
 
         - returns: Returns true if the element exists in the list, false otherwise.
 
     */
 
-    public class func contains<T: Comparable, U: CollectionType where T == U.Generator.Element>(element: T, in collection: U) -> Bool {
+    public class func contains<A: Comparable, B: CollectionType where A == B.Generator.Element>(element: A, in collection: B) -> Bool {
         return any({ $0 == element }, in: collection)
     }
 
@@ -27,7 +29,8 @@ extension R {
 
         - parameter element: The element to find in the list.
 
-        - returns: Returns true if the element exists in the list, false otherwise.
+        - returns: A curried function that accepts an array and returns true if
+        the element exists in the list, false otherwise.
 
     */
 
@@ -36,3 +39,5 @@ extension R {
     }
 
 }
+
+// swiftlint:enable line_length

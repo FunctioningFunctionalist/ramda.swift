@@ -31,7 +31,8 @@ extension R {
 
         - parameter lhs: The left hand side boolean check.
 
-        - returns: A function that accepts an argument and returns a boolean.
+        - returns: A curried function that accepts the second function and returns
+        a function that accepts an argument and returns a boolean.
 
     */
 

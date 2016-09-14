@@ -4,6 +4,8 @@
 
 import Foundation
 
+// swiftlint:disable line_length
+
 extension R {
 
     /**
@@ -11,16 +13,16 @@ extension R {
        Applies the function with the argument list and returns the result.
 
         - parameter function: The function to apply with the argument list.
-        - parameter array: An array of values to pass into the function.
+        - parameter collection: A collection of values to pass into the function.
 
         - returns: The result of the function with the arguments passed in.
 
     */
 
-    public class func apply<A, B>(function: (A...) -> B, with array: [A]) -> B {
-        typealias Function = [A] -> B
+    public class func apply<A, B, C: CollectionType where C.Generator.Element == A>(function: (A...) -> B, with collection: C) -> B {
+        typealias Function = C -> B
         let newFunction = unsafeBitCast(function, Function.self)
-        return bind(newFunction, with: array)()
+        return newFunction(collection)
     }
 
     /**
@@ -29,7 +31,8 @@ extension R {
 
         - parameter function: The function to apply with the argument list.
 
-        - returns: The result of the function with the arguments passed in.
+        - returns: A curried function that accepts an array and returns the result
+        of the function with the arguments passed in.
 
     */
 
@@ -38,3 +41,5 @@ extension R {
     }
 
 }
+
+// swiftlint:enable line_length

@@ -4,6 +4,8 @@
 
 import Foundation
 
+// swiftlint:disable line_length
+
 extension R {
 
     /**
@@ -14,13 +16,13 @@ extension R {
         Acts as a transducer if a transformer is given in list position
 
         - parameter function: The predicate function.
-        - parameter array: The array to consider.
+        - parameter collection: The collection to consider.
 
-        - returns: true if the predicate is satisfied by every element, false otherwise.
+        - returns: True if the predicate is satisfied by every element, false otherwise.
 
      */
 
-    public class func all<Element, Collection where Collection: CollectionType, Element == Collection.Generator.Element>(function: Element -> Bool, in collection: Collection) -> Bool {
+    public class func all<A, B where B: CollectionType, A == B.Generator.Element>(function: A -> Bool, in collection: B) -> Bool {
         for element in collection {
             if !function(element) {
                 return false
@@ -38,13 +40,15 @@ extension R {
 
         - parameter function: The predicate function.
 
-        - returns: A partial function that accepts the second condition to produce
+        - returns: A curried function that accepts the second condition to produce
                     the result
 
      */
 
-    public class func all<Element>(function: Element -> Bool) -> (in: [Element]) -> Bool {
+    public class func all<T>(function: T -> Bool) -> (in: [T]) -> Bool {
         return curry(all)(function)
     }
 
 }
+
+// swiftlint:enable line_length

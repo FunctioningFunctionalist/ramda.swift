@@ -11,9 +11,6 @@ import Ramda
 
 class DifferenceTests: XCTestCase {
 
-//R.difference([1,2,3,4], [7,6,5,4,3]); //=> [1,2]
-//R.difference([7,6,5,4,3], [1,2,3,4]); //=> [7,6,5]
-
     func testShouldReturnDifferenceBetweenTwoArrays() {
         let expectedResult = [1, 2]
 
@@ -28,14 +25,6 @@ class DifferenceTests: XCTestCase {
         let result = R.difference([7, 6, 5, 4, 3])(from: [1, 2, 3, 4])
 
         XCTAssertEqual(expectedResult, result)
-    }
-
-    func testShouldReturnDifferenceBetweenTwoStrings() {
-//        let expectedResult = "ple"
-
-//        let result = R.difference("Example")(from: "Exam")
-
-//        XCTAssertEqual(expectedResult, result)
     }
 
 }
