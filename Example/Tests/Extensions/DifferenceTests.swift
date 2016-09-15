@@ -39,4 +39,12 @@ class DifferenceTests: XCTestCase {
         XCTAssertTrue(match2)
     }
 
+    func testShouldReturnDifferenceBetweenTwoStrings() {
+        let expectedResult: [Character] = ["i", "n", "g"]
+
+        let result = R.difference("String".characters, from: "Str".characters)
+
+        XCTAssertEqual(expectedResult, result)
+    }
+
 }
