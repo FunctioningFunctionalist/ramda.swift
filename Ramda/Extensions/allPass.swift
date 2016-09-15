@@ -23,7 +23,7 @@ extension R {
 
     public class func allPass<A>(array: [(A) -> Bool], with first: A) -> Bool {
         let predicates: [() -> Bool] = array.map { R.bind($0, with: first) }
-        return Utilities.executePredicates(predicates)
+        return executePredicates(predicates)
     }
 
     /**
@@ -40,9 +40,9 @@ extension R {
 
     */
 
-    public class func allPass<A, B>(array: [(A, B) -> Bool], with first: A, _ second: B) -> Bool {
+    public class func allPass<A, B>(array: [(A, B) -> Bool], with first: A, and second: B) -> Bool {
         let predicates: [() -> Bool] = array.map { R.bind($0, with: first, and: second) }
-        return Utilities.executePredicates(predicates)
+        return executePredicates(predicates)
     }
 
     /**
@@ -60,9 +60,9 @@ extension R {
 
     */
 
-    public class func allPass<A, B, C>(array: [(A, B, C) -> Bool], with first: A, _ second: B, _ third: C) -> Bool {
+    public class func allPass<A, B, C>(array: [(A, B, C) -> Bool], with first: A, _ second: B, and third: C) -> Bool {
         let predicates: [() -> Bool] = array.map { R.bind($0, with: first, second, and: third) }
-        return Utilities.executePredicates(predicates)
+        return executePredicates(predicates)
     }
 
     /**
@@ -81,9 +81,9 @@ extension R {
 
     */
 
-    public class func allPass<A, B, C, D>(array: [(A, B, C, D) -> Bool], with first: A, _ second: B, _ third: C, _ fourth: D) -> Bool {
+    public class func allPass<A, B, C, D>(array: [(A, B, C, D) -> Bool], with first: A, _ second: B, _ third: C, and fourth: D) -> Bool {
         let predicates: [() -> Bool] = array.map { R.bind($0, with: first, second, third, and: fourth) }
-        return Utilities.executePredicates(predicates)
+        return executePredicates(predicates)
     }
 
     /**
@@ -145,8 +145,7 @@ extension R {
 
         - parameter array: Array of predicates
 
-        - returns: The function returned is a curried function whose arity matches that of the
-            highest-arity predicate.
+        - returns: The function returned is a curried function whose arity matches that of the highest-arity predicate.
 
     */
 
@@ -157,3 +156,13 @@ extension R {
 }
 
 // swiftlint:enable line_length
+
+private func executePredicates(array: [() -> Bool]) -> Bool {
+    for predicate in array {
+        if !predicate() {
+            return false
+        }
+    }
+
+    return true
+}
