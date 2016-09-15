@@ -27,4 +27,16 @@ class DifferenceTests: XCTestCase {
         XCTAssertEqual(expectedResult, result)
     }
 
+    func testShouldReturnDifferenceBetweenTwoSets() {
+        let set1 = Set(arrayLiteral: 1, 2, 3, 4)
+        let set2 = Set(arrayLiteral: 7, 6, 5, 4, 3)
+
+        let result = R.difference(set1, from: set2)
+
+        let match1 = R.contains(1, in: result)
+        let match2 = R.contains(2, in: result)
+        XCTAssertTrue(match1)
+        XCTAssertTrue(match2)
+    }
+
 }

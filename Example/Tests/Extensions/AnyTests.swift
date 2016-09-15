@@ -41,4 +41,12 @@ class AnyTests: XCTestCase {
         XCTAssertTrue(result)
     }
 
+    func testShouldReturnFalseWhenOneValueInSetDoesNotMatchThePredicate() {
+        let values = Set(arrayLiteral: 1, 3, 5, 7, 9)
+
+        let result = R.any(self.isEven, in: values)
+
+        XCTAssertFalse(result)
+    }
+
 }

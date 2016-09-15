@@ -75,8 +75,19 @@ class BindTests: XCTestCase {
     }
 
     func testShouldBindVarargParameterToFunctionAndReturnCorrectResult() {
+        let integerGenerator = FoxGeneratorParam2(FOXInteger(), FOXInteger()) { (number1: Int, number2: Int) in
+            let bound = R.bind(self.addV)(with:number1, number2)
+            let result = bound()
+
+            return result == (number1 + number2)
+        }
+
+        FoxTester.assert(integerGenerator)
+    }
+
+    func testShouldBindVarargParametersOfAnyLengthAndReturnCorrectResult() {
         let integerGenerator = FoxGeneratorParam5(FOXInteger(), FOXInteger(), FOXInteger(), FOXInteger(), FOXInteger()) { (number1: Int, number2: Int, number3: Int, number4: Int, number5: Int) in
-            let bound = R.bind(self.addV)(with:number1, number2, number3, number4, number5)
+            let bound = R.bind(self.addV, with:number1, number2, number3, number4, number5)
             let result = bound()
 
             return result == (number1 + number2 + number3 + number4 + number5)
