@@ -61,5 +61,5 @@ public protocol Concatenate {
 
 }
 
-extension Array : Concatenate {}
-extension String : Concatenate {}
+extension Array: Concatenate {}
+extension String: Concatenate {}

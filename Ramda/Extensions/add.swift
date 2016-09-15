@@ -63,15 +63,15 @@ public protocol AdditionArithmeticType {
     func + (lhs: Self, rhs: Self) -> Self
 }
 
-extension Int : AdditionArithmeticType {}
-extension Int8 : AdditionArithmeticType {}
-extension Int16 : AdditionArithmeticType {}
-extension Int32 : AdditionArithmeticType {}
-extension Int64 : AdditionArithmeticType {}
-extension UInt : AdditionArithmeticType {}
-extension UInt8 : AdditionArithmeticType {}
-extension UInt16 : AdditionArithmeticType {}
-extension UInt32 : AdditionArithmeticType {}
-extension UInt64 : AdditionArithmeticType {}
-extension Float : AdditionArithmeticType {}
-extension Double : AdditionArithmeticType {}
+extension Int: AdditionArithmeticType {}
+extension Int8: AdditionArithmeticType {}
+extension Int16: AdditionArithmeticType {}
+extension Int32: AdditionArithmeticType {}
+extension Int64: AdditionArithmeticType {}
+extension UInt: AdditionArithmeticType {}
+extension UInt8: AdditionArithmeticType {}
+extension UInt16: AdditionArithmeticType {}
+extension UInt32: AdditionArithmeticType {}
+extension UInt64: AdditionArithmeticType {}
+extension Float: AdditionArithmeticType {}
+extension Double: AdditionArithmeticType {}
