@@ -17,7 +17,7 @@ class GteTests: XCTestCase {
         XCTAssertTrue(result)
     }
 
-    func testShouldReturnTFalseWhenFirstIntegerIsSmallerThanSecond() {
+    func testShouldReturnFalseWhenFirstIntegerIsSmallerThanSecond() {
         let result = R.gte(10)(than: 20)
 
         XCTAssertFalse(result)
