@@ -31,8 +31,13 @@ class AllTests: XCTestCase {
 
     func testShouldReturnTrueWhenCertainValueInDictionaryPassesThePredicateTest() {
         let lessThanSix: ((String, Int)) -> Bool = {
-            if $0.0 == "Index1" { return $0.1 < 6 } else { return true }
+            if $0.0 == "Index1" {
+                return $0.1 < 6
+            }
+
+            return true
         }
+
         let dictionary = ["Index0": 7, "Index1": 2, "Index2": 9]
 
         let result = R.all(lessThanSix, in: dictionary)
