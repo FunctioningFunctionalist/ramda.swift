@@ -21,4 +21,19 @@ extension R {
         return value is A
     }
 
+    /**
+
+        Sees if 'value' is the of the supplied 'type'.
+
+        - parameter type: The type to check against.
+
+        - returns: A curried function that accepts the value and returns
+        true is value is of the type, false otherwise.
+
+    */
+
+    public class func _is<A, B>(type: A.Type) -> (value: B) -> Bool {
+        return curry(_is)(type)
+    }
+
 }
