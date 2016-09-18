@@ -22,6 +22,14 @@ public protocol BasicArithmeticType {
 
     /**
 
+        Identity value for arithmetic type.
+
+    */
+
+    static var one: Self { get }
+
+    /**
+
         Adds "lhs" and "rhs", returning a result of same type.
 
         - parameter lhs: The left hand side operand.
@@ -99,6 +107,16 @@ extension Int: BasicArithmeticType {
 
     }
 
+    public static var one: Int {
+
+        get {
+
+            return 1
+
+        }
+
+    }
+
 }
 
 extension Int8: BasicArithmeticType {
@@ -108,6 +126,16 @@ extension Int8: BasicArithmeticType {
         get {
 
             return 0
+
+        }
+
+    }
+
+    public static var one: Int8 {
+
+        get {
+
+            return 1
 
         }
 
@@ -127,6 +155,16 @@ extension Int16: BasicArithmeticType {
 
     }
 
+    public static var one: Int16 {
+
+        get {
+
+            return 1
+
+        }
+
+    }
+
 }
 
 extension Int32: BasicArithmeticType {
@@ -136,6 +174,16 @@ extension Int32: BasicArithmeticType {
         get {
 
             return 0
+
+        }
+
+    }
+
+    public static var one: Int32 {
+
+        get {
+
+            return 1
 
         }
 
@@ -155,6 +203,16 @@ extension Int64: BasicArithmeticType {
 
     }
 
+    public static var one: Int64 {
+
+        get {
+
+            return 1
+
+        }
+
+    }
+
 }
 
 extension UInt: BasicArithmeticType {
@@ -164,6 +222,16 @@ extension UInt: BasicArithmeticType {
         get {
 
             return 0
+
+        }
+
+    }
+
+    public static var one: UInt {
+
+        get {
+
+            return 1
 
         }
 
@@ -183,6 +251,16 @@ extension UInt8: BasicArithmeticType {
 
     }
 
+    public static var one: UInt8 {
+
+        get {
+
+            return 1
+
+        }
+
+    }
+
 }
 
 extension UInt16: BasicArithmeticType {
@@ -192,6 +270,16 @@ extension UInt16: BasicArithmeticType {
         get {
 
             return 0
+
+        }
+
+    }
+
+    public static var one: UInt16 {
+
+        get {
+
+            return 1
 
         }
 
@@ -211,6 +299,16 @@ extension UInt32: BasicArithmeticType {
 
     }
 
+    public static var one: UInt32 {
+
+        get {
+
+            return 1
+
+        }
+
+    }
+
 }
 
 extension UInt64: BasicArithmeticType {
@@ -220,6 +318,16 @@ extension UInt64: BasicArithmeticType {
         get {
 
             return 0
+
+        }
+
+    }
+
+    public static var one: UInt64 {
+
+        get {
+
+            return 1
 
         }
 
@@ -239,6 +347,16 @@ extension Float: BasicArithmeticType {
 
     }
 
+    public static var one: Float {
+
+        get {
+
+            return 1
+
+        }
+
+    }
+
 }
 
 extension Double: BasicArithmeticType {
@@ -248,6 +366,16 @@ extension Double: BasicArithmeticType {
         get {
 
             return 0
+
+        }
+
+    }
+
+    public static var one: Double {
+
+        get {
+
+            return 1
 
         }
 

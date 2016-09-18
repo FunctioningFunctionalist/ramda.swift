@@ -13,6 +13,7 @@
 		34C071613F98E9CE97819527 /* OrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0798A4EB7D1385B3D4912 /* OrTests.swift */; };
 		34C07170584603BA3B8A034B /* AllTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C076D1113D8A244D5CEFAF /* AllTests.swift */; };
 		34C071B55D520A0B88B76EDD /* IdentityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C075E929095950440F2CAD /* IdentityTests.swift */; };
+		34C071CE197302D8A4DD42A3 /* ProductTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07D52CC675CA8B5370EAA /* ProductTests.swift */; };
 		34C0726B74C33D839E82F492 /* IsNilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07606A7D91FEBDEB34CD9 /* IsNilTests.swift */; };
 		34C07283B9ABDC84FB7F4F6E /* IsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07B977CFBB07B718CBC08 /* IsTests.swift */; };
 		34C07297EB4D6785B8C986AE /* IncTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07A2AEACAA70EE0243A88 /* IncTests.swift */; };
@@ -140,6 +141,7 @@
 		34C07D0AAF9F9B791691B6CC /* ContainsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainsTests.swift; sourceTree = "<group>"; };
 		34C07D1F21A79027C3D9775B /* ReduceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReduceTests.swift; sourceTree = "<group>"; };
 		34C07D3B8E25DB53BA068932 /* LteTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LteTests.swift; sourceTree = "<group>"; };
+		34C07D52CC675CA8B5370EAA /* ProductTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTests.swift; sourceTree = "<group>"; };
 		34C07DF8BCAC8CC328F9B1D8 /* DefaultToTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultToTests.swift; sourceTree = "<group>"; };
 		34C07E10C38112B16BDFBDF2 /* AlwaysTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlwaysTests.swift; sourceTree = "<group>"; };
 		34C07E3FA7BFC67AE14D4D8C /* ClampTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClampTests.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 				34C074DD4D816EFD04255A6D /* SortTests.swift */,
 				34C07D1F21A79027C3D9775B /* ReduceTests.swift */,
 				34C078C5792B4E6C9FB75D05 /* SumTests.swift */,
+				34C07D52CC675CA8B5370EAA /* ProductTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -843,6 +846,7 @@
 				34C07A1E8D8012FC3686D561 /* SortTests.swift in Sources */,
 				34C0779581A190EBB7A62410 /* ReduceTests.swift in Sources */,
 				34C07952655BB5F9FFEB977F /* SumTests.swift in Sources */,
+				34C071CE197302D8A4DD42A3 /* ProductTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
