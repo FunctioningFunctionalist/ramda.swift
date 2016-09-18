@@ -30,6 +30,7 @@
 		34C076A5A6E8DBC9A0361DF0 /* ToLowerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07378D14C8E8F0404B20A /* ToLowerTests.swift */; };
 		34C076BED0B747DC365D4788 /* ConcatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07F8578907F95C0E9E0B6 /* ConcatTests.swift */; };
 		34C076CF54CFC25D3DBFCDD6 /* GtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07316B085BB3E7CE3542E /* GtTests.swift */; };
+		34C0772B91AAC7E9CAA25ACD /* ToStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07F597EB4666CDE6869B6 /* ToStringTests.swift */; };
 		34C0772F08833B9057739F5E /* AddTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07BED8A7252F5AFC0691C /* AddTests.swift */; };
 		34C077520D1C23CD67B1BDAF /* ContainsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07D0AAF9F9B791691B6CC /* ContainsTests.swift */; };
 		34C077A0A8E99B91303BF5A2 /* NegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C076B7CD7C176B3659C5FE /* NegateTests.swift */; };
@@ -131,6 +132,7 @@
 		34C07E996CE7979187C54115 /* TTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTests.swift; sourceTree = "<group>"; };
 		34C07F23DD9328DEA906C413 /* IsEmptyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsEmptyTests.swift; sourceTree = "<group>"; };
 		34C07F47144D58F89F507F38 /* MultiplyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplyTests.swift; sourceTree = "<group>"; };
+		34C07F597EB4666CDE6869B6 /* ToStringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToStringTests.swift; sourceTree = "<group>"; };
 		34C07F8578907F95C0E9E0B6 /* ConcatTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcatTests.swift; sourceTree = "<group>"; };
 		34C07FCFE10A25F80A4EACD4 /* EitherTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EitherTests.swift; sourceTree = "<group>"; };
 		419FFE55846CA50DFA74371A /* Ramda.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Ramda.podspec; path = ../Ramda.podspec; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 				34C075E929095950440F2CAD /* IdentityTests.swift */,
 				34C075465F6522FA27B24D9B /* IfElseTests.swift */,
 				34C07378D14C8E8F0404B20A /* ToLowerTests.swift */,
+				34C07F597EB4666CDE6869B6 /* ToStringTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -807,6 +810,7 @@
 				34C071B55D520A0B88B76EDD /* IdentityTests.swift in Sources */,
 				34C075E0687B806824914710 /* IfElseTests.swift in Sources */,
 				34C076A5A6E8DBC9A0361DF0 /* ToLowerTests.swift in Sources */,
+				34C0772B91AAC7E9CAA25ACD /* ToStringTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
