@@ -72,6 +72,19 @@ public protocol BasicArithmeticType {
 
     func / (lhs: Self, rhs: Self) -> Self
 
+    /**
+
+        Divides "lhs" and "rhs", returning the remainder of the division.
+
+        - parameter lhs: The left hand side operand.
+        - parameter rhs: The right hand side operand.
+
+        - returns: The remainder of the division.
+
+    */
+
+    func % (lhs: Self, rhs: Self) -> Self
+
 }
 
 extension Int: BasicArithmeticType {
