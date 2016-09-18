@@ -13,14 +13,14 @@ extension R {
         Drops 'amount' of elements from the collection.
 
         - parameter amount: The nth element to drop.
-        - parameter collection: The collection to drop the elements.
+        - parameter sequence: The sequence to drop the elements.
 
-        - returns: The collection with all but the first 'amount' of elements.
+        - returns: The sequence with all but the first 'amount' of elements.
 
     */
 
-    public class func drop<T: RangeReplaceableCollectionType>(amount: Int, in collection: T) -> T.SubSequence {
-        return collection.dropFirst(amount)
+    public class func drop<T: SequenceType>(amount: Int, in sequence: T) -> T.SubSequence {
+        return sequence.dropFirst(amount)
     }
 
     /**

@@ -19,7 +19,7 @@ extension R {
 
     */
 
-    public class func sort<A, B: CollectionType where A == B.Generator.Element>(comparator: (A, A) -> Bool, for collection: B) -> [A] {
+    public class func sort<A, B: SequenceType where A == B.Generator.Element>(comparator: (A, A) -> Bool, for collection: B) -> [A] {
         return collection.sort(comparator)
     }
 
@@ -34,7 +34,7 @@ extension R {
 
     */
 
-    public class func sort<A, B: CollectionType where A == B.Generator.Element>(comparator: (A, A) -> Bool) -> (for: B) -> [A] {
+    public class func sort<A, B: SequenceType where A == B.Generator.Element>(comparator: (A, A) -> Bool) -> (for: B) -> [A] {
         return curry(sort)(comparator)
     }
 
@@ -49,7 +49,7 @@ extension R {
 
     */
 
-    public class func sort<A, B: CollectionType where A == B.Generator.Element>(comparator: (A, A) -> Int, for collection: B) -> [A] {
+    public class func sort<A, B: SequenceType where A == B.Generator.Element>(comparator: (A, A) -> Int, for collection: B) -> [A] {
         return sort { R.lt(comparator($0, $1), than: 0) } (for: collection)
     }
 
@@ -64,7 +64,7 @@ extension R {
 
     */
 
-    public class func sort<A, B: CollectionType where A == B.Generator.Element>(comparator: (A, A) -> Int) -> (for: B) -> [A] {
+    public class func sort<A, B: SequenceType where A == B.Generator.Element>(comparator: (A, A) -> Int) -> (for: B) -> [A] {
         return curry(sort)(comparator)
     }
 

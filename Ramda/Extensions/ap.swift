@@ -12,16 +12,16 @@ extension R {
 
        Applies a list of functions to a list of values.
 
-        - parameter functions: A collection of functions to apply to each value.
-        - parameter collection: A collection of values.
+        - parameter functions: A sequence of functions to apply to each value.
+        - parameter sequence: A sequence of values.
 
         - returns: An array of results of applying each of the functions to all of values in turn.
 
     */
 
-    public class func ap<A, B, C: CollectionType, D: CollectionType where C.Generator.Element == (A -> B), D.Generator.Element == A>(functions: C, to collection: D) -> [B] {
+    public class func ap<A, B, C: SequenceType, D: SequenceType where C.Generator.Element == (A -> B), D.Generator.Element == A>(functions: C, to sequence: D) -> [B] {
         return functions.flatMap { (function: A -> B) in
-            collection.map { (element: A) in
+            sequence.map { (element: A) in
                 function(element)
             }
         }

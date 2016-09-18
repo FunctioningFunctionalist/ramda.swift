@@ -13,7 +13,7 @@ extension R {
         Maps a list and concatenates the result. Chain is also known as flatMap.
 
         - parameter transform: Function that transforms the value.
-        - parameter collection: List of values to execute the transform.
+        - parameter sequence: List of values to execute the transform.
 
         - rethrows: Passed through from flapMap.
 
@@ -21,8 +21,8 @@ extension R {
 
     */
 
-    public class func chain<A, B, C: CollectionType where C.Generator.Element == A>(transform: A throws -> B, for collection: C) rethrows -> [B] {
-        return try collection.flatMap(transform)
+    public class func chain<A, B, C: SequenceType where C.Generator.Element == A>(transform: A throws -> B, for sequence: C) rethrows -> [B] {
+        return try sequence.flatMap(transform)
     }
 
     /**
@@ -46,7 +46,7 @@ extension R {
         Maps a list and concatenates the result. Chain is also known as flatMap.
 
         - parameter transform: Function that transforms the value.
-        - parameter collection: List of values to execute the transform.
+        - parameter sequence: List of values to execute the transform.
 
         - rethrows: Passed through from flapMap.
 
@@ -54,8 +54,8 @@ extension R {
 
     */
 
-    public class func chain<A, B, C: CollectionType where C.Generator.Element == A>(transform: A throws -> B?, for collection: C) rethrows -> [B] {
-        return try collection.flatMap(transform)
+    public class func chain<A, B, C: SequenceType where C.Generator.Element == A>(transform: A throws -> B?, for sequence: C) rethrows -> [B] {
+        return try sequence.flatMap(transform)
     }
 
     /**

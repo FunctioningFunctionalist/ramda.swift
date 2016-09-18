@@ -16,14 +16,14 @@ extension R {
         Acts as a transducer if a transformer is given in list position
 
         - parameter function: The predicate function.
-        - parameter collection: The collection to consider.
+        - parameter sequence: The sequence to consider.
 
         - returns: True if the predicate is satisfied by every element, false otherwise.
 
      */
 
-    public class func all<A, B where B: CollectionType, A == B.Generator.Element>(function: A -> Bool, in collection: B) -> Bool {
-        for element in collection {
+    public class func all<A, B where B: SequenceType, A == B.Generator.Element>(function: A -> Bool, in sequence: B) -> Bool {
+        for element in sequence {
             if !function(element) {
                 return false
             }

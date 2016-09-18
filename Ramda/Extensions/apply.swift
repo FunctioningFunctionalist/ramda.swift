@@ -13,16 +13,16 @@ extension R {
        Applies the function with the argument list and returns the result.
 
         - parameter function: The function to apply with the argument list.
-        - parameter collection: A collection of values to pass into the function.
+        - parameter sequence: A sequence of values to pass into the function.
 
         - returns: The result of the function with the arguments passed in.
 
     */
 
-    public class func apply<A, B, C: CollectionType where C.Generator.Element == A>(function: (A...) -> B, with collection: C) -> B {
+    public class func apply<A, B, C: SequenceType where C.Generator.Element == A>(function: (A...) -> B, with sequence: C) -> B {
         typealias Function = C -> B
         let newFunction = unsafeBitCast(function, Function.self)
-        return newFunction(collection)
+        return newFunction(sequence)
     }
 
     /**

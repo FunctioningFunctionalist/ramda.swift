@@ -13,15 +13,15 @@ extension R {
         Returns true is no element matches the predicate.
 
         - parameter function: The predicate function.
-        - parameter collection: The collection.
+        - parameter sequence: The sequence.
 
         - returns: True if no elements match the predicate, false if any do match.
 
     */
 
-    public class func none<A, B where B: CollectionType, A == B.Generator.Element>(function: A -> Bool, in collection: B) -> Bool {
+    public class func none<A, B where B: SequenceType, A == B.Generator.Element>(function: A -> Bool, in sequence: B) -> Bool {
         let opposite = complement(function)
-        return all(opposite, in: collection)
+        return all(opposite, in: sequence)
     }
 
     /**

@@ -13,16 +13,16 @@ extension R {
         Finds the set (i.e. no duplicates) of all elements in the first list not contained in
         the second list.
 
-        - parameter collection: The first list.
-        - parameter collection2: The second list.
+        - parameter sequence: The first list.
+        - parameter sequence2: The second list.
 
         - returns: An array of the difference between the two lists.
 
     */
 
-    public class func difference<A: CollectionType, B: CollectionType where A.Generator.Element: Comparable, A.Generator.Element == B.Generator.Element>(collection: A, from collection2: B) -> [A.Generator.Element] {
+    public class func difference<A: SequenceType, B: SequenceType where A.Generator.Element: Comparable, A.Generator.Element == B.Generator.Element>(sequence: A, from sequence2: B) -> [A.Generator.Element] {
         let check: (A.Generator.Element, B) -> Bool = R.complement(R.contains)
-        return collection.filter { (element: A.Generator.Element) -> Bool in check(element, collection2) }
+        return sequence.filter { (element: A.Generator.Element) -> Bool in check(element, sequence2) }
     }
 
     /**

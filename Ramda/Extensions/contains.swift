@@ -13,14 +13,14 @@ extension R {
         Returns true is the element exists in the list.
 
         - parameter element: The element to find in the list.
-        - parameter collection: The list to search for the element.
+        - parameter sequence: The list to search for the element.
 
         - returns: Returns true if the element exists in the list, false otherwise.
 
     */
 
-    public class func contains<A: Comparable, B: CollectionType where A == B.Generator.Element>(element: A, in collection: B) -> Bool {
-        return any({ $0 == element }, in: collection)
+    public class func contains<A: Comparable, B: SequenceType where A == B.Generator.Element>(element: A, in sequence: B) -> Bool {
+        return any({ $0 == element }, in: sequence)
     }
 
     /**

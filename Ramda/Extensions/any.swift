@@ -13,14 +13,14 @@ extension R {
         Returns true if any elements of the list match the predicate, false if all don't.
 
         - parameter function: The predicate function.
-        - parameter collection: The list of values.
+        - parameter sequence: The list of values.
 
         - returns: True if the predicate is true for any value, false is all don't.
 
      */
 
-    public class func any<A, B where B: CollectionType, A == B.Generator.Element>(function: A -> Bool, in collection: B) -> Bool {
-        for value in collection {
+    public class func any<A, B where B: SequenceType, A == B.Generator.Element>(function: A -> Bool, in sequence: B) -> Bool {
+        for value in sequence {
             if function(value) {
                 return true
             }
@@ -34,8 +34,8 @@ extension R {
 
         - parameter function: The predicate function.
 
-        - returns: A curried function that accepts an array and returns true if the predicate i
-        s true for any value, false is all don't.
+        - returns: A curried function that accepts an array and returns true if the predicate
+        is true for any value, false is all don't.
 
      */
 
