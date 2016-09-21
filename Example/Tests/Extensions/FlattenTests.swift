@@ -10,7 +10,7 @@ import XCTest
 import Ramda
 
 class FlattenTests: XCTestCase {
-    
+
     func testShouldReturnFlattenedArray() {
         let expectedResult = [1, 3, 5, 7, 9, 11, 13]
 
