@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		34C070BDB4EE8BC1FF3B7283 /* DecTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C075A6799E8CA389B30A9D /* DecTests.swift */; };
+		34C070C69371C2B013AB04CA /* MapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07BDF8114A3E66B1A07F9 /* MapTests.swift */; };
 		34C070D76DA2F57DA544AEE4 /* EqualsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07CA5208FCFD12693DD42 /* EqualsTests.swift */; };
 		34C070DD56232A0F81196DFD /* IdenticalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07ADA97D6A21F91AC9E32 /* IdenticalTests.swift */; };
 		34C0713009E1ACD4FE54D1EC /* LastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C076987B30AEF84087AF09 /* LastTests.swift */; };
@@ -154,6 +155,7 @@
 		34C07ADA97D6A21F91AC9E32 /* IdenticalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdenticalTests.swift; sourceTree = "<group>"; };
 		34C07B505677933A9AB0811A /* LtTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LtTests.swift; sourceTree = "<group>"; };
 		34C07B977CFBB07B718CBC08 /* IsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsTests.swift; sourceTree = "<group>"; };
+		34C07BDF8114A3E66B1A07F9 /* MapTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTests.swift; sourceTree = "<group>"; };
 		34C07BED8A7252F5AFC0691C /* AddTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTests.swift; sourceTree = "<group>"; };
 		34C07C40531CF0BDCDF372FC /* FoxTester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoxTester.swift; sourceTree = "<group>"; };
 		34C07C8285B3DA3C72F932C8 /* EmptyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyTests.swift; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 				34C071364A6BDB7066691AA5 /* LastIndexOfTests.swift */,
 				34C0798D041098734529198C /* InsertTests.swift */,
 				34C07EB9C3EDAC1847564D6B /* JoinTests.swift */,
+				34C07BDF8114A3E66B1A07F9 /* MapTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -891,6 +894,7 @@
 				34C077231409A30A7A1833B3 /* LastIndexOfTests.swift in Sources */,
 				34C07F0E66CB4934A43CEB74 /* InsertTests.swift in Sources */,
 				34C073C2E2CE3926ADAF4A0D /* JoinTests.swift in Sources */,
+				34C070C69371C2B013AB04CA /* MapTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
