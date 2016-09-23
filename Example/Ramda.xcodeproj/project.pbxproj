@@ -68,6 +68,7 @@
 		34C07C350253DD4AF5B2327F /* DifferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C077D91B33FADE4F179FE0 /* DifferenceTests.swift */; };
 		34C07C6B1B891AEB4C88930A /* FilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0749695DF5E5F40212DC8 /* FilterTests.swift */; };
 		34C07CDF4D014311A557B1F4 /* AndTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0783285334AFE41A2CA51 /* AndTests.swift */; };
+		34C07D06D54FD38799ACF146 /* RangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0726B9FE121DEE8E27126 /* RangeTests.swift */; };
 		34C07D0C2A570623F83E76BC /* FoxGeneratorParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07128985B79B979FB8931 /* FoxGeneratorParams.swift */; };
 		34C07D2AE78A419F863C746F /* MinByTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C079535188DFC5A175F802 /* MinByTests.swift */; };
 		34C07D4B931DACC0F0CD29C5 /* NthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0781395E08FA9F017F9F4 /* NthTests.swift */; };
@@ -115,6 +116,7 @@
 		34C071364A6BDB7066691AA5 /* LastIndexOfTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastIndexOfTests.swift; sourceTree = "<group>"; };
 		34C071994A004B6A20C0B17F /* LengthTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LengthTests.swift; sourceTree = "<group>"; };
 		34C0725431AB2E4DA5D091DA /* CurryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurryTests.swift; sourceTree = "<group>"; };
+		34C0726B9FE121DEE8E27126 /* RangeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeTests.swift; sourceTree = "<group>"; };
 		34C07316B085BB3E7CE3542E /* GtTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GtTests.swift; sourceTree = "<group>"; };
 		34C07350020DBB7EFAFA674F /* AnyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyTests.swift; sourceTree = "<group>"; };
 		34C07378D14C8E8F0404B20A /* ToLowerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToLowerTests.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 				34C07ADDD06BA33672E79BBB /* NthArgTests.swift */,
 				34C073C5F466C2E88BE6DC0C /* PairTests.swift */,
 				34C07C084676937C2AD0EE53 /* PrependTests.swift */,
+				34C0726B9FE121DEE8E27126 /* RangeTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -915,6 +918,7 @@
 				34C074E4F778353F502CE6A0 /* NthArgTests.swift in Sources */,
 				34C07FFB291B16800DD02C7D /* PairTests.swift in Sources */,
 				34C075F8FD128E28F4F8A631 /* PrependTests.swift in Sources */,
+				34C07D06D54FD38799ACF146 /* RangeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
