@@ -82,6 +82,7 @@
 		34C07F38E8DA9C89804F5034 /* ReverseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C077F06D40401BF1D82368 /* ReverseTests.swift */; };
 		34C07F825A4AF0C44AED08C6 /* MeanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0778B2223B600D31EB16B /* MeanTests.swift */; };
 		34C07FAC0EC9D75CDCDA54B7 /* EitherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07FCFE10A25F80A4EACD4 /* EitherTests.swift */; };
+		34C07FFB291B16800DD02C7D /* PairTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C073C5F466C2E88BE6DC0C /* PairTests.swift */; };
 		36A481EE709388A3F1DE4B9C /* Pods_Ramda_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F96CE4DCDD485B92E79353 /* Pods_Ramda_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -116,6 +117,7 @@
 		34C07316B085BB3E7CE3542E /* GtTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GtTests.swift; sourceTree = "<group>"; };
 		34C07350020DBB7EFAFA674F /* AnyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyTests.swift; sourceTree = "<group>"; };
 		34C07378D14C8E8F0404B20A /* ToLowerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToLowerTests.swift; sourceTree = "<group>"; };
+		34C073C5F466C2E88BE6DC0C /* PairTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PairTests.swift; sourceTree = "<group>"; };
 		34C073EBB0CBC18824B865D5 /* DivideTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DivideTests.swift; sourceTree = "<group>"; };
 		34C073FF1B031932DD2F9D86 /* ComplementTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplementTests.swift; sourceTree = "<group>"; };
 		34C0749695DF5E5F40212DC8 /* FilterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterTests.swift; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 				34C076F977B2A63890EC046A /* MaxByTests.swift */,
 				34C079535188DFC5A175F802 /* MinByTests.swift */,
 				34C07ADDD06BA33672E79BBB /* NthArgTests.swift */,
+				34C073C5F466C2E88BE6DC0C /* PairTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -907,6 +910,7 @@
 				34C07BA9181D8A5EE4D28898 /* MaxByTests.swift in Sources */,
 				34C07D2AE78A419F863C746F /* MinByTests.swift in Sources */,
 				34C074E4F778353F502CE6A0 /* NthArgTests.swift in Sources */,
+				34C07FFB291B16800DD02C7D /* PairTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
