@@ -35,7 +35,7 @@ class DropTests: XCTestCase {
         XCTAssertEqual(expectedResult, result)
     }
 
-    func testShouldReturnStringWithoutFirstTwoCharacters() {
+    func testShouldReturnStringWithoutFirstFourCharacters() {
         let expectedResult = "Example"
 
         let result = R.drop(4, in: "TestExample".characters)

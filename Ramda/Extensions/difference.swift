@@ -22,7 +22,7 @@ extension R {
 
     public class func difference<A: SequenceType, B: SequenceType where A.Generator.Element: Comparable, A.Generator.Element == B.Generator.Element>(sequence: A, from sequence2: B) -> [A.Generator.Element] {
         let check: (A.Generator.Element, B) -> Bool = R.complement(R.contains)
-        return sequence.filter { (element: A.Generator.Element) -> Bool in check(element, sequence2) }
+        return R.filter { (element: A.Generator.Element) -> Bool in check(element, sequence2) } (in: sequence)
     }
 
     /**
