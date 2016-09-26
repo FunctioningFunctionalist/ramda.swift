@@ -56,6 +56,7 @@
 		34C077F709B9A8D1F3BDDADD /* FTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07999E809DC9DE7F45B62 /* FTests.swift */; };
 		34C07816457AC8845339727E /* RemoveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07AA34CDD86047FF763F6 /* RemoveTests.swift */; };
 		34C0781CBD96901E436780B2 /* MinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0707EC46D19544441474D /* MinTests.swift */; };
+		34C07859AEFC4C3FE32FAEEF /* DropWhileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C070AFB300506766BA5D41 /* DropWhileTests.swift */; };
 		34C078BAC208D0D5708D8B31 /* ApplyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0792D4D71888CAA080CCB /* ApplyTests.swift */; };
 		34C078F1AEFF5F2305022992 /* NoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07E4EBCCBE0ED1F1CB09D /* NoneTests.swift */; };
 		34C0794A54DFB808E8B39179 /* BothTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C078159FCD9D4251EBDC94 /* BothTests.swift */; };
@@ -121,6 +122,7 @@
 		0FB3BFA567572DDF6B6D6B93 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		2174DD057618ED66D09ADCC8 /* Pods-Ramda_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ramda_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ramda_Example/Pods-Ramda_Example.release.xcconfig"; sourceTree = "<group>"; };
 		34C0707EC46D19544441474D /* MinTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinTests.swift; sourceTree = "<group>"; };
+		34C070AFB300506766BA5D41 /* DropWhileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropWhileTests.swift; sourceTree = "<group>"; };
 		34C070C34CD6D40A8D133B60 /* WithoutTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WithoutTests.swift; sourceTree = "<group>"; };
 		34C07128985B79B979FB8931 /* FoxGeneratorParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoxGeneratorParams.swift; sourceTree = "<group>"; };
 		34C071364A6BDB7066691AA5 /* LastIndexOfTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastIndexOfTests.swift; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 				34C070C34CD6D40A8D133B60 /* WithoutTests.swift */,
 				34C07547F4D728E03C15A76E /* DropLastTests.swift */,
 				34C07B06741907E08ED57B9A /* DropLastWhileTests.swift */,
+				34C070AFB300506766BA5D41 /* DropWhileTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -955,6 +958,7 @@
 				34C076F2EA8AF6638EF133A8 /* WithoutTests.swift in Sources */,
 				34C07F36B4520C2790402F9D /* DropLastTests.swift in Sources */,
 				34C07B5807A7F5F7D360994F /* DropLastWhileTests.swift in Sources */,
+				34C07859AEFC4C3FE32FAEEF /* DropWhileTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
