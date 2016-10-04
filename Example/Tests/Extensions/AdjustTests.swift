@@ -40,4 +40,5 @@ class AdjustTests: XCTestCase {
 
         XCTAssertEqual(array, result)
     }
+
 }

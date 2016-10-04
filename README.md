@@ -6,6 +6,7 @@
 [![License](https://img.shields.io/cocoapods/l/Ramda.svg?style=flat)](http://cocoapods.org/pods/Ramda)
 [![Platform](https://img.shields.io/cocoapods/p/Ramda.svg?style=flat)](http://cocoapods.org/pods/Ramda)
 [![Code Climate](https://codeclimate.com/github/FunctioningFunctionalist/ramda.swift/badges/gpa.svg)](https://codeclimate.com/github/FunctioningFunctionalist/ramda.swift)
+[![Join the chat at https://gitter.im/ramda-swift/Lobby](https://badges.gitter.im/ramda-swift/Lobby.svg)](https://gitter.im/ramda-swift/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## Example
 

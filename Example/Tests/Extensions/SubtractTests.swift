@@ -18,7 +18,7 @@ class SubtractTests: XCTestCase {
         let integerGenerator = FoxGeneratorParam2(FOXInteger(), FOXInteger()) { (number1: Int, number2: Int) in
             let expectedResult = number1 - number2
 
-            let result = R.subtract(number2)(from: number1)
+            let result = R.subtract(number1)(minus: number2)
 
             return expectedResult == result
         }
@@ -30,7 +30,7 @@ class SubtractTests: XCTestCase {
         let floatGenerator = FoxGeneratorParam2(FOXFloat(), FOXFloat()) { (number1: Float, number2: Float) in
             let expectedResult = number1 - number2
 
-            let result = R.subtract(number2)(from: number1)
+            let result = R.subtract(number1)(minus: number2)
 
             return expectedResult == result
         }
@@ -42,7 +42,7 @@ class SubtractTests: XCTestCase {
         let doubleGenerator = FoxGeneratorParam2(FOXDouble(), FOXDouble()) { (number1: Double, number2: Double) in
             let expectedResult = number1 - number2
 
-            let result = R.subtract(number2)(from: number1)
+            let result = R.subtract(number1)(minus: number2)
 
             return expectedResult == result
         }

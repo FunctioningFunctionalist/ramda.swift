@@ -27,7 +27,8 @@ extension R {
 
         - parameter lhs: The left hand side operand.
 
-        - returns: The concatenated value of the two operands.
+        - returns: A curried function that accepts the next value and returns the
+        concatenated value of the two operands.
 
     */
 
@@ -60,5 +61,5 @@ public protocol Concatenate {
 
 }
 
-extension Array : Concatenate {}
-extension String : Concatenate {}
+extension Array: Concatenate {}
+extension String: Concatenate {}

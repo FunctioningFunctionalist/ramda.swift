@@ -42,7 +42,8 @@ extension R {
 
         - throws: 'ClampError.MinGreaterThanMax' if 'min' is greater than 'max'.
 
-        - returns: The clamped value.
+        - returns: A curried function that accepts the min and value parameters and
+        returns the clamped value.
 
     */
 

@@ -8,47 +8,52 @@
 
 import Foundation
 
+// swiftlint:disable line_length
+
 extension R {
 
     /**
 
-        Applies a function to the value at the given index of an array,
-        returning a new copy of the array with the element at the given
+        Applies a function to the value at the given index of collection,
+        returning a new copy of the collection with the element at the given
         index replaced with the result of the function application.
 
         - parameter function: The function to apply.
         - parameter index: The index of the object.
-        - parameter array: An array whose value at the supplied index will be replaced.
+        - parameter collection: A collection whose value at the supplied index will be replaced.
 
-        - returns: A copy of the supplied array-like object with the element
+        - returns: A copy of the supplied collection-like object with the element
                     at index replaced with the value returned by applying function
                     to the existing element.
 
      */
 
-    public class func adjust<A>(function: (A) -> A, at index: Int, in array: [A]) -> [A] {
-        var result: [A] = array
-        if index < array.count && index > -1 {
-            result[index] = function(result[index])
+    public class func adjust<A, B, C where B: RangeReplaceableCollectionType, A == B.Generator.Element, C == B.Index>(function: A -> A, at index: C, in collection: B) -> B {
+        var result = collection
+        if collection.indices.contains(index) {
+            let newValue = function(result[index])
+            result.insert(newValue, atIndex: index)
         }
         return result
     }
 
     /**
 
-        Applies a function to the value at the given index of an array,
-        returning a new copy of the array with the element at the given
+        Applies a function to the value at the given index of collection,
+        returning a new copy of the collection with the element at the given
         index replaced with the result of the function application.
 
         - parameter function: The function to apply.
 
-        - returns: A partial function that accepts the second condition to produce
+        - returns: A curried function that accepts the second condition to produce
                     the result
 
      */
 
-    public class func adjust<A>(function: (A) -> A) -> (at: Int) -> (in: [A]) -> [A] {
+    public class func adjust<T>(function: T -> T) -> (at: Int) -> (in: [T]) -> [T] {
         return curry(adjust)(function)
     }
 
 }
+
+// swiftlint:enable valid_docs

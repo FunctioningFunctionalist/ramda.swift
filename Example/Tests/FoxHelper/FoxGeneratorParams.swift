@@ -16,7 +16,7 @@ protocol IFoxGeneratorParam {
 // swiftlint:disable line_length
 // swiftlint:disable function_parameter_count
 
-class FoxGeneratorParam<T> : IFoxGeneratorParam {
+class FoxGeneratorParam<T>: IFoxGeneratorParam {
 
     private let tupleGenerator: FOXGenerator
     private let validation: T -> Bool
@@ -44,7 +44,7 @@ class FoxGeneratorParam<T> : IFoxGeneratorParam {
 
 }
 
-class FoxGeneratorParam1<A> : FoxGeneratorParam<(A)> {
+class FoxGeneratorParam1<A>: FoxGeneratorParam<(A)> {
 
     init(_ firstGenerator: FOXGenerator, validation: (A) -> Bool) {
         super.init(generators: [firstGenerator], validation: validation)
@@ -56,7 +56,7 @@ class FoxGeneratorParam1<A> : FoxGeneratorParam<(A)> {
 
 }
 
-class FoxGeneratorParam2<A, B> : FoxGeneratorParam<(A, B)> {
+class FoxGeneratorParam2<A, B>: FoxGeneratorParam<(A, B)> {
 
     init(_ firstGenerator: FOXGenerator, _ secondGenerator: FOXGenerator, validation: (A, B) -> Bool) {
         super.init(generators: [firstGenerator, secondGenerator], validation: validation)
@@ -68,7 +68,7 @@ class FoxGeneratorParam2<A, B> : FoxGeneratorParam<(A, B)> {
 
 }
 
-class FoxGeneratorParam3<A, B, C> : FoxGeneratorParam<(A, B, C)> {
+class FoxGeneratorParam3<A, B, C>: FoxGeneratorParam<(A, B, C)> {
 
     init(_ firstGenerator: FOXGenerator, _ secondGenerator: FOXGenerator, _ thirdGenerator: FOXGenerator, validation: (A, B, C) -> Bool) {
         super.init(generators: [firstGenerator, secondGenerator, thirdGenerator], validation: validation)
@@ -80,7 +80,7 @@ class FoxGeneratorParam3<A, B, C> : FoxGeneratorParam<(A, B, C)> {
 
 }
 
-class FoxGeneratorParam4<A, B, C, D> : FoxGeneratorParam<(A, B, C, D)> {
+class FoxGeneratorParam4<A, B, C, D>: FoxGeneratorParam<(A, B, C, D)> {
 
     init(_ firstGenerator: FOXGenerator, _ secondGenerator: FOXGenerator, _ thirdGenerator: FOXGenerator, _ fourthGenerator: FOXGenerator, validation: (A, B, C, D) -> Bool) {
         super.init(generators: [firstGenerator, secondGenerator, thirdGenerator, fourthGenerator], validation: validation)
@@ -92,7 +92,7 @@ class FoxGeneratorParam4<A, B, C, D> : FoxGeneratorParam<(A, B, C, D)> {
 
 }
 
-class FoxGeneratorParam5<A, B, C, D, E> : FoxGeneratorParam<(A, B, C, D, E)> {
+class FoxGeneratorParam5<A, B, C, D, E>: FoxGeneratorParam<(A, B, C, D, E)> {
 
     init(_ firstGenerator: FOXGenerator, _ secondGenerator: FOXGenerator, _ thirdGenerator: FOXGenerator, _ fourthGenerator: FOXGenerator, _ fifthGenerator: FOXGenerator, validation: (A, B, C, D, E) -> Bool) {
         super.init(generators: [firstGenerator, secondGenerator, thirdGenerator, fourthGenerator, fifthGenerator], validation: validation)

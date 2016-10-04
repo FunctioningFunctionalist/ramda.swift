@@ -4,6 +4,8 @@
 
 import Foundation
 
+// swiftlint:disable line_length
+
 extension R {
 
     /**
@@ -11,7 +13,7 @@ extension R {
         Maps a list and concatenates the result. Chain is also known as flatMap.
 
         - parameter transform: Function that transforms the value.
-        - parameter array: List of values to execute the transform.
+        - parameter sequence: List of values to execute the transform.
 
         - rethrows: Passed through from flapMap.
 
@@ -19,8 +21,8 @@ extension R {
 
     */
 
-    public class func chain<A, B>(transform: A throws -> B, for array: [A]) rethrows -> [B] {
-        return try array.flatMap(transform)
+    public class func chain<A, B, C: SequenceType where C.Generator.Element == A>(transform: A throws -> B, for sequence: C) rethrows -> [B] {
+        return try sequence.flatMap(transform)
     }
 
     /**
@@ -31,7 +33,7 @@ extension R {
 
         - throws: Passed through from flapMap.
 
-        - returns: Transformed result.
+        - returns: A curried function that accepts an array and returns the transformed result.
 
     */
 
@@ -44,7 +46,7 @@ extension R {
         Maps a list and concatenates the result. Chain is also known as flatMap.
 
         - parameter transform: Function that transforms the value.
-        - parameter array: List of values to execute the transform.
+        - parameter sequence: List of values to execute the transform.
 
         - rethrows: Passed through from flapMap.
 
@@ -52,8 +54,8 @@ extension R {
 
     */
 
-    public class func chain<A, B>(transform: A throws -> B?, for array: [A]) rethrows -> [B] {
-        return try array.flatMap(transform)
+    public class func chain<A, B, C: SequenceType where C.Generator.Element == A>(transform: A throws -> B?, for sequence: C) rethrows -> [B] {
+        return try sequence.flatMap(transform)
     }
 
     /**
@@ -64,7 +66,7 @@ extension R {
 
         - throws: Passed through from flapMap.
 
-        - returns: Transformed result.
+        - returns: A curried function that accepts an array and returns the transformed result.
 
     */
 
@@ -73,3 +75,5 @@ extension R {
     }
 
 }
+
+// swiftlint:enable line_length
