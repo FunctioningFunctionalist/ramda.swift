@@ -86,7 +86,7 @@ extension R {
     */
 
     public class func anyPass<A>(array: [(A) -> Bool]) -> (with: A) -> Bool {
-        return curry(allPass)(array)
+        return curry(anyPass)(array)
     }
 
     /**
@@ -102,7 +102,7 @@ extension R {
     */
 
     public class func anyPass<A, B>(array: [(A, B) -> Bool]) -> (with: A) -> (and: B) -> Bool {
-        return curry(allPass)(array)
+        return curry(anyPass)(array)
     }
 
     /**
@@ -118,7 +118,7 @@ extension R {
     */
 
     public class func anyPass<A, B, C>(array: [(A, B, C) -> Bool]) -> (with: A) -> (B) -> (and: C) -> Bool {
-        return curry(allPass)(array)
+        return curry(anyPass)(array)
     }
 
     /**
@@ -134,7 +134,7 @@ extension R {
      */
 
     public class func anyPass<A, B, C, D>(array: [(A, B, C, D) -> Bool]) -> (with: A) -> (B) -> (C) -> (and: D) -> Bool {
-        return curry(allPass)(array)
+        return curry(anyPass)(array)
     }
 }
 
