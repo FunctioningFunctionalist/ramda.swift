@@ -11,35 +11,44 @@ import Ramda
 
 class AllPassTests: XCTestCase {
 
-    struct Card {
-        let rank: String
-        let suit: String
-    }
+    func testShouldReturnTrueWhenLessThanTenAndGreaterThanFive() {
+        let predicates = [ { $0 < 10 }, { $0 > 5 }]
 
-    func testShouldReturnFalseIfAllPredicatesAreNotSatisfiedByTheArguments() {
-        let predicates = [isQueen, isSpade]
-        let queenOfClubs = Card(rank: "Q", suit: "♣︎")
-
-        let result = R.allPass(predicates)(with: queenOfClubs)
-
-        XCTAssertFalse(result)
-    }
-
-    func testShouldReturnTrueIfAllPredicatesAreSatisfiedByTheArguments() {
-        let predicates = [isQueen, isSpade]
-        let queenOfSpades = Card(rank: "Q", suit: "♠︎")
-
-        let result = R.allPass(predicates)(with: queenOfSpades)
+        let result = R.allPass(predicates)(with: 6)
 
         XCTAssertTrue(result)
     }
 
-    func isQueen(card: Card) -> Bool {
-        return card.rank == "Q"
+    func testShouldReturnFalseWhenLessThanTenOrGreaterThanFive() {
+        let predicates = [ { $0 < 10 }, { $0 > 5 }]
+
+        let result = R.allPass(predicates)(with: 3)
+
+        XCTAssertFalse(result)
     }
 
-    func isSpade(card: Card) -> Bool {
-        return card.suit == "♠︎"
+    func testShouldReturnTrueWhenWhenTheSumOfTwoNumbersAreLessThanTenAndGreaterThanFive() {
+        let predicates = [ { R.sum([$0, $1]) < 10 }, { R.sum([$0, $1]) > 5 }]
+
+        let result = R.allPass(predicates)(with: 5)(and: 3)
+
+        XCTAssertTrue(result)
+    }
+
+    func testShouldReturnTrueWhenWhenTheSumOfThreeNumbersAreLessThanTenAndGreaterThanFive() {
+        let predicates = [ { R.sum([$0, $1, $2]) < 10 }, { R.sum([$0, $1, $2]) > 5 }]
+
+        let result = R.allPass(predicates)(with: 5)(3)(and: 0)
+
+        XCTAssertTrue(result)
+    }
+
+    func testShouldReturnTrueWhenWhenTheSumOfFourNumbersAreLessThanTenAndGreaterThanFive() {
+        let predicates = [ { R.sum([$0, $1, $2, $3]) < 10 }, { R.sum([$0, $1, $2, $3]) > 5 }]
+
+        let result = R.allPass(predicates)(with: 5)(3)(0)(and: 1)
+
+        XCTAssertTrue(result)
     }
 
 }

@@ -103,6 +103,7 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		63B272401DA437A3008F3DC0 /* AnyPassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B2723F1DA437A3008F3DC0 /* AnyPassTests.swift */; };
 		63FE4D571D8426C2001BDF4B /* AddIndexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FE4D561D8426C2001BDF4B /* AddIndexTests.swift */; };
 		6C487A0A13683BE0EC3944E1 /* AllPassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C487C732354FDF457157B7D /* AllPassTests.swift */; };
 		DA9085197A1A303CB1D92785 /* Pods_Ramda_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E95F54F31639C4E774191B /* Pods_Ramda_Tests.framework */; };
@@ -225,6 +226,7 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* Ramda_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Ramda_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63B2723F1DA437A3008F3DC0 /* AnyPassTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyPassTests.swift; sourceTree = "<group>"; };
 		63FE4D561D8426C2001BDF4B /* AddIndexTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddIndexTests.swift; sourceTree = "<group>"; };
 		6C487C732354FDF457157B7D /* AllPassTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPassTests.swift; sourceTree = "<group>"; };
 		99E95F54F31639C4E774191B /* Pods_Ramda_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ramda_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -353,6 +355,7 @@
 				34C070AFB300506766BA5D41 /* DropWhileTests.swift */,
 				34C0735DD7BF0108AD1A31FF /* TestTests.swift */,
 				34C07ACCFED39E6145F48804 /* FindTests.swift */,
+				63B2723F1DA437A3008F3DC0 /* AnyPassTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -957,6 +960,7 @@
 				34C07D06D54FD38799ACF146 /* RangeTests.swift in Sources */,
 				34C07ADAEA9B05749C664B61 /* RejectTests.swift in Sources */,
 				34C07816457AC8845339727E /* RemoveTests.swift in Sources */,
+				63B272401DA437A3008F3DC0 /* AnyPassTests.swift in Sources */,
 				34C075B9B42591AE53B6C116 /* RepeatTests.swift in Sources */,
 				34C077F1E03DF1A895BE008A /* TailTests.swift in Sources */,
 				34C07552860715369001321A /* TimesTests.swift in Sources */,
