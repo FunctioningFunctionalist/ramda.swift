@@ -20,7 +20,7 @@ extension R {
 
     */
 
-    public class func find<A, B: SequenceType where A == B.Generator.Element>(predicate: (A) -> Bool, in sequence: B) -> A? {
+    private class func find<A>(predicate: (A) -> Bool, in sequence: [A]) -> A? {
         for element in sequence {
             if predicate(element) {
                 return element
@@ -41,7 +41,7 @@ extension R {
 
     */
 
-    public class func find<A, B: SequenceType where A == B.Generator.Element>(predicate: (A) -> Bool) -> (in: B) -> A? {
+    public class func find<A>(predicate: (A) -> Bool) -> (in: [A]) -> A? {
         return curry(find)(predicate)
     }
 
