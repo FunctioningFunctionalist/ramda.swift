@@ -39,7 +39,7 @@ class PipeTests: XCTestCase {
 
     func testShouldPipeTwoFunctionsTogetherWithOptionalValueAndHaveOptionalResult() {
         let expectedResult = "4"
-        let element = R.find { R.modulo($0, by: 2) == 0 }
+        let element:(in: [Int]) -> Int? = R.find { R.modulo($0, by: 2) == 0 }
 
         let pipe: [Int] -> String = R.pipe(element, second: elementDescription)
         let result = pipe(testData)
@@ -48,7 +48,7 @@ class PipeTests: XCTestCase {
     }
 
     func testShouldPipeTwoFunctionsTogetherWithOptionalValueAndReturnsNil() {
-        let element = R.find { $0 < 0 }
+        let element:(in: [Int]) -> Int? = R.find { $0 < 0 }
 
         let pipe: [Int] -> String? = R.pipe(element, second: elementDescription)
         let result = pipe(testData)
@@ -67,7 +67,7 @@ class PipeTests: XCTestCase {
     }
 
     func testShouldPipeThreeFunctionsTogetherWithOptionalValueAndHaveOptionalResult() {
-        let element = R.find { R.modulo($0, by: 2) == 0 }
+        let element:(in: [Int]) -> Int? = R.find { R.modulo($0, by: 2) == 0 }
 
         let pipe: [Int] -> String = R.pipe(element, second: square, third: elementDescription)
         let result = pipe(testData)
@@ -76,7 +76,7 @@ class PipeTests: XCTestCase {
     }
 
     func testShouldPipeThreeFunctionsTogetherWithOptionalValueAndReturnsNil() {
-        let element = R.find { $0 < 0 }
+        let element:(in: [Int]) -> Int? = R.find { $0 < 0 }
 
         let pipe: [Int] -> String? = R.pipe(element, second: square, third: elementDescription)
         let result = pipe(testData)
