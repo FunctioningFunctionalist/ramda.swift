@@ -12,10 +12,10 @@ import Foundation
 
 extension R {
 
-    public class func reduceBy<A: SequenceType, B, C, D: SequenceType where B == A.Generator.Element, C == D.Generator.Element>
-        (valueFn: (A, B) -> D, valueAcc: A, keyFn: B -> String, list: A) -> [String: D] {
+    public class func reduceBy<A, B: SequenceType, C, D: SequenceType where A == B.Generator.Element, C == D.Generator.Element>
+        (valueFn: (B, A) -> D, valueAcc: B, keyFn: A -> String, list: B) -> [String: D] {
         
-        typealias ReduceSignature = (startingWith: [String: D]) -> (in: A) -> [String: D]
+        typealias ReduceSignature = (startingWith: [String: D]) -> (in: B) -> [String: D]
 
         let reduceBy: ReduceSignature = R.reduce { (acc, elment) in
             var result = acc
