@@ -19,7 +19,7 @@ extension R {
     */
 
     public class func sum<A: BasicArithmeticType, B: SequenceType where A == B.Generator.Element>(sequence: B) -> A {
-        return R.reduce(+, startingAt: A.zero, in: sequence)
+        return R.reduce(+, startingWith: A.zero, in: sequence)
     }
 
 }

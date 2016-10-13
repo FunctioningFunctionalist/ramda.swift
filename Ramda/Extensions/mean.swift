@@ -19,7 +19,7 @@ extension R {
     */
 
     public class func mean<A: BasicArithmeticType, B: CollectionType where A: DoubleConvertible, A == B.Generator.Element, B.Index.Distance == Int>(collection: B) -> Double {
-        return R.divide(R.reduce(+, startingAt: A.zero, in: collection).doubleValue, by: R.length(collection).doubleValue)
+        return R.divide(R.reduce(+, startingWith: A.zero, in: collection).doubleValue, by: R.length(collection).doubleValue)
     }
 
 }
