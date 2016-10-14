@@ -105,6 +105,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		6337E48B1DA7F92800FD1B83 /* PipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6337E48A1DA7F92800FD1B83 /* PipeTests.swift */; };
 		63B272401DA437A3008F3DC0 /* AnyPassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B2723F1DA437A3008F3DC0 /* AnyPassTests.swift */; };
+		63F44E031DB00F6A00631052 /* ReduceByTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F44E021DB00F6A00631052 /* ReduceByTests.swift */; };
 		63FE4D571D8426C2001BDF4B /* AddIndexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FE4D561D8426C2001BDF4B /* AddIndexTests.swift */; };
 		6C487A0A13683BE0EC3944E1 /* AllPassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C487C732354FDF457157B7D /* AllPassTests.swift */; };
 		DA9085197A1A303CB1D92785 /* Pods_Ramda_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E95F54F31639C4E774191B /* Pods_Ramda_Tests.framework */; };
@@ -229,6 +230,7 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6337E48A1DA7F92800FD1B83 /* PipeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PipeTests.swift; sourceTree = "<group>"; };
 		63B2723F1DA437A3008F3DC0 /* AnyPassTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyPassTests.swift; sourceTree = "<group>"; };
+		63F44E021DB00F6A00631052 /* ReduceByTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReduceByTests.swift; sourceTree = "<group>"; };
 		63FE4D561D8426C2001BDF4B /* AddIndexTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddIndexTests.swift; sourceTree = "<group>"; };
 		6C487C732354FDF457157B7D /* AllPassTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPassTests.swift; sourceTree = "<group>"; };
 		99E95F54F31639C4E774191B /* Pods_Ramda_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ramda_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -359,6 +361,7 @@
 				34C07ACCFED39E6145F48804 /* FindTests.swift */,
 				63B2723F1DA437A3008F3DC0 /* AnyPassTests.swift */,
 				6337E48A1DA7F92800FD1B83 /* PipeTests.swift */,
+				63F44E021DB00F6A00631052 /* ReduceByTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -461,7 +464,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Ramda_Example" */;
 			buildPhases = (
-				F2E86A55D062B5E3D8ED380E /* 📦 Check Pods Manifest.lock */,
+				F2E86A55D062B5E3D8ED380E /* [CP] Check Pods Manifest.lock */,
 				DD4A51FF193AA336E0351563 /* [CP] Check Pods Manifest.lock */,
 				B52D24DDCFBFC751AC22DDE3 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
@@ -488,7 +491,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Ramda_Tests" */;
 			buildPhases = (
-				60280A7F082D74B643517E44 /* 📦 Check Pods Manifest.lock */,
+				60280A7F082D74B643517E44 /* [CP] Check Pods Manifest.lock */,
 				60B8A83F0289887946975361 /* [CP] Check Pods Manifest.lock */,
 				28CCAF4ED0DBEF53B1F78AC1 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
@@ -646,19 +649,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ramda_Tests/Pods-Ramda_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		60280A7F082D74B643517E44 /* 📦 Check Pods Manifest.lock */ = {
+		60280A7F082D74B643517E44 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		60B8A83F0289887946975361 /* [CP] Check Pods Manifest.lock */ = {
@@ -850,19 +853,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		F2E86A55D062B5E3D8ED380E /* 📦 Check Pods Manifest.lock */ = {
+		F2E86A55D062B5E3D8ED380E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -914,6 +917,7 @@
 				34C07EC6B8BEBA322C151B2C /* MultiplyTests.swift in Sources */,
 				34C077A0A8E99B91303BF5A2 /* NegateTests.swift in Sources */,
 				34C07E335E5364425D1CC14B /* ModuloTests.swift in Sources */,
+				63F44E031DB00F6A00631052 /* ReduceByTests.swift in Sources */,
 				34C07297EB4D6785B8C986AE /* IncTests.swift in Sources */,
 				34C07FAC0EC9D75CDCDA54B7 /* EitherTests.swift in Sources */,
 				34C07402B188C3709047A1AB /* DropTests.swift in Sources */,
