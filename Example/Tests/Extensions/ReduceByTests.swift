@@ -22,7 +22,7 @@ class ReduceByTests: XCTestCase {
         Student(name: "Ivan", score: 75)
     ]
 
-    func testExample() {
+    func testGroupsStudentsCorrectly() {
         typealias Signature = (Student -> String) -> [Student] -> [String: [String]]
 
         let reduceToNamesBy: Signature = R.reduceBy { arr, student in
