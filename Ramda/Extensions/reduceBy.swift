@@ -30,7 +30,7 @@ extension R {
 
      */
 
-    public class func reduceBy<A, B:SequenceType, C: Hashable>
+    public class func reduceBy<A, B: SequenceType, C: Hashable>
         (iterator: (A, B.Generator.Element) -> A, startingWith initialValue: A, functionForKeys keyFn: B.Generator.Element -> C, in sequence: B) -> [C: A] {
 
         typealias ReduceSignature = (startingWith: [C: A]) -> (in: B) -> [C: A]
