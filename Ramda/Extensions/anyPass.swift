@@ -8,6 +8,19 @@ import Foundation
 
 extension R {
 
+    /**
+
+     Takes a list of predicates and returns a predicate that returns true
+     for a given list of arguments if every one of the provided predicates
+     is satisfied by those arguments.
+
+     - parameter array: Array of predicates
+     - parameter first: Argument to be passed into predicate functions
+
+     - returns: Whether all predicates are satisfied by the arguments.
+
+     */
+
     public class func anyPass<A>(array: [(A) -> Bool], with first: A) -> Bool {
         let predicates: [() -> Bool] = array.map { R.bind($0, with: first) }
         return executePredicates(predicates)
