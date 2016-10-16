@@ -104,6 +104,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		6337E48B1DA7F92800FD1B83 /* PipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6337E48A1DA7F92800FD1B83 /* PipeTests.swift */; };
+		6373C90D1DB3628500B50EA2 /* ReduceRightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6373C90C1DB3628500B50EA2 /* ReduceRightTests.swift */; };
 		63B272401DA437A3008F3DC0 /* AnyPassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B2723F1DA437A3008F3DC0 /* AnyPassTests.swift */; };
 		63F44E031DB00F6A00631052 /* ReduceByTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F44E021DB00F6A00631052 /* ReduceByTests.swift */; };
 		63FE4D571D8426C2001BDF4B /* AddIndexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FE4D561D8426C2001BDF4B /* AddIndexTests.swift */; };
@@ -229,6 +230,7 @@
 		607FACE51AFB9204008FA782 /* Ramda_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Ramda_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6337E48A1DA7F92800FD1B83 /* PipeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PipeTests.swift; sourceTree = "<group>"; };
+		6373C90C1DB3628500B50EA2 /* ReduceRightTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReduceRightTests.swift; sourceTree = "<group>"; };
 		63B2723F1DA437A3008F3DC0 /* AnyPassTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyPassTests.swift; sourceTree = "<group>"; };
 		63F44E021DB00F6A00631052 /* ReduceByTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReduceByTests.swift; sourceTree = "<group>"; };
 		63FE4D561D8426C2001BDF4B /* AddIndexTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddIndexTests.swift; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 				63B2723F1DA437A3008F3DC0 /* AnyPassTests.swift */,
 				6337E48A1DA7F92800FD1B83 /* PipeTests.swift */,
 				63F44E021DB00F6A00631052 /* ReduceByTests.swift */,
+				6373C90C1DB3628500B50EA2 /* ReduceRightTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -942,6 +945,7 @@
 				34C079B3ECA14B606E703AA2 /* ToUpperTests.swift in Sources */,
 				34C07562A92CC5004BCB3096 /* LengthTests.swift in Sources */,
 				34C0774219BC00C54B634CC4 /* MaxTests.swift in Sources */,
+				6373C90D1DB3628500B50EA2 /* ReduceRightTests.swift in Sources */,
 				34C0781CBD96901E436780B2 /* MinTests.swift in Sources */,
 				34C071613F98E9CE97819527 /* OrTests.swift in Sources */,
 				34C07A1E8D8012FC3686D561 /* SortTests.swift in Sources */,
