@@ -14,16 +14,34 @@ extension R {
 
     /**
 
-     Groups the elements of the list according to the result of calling the
-     String-returning function keyFn on each element and reduces the elements
-     of each group to a single value via the reducer function valueFn. This function
-     is basically a more general groupBy function. Acts as a transducer if a
-     transformer is given in list position.
+     Counts the elements of a list according to how many match each value of a key generated
+     by the supplied function. Returns an object mapping the keys produced by fn to the number
+     of occurrences in the list. Note that all keys are coerced to strings because of how
+     JavaScript objects work
 
-     - parameter functionForKeys: The function that maps the list's element into a key.
+     - parameter functionForKeys: The function used to map values to keys.
+     - parameter sequence: The list to count elements from.
 
-     - returns: An object with the output of keyFn for keys, mapped to the output of
-     valueFn for elements which produced that key when passed to keyFn.
+     - returns: An object mapping keys to number of occurrences in the list.
+
+     */
+
+    public class func countBy<B: SequenceType, C: Hashable>(functionForKeys: B.Generator.Element -> C, in sequence: B) -> [C: Int] {
+        typealias Signature = ((B.Generator.Element) -> C) -> (B) -> [C: Int]
+        let result: Signature = R.reduceBy({ (acc, element) in acc + 1 })(startingWith: 0)
+        return result(functionForKeys)(sequence)
+    }
+
+    /**
+
+     Counts the elements of a list according to how many match each value of a key generated
+     by the supplied function. Returns an object mapping the keys produced by fn to the number
+     of occurrences in the list. Note that all keys are coerced to strings because of how
+     JavaScript objects work
+
+     - parameter functionForKeys: The function used to map values to keys.
+
+     - returns: An object mapping keys to number of occurrences in the list.
 
      */
 

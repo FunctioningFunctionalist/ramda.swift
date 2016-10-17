@@ -103,6 +103,7 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		6310D2631DB4BEE9004E540B /* CountByTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6310D2621DB4BEE9004E540B /* CountByTests.swift */; };
 		6337E48B1DA7F92800FD1B83 /* PipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6337E48A1DA7F92800FD1B83 /* PipeTests.swift */; };
 		6373C90D1DB3628500B50EA2 /* ReduceRightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6373C90C1DB3628500B50EA2 /* ReduceRightTests.swift */; };
 		6373C9111DB3FD1B00B50EA2 /* ReduceWhileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6373C9101DB3FD1B00B50EA2 /* ReduceWhileTests.swift */; };
@@ -230,6 +231,7 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* Ramda_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Ramda_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6310D2621DB4BEE9004E540B /* CountByTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountByTests.swift; sourceTree = "<group>"; };
 		6337E48A1DA7F92800FD1B83 /* PipeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PipeTests.swift; sourceTree = "<group>"; };
 		6373C90C1DB3628500B50EA2 /* ReduceRightTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReduceRightTests.swift; sourceTree = "<group>"; };
 		6373C9101DB3FD1B00B50EA2 /* ReduceWhileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReduceWhileTests.swift; sourceTree = "<group>"; };
@@ -368,6 +370,7 @@
 				63F44E021DB00F6A00631052 /* ReduceByTests.swift */,
 				6373C90C1DB3628500B50EA2 /* ReduceRightTests.swift */,
 				6373C9101DB3FD1B00B50EA2 /* ReduceWhileTests.swift */,
+				6310D2621DB4BEE9004E540B /* CountByTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -930,6 +933,7 @@
 				34C07402B188C3709047A1AB /* DropTests.swift in Sources */,
 				34C0743FB21BB03F139824C2 /* EmptyTests.swift in Sources */,
 				6337E48B1DA7F92800FD1B83 /* PipeTests.swift in Sources */,
+				6310D2631DB4BEE9004E540B /* CountByTests.swift in Sources */,
 				34C070D76DA2F57DA544AEE4 /* EqualsTests.swift in Sources */,
 				34C07C6B1B891AEB4C88930A /* FilterTests.swift in Sources */,
 				34C076CF54CFC25D3DBFCDD6 /* GtTests.swift in Sources */,
