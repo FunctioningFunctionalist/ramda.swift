@@ -22,7 +22,7 @@ class ToLowerTests: XCTestCase {
 
     func testShouldLowerCaseStrings() {
         let stringGenerator = FoxGeneratorParam1(FOXString()) { (string: String) in
-            let expectedResult = string.lowercaseString
+            let expectedResult = string.lowercased()
 
             let result = R.toLower(string)
 

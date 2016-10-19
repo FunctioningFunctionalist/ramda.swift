@@ -18,7 +18,7 @@ extension R {
 
     */
 
-    public class func either<T>(lhs: (T) -> Bool, or rhs: (T) -> Bool) -> (T) -> Bool {
+    public class func either<T>(_ lhs: @escaping (T) -> Bool, or rhs: @escaping (T) -> Bool) -> (T) -> Bool {
         return { element in
             return lhs(element) || rhs(element)
         }
@@ -36,7 +36,7 @@ extension R {
 
     */
 
-    public class func either<T>(lhs: (T) -> Bool) -> (or: (T) -> Bool) -> (T) -> Bool {
+    public class func either<T>(_ lhs: @escaping (T) -> Bool) -> (_ or: @escaping (T) -> Bool) -> (T) -> Bool {
         return curry(either)(lhs)
     }
 

@@ -17,7 +17,7 @@ extension R {
 
     */
 
-    public class func dropLast<T: SequenceType>(amount: Int, in sequence: T) -> T.SubSequence {
+    public class func dropLast<T: Sequence>(_ amount: Int, in sequence: T) -> T.SubSequence {
         return sequence.dropLast(amount)
     }
 
@@ -32,7 +32,7 @@ extension R {
 
    */
 
-    public class func dropLast<T>(amount: Int) -> (in: [T]) -> ArraySlice<T> {
+    public class func dropLast<T>(_ amount: Int) -> (_ in: [T]) -> ArraySlice<T> {
         return curry(dropLast)(amount)
     }
 

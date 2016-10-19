@@ -16,7 +16,7 @@ extension R {
 
     */
 
-    public class func dec<T: Decrementable>(number: T) -> T {
+    public class func dec<T: Decrementable>(_ number: T) -> T {
         return number.decrement()
     }
 

@@ -19,8 +19,8 @@ extension R {
 
     */
 
-    public class func sort<A, B: SequenceType where A == B.Generator.Element>(comparator: (A, A) -> Bool, for collection: B) -> [A] {
-        return collection.sort(comparator)
+    public class func sort<A, B: Sequence>(_ comparator: (A, A) -> Bool, for collection: B) -> [A] where A == B.Iterator.Element {
+        return collection.sorted(by: comparator)
     }
 
     /**
@@ -34,7 +34,7 @@ extension R {
 
     */
 
-    public class func sort<A, B: SequenceType where A == B.Generator.Element>(comparator: (A, A) -> Bool) -> (for: B) -> [A] {
+    public class func sort<A, B: Sequence>(_ comparator: (A, A) -> Bool) -> (_ for: B) -> [A] where A == B.Iterator.Element {
         return curry(sort)(comparator)
     }
 
@@ -49,8 +49,8 @@ extension R {
 
     */
 
-    public class func sort<A, B: SequenceType where A == B.Generator.Element>(comparator: (A, A) -> Int, for collection: B) -> [A] {
-        return sort { R.lt(comparator($0, $1), than: 0) } (for: collection)
+    public class func sort<A, B: Sequence>(_ comparator: @escaping (A, A) -> Int, for collection: B) -> [A] where A == B.Iterator.Element {
+        return sort { R.lt(comparator($0, $1), than: 0) } (collection)
     }
 
     /**
@@ -64,7 +64,7 @@ extension R {
 
     */
 
-    public class func sort<A, B: SequenceType where A == B.Generator.Element>(comparator: (A, A) -> Int) -> (for: B) -> [A] {
+    public class func sort<A, B: Sequence>(_ comparator: @escaping (A, A) -> Int) -> (_ for: B) -> [A] where A == B.Iterator.Element {
         return curry(sort)(comparator)
     }
 

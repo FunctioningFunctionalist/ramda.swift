@@ -17,7 +17,7 @@ extension R {
 
     */
 
-    public class func modulo<T: BasicArithmeticType>(lhs: T, by rhs: T) -> T {
+    public class func modulo<T: BasicArithmeticType>(_ lhs: T, by rhs: T) -> T {
         return lhs % rhs
     }
 
@@ -31,7 +31,7 @@ extension R {
 
     */
 
-    public class func modulo<T: BasicArithmeticType>(lhs: T) -> (by: T) -> T {
+    public class func modulo<T: BasicArithmeticType>(_ lhs: T) -> (_ by: T) -> T {
         return curry(modulo)(lhs)
     }
 

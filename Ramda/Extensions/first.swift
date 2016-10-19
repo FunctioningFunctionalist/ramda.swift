@@ -16,7 +16,7 @@ extension R {
 
     */
 
-    public class func first<T: CollectionType>(collection: T) -> T.Generator.Element? {
+    public class func first<T: Collection>(_ collection: T) -> T.Iterator.Element? {
         return collection.first
     }
 

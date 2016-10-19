@@ -14,20 +14,20 @@ import Ramda
 
 class BindTests: XCTestCase {
 
-    func increment(num: Int) -> Int {
+    func increment(_ num: Int) -> Int {
         return num + 1
     }
 
-    func add3(num1: Int, num2: Int, num3: Int) -> Int {
+    func add3(_ num1: Int, num2: Int, num3: Int) -> Int {
         return num1 + num2 + num3
     }
 
-    func add4(num1: Int, num2: Int, num3: Int, num4: Int) -> Int {
+    func add4(_ num1: Int, num2: Int, num3: Int, num4: Int) -> Int {
         return num1 + num2 + num3 + num4
     }
 
-    func addV(numbers: Int...) -> Int {
-        return numbers.reduce(0, combine: +)
+    func addV(_ numbers: Int...) -> Int {
+        return numbers.reduce(0, +)
     }
 
     func testShouldBindOneParameterToFunctionAndReturnCorrectResult() {

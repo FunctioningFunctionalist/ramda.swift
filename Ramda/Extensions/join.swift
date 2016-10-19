@@ -20,8 +20,8 @@ extension R {
 
     */
 
-    public class func join<T: SequenceType where T.Generator.Element == String>(separator: String, in sequence: T) -> String {
-        return sequence.joinWithSeparator(separator)
+    public class func join<T: Sequence>(_ separator: String, in sequence: T) -> String where T.Iterator.Element == String {
+        return sequence.joined(separator: separator)
     }
 
     /**
@@ -36,7 +36,7 @@ extension R {
 
     */
 
-    public class func join<T: SequenceType where T.Generator.Element == String>(separator: String) -> (in: T) -> String {
+    public class func join<T: Sequence>(_ separator: String) -> (_ in: T) -> String where T.Iterator.Element == String {
         return curry(join)(separator)
     }
 

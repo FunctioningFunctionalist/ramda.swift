@@ -39,7 +39,7 @@ public protocol BasicArithmeticType {
 
     */
 
-    func + (lhs: Self, rhs: Self) -> Self
+    static func + (lhs: Self, rhs: Self) -> Self
 
     /**
 
@@ -52,7 +52,7 @@ public protocol BasicArithmeticType {
 
     */
 
-    func - (lhs: Self, rhs: Self) -> Self
+    static func - (lhs: Self, rhs: Self) -> Self
 
     /**
 
@@ -65,7 +65,7 @@ public protocol BasicArithmeticType {
 
     */
 
-    func * (lhs: Self, rhs: Self) -> Self
+    static func * (lhs: Self, rhs: Self) -> Self
 
     /**
 
@@ -78,7 +78,7 @@ public protocol BasicArithmeticType {
 
     */
 
-    func / (lhs: Self, rhs: Self) -> Self
+    static func / (lhs: Self, rhs: Self) -> Self
 
     /**
 
@@ -91,7 +91,7 @@ public protocol BasicArithmeticType {
 
     */
 
-    func % (lhs: Self, rhs: Self) -> Self
+    static func % (lhs: Self, rhs: Self) -> Self
 
 }
 

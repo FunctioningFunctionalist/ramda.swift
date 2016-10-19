@@ -20,8 +20,8 @@ extension R {
 
     */
 
-    public class func indexOf<A: Comparable, B: CollectionType where A == B.Generator.Element>(element: A, in collection: B) -> B.Index? {
-        return collection.indexOf(R.equals(element))
+    public class func indexOf<A: Comparable, B: Collection>(_ element: A, in collection: B) -> B.Index? where A == B.Iterator.Element {
+        return collection.index(where: R.equals(element))
     }
 
     /**
@@ -35,7 +35,7 @@ extension R {
 
     */
 
-    public class func indexOf<A: Comparable, B: CollectionType where A == B.Generator.Element>(element: A) -> (in: B) -> B.Index? {
+    public class func indexOf<A: Comparable, B: Collection>(_ element: A) -> (_ in: B) -> B.Index? where A == B.Iterator.Element {
         return curry(indexOf)(element)
     }
 

@@ -11,7 +11,7 @@ import Ramda
 
 class NoneTests: XCTestCase {
 
-    func isEven(number: Int) -> Bool {
+    func isEven(_ number: Int) -> Bool {
         return number % 2 == 0
     }
 

@@ -19,7 +19,7 @@ extension R {
 
     */
 
-    public class func none<A, B where B: SequenceType, A == B.Generator.Element>(function: A -> Bool, in sequence: B) -> Bool {
+    public class func none<A, B>(_ function: @escaping (A) -> Bool, in sequence: B) -> Bool where B: Sequence, A == B.Iterator.Element {
         let opposite = complement(function)
         return all(opposite, in: sequence)
     }
@@ -35,7 +35,7 @@ extension R {
 
     */
 
-    public class func none<T>(function: T -> Bool) -> (in: [T]) -> Bool {
+    public class func none<T>(_ function: @escaping (T) -> Bool) -> (_ in: [T]) -> Bool {
         return curry(none)(function)
     }
 

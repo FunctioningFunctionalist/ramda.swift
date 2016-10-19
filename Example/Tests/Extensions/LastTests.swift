@@ -29,7 +29,7 @@ class LastTests: XCTestCase {
 
     func testShouldReturnLastElementFromSet() {
         let input = Set(arrayLiteral: 1, 3, 5, 7, 9)
-        let expectedResult = input.reverse().first
+        let expectedResult = input.reversed().first
 
         let result = R.last(input)
 

@@ -23,7 +23,7 @@ extension R {
 
     */
 
-    public class func ifElse<A, B>(conditionFunction: A -> Bool, then trueFunction: A -> B, else falseFunction: A -> B) -> A -> B {
+    public class func ifElse<A, B>(_ conditionFunction: @escaping (A) -> Bool, then trueFunction: @escaping (A) -> B, else falseFunction: @escaping (A) -> B) -> (A) -> B {
         return { parameter in
             if conditionFunction(parameter) {
                 return trueFunction(parameter)
@@ -46,7 +46,7 @@ extension R {
 
     */
 
-    public class func ifElse<A, B>(conditionFunction: A -> Bool) -> (then: A -> B) -> (else: A -> B) -> A -> B {
+    public class func ifElse<A, B>(_ conditionFunction: @escaping (A) -> Bool) -> (_ then: @escaping (A) -> B) -> (_ else: @escaping (A) -> B) -> (A) -> B {
         return curry(ifElse)(conditionFunction)
     }
 

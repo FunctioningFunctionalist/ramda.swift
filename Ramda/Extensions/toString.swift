@@ -16,7 +16,7 @@ extension R {
 
     */
 
-    public class func toString<T: CustomStringConvertible>(value: T) -> String {
+    public class func toString<T: CustomStringConvertible>(_ value: T) -> String {
         return value.description
     }
 

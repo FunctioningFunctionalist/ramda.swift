@@ -16,7 +16,7 @@ extension R {
 
     */
 
-    public class func inc<T: Incrementable>(number: T) -> T {
+    public class func inc<T: Incrementable>(_ number: T) -> T {
         return number.increment()
     }
 

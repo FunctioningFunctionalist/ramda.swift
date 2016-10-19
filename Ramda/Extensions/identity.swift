@@ -16,7 +16,7 @@ extension R {
 
     */
 
-    public class func identity<T>(value: T) -> T {
+    public class func identity<T>(_ value: T) -> T {
         return value
     }
 

@@ -13,7 +13,7 @@ import Ramda
 
 class ReduceWhileTests: XCTestCase {
 
-    func isOdd(acc: Int, element: Int) -> Bool {
+    func isOdd(_ acc: Int, element: Int) -> Bool {
         return element % 2 == 1
     }
 

@@ -22,7 +22,7 @@ class ToUpperTests: XCTestCase {
 
     func testShouldUpperCaseStrings() {
         let stringGenerator = FoxGeneratorParam1(FOXString()) { (string: String) in
-            let expectedResult = string.uppercaseString
+            let expectedResult = string.uppercased()
 
             let result = R.toUpper(string)
 

@@ -17,7 +17,7 @@ extension R {
 
     */
 
-    public class func defaultTo<T>(defaultValue: T, value: T?) -> T {
+    public class func defaultTo<T>(_ defaultValue: T, value: T?) -> T {
         return value ?? defaultValue
     }
 
@@ -32,7 +32,7 @@ extension R {
 
     */
 
-    public class func defaultTo<T>(defaultValue: T) -> (value: T?) -> T {
+    public class func defaultTo<T>(_ defaultValue: T) -> (_ value: T?) -> T {
         return curry(defaultTo)(defaultValue)
     }
 

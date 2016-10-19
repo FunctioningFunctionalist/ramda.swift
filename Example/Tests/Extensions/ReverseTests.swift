@@ -29,7 +29,7 @@ class ReverseTests: XCTestCase {
 
     func testShouldReturnReversedSet() {
         let input = Set(arrayLiteral: 1, 3, 5, 7, 9)
-        let expectedResult = input.reverse()
+        let expectedResult = input.reversed()
 
         let result = R.reverse(input)
 

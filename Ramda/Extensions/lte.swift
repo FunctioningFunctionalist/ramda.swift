@@ -18,7 +18,7 @@ extension R {
 
     */
 
-    public class func lte<T: Comparable>(lhs: T, than rhs: T) -> Bool {
+    public class func lte<T: Comparable>(_ lhs: T, than rhs: T) -> Bool {
         return lhs <= rhs
     }
 
@@ -33,7 +33,7 @@ extension R {
 
     */
 
-    public class func lte<T: Comparable>(lhs: T) -> (than: T) -> Bool {
+    public class func lte<T: Comparable>(_ lhs: T) -> (_ than: T) -> Bool {
         return curry(lte)(lhs)
     }
 

@@ -16,7 +16,7 @@ extension R {
 
     */
 
-    public class func empty<T: EmptyType>(value: T) -> T {
+    public class func empty<T: EmptyType>(_ value: T) -> T {
         return value.empty()
     }
 

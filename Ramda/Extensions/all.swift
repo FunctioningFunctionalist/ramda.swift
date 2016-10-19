@@ -22,7 +22,7 @@ extension R {
 
      */
 
-    public class func all<A, B where B: SequenceType, A == B.Generator.Element>(function: A -> Bool, in sequence: B) -> Bool {
+    public class func all<A, B>(_ function: (A) -> Bool, in sequence: B) -> Bool where B: Sequence, A == B.Iterator.Element {
         for element in sequence {
             if !function(element) {
                 return false
@@ -45,7 +45,7 @@ extension R {
 
      */
 
-    public class func all<T>(function: T -> Bool) -> (in: [T]) -> Bool {
+    public class func all<T>(_ function: (T) -> Bool) -> (_ in: [T]) -> Bool {
         return curry(all)(function)
     }
 

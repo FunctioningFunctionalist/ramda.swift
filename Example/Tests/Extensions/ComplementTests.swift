@@ -12,27 +12,27 @@ import Ramda
 
 class ComplementTests: XCTestCase {
 
-    func isEven(number: Int) -> Bool {
+    func isEven(_ number: Int) -> Bool {
         return number % 2 == 0
     }
 
-    func isEqual(first: String, second: String) -> Bool {
+    func isEqual(_ first: String, second: String) -> Bool {
         return first == second
     }
 
-    func isConsecutive(first: Int, second: Int, third: Int) -> Bool {
+    func isConsecutive(_ first: Int, second: Int, third: Int) -> Bool {
         return (third == (second + 1)) && (third == (first + 2))
     }
 
-    func isAllEqual(first: String, second: String, third: String, fourth: String) -> Bool {
+    func isAllEqual(_ first: String, second: String, third: String, fourth: String) -> Bool {
         return first == second && second == third && third == fourth
     }
 
-    func isAllEven(first: Int, second: Int, third: Int, fourth: Int, fifth: Int) -> Bool {
+    func isAllEven(_ first: Int, second: Int, third: Int, fourth: Int, fifth: Int) -> Bool {
         return isEven(first) && isEven(second) && isEven(third) && isEven(fourth) && isEven(fifth)
     }
 
-    func isAllOdd(numbers: Int...) -> Bool {
+    func isAllOdd(_ numbers: Int...) -> Bool {
         for number in numbers {
             if isEven(number) {
                 return false

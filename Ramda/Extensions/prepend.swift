@@ -20,7 +20,7 @@ extension R {
 
     */
 
-    public class func prepend<A, B: RangeReplaceableCollectionType where A == B.Generator.Element, Int == B.Index>(element: A, to collection: B) -> B {
+    public class func prepend<A, B: RangeReplaceableCollection>(_ element: A, to collection: B) -> B where A == B.Iterator.Element, Int == B.Index {
         return R.insert(0, with: element, in: collection)
     }
 
@@ -36,7 +36,7 @@ extension R {
 
     */
 
-    public class func prepend<A, B: RangeReplaceableCollectionType where A == B.Generator.Element, Int == B.Index>(element: A) -> (to: B) -> B {
+    public class func prepend<A, B: RangeReplaceableCollection>(_ element: A) -> (_ to: B) -> B where A == B.Iterator.Element, Int == B.Index {
         return curry(prepend)(element)
     }
 }

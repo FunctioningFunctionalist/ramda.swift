@@ -12,7 +12,7 @@ import Ramda
 
 class ChainTests: XCTestCase {
 
-    func convert(string: String) -> Int {
+    func convert(_ string: String) -> Int {
         if let number = Int(string) {
             return number
         }
@@ -20,7 +20,7 @@ class ChainTests: XCTestCase {
         return 0
     }
 
-    func optionalConvert(string: String) -> Int? {
+    func optionalConvert(_ string: String) -> Int? {
         return Int(string)
     }
 

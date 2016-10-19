@@ -19,8 +19,8 @@ extension R {
 
     */
 
-    public class func without<A: SequenceType, B: SequenceType
-                             where A.Generator.Element: Comparable, A.Generator.Element == B.Generator.Element>(sequence: A, from sequence2: B) -> [A.Generator.Element] {
+    public class func without<A: Sequence, B: Sequence>(_ sequence: A, from sequence2: B) -> [A.Iterator.Element]
+                             where A.Iterator.Element: Comparable, A.Iterator.Element == B.Iterator.Element {
         return R.difference(sequence2, from: sequence)
     }
 
@@ -35,8 +35,8 @@ extension R {
 
     */
 
-    public class func without<A: SequenceType, B: SequenceType
-                             where A.Generator.Element: Comparable, A.Generator.Element == B.Generator.Element>(sequence: A) -> (from: B) -> [A.Generator.Element] {
+    public class func without<A: Sequence, B: Sequence>(_ sequence: A) -> (_ from: B) -> [A.Iterator.Element]
+                             where A.Iterator.Element: Comparable, A.Iterator.Element == B.Iterator.Element {
         return curry(without)(sequence)
     }
 

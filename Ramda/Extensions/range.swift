@@ -17,7 +17,7 @@ extension R {
 
     */
 
-    public class func range(from: Int, to second: Int) -> [Int] {
+    public class func range(_ from: Int, to second: Int) -> [Int] {
         return Array(from...R.subtract(second, minus: 1))
     }
 
@@ -32,7 +32,7 @@ extension R {
 
     */
 
-    public class func range(from: Int) -> (to: Int) -> [Int] {
+    public class func range(_ from: Int) -> (_ to: Int) -> [Int] {
         return curry(range)(from)
     }
 

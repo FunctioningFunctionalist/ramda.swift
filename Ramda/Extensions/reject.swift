@@ -20,7 +20,7 @@ extension R {
 
     */
 
-    public class func reject<A, B: SequenceType where A == B.Generator.Element>(function: A -> Bool, in sequence: B) -> [A] {
+    public class func reject<A, B: Sequence>(_ function: @escaping (A) -> Bool, in sequence: B) -> [A] where A == B.Iterator.Element {
         return R.filter(R.complement(function), in: sequence)
     }
 
@@ -35,7 +35,7 @@ extension R {
 
     */
 
-    public class func reject<A, B: SequenceType where A == B.Generator.Element>(function: A -> Bool) -> (in: B) -> [A] {
+    public class func reject<A, B: Sequence>(_ function: @escaping (A) -> Bool) -> (_ in: B) -> [A] where A == B.Iterator.Element {
         return curry(reject)(function)
     }
 

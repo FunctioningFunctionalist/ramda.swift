@@ -17,8 +17,8 @@ extension R {
 
     */
 
-    public class func addIndex<T: SequenceType>(sequence: T) -> EnumerateSequence<T> {
-        return sequence.enumerate()
+    public class func addIndex<T: Sequence>(_ sequence: T) -> EnumeratedSequence<T> {
+        return sequence.enumerated()
     }
 
 }

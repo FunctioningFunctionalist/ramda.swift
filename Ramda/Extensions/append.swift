@@ -19,7 +19,7 @@ extension R {
 
     */
 
-    public class func append<A, B: RangeReplaceableCollectionType where B.Generator.Element == A>(element: A, to collection: B) -> B {
+    public class func append<A, B: RangeReplaceableCollection>(_ element: A, to collection: B) -> B where B.Iterator.Element == A {
         var result = collection
         result.append(element)
         return result
@@ -36,7 +36,7 @@ extension R {
 
     */
 
-    public class func append<T>(element: T) -> (to: [T]) -> [T] {
+    public class func append<T>(_ element: T) -> (_ to: [T]) -> [T] {
         return curry(append)(element)
     }
 
@@ -51,9 +51,9 @@ extension R {
 
     */
 
-    public class func append<T: RangeReplaceableCollectionType>(elements: T, to collection: T) -> T {
+    public class func append<T: RangeReplaceableCollection>(_ elements: T, to collection: T) -> T {
         var result = collection
-        result.appendContentsOf(elements)
+        result.append(contentsOf: elements)
         return result
     }
 
@@ -68,7 +68,7 @@ extension R {
 
     */
 
-    public class func append<T: RangeReplaceableCollectionType>(elements: T) -> (to: T) -> T {
+    public class func append<T: RangeReplaceableCollection>(_ elements: T) -> (_ to: T) -> T {
         return curry(append)(elements)
     }
 

@@ -34,7 +34,7 @@ class ModuloTests: XCTestCase {
             let newRhs = rhs == 0 ? rhs + 1 : rhs
             let result = R.modulo(newLhs)(by: newRhs)
 
-            return result == (newLhs % newRhs)
+            return result == (newLhs.truncatingRemainder(dividingBy: newRhs))
         }
 
         FoxTester.assert(floatsGenerator)
@@ -48,7 +48,7 @@ class ModuloTests: XCTestCase {
             let newRhs = rhs == 0 ? rhs + 1 : rhs
             let result = R.modulo(newLhs)(by: newRhs)
 
-            return result == (newLhs % newRhs)
+            return result == (newLhs.truncatingRemainder(dividingBy: newRhs))
         }
 
         FoxTester.assert(doubleGenerator)

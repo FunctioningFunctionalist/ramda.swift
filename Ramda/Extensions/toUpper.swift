@@ -16,8 +16,8 @@ extension R {
 
     */
 
-    public class func toUpper(string: String) -> String {
-        return string.uppercaseString
+    public class func toUpper(_ string: String) -> String {
+        return string.uppercased()
     }
 
 }

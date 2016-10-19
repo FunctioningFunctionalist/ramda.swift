@@ -19,8 +19,8 @@ extension R {
 
     */
 
-    public class func ap<A, B, C: SequenceType, D: SequenceType where C.Generator.Element == (A -> B), D.Generator.Element == A>(functions: C, to sequence: D) -> [B] {
-        return functions.flatMap { (function: A -> B) in
+    public class func ap<A, B, C: Sequence, D: Sequence>(_ functions: C, to sequence: D) -> [B] where C.Iterator.Element == ((A) -> B), D.Iterator.Element == A {
+        return functions.flatMap { (function: (A) -> B) in
             sequence.map { (element: A) in
                 function(element)
             }
@@ -38,9 +38,10 @@ extension R {
 
     */
 
-    public class func ap<A, B>(functions: (A -> B)...) -> (to: [A]) -> [B] {
-        return curry(ap)(functions)
-    }
+//    public class func ap<A, B>(_ functions: (A) -> B...) -> (_ to: [A]) -> [B] {
+//        let a: [(A) -> B] = functions
+//        return curry(ap)(functions)
+//    }
 
     /**
 
@@ -53,7 +54,7 @@ extension R {
 
     */
 
-    public class func ap<A, B>(functions: [A -> B]) -> (to: [A]) -> [B] {
+    public class func ap<A, B>(_ functions: [(A) -> B]) -> (_ to: [A]) -> [B] {
         return curry(ap)(functions)
     }
 

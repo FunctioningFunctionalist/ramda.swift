@@ -28,12 +28,10 @@ extension R {
 
      */
 
-    public class func adjust<A, B, C where B: RangeReplaceableCollectionType, A == B.Generator.Element, C == B.Index>(function: A -> A, at index: C, in collection: B) -> B {
+    public class func adjust<A, B, C>(_ function: (A) -> A, at index: C, in collection: B) -> B where B: RangeReplaceableCollection, A == B.Iterator.Element, C == B.Index {
         var result = collection
-        if collection.indices.contains(index) {
-            let newValue = function(result[index])
-            result.insert(newValue, atIndex: index)
-        }
+        let newValue = function(result[index])
+        result.insert(newValue, at: index)
         return result
     }
 
@@ -50,7 +48,7 @@ extension R {
 
      */
 
-    public class func adjust<T>(function: T -> T) -> (at: Int) -> (in: [T]) -> [T] {
+    public class func adjust<T>(_ function: (T) -> T) -> (_ at: Int) -> (_ in: [T]) -> [T] {
         return curry(adjust)(function)
     }
 

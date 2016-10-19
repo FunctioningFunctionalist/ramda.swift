@@ -28,8 +28,8 @@ extension R {
 
      */
 
-    public class func reduceWhile<A, B: SequenceType>
-        (predicate: (A, B.Generator.Element) -> Bool, iterator: (A, B.Generator.Element) -> A, startingWith initialValue: A, in sequence: B) -> A {
+    public class func reduceWhile<A, B: Sequence>
+        (_ predicate: (A, B.Iterator.Element) -> Bool, iterator: (A, B.Iterator.Element) -> A, startingWith initialValue: A, in sequence: B) -> A {
 
         var acc = initialValue
 
@@ -56,8 +56,8 @@ extension R {
 
      */
 
-    public class func reduceWhile<A, B: SequenceType>
-        (predicate: (A, B.Generator.Element) -> Bool) -> (iterator: (A, B.Generator.Element) -> A) -> (startingWith: A) -> (in: B) -> A {
+    public class func reduceWhile<A, B: Sequence>
+        (_ predicate: (A, B.Iterator.Element) -> Bool) -> (_ iterator: (A, B.Iterator.Element) -> A) -> (_ startingWith: A) -> (_ in: B) -> A {
         return curry(reduceWhile)(predicate)
     }
 

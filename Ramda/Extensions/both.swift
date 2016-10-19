@@ -18,7 +18,7 @@ extension R {
 
     */
 
-    public class func both<T>(lhs: T -> Bool, and rhs: T -> Bool) -> (T) -> Bool {
+    public class func both<T>(_ lhs: @escaping (T) -> Bool, and rhs: @escaping (T) -> Bool) -> (T) -> Bool {
         return { input in
             return lhs(input) && rhs(input)
         }
@@ -36,7 +36,7 @@ extension R {
 
     */
 
-    public class func both<T>(lhs: T -> Bool) -> (and: T -> Bool) -> (T) -> Bool {
+    public class func both<T>(_ lhs: @escaping (T) -> Bool) -> (_ and: @escaping (T) -> Bool) -> (T) -> Bool {
         return curry(both)(lhs)
     }
 

@@ -16,8 +16,8 @@ extension R {
 
     */
 
-    public class func reverse<T: SequenceType>(sequence: T) -> [T.Generator.Element] {
-        return sequence.reverse()
+    public class func reverse<T: Sequence>(_ sequence: T) -> [T.Iterator.Element] {
+        return sequence.reversed()
     }
 
 }

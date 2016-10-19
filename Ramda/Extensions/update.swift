@@ -20,12 +20,10 @@ extension R {
 
     */
 
-    public class func update<A, B, C where B: RangeReplaceableCollectionType, A == B.Generator.Element, C == B.Index>(index: C, value: A, in collection: B) -> B {
+    public class func update<A, B, C>(_ index: C, value: A, in collection: B) -> B where B: RangeReplaceableCollection, A == B.Iterator.Element, C == B.Index {
         var result = collection
-        if collection.indices.contains(index) {
-            result.removeAtIndex(index)
-            result.insert(value, atIndex: index)
-        }
+        result.remove(at: index)
+        result.insert(value, at: index)
         return result
     }
 
@@ -40,7 +38,7 @@ extension R {
 
     */
 
-    public class func update<T>(index: Int) -> (value: T) -> (in: [T]) -> [T] {
+    public class func update<T>(_ index: Int) -> (_ value: T) -> (_ in: [T]) -> [T] {
         return curry(update)(index)
     }
 

@@ -16,8 +16,8 @@ extension R {
 
     */
 
-    public class func toLower(string: String) -> String {
-        return string.lowercaseString
+    public class func toLower(_ string: String) -> String {
+        return string.lowercased()
     }
 
 }

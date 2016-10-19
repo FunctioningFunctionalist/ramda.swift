@@ -19,9 +19,9 @@ extension R {
 
     */
 
-    public class func apply<A, B, C: SequenceType where C.Generator.Element == A>(function: (A...) -> B, with sequence: C) -> B {
-        typealias Function = C -> B
-        let newFunction = unsafeBitCast(function, Function.self)
+    public class func apply<A, B, C: Sequence>(_ function: (A...) -> B, with sequence: C) -> B where C.Iterator.Element == A {
+        typealias Function = (C) -> B
+        let newFunction = unsafeBitCast(function, to: Function.self)
         return newFunction(sequence)
     }
 
@@ -36,7 +36,7 @@ extension R {
 
     */
 
-    public class func apply<A, B>(function: (A...) -> B) -> (with: [A]) -> B {
+    public class func apply<A, B>(_ function: (A...) -> B) -> (_ with: [A]) -> B {
         return curry(apply)(function)
     }
 

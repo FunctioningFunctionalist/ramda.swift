@@ -20,8 +20,8 @@ extension R {
 
     */
 
-    public class func nth<A: CollectionType, B: CollectionType
-                         where B == A.SubSequence, A.Index.Distance == Int>(index: Int, in collection: A) -> B.Generator.Element? {
+    public class func nth<A: Collection, B: Collection>(_ index: Int, in collection: A) -> B.Iterator.Element?
+                         where B == A.SubSequence, A.IndexDistance == Int {
         let newIndex = index < 0 ? index + R.length(collection) : index
         return R.first(R.drop(newIndex, in: collection))
     }
@@ -38,8 +38,8 @@ extension R {
 
     */
 
-    public class func nth<A: CollectionType, B: CollectionType
-                         where B == A.SubSequence, A.Index.Distance == Int>(index: Int) -> (in: A) -> B.Generator.Element? {
+    public class func nth<A: Collection, B: Collection>(_ index: Int) -> (_ in: A) -> B.Iterator.Element?
+                         where B == A.SubSequence, A.IndexDistance == Int {
         return curry(nth)(index)
     }
 

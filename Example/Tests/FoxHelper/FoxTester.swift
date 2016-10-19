@@ -10,11 +10,11 @@ class FoxTester {
 
     static let numberOfTests: UInt = 25
 
-    static func assert(foxParam: IFoxGeneratorParam) -> Bool {
+    static func assert(_ foxParam: IFoxGeneratorParam) -> Bool {
         let runner = FOXRunner()
-        let result = runner.resultForNumberOfTests(numberOfTests, property: foxParam.toGenerator())
-        XCTAssertTrue(result.succeeded, result.friendlyDescription())
-        return result.succeeded
+        let result = runner?.resultForNumber(ofTests: numberOfTests, property: foxParam.toGenerator())
+        XCTAssertTrue((result?.succeeded)!, (result?.friendlyDescription())!)
+        return result!.succeeded
     }
 
 }

@@ -18,10 +18,10 @@ protocol IFoxGeneratorParam {
 
 class FoxGeneratorParam<T>: IFoxGeneratorParam {
 
-    private let tupleGenerator: FOXGenerator
-    private let validation: T -> Bool
+    fileprivate let tupleGenerator: FOXGenerator
+    fileprivate let validation: (T) -> Bool
 
-    init(generators: [FOXGenerator], validation: T -> Bool) {
+    init(generators: [FOXGenerator], validation: @escaping (T) -> Bool) {
         self.tupleGenerator = FOXTuple(generators)
         self.validation = validation
     }
@@ -36,7 +36,7 @@ class FoxGeneratorParam<T>: IFoxGeneratorParam {
 
     }
 
-    private func executeFunc(validation: T -> Bool, generations: [AnyObject]) -> Bool {
+    fileprivate func executeFunc(_ validation: (T) -> Bool, generations: [AnyObject]) -> Bool {
 
         return false
 
@@ -46,11 +46,11 @@ class FoxGeneratorParam<T>: IFoxGeneratorParam {
 
 class FoxGeneratorParam1<A>: FoxGeneratorParam<(A)> {
 
-    init(_ firstGenerator: FOXGenerator, validation: (A) -> Bool) {
+    init(_ firstGenerator: FOXGenerator, validation: @escaping (A) -> Bool) {
         super.init(generators: [firstGenerator], validation: validation)
     }
 
-    override func executeFunc(validation: A -> Bool, generations: [AnyObject]) -> Bool {
+    override func executeFunc(_ validation: (A) -> Bool, generations: [AnyObject]) -> Bool {
         return validation(generations[0] as! A)
     }
 
@@ -58,11 +58,11 @@ class FoxGeneratorParam1<A>: FoxGeneratorParam<(A)> {
 
 class FoxGeneratorParam2<A, B>: FoxGeneratorParam<(A, B)> {
 
-    init(_ firstGenerator: FOXGenerator, _ secondGenerator: FOXGenerator, validation: (A, B) -> Bool) {
+    init(_ firstGenerator: FOXGenerator, _ secondGenerator: FOXGenerator, validation: @escaping (A, B) -> Bool) {
         super.init(generators: [firstGenerator, secondGenerator], validation: validation)
     }
 
-    override func executeFunc(validation: (A, B) -> Bool, generations: [AnyObject]) -> Bool {
+    override func executeFunc(_ validation: (A, B) -> Bool, generations: [AnyObject]) -> Bool {
         return validation(generations[0] as! A, generations[1] as! B)
     }
 
@@ -70,11 +70,11 @@ class FoxGeneratorParam2<A, B>: FoxGeneratorParam<(A, B)> {
 
 class FoxGeneratorParam3<A, B, C>: FoxGeneratorParam<(A, B, C)> {
 
-    init(_ firstGenerator: FOXGenerator, _ secondGenerator: FOXGenerator, _ thirdGenerator: FOXGenerator, validation: (A, B, C) -> Bool) {
+    init(_ firstGenerator: FOXGenerator, _ secondGenerator: FOXGenerator, _ thirdGenerator: FOXGenerator, validation: @escaping (A, B, C) -> Bool) {
         super.init(generators: [firstGenerator, secondGenerator, thirdGenerator], validation: validation)
     }
 
-    override func executeFunc(validation: (A, B, C) -> Bool, generations: [AnyObject]) -> Bool {
+    override func executeFunc(_ validation: (A, B, C) -> Bool, generations: [AnyObject]) -> Bool {
         return validation(generations[0] as! A, generations[1] as! B, generations[2] as! C)
     }
 
@@ -82,11 +82,11 @@ class FoxGeneratorParam3<A, B, C>: FoxGeneratorParam<(A, B, C)> {
 
 class FoxGeneratorParam4<A, B, C, D>: FoxGeneratorParam<(A, B, C, D)> {
 
-    init(_ firstGenerator: FOXGenerator, _ secondGenerator: FOXGenerator, _ thirdGenerator: FOXGenerator, _ fourthGenerator: FOXGenerator, validation: (A, B, C, D) -> Bool) {
+    init(_ firstGenerator: FOXGenerator, _ secondGenerator: FOXGenerator, _ thirdGenerator: FOXGenerator, _ fourthGenerator: FOXGenerator, validation: @escaping (A, B, C, D) -> Bool) {
         super.init(generators: [firstGenerator, secondGenerator, thirdGenerator, fourthGenerator], validation: validation)
     }
 
-    override func executeFunc(validation: (A, B, C, D) -> Bool, generations: [AnyObject]) -> Bool {
+    override func executeFunc(_ validation: (A, B, C, D) -> Bool, generations: [AnyObject]) -> Bool {
         return validation(generations[0] as! A, generations[1] as! B, generations[2] as! C, generations[3] as! D)
     }
 
@@ -94,11 +94,11 @@ class FoxGeneratorParam4<A, B, C, D>: FoxGeneratorParam<(A, B, C, D)> {
 
 class FoxGeneratorParam5<A, B, C, D, E>: FoxGeneratorParam<(A, B, C, D, E)> {
 
-    init(_ firstGenerator: FOXGenerator, _ secondGenerator: FOXGenerator, _ thirdGenerator: FOXGenerator, _ fourthGenerator: FOXGenerator, _ fifthGenerator: FOXGenerator, validation: (A, B, C, D, E) -> Bool) {
+    init(_ firstGenerator: FOXGenerator, _ secondGenerator: FOXGenerator, _ thirdGenerator: FOXGenerator, _ fourthGenerator: FOXGenerator, _ fifthGenerator: FOXGenerator, validation: @escaping (A, B, C, D, E) -> Bool) {
         super.init(generators: [firstGenerator, secondGenerator, thirdGenerator, fourthGenerator, fifthGenerator], validation: validation)
     }
 
-    override func executeFunc(validation: (A, B, C, D, E) -> Bool, generations: [AnyObject]) -> Bool {
+    override func executeFunc(_ validation: (A, B, C, D, E) -> Bool, generations: [AnyObject]) -> Bool {
         return validation(generations[0] as! A, generations[1] as! B, generations[2] as! C, generations[3] as! D, generations[4] as! E)
     }
 

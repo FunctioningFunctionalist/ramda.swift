@@ -14,11 +14,11 @@ import Ramda
 
 class BothTests: XCTestCase {
 
-    func isGreaterThan10(number: Int) -> Bool {
+    func isGreaterThan10(_ number: Int) -> Bool {
         return number > 10
     }
 
-    func isEven(number: Int) -> Bool {
+    func isEven(_ number: Int) -> Bool {
         return number % 2 == 0
     }
 

@@ -16,7 +16,7 @@ class ApTests: XCTestCase {
 
     func testShouldApplyArrayOfFunctionsToArrayOfValues() {
         let arrayGenerator = FoxGeneratorParam1(FOXArray(FOXInteger())) { (numbers: [Int]) in
-            let functions: [Int -> Int] = [R.add(10), R.add(25)]
+            let functions: [(Int) -> Int] = [R.add(10), R.add(25)]
             let expectedResult = self.createResultFromFunctions(functions, with: numbers)
 
             let actualResult = R.ap(functions)(to: numbers)
@@ -29,7 +29,7 @@ class ApTests: XCTestCase {
 
     func testShouldApplyArraysOfFunctionsToArrayOfValuesUsingPartialFunctions() {
         let partialGenerator = FoxGeneratorParam1(FOXArray(FOXInteger())) { (functionValues: [Int]) in
-            let functions: [Int -> Int] = functionValues.map { (num: Int) in R.add(num) }
+            let functions: [(Int) -> Int] = functionValues.map { (num: Int) in R.add(num) }
             let partial = R.ap(functions)
             let arrayGenerator = FoxGeneratorParam1(FOXArray(FOXInteger())) { (numbers: [Int]) in
                 let expectedResult = self.createResultFromFunctions(functions, with: numbers)
@@ -53,7 +53,7 @@ class ApTests: XCTestCase {
         XCTAssertEqual(expectedResult, result)
     }
 
-    func createResultFromFunctions(functions: [Int -> Int], with numbers: [Int]) -> [Int] {
+    func createResultFromFunctions(_ functions: [(Int) -> Int], with numbers: [Int]) -> [Int] {
         var result: [Int] = []
         for function in functions {
             for number in numbers {

@@ -12,7 +12,7 @@ import Ramda
 
 class ApplyTests: XCTestCase {
 
-    func max(numbers: Int...) -> Int {
+    func max(_ numbers: Int...) -> Int {
         var maximum = Int.min
         for number in numbers {
             if number > maximum {

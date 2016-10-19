@@ -16,7 +16,7 @@ extension R {
 
     */
 
-    public class func or(lhs: () -> Bool, or rhs: () -> Bool) -> Bool {
+    public class func or(_ lhs: () -> Bool, or rhs: () -> Bool) -> Bool {
         return lhs() || rhs()
     }
 
@@ -30,7 +30,7 @@ extension R {
 
     */
 
-    public class func or(lhs: () -> Bool) -> (or: () -> Bool) -> Bool {
+    public class func or(_ lhs: () -> Bool) -> (_ or: () -> Bool) -> Bool {
         return curry(or)(lhs)
     }
 
@@ -44,7 +44,7 @@ extension R {
 
     */
 
-    public class func or(lhs: Bool, or rhs: Bool) -> Bool {
+    public class func or(_ lhs: Bool, or rhs: Bool) -> Bool {
         return lhs || rhs
     }
 
@@ -58,7 +58,7 @@ extension R {
 
     */
 
-    public class func or(lhs: Bool) -> (or: Bool) -> Bool {
+    public class func or(_ lhs: Bool) -> (_ or: Bool) -> Bool {
         return curry(or)(lhs)
     }
 

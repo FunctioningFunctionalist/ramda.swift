@@ -13,11 +13,11 @@ class EitherTests: XCTestCase {
 
     func testShouldReturnTrueAndNotExecuteTheSecondFunctionWhenTheFirstPredicateIsTrue() {
         var executed = false
-        let isEven: Int -> Bool = {
+        let isEven: (Int) -> Bool = {
             return $0 % 2 == 0
         }
 
-        let isGreaterThan10: Int -> Bool = {
+        let isGreaterThan10: (Int) -> Bool = {
             executed = true
             return $0 > 10
         }
@@ -31,11 +31,11 @@ class EitherTests: XCTestCase {
 
     func testShouldReturnTrueAndExecuteBothPredicatesWhenFirstPredicateIsFalse() {
         var executed = false
-        let isEven: Int -> Bool = {
+        let isEven: (Int) -> Bool = {
             return $0 % 2 == 0
         }
 
-        let isGreaterThan10: Int -> Bool = {
+        let isGreaterThan10: (Int) -> Bool = {
             executed = true
             return $0 > 10
         }
@@ -49,11 +49,11 @@ class EitherTests: XCTestCase {
 
     func testShouldReturnFalseWhenBothPredicatesResultInFalse() {
         var executed = false
-        let isEven: Int -> Bool = {
+        let isEven: (Int) -> Bool = {
             return $0 % 2 == 0
         }
 
-        let isGreaterThan10: Int -> Bool = {
+        let isGreaterThan10: (Int) -> Bool = {
             executed = true
             return $0 > 10
         }

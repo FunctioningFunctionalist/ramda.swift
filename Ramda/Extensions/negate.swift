@@ -16,7 +16,7 @@ extension R {
 
     */
 
-    public class func negate<T: SignedNumberType>(number: T) -> T {
+    public class func negate<T: SignedNumber>(_ number: T) -> T {
         return -number
     }
 

@@ -16,7 +16,7 @@ extension R {
 
     */
 
-    public class func last<T: CollectionType>(collection: T) -> T.Generator.Element? {
+    public class func last<T: Collection>(_ collection: T) -> T.Iterator.Element? {
         return R.first(R.reverse(collection))
     }
 

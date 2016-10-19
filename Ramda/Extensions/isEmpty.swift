@@ -16,7 +16,7 @@ extension R {
 
     */
 
-    public class func isEmpty<T: CollectionType>(collection: T) -> Bool {
+    public class func isEmpty<T: Collection>(_ collection: T) -> Bool {
         return collection.isEmpty
     }
 

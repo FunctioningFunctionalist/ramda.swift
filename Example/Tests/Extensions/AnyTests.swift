@@ -12,7 +12,7 @@ import Ramda
 
 class AnyTests: XCTestCase {
 
-    func isEven(number: Int) -> Bool {
+    func isEven(_ number: Int) -> Bool {
         return number % 2 == 0
     }
 
@@ -35,8 +35,8 @@ class AnyTests: XCTestCase {
     func testShouldReturnTrueIfAnyValueInListMatchesPredicateUsingPartialFunctions() {
         let values = [1, 3, 5, 6, 7]
 
-        let any: (in: [Int]) -> Bool = R.any(self.isEven)
-        let result = any(in: values)
+        let any: (_ in: [Int]) -> Bool = R.any(self.isEven)
+        let result = any(values)
 
         XCTAssertTrue(result)
     }

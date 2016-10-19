@@ -14,35 +14,35 @@ import Ramda
 
 class CurryTests: XCTestCase {
 
-    func add2(first: Int, second: Int) -> Int {
+    func add2(_ first: Int, second: Int) -> Int {
         return first + second
     }
 
-    func add3(first: Int, second: Int, third: Int) -> Int {
+    func add3(_ first: Int, second: Int, third: Int) -> Int {
         return first + second + third
     }
 
-    func add4(first: Int, second: Int, third: Int, fourth: Int) -> Int {
+    func add4(_ first: Int, second: Int, third: Int, fourth: Int) -> Int {
         return first + second + third + fourth
     }
 
-    func add5(first: Int, second: Int, third: Int, fourth: Int, fifth: Int) -> Int {
+    func add5(_ first: Int, second: Int, third: Int, fourth: Int, fifth: Int) -> Int {
         return first + second + third + fourth + fifth
     }
 
-    func add2Throws(first: Int, second: Int) throws -> Int {
+    func add2Throws(_ first: Int, second: Int) throws -> Int {
         return first + second
     }
 
-    func add3Throws(first: Int, second: Int, third: Int) throws -> Int {
+    func add3Throws(_ first: Int, second: Int, third: Int) throws -> Int {
         return first + second + third
     }
 
-    func add4Throws(first: Int, second: Int, third: Int, fourth: Int) throws -> Int {
+    func add4Throws(_ first: Int, second: Int, third: Int, fourth: Int) throws -> Int {
         return first + second + third + fourth
     }
 
-    func add5Throws(first: Int, second: Int, third: Int, fourth: Int, fifth: Int) throws -> Int {
+    func add5Throws(_ first: Int, second: Int, third: Int, fourth: Int, fifth: Int) throws -> Int {
         return first + second + third + fourth + fifth
     }
 

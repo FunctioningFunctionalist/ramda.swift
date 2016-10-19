@@ -16,9 +16,9 @@ extension R {
 
     */
 
-    public class func trim(string: String) -> String {
-        let characterSet = NSCharacterSet.whitespaceAndNewlineCharacterSet()
-        return string.stringByTrimmingCharactersInSet(characterSet)
+    public class func trim(_ string: String) -> String {
+        let characterSet = CharacterSet.whitespacesAndNewlines
+        return string.trimmingCharacters(in: characterSet)
     }
 
 }

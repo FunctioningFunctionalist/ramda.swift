@@ -20,10 +20,10 @@ extension R {
 
     */
 
-    public class func insert<A, B: RangeReplaceableCollectionType, C
-                            where A == B.Generator.Element, C == B.Index>(index: C, with element: A, in collection: B) -> B {
+    public class func insert<A, B: RangeReplaceableCollection, C>(_ index: C, with element: A, in collection: B) -> B
+                            where A == B.Iterator.Element, C == B.Index {
         var newCollection = collection
-        newCollection.insert(element, atIndex: index)
+        newCollection.insert(element, at: index)
         return newCollection
     }
 
@@ -38,8 +38,8 @@ extension R {
 
     */
 
-    public class func insert<A, B: RangeReplaceableCollectionType, C
-                            where A == B.Generator.Element, C == B.Index>(index: C) -> (with: A) -> (in: B) -> B {
+    public class func insert<A, B: RangeReplaceableCollection, C>(_ index: C) -> (_ with: A) -> (_ in: B) -> B
+                            where A == B.Iterator.Element, C == B.Index {
         return curry(insert)(index)
     }
 }

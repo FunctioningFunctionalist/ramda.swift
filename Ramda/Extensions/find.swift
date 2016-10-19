@@ -16,7 +16,7 @@ extension R {
      - returns: The first found element, or nil if none found.
      */
 
-    public class func find<A, B: SequenceType where A == B.Generator.Element>(predicate: (A) -> Bool, in sequence: B) -> A? {
+    public class func find<A, B: Sequence>(_ predicate: (A) -> Bool, in sequence: B) -> A? where A == B.Iterator.Element {
         for element in sequence {
             if predicate(element) {
                 return element
@@ -33,7 +33,7 @@ extension R {
      the first found element, or nil if none found.
      */
 
-    public class func find<A, B: SequenceType where A == B.Generator.Element>(predicate: (A) -> Bool) -> (in: B) -> A? {
+    public class func find<A, B: Sequence>(_ predicate: (A) -> Bool) -> (_ in: B) -> A? where A == B.Iterator.Element {
         return curry(find)(predicate)
     }
 

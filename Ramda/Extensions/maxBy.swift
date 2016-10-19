@@ -19,7 +19,7 @@ extension R {
 
     */
 
-    public class func maxBy<A, B: Comparable>(function: A -> B, with lhs: A, or rhs: A) -> B {
+    public class func maxBy<A, B: Comparable>(_ function: (A) -> B, with lhs: A, or rhs: A) -> B {
         return R.max(function(lhs), or: function(rhs))
     }
 
@@ -35,7 +35,7 @@ extension R {
 
     */
 
-    public class func maxBy<A, B: Comparable>(function: A -> B) -> (with: A) -> (or: A) -> B {
+    public class func maxBy<A, B: Comparable>(_ function: (A) -> B) -> (_ with: A) -> (_ or: A) -> B {
         return curry(maxBy)(function)
     }
 

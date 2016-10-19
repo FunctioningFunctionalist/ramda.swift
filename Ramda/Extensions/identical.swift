@@ -19,10 +19,8 @@ extension R {
 
     */
 
-    public class func identical<T>(inout lhs: T, inout to rhs: T) -> Bool {
-        return withUnsafePointers(&lhs, &rhs) {
-            return $0 == $1
-        }
+    public class func identical<T: AnyObject>(_ lhs: T, to rhs: T) -> Bool {
+        return lhs === rhs
     }
 
 }
