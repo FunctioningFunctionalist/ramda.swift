@@ -7,51 +7,32 @@
 //
 
 import XCTest
-import Fox
 import Ramda
 
 class DivideTests: XCTestCase {
 
     func testShouldDivideIntegersTogether() {
-        let integerGenerator = FoxGeneratorParam2(FOXInteger(), FOXInteger()) {
-            (lhs: Int, rhs: Int) in
+        let newLhs = 1
+        let newRhs = 2
+        let result = R.divide(newLhs)(newRhs)
 
-            let newLhs = lhs == 0 ? lhs + 1 : lhs
-            let newRhs = rhs == 0 ? rhs + 1 : rhs
-            let result = R.divide(newLhs)(by: newRhs)
-
-            return result == (newLhs / newRhs)
-        }
-
-        FoxTester.assert(integerGenerator)
+        XCTAssertTrue(result == (newLhs / newRhs))
     }
 
     func testShouldDivideFloatsTogether() {
-        let floatsGenerator = FoxGeneratorParam2(FOXFloat(), FOXFloat()) {
-            (lhs: Float, rhs: Float) in
+        let newLhs: Float = 1.1
+        let newRhs: Float = 2.2
+        let result = R.divide(newLhs)(newRhs)
 
-            let newLhs = lhs == 0 ? lhs + 1 : lhs
-            let newRhs = rhs == 0 ? rhs + 1 : rhs
-            let result = R.divide(newLhs)(by: newRhs)
-
-            return result == (newLhs / newRhs)
-        }
-
-        FoxTester.assert(floatsGenerator)
+        XCTAssertTrue(result == (newLhs / newRhs))
     }
 
     func testShouldDivideDoublesTogether() {
-        let doubleGenerator = FoxGeneratorParam2(FOXDouble(), FOXDouble()) {
-            (lhs: Double, rhs: Double) in
+        let newLhs: Double = 1.1
+        let newRhs: Double = 0.2
+        let result = R.divide(newLhs)(newRhs)
 
-            let newLhs = lhs == 0 ? lhs + 1 : lhs
-            let newRhs = rhs == 0 ? rhs + 1 : rhs
-            let result = R.divide(newLhs)(by: newRhs)
-
-            return result == (newLhs / newRhs)
-        }
-
-        FoxTester.assert(doubleGenerator)
+        XCTAssertTrue(result == (newLhs / newRhs))
     }
 
 }

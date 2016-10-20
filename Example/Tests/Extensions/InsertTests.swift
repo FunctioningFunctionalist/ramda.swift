@@ -14,7 +14,7 @@ class InsertTests: XCTestCase {
     func testShouldInsertElementIntoArray() {
         let expectedResult = [1, 2, 3, 5]
 
-        let result = R.insert(1)(with: 2)(in: [1, 3, 5])
+        let result = R.insert(1)(2)(in: [1, 3, 5])
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -23,7 +23,7 @@ class InsertTests: XCTestCase {
         let expectedResult = [1, 3, 5, 6, 7, 9]
         let input = [1, 3, 5, 7, 9]
 
-        let result = R.insert(3)(with: 6)(in: input)
+        let result = R.insert(3)(6)(in: input)
 
         XCTAssertEqual(expectedResult, result)
         XCTAssertEqual(input, [1, 3, 5, 7, 9])

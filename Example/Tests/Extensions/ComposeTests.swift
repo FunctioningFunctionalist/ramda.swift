@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import Fox
 import Ramda
 
 // swiftlint:disable line_length

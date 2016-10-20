@@ -18,7 +18,7 @@ class IdenticalTests: XCTestCase {
     }
 
     func testShouldReturnTrueWhenStringsAreIdentical() {
-        let result = R.identical(&Singleton.string, to: &Singleton.string)
+        let result = R.identical(Singleton.string, to: Singleton.string)
 
         XCTAssertTrue(result)
     }
@@ -27,7 +27,7 @@ class IdenticalTests: XCTestCase {
         var string1 = "String"
         var string2 = "String"
 
-        let result = R.identical(&string1, to: &string2)
+        let result = R.identical(string1, to: string2)
 
         XCTAssertFalse(result)
     }
@@ -36,7 +36,7 @@ class IdenticalTests: XCTestCase {
         var array1 = []
         var array2 = []
 
-        let result = R.identical(&array1, to: &array2)
+        let result = R.identical(array1, to: array2)
 
         XCTAssertFalse(result)
     }

@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import Fox
 import Ramda
 
 class ComplementTests: XCTestCase {

@@ -12,19 +12,19 @@ import Ramda
 class LteTests: XCTestCase {
 
     func testShouldReturnTrueWhenFirstIntegerIsSmallerThanSecond() {
-        let result = R.lte(10)(than: 20)
+        let result = R.lte(10)(20)
 
         XCTAssertTrue(result)
     }
 
     func testShouldReturnFalseWhenFirstIntegerIsLargerThanSecond() {
-        let result = R.lte(20)(than: 10)
+        let result = R.lte(20)(10)
 
         XCTAssertFalse(result)
     }
 
     func testShouldReturnTrueWhenFirstIntegerIsEqualToSecond() {
-        let result = R.lte(20)(than: 20)
+        let result = R.lte(20)(20)
 
         XCTAssertTrue(result)
     }

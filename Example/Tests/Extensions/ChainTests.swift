@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import Fox
 import Ramda
 
 class ChainTests: XCTestCase {
@@ -28,7 +27,7 @@ class ChainTests: XCTestCase {
         let expectedResult = [2, 4, 5, 3]
         let input = ["2", "4", "5", "3"]
 
-        let result = try R.chain(convert)(for: input)
+        let result = try R.chain(convert)(input)
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -37,7 +36,7 @@ class ChainTests: XCTestCase {
         let expectedResult = [2, 5]
         let input = ["2", "a", "5", "k"]
 
-        let result = try R.chain(optionalConvert)(for: input)
+        let result = try R.chain(optionalConvert)(input)
 
         XCTAssertEqual(expectedResult, result)
     }

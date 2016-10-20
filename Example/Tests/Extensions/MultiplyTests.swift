@@ -7,45 +7,29 @@
 //
 
 import XCTest
-import Fox
 import Ramda
 
 class MultiplyTests: XCTestCase {
 
     func testShouldMultiplyIntegersTogether() {
-        let integerGenerator = FoxGeneratorParam2(FOXInteger(), FOXInteger()) {
-            (lhs: Int, rhs: Int) in
-
-            let result = R.multiply(lhs)(by: rhs)
-
-            return result == (lhs * rhs)
-        }
-
-        FoxTester.assert(integerGenerator)
+        let lhs = 3
+        let rhs = 4
+        let result = R.multiply(lhs)(rhs)
+        XCTAssertTrue(result == (lhs * rhs))
     }
 
     func testShouldMultiplyFloatsTogether() {
-        let floatsGenerator = FoxGeneratorParam2(FOXFloat(), FOXFloat()) {
-            (lhs: Float, rhs: Float) in
-
-            let result = R.multiply(lhs)(by: rhs)
-
-            return result == (lhs * rhs)
-        }
-
-        FoxTester.assert(floatsGenerator)
+        let lhs: Float = 3
+        let rhs: Float = 4.2
+        let result = R.multiply(lhs)(rhs)
+        XCTAssertTrue(result == (lhs * rhs))
     }
 
     func testShouldMultiplyDoublesTogether() {
-        let doubleGenerator = FoxGeneratorParam2(FOXDouble(), FOXDouble()) {
-            (lhs: Double, rhs: Double) in
-
-            let result = R.multiply(lhs)(by: rhs)
-
-            return result == (lhs * rhs)
-        }
-
-        FoxTester.assert(doubleGenerator)
+        let lhs: Double = 3
+        let rhs: Double = 4.2
+        let result = R.multiply(lhs)(rhs)
+        XCTAssertTrue(result == (lhs * rhs))
     }
 
 }

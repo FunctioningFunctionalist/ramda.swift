@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import Fox
 import Ramda
 
 class ToUpperTests: XCTestCase {
@@ -18,18 +17,6 @@ class ToUpperTests: XCTestCase {
         let result = R.toUpper("example")
 
         XCTAssertEqual(expectedResult, result)
-    }
-
-    func testShouldUpperCaseStrings() {
-        let stringGenerator = FoxGeneratorParam1(FOXString()) { (string: String) in
-            let expectedResult = string.uppercased()
-
-            let result = R.toUpper(string)
-
-            return expectedResult == result
-        }
-
-        FoxTester.assert(stringGenerator)
     }
 
 }

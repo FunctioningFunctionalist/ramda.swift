@@ -22,7 +22,7 @@ class EitherTests: XCTestCase {
             return $0 > 10
         }
 
-        let either = R.either(isEven)(or: isGreaterThan10)
+        let either = R.either(isEven)(isGreaterThan10)
         let result = either(12)
 
         XCTAssertTrue(result)
@@ -40,7 +40,7 @@ class EitherTests: XCTestCase {
             return $0 > 10
         }
 
-        let either = R.either(isEven)(or: isGreaterThan10)
+        let either = R.either(isEven)(isGreaterThan10)
         let result = either(13)
 
         XCTAssertTrue(result)
@@ -58,7 +58,7 @@ class EitherTests: XCTestCase {
             return $0 > 10
         }
 
-        let either = R.either(isEven)(or: isGreaterThan10)
+        let either = R.either(isEven)(isGreaterThan10)
         let result = either(7)
 
         XCTAssertFalse(result)

@@ -7,51 +7,32 @@
 //
 
 import XCTest
-import Fox
 import Ramda
 
 class ModuloTests: XCTestCase {
 
     func testShouldModuloIntegersTogether() {
-        let integerGenerator = FoxGeneratorParam2(FOXInteger(), FOXInteger()) {
-            (lhs: Int, rhs: Int) in
+        let lhs = 1
+        let rhs = 2
+        let result = R.modulo(lhs)(rhs)
 
-            let newLhs = lhs == 0 ? lhs + 1 : lhs
-            let newRhs = rhs == 0 ? rhs + 1 : rhs
-            let result = R.modulo(newLhs)(by: newRhs)
-
-            return result == (newLhs % newRhs)
-        }
-
-        FoxTester.assert(integerGenerator)
+        XCTAssertTrue(result == (lhs % rhs))
     }
 
     func testShouldModuloFloatsTogether() {
-        let floatsGenerator = FoxGeneratorParam2(FOXFloat(), FOXFloat()) {
-            (lhs: Float, rhs: Float) in
+        let lhs: Float = 1
+        let rhs: Float = 2
+        let result = R.modulo(lhs)(rhs)
 
-            let newLhs = lhs == 0 ? lhs + 1 : lhs
-            let newRhs = rhs == 0 ? rhs + 1 : rhs
-            let result = R.modulo(newLhs)(by: newRhs)
-
-            return result == (newLhs.truncatingRemainder(dividingBy: newRhs))
-        }
-
-        FoxTester.assert(floatsGenerator)
+        XCTAssertTrue(result == lhs.truncatingRemainder(dividingBy: rhs))
     }
 
     func testShouldModuloDoublesTogether() {
-        let doubleGenerator = FoxGeneratorParam2(FOXDouble(), FOXDouble()) {
-            (lhs: Double, rhs: Double) in
+        let lhs: Double = 1
+        let rhs: Double = 2
+        let result = R.modulo(lhs)(rhs)
 
-            let newLhs = lhs == 0 ? lhs + 1 : lhs
-            let newRhs = rhs == 0 ? rhs + 1 : rhs
-            let result = R.modulo(newLhs)(by: newRhs)
-
-            return result == (newLhs.truncatingRemainder(dividingBy: newRhs))
-        }
-
-        FoxTester.assert(doubleGenerator)
+        XCTAssertTrue(result == lhs.truncatingRemainder(dividingBy: rhs))
     }
 
 }

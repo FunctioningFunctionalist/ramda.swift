@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import Fox
 import Ramda
 
 // swiftlint:disable line_length
@@ -23,48 +22,36 @@ class BothTests: XCTestCase {
     }
 
     func testShouldCreateFunctionThatComparesBothPassedInFunctionsAndReturnCorrectResult() {
-        let integerGenerator = FoxGeneratorParam1(FOXInteger()) { (number: Int) in
-            let expectedResult = self.isGreaterThan10(number) && self.isEven(number)
+        let number = 12
+        let expectedResult = self.isGreaterThan10(number) && self.isEven(number)
 
-            let both = R.both(self.isGreaterThan10)(and: self.isEven)
-            let result = both(number)
+        let both = R.both(self.isGreaterThan10)(self.isEven)
+        let result = both(number)
 
-            return result == expectedResult
-        }
-
-        FoxTester.assert(integerGenerator)
+        XCTAssertTrue(result == expectedResult)
     }
 
     func testShouldCreateFunctionThatComparesBothPassedInFunctionsAndReturnCorrectResultAndNotExecuteLastFunctionIfFirstIsFalse() {
-        let integerGenerator = FoxGeneratorParam1(FOXInteger()) { (number: Int) in
-            let expectedResult = self.isGreaterThan10(number)
-            var result = false
-            let rhs: (Int) -> Bool = { _ in
-                result = true
-                return true
-            }
-
-            let both = R.both(self.isGreaterThan10)(and: rhs)
-            both(number)
-
-            return result == expectedResult
+        let number = 8
+        let expectedResult = self.isGreaterThan10(number)
+        var result = false
+        let rhs: (Int) -> Bool = { _ in
+            result = true
+            return true
         }
 
-        FoxTester.assert(integerGenerator)
+        XCTAssertTrue(result == expectedResult)
     }
 
     func testShouldCreateFunctionThatComparesBothPassedInFunctionsAndReturnCorrectResultUsingPartialFunctions() {
-        let integerGenerator = FoxGeneratorParam1(FOXInteger()) { (number: Int) in
-            let expectedResult = self.isGreaterThan10(number) && self.isEven(number)
+        let number = 12
+        let expectedResult = self.isGreaterThan10(number) && self.isEven(number)
 
-            let partial = R.both(self.isGreaterThan10)
-            let both = partial(and: self.isEven)
-            let result = both(number)
+        let partial = R.both(self.isGreaterThan10)
+        let both = partial(self.isEven)
+        let result = both(number)
 
-            return result == expectedResult
-        }
-
-        FoxTester.assert(integerGenerator)
+        XCTAssertTrue(result == expectedResult)
     }
 }
 

@@ -29,7 +29,7 @@ class ReduceByTests: XCTestCase {
             var append = arr
             append.append(student.name)
             return append
-        }(startingWith: [String]())
+        }([String]())
 
         let namesByPassRate = reduceToNamesBy { student in
             student.score > 60 ? "Pass" : "Fail"

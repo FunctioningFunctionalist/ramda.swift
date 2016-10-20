@@ -22,13 +22,13 @@ class IndexOfTests: XCTestCase {
     func testShouldReturnIndexOfTheFirstArrayElement() {
         let expectedResult = 3
 
-        let result = R.indexOf(7)(in: [1, 3, 5, 7, 9, 7, 5, 3, 1])
+        let result = R.indexOf(7)([1, 3, 5, 7, 9, 7, 5, 3, 1])
 
         XCTAssertEqual(expectedResult, result)
     }
 
     func testShouldReturnNilWhenElementCannotBeFoundInArray() {
-        let result = R.indexOf(11)(in: [1, 3, 5, 7, 9])
+        let result = R.indexOf(11)([1, 3, 5, 7, 9])
 
         XCTAssertNil(result)
     }

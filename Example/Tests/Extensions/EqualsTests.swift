@@ -12,13 +12,13 @@ import Ramda
 class EqualsTests: XCTestCase {
 
     func testShouldReturnTrueWhenIntegersAreEqual() {
-        let result = R.equals(1)(to: 1)
+        let result = R.equals(1)(1)
 
         XCTAssertTrue(result)
     }
 
     func testShouldReturnFalseWhenIntegersAreNotEqual() {
-        let result = R.equals(1)(to: 2)
+        let result = R.equals(1)(2)
 
         XCTAssertFalse(result)
     }
