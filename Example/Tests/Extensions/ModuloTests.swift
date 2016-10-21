@@ -19,20 +19,4 @@ class ModuloTests: XCTestCase {
         XCTAssertTrue(result == (lhs % rhs))
     }
 
-    func testShouldModuloFloatsTogether() {
-        let lhs: Float = 1
-        let rhs: Float = 2
-        let result = R.modulo(lhs)(rhs)
-
-        XCTAssertTrue(result == lhs.truncatingRemainder(dividingBy: rhs))
-    }
-
-    func testShouldModuloDoublesTogether() {
-        let lhs: Double = 1
-        let rhs: Double = 2
-        let result = R.modulo(lhs)(rhs)
-
-        XCTAssertTrue(result == lhs.truncatingRemainder(dividingBy: rhs))
-    }
-
 }

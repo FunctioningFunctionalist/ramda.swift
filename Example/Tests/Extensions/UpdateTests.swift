@@ -27,12 +27,4 @@ class UpdateTests: XCTestCase {
         XCTAssertEqual(expectedResult, result)
     }
 
-    func testShouldDoNothingWhenTryingToUpdateArrayWithNewValueWhenIndexIsOutOfBounds() {
-        let expectedResult = [1, 5, 6, 2]
-
-        let result = R.update(20)(23)([1, 5, 6, 2])
-
-        XCTAssertEqual(expectedResult, result)
-    }
-
 }
