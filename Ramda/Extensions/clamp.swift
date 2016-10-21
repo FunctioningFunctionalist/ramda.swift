@@ -7,7 +7,7 @@ import Foundation
 extension R {
 
     public enum ClampError: Error {
-        case minGreaterThanMax
+        case MinGreaterThanMax
     }
 
     /**
@@ -26,7 +26,7 @@ extension R {
 
     public class func clamp<T: Comparable>(_ min: T, and max: T, with value: T) throws -> T {
         if min > max {
-            throw ClampError.minGreaterThanMax
+            throw ClampError.MinGreaterThanMax
         }
 
         return  value < min ? min :
