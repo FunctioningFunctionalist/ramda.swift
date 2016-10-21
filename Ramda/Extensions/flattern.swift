@@ -19,8 +19,8 @@ extension R {
 
     */
 
-    public class func flatten<T: CollectionType where T.Generator.Element: CollectionType>(collection: T) -> FlattenCollection<T> {
-        return collection.flatten()
+    public class func flatten<T: Collection>(_ collection: T) -> FlattenCollection<T> where T.Iterator.Element: Collection {
+        return collection.joined()
     }
 
 }

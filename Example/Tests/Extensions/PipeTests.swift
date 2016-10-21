@@ -15,15 +15,15 @@ class PipeTests: XCTestCase {
 
     let elementDescription = { (element: Int) -> String in element.description }
 
-    func isEven(number: Int) -> Bool {
+    func isEven(_ number: Int) -> Bool {
         return number % 2 == 0
     }
 
-    func increment(number: Int) -> Int {
+    func increment(_ number: Int) -> Int {
         return number + 1
     }
 
-    func square(number: Int) -> Int {
+    func square(_ number: Int) -> Int {
         return number * number
     }
 
@@ -39,18 +39,18 @@ class PipeTests: XCTestCase {
 
     func testShouldPipeTwoFunctionsTogetherWithOptionalValueAndHaveOptionalResult() {
         let expectedResult = "4"
-        let element:(in: [Int]) -> Int? = R.find { R.modulo($0, by: 2) == 0 }
+        let element:(_ in: [Int]) -> Int? = R.find { R.modulo($0, by: 2) == 0 }
 
-        let pipe: [Int] -> String = R.pipe(element, second: elementDescription)
+        let pipe: ([Int]) -> String = R.pipe(element, second: elementDescription)
         let result = pipe(testData)
 
         XCTAssertEqual(result, expectedResult)
     }
 
     func testShouldPipeTwoFunctionsTogetherWithOptionalValueAndReturnsNil() {
-        let element:(in: [Int]) -> Int? = R.find { $0 < 0 }
+        let element:(_ in: [Int]) -> Int? = R.find { $0 < 0 }
 
-        let pipe: [Int] -> String? = R.pipe(element, second: elementDescription)
+        let pipe: ([Int]) -> String? = R.pipe(element, second: elementDescription)
         let result = pipe(testData)
 
         XCTAssertNil(result)
@@ -67,18 +67,18 @@ class PipeTests: XCTestCase {
     }
 
     func testShouldPipeThreeFunctionsTogetherWithOptionalValueAndHaveOptionalResult() {
-        let element:(in: [Int]) -> Int? = R.find { R.modulo($0, by: 2) == 0 }
+        let element:(_ in: [Int]) -> Int? = R.find { R.modulo($0, by: 2) == 0 }
 
-        let pipe: [Int] -> String = R.pipe(element, second: square, third: elementDescription)
+        let pipe: ([Int]) -> String = R.pipe(element, second: square, third: elementDescription)
         let result = pipe(testData)
 
         XCTAssertEqual(result, "16")
     }
 
     func testShouldPipeThreeFunctionsTogetherWithOptionalValueAndReturnsNil() {
-        let element:(in: [Int]) -> Int? = R.find { $0 < 0 }
+        let element:(_ in: [Int]) -> Int? = R.find { $0 < 0 }
 
-        let pipe: [Int] -> String? = R.pipe(element, second: square, third: elementDescription)
+        let pipe: ([Int]) -> String? = R.pipe(element, second: square, third: elementDescription)
         let result = pipe(testData)
 
         XCTAssertNil(result)
@@ -90,7 +90,7 @@ class PipeTests: XCTestCase {
             |> R.sort { $0 > $1 }
             |> R.map { $0.description }
 
-        let result = pipe.joinWithSeparator("-")
+        let result = pipe.joined(separator: "-")
 
         XCTAssertEqual(result, "86-24-22-18-4-2")
     }

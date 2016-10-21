@@ -20,7 +20,7 @@ extension R {
 
     */
 
-    public class func filter<A, B: SequenceType where A == B.Generator.Element>(function: A -> Bool, in sequence: B) -> [A] {
+    public class func filter<A, B: Sequence>(_ function: (A) -> Bool, in sequence: B) -> [A] where A == B.Iterator.Element {
         return sequence.filter { function($0) }
     }
 
@@ -35,7 +35,7 @@ extension R {
 
     */
 
-    public class func filter<A, B: SequenceType where A == B.Generator.Element>(function: A -> Bool) -> (in: B) -> [A] {
+    public class func filter<A, B: Sequence>(_ function: (A) -> Bool) -> (_ in: B) -> [A] where A == B.Iterator.Element {
         return curry(filter)(function)
     }
 }

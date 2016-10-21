@@ -14,7 +14,7 @@ class DropTests: XCTestCase {
     func testShouldReturnSlicedArrayWithoutFirstTwoElements() {
         let expectedResult: ArraySlice<Int> = [3, 4, 5]
 
-        let result = R.drop(2)(in: [1, 2, 3, 4, 5])
+        let result = R.drop(2)([1, 2, 3, 4, 5])
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -22,7 +22,7 @@ class DropTests: XCTestCase {
     func testShouldReturnSlicedArrayWithoutFirstFiveElements() {
         let expectedResult: ArraySlice<Int> = [6]
 
-        let result = R.drop(5)(in: [1, 2, 3, 4, 5, 6])
+        let result = R.drop(5)([1, 2, 3, 4, 5, 6])
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -30,7 +30,7 @@ class DropTests: XCTestCase {
     func testShouldReturnEmptySlicedArrayWithoutFirstTenElementsAndArrayOnlyContainsFive() {
         let expectedResult: ArraySlice<Int> = []
 
-        let result = R.drop(10)(in: [1, 2, 3, 4, 5])
+        let result = R.drop(10)([1, 2, 3, 4, 5])
 
         XCTAssertEqual(expectedResult, result)
     }

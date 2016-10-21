@@ -7,12 +7,11 @@
 //
 
 import XCTest
-import Fox
 import Ramda
 
 class ApplyTests: XCTestCase {
 
-    func max(numbers: Int...) -> Int {
+    func max(_ numbers: Int...) -> Int {
         var maximum = Int.min
         for number in numbers {
             if number > maximum {
@@ -26,7 +25,7 @@ class ApplyTests: XCTestCase {
         let expectedResult = 100
         let values = [2, 4, 0, 53, 24, 64, 100, 4, 78]
 
-        let result = R.apply(self.max)(with: values)
+        let result = R.apply(self.max)(values)
 
         XCTAssertEqual(expectedResult, result)
     }

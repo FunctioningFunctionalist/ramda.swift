@@ -14,7 +14,7 @@ class MapTests: XCTestCase {
     func testShouldReturnStringVersionOfIntegerArray() {
         let expectedResult = ["1", "3", "5", "7", "9"]
 
-        let result = R.map { String($0) } (with: [1, 3, 5, 7, 9])
+        let result = R.map { String($0) } ([1, 3, 5, 7, 9])
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -22,7 +22,7 @@ class MapTests: XCTestCase {
     func testShouldReturnDoubledIntegerArray() {
         let expectedResult = [1, 9, 25, 49, 81]
 
-        let result = R.map { $0 * $0 } (with: [1, 3, 5, 7, 9])
+        let result = R.map { $0 * $0 } ([1, 3, 5, 7, 9])
 
         XCTAssertEqual(expectedResult, result)
     }

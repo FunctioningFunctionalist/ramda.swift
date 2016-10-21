@@ -19,14 +19,4 @@ class IdentityTests: XCTestCase {
         XCTAssertEqual(input, result)
     }
 
-    func testShouldReturnFalseWhenIdentityDoesNotPointToSameMemoryAddress() {
-        var input = "String"
-
-        var result = R.identity(input)
-
-        withUnsafePointers(&input, &result) {
-            XCTAssertNotEqual($0, $1)
-        }
-    }
-
 }

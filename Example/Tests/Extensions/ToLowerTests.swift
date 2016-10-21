@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import Fox
 import Ramda
 
 class ToLowerTests: XCTestCase {
@@ -18,18 +17,6 @@ class ToLowerTests: XCTestCase {
         let result = R.toLower("EXAMPLE")
 
         XCTAssertEqual(expectedResult, result)
-    }
-
-    func testShouldLowerCaseStrings() {
-        let stringGenerator = FoxGeneratorParam1(FOXString()) { (string: String) in
-            let expectedResult = string.lowercaseString
-
-            let result = R.toLower(string)
-
-            return expectedResult == result
-        }
-
-        FoxTester.assert(stringGenerator)
     }
 
 }

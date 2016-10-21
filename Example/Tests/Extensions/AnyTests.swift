@@ -7,19 +7,18 @@
 //
 
 import XCTest
-import Fox
 import Ramda
 
 class AnyTests: XCTestCase {
 
-    func isEven(number: Int) -> Bool {
+    func isEven(_ number: Int) -> Bool {
         return number % 2 == 0
     }
 
     func testShouldReturnTrueIfAnyValueInListMatchesPredicate() {
         let values = [1, 3, 5, 6, 7]
 
-        let result = R.any(self.isEven)(in: values)
+        let result = R.any(self.isEven)(values)
 
         XCTAssertTrue(result)
     }
@@ -27,7 +26,7 @@ class AnyTests: XCTestCase {
     func testShouldReturnFalseIsNoValueInListMatchesPredicate() {
         let values = [1, 3, 5, 7, 9]
 
-        let result = R.any(self.isEven)(in: values)
+        let result = R.any(self.isEven)(values)
 
         XCTAssertFalse(result)
     }
@@ -35,8 +34,8 @@ class AnyTests: XCTestCase {
     func testShouldReturnTrueIfAnyValueInListMatchesPredicateUsingPartialFunctions() {
         let values = [1, 3, 5, 6, 7]
 
-        let any: (in: [Int]) -> Bool = R.any(self.isEven)
-        let result = any(in: values)
+        let any: (_ in: [Int]) -> Bool = R.any(self.isEven)
+        let result = any(values)
 
         XCTAssertTrue(result)
     }

@@ -7,93 +7,94 @@
 //
 
 import XCTest
-import Fox
 import Ramda
 
 // swiftlint:disable line_length
 
 class BindTests: XCTestCase {
 
-    func increment(num: Int) -> Int {
+    func increment(_ num: Int) -> Int {
         return num + 1
     }
 
-    func add3(num1: Int, num2: Int, num3: Int) -> Int {
+    func add3(_ num1: Int, num2: Int, num3: Int) -> Int {
         return num1 + num2 + num3
     }
 
-    func add4(num1: Int, num2: Int, num3: Int, num4: Int) -> Int {
+    func add4(_ num1: Int, num2: Int, num3: Int, num4: Int) -> Int {
         return num1 + num2 + num3 + num4
     }
 
-    func addV(numbers: Int...) -> Int {
-        return numbers.reduce(0, combine: +)
+    func addV(_ numbers: Int...) -> Int {
+        return numbers.reduce(0, +)
     }
 
     func testShouldBindOneParameterToFunctionAndReturnCorrectResult() {
-        let integerGenerator = FoxGeneratorParam1(FOXInteger()) { (number: Int) in
-            let bound = R.bind(self.increment)(with: number)
-            let result = bound()
+        let number = 1
 
-            return result == (number + 1)
-        }
+        let bound = R.bind(self.increment)(number)
+        let result = bound()
+        let expectedResult = (number + 1)
 
-        FoxTester.assert(integerGenerator)
+        XCTAssertTrue(result == expectedResult)
     }
 
     func testShouldBindTwoParametersToFunctionAndReturnCorrectResult() {
-        let integerGenerator = FoxGeneratorParam2(FOXInteger(), FOXInteger()) { (number1: Int, number2: Int) in
-            let bound = R.bind(R.add)(with: number1)(and: number2)
-            let result = bound()
+        let number1 = 1
+        let number2 = 2
 
-            return result == (number1 + number2)
-        }
+        let bound = R.bind(R.add)(number1)(number2)
+        let result = bound()
 
-        FoxTester.assert(integerGenerator)
+        XCTAssertTrue(result == (number1 + number2))
     }
 
     func testShouldBindThreeParametersToFunctionAndReturnCorrectResult() {
-        let integerGenerator = FoxGeneratorParam3(FOXInteger(), FOXInteger(), FOXInteger()) { (number1: Int, number2: Int, number3: Int) in
-            let bound = R.bind(self.add3)(with: number1)(number2)(and: number3)
-            let result = bound()
+        let number1 = 1
+        let number2 = 2
+        let number3 = 3
 
-            return result == (number1 + number2 + number3)
-        }
+        let bound = R.bind(self.add3)(number1)(number2)(number3)
+        let result = bound()
 
-        FoxTester.assert(integerGenerator)
+        XCTAssertTrue(result == (number1 + number2 + number3))
     }
 
     func testShouldBindFourParametersToFunctionAndReturnCorrectResult() {
-        let integerGenerator = FoxGeneratorParam4(FOXInteger(), FOXInteger(), FOXInteger(), FOXInteger()) { (number1: Int, number2: Int, number3: Int, number4: Int) in
-            let bound = R.bind(self.add4)(with: number1)(number2)(number3)(and: number4)
-            let result = bound()
+        let number1 = 1
+        let number2 = 2
+        let number3 = 3
+        let number4 = 4
 
-            return result == (number1 + number2 + number3 + number4)
-        }
+        let bound = R.bind(self.add4)(number1)(number2)(number3)(number4)
+        let result = bound()
 
-        FoxTester.assert(integerGenerator)
+        XCTAssertTrue(result == (number1 + number2 + number3 + number4))
     }
 
     func testShouldBindVarargParameterToFunctionAndReturnCorrectResult() {
-        let integerGenerator = FoxGeneratorParam2(FOXInteger(), FOXInteger()) { (number1: Int, number2: Int) in
-            let bound = R.bind(self.addV)(with: number1, number2)
-            let result = bound()
+        let number1 = 1
+        let number2 = 2
 
-            return result == (number1 + number2)
-        }
+        let bound = R.bind(self.addV)(number1, number2)
+        let result = bound()
 
-        FoxTester.assert(integerGenerator)
+        XCTAssertTrue(result == (number1 + number2))
     }
 
     func testShouldBindVarargParametersOfAnyLengthAndReturnCorrectResult() {
-        let integerGenerator = FoxGeneratorParam5(FOXInteger(), FOXInteger(), FOXInteger(), FOXInteger(), FOXInteger()) { (number1: Int, number2: Int, number3: Int, number4: Int, number5: Int) in
-            let bound = R.bind(self.addV, with: number1, number2, number3, number4, number5)
-            let result = bound()
+        let number1 = 1
+        let number2 = 2
+        let number3 = 3
+        let number4 = 4
+        let number5 = 5
 
-            return result == (number1 + number2 + number3 + number4 + number5)
-        }
+        let bound = R.bind(self.addV, with: number1, number2, number3, number4, number5)
+        let result = bound()
 
-        FoxTester.assert(integerGenerator)
+        let expectedResult = (number1 + number2 + number3 + number4 + number5)
+
+        XCTAssertTrue(result == expectedResult)
     }
 
 }

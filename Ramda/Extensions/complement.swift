@@ -18,7 +18,7 @@ extension R {
 
     */
 
-    public class func complement<A>(function: (A) -> Bool) -> (A) -> Bool {
+    public class func complement<A>(_ function: @escaping (A) -> Bool) -> (A) -> Bool {
         return { parameter in
             return !function(parameter)
         }
@@ -34,7 +34,7 @@ extension R {
 
     */
 
-    public class func complement<A, B>(function: (A, B) -> Bool) -> (A, B) -> Bool {
+    public class func complement<A, B>(_ function: @escaping (A, B) -> Bool) -> (A, B) -> Bool {
         return { (first, second) in
             return !function(first, second)
         }
@@ -50,7 +50,7 @@ extension R {
 
     */
 
-    public class func complement<A, B, C>(function: (A, B, C) -> Bool) -> (A, B, C) -> Bool {
+    public class func complement<A, B, C>(_ function: @escaping (A, B, C) -> Bool) -> (A, B, C) -> Bool {
         return { (first, second, third) in
             return !function(first, second, third)
         }
@@ -66,7 +66,7 @@ extension R {
 
     */
 
-    public class func complement<A, B, C, D>(function: (A, B, C, D) -> Bool) -> (A, B, C, D) -> Bool {
+    public class func complement<A, B, C, D>(_ function: @escaping (A, B, C, D) -> Bool) -> (A, B, C, D) -> Bool {
         return { (first, second, third, fourth) in
             return !function(first, second, third, fourth)
         }
@@ -82,7 +82,7 @@ extension R {
 
     */
 
-    public class func complement<A, B, C, D, E>(function: (A, B, C, D, E) -> Bool) -> (A, B, C, D, E) -> Bool {
+    public class func complement<A, B, C, D, E>(_ function: @escaping (A, B, C, D, E) -> Bool) -> (A, B, C, D, E) -> Bool {
         return { (first, second, third, fourth, fifth) in
             return !function(first, second, third, fourth, fifth)
         }
@@ -98,10 +98,10 @@ extension R {
 
     */
 
-    public class func complement<T>(function: (T...) -> Bool) -> (T...) -> Bool {
+    public class func complement<T>(_ function: @escaping (T...) -> Bool) -> (T...) -> Bool {
         return { (parameters: T...) in
-            typealias ArrayFunction = [T] -> Bool
-            let newFunc = unsafeBitCast(function, ArrayFunction.self)
+            typealias ArrayFunction = ([T]) -> Bool
+            let newFunc = unsafeBitCast(function, to: ArrayFunction.self)
             return !newFunc(parameters)
         }
     }

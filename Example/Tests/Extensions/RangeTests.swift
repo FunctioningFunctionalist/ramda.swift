@@ -14,7 +14,7 @@ class RangeTests: XCTestCase {
     func testShouldReturnRangeFromOneToFour() {
         let expectedResult = [1, 2, 3, 4]
 
-        let result = R.range(1)(to: 5)
+        let result = R.range(1)(5)
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -22,7 +22,7 @@ class RangeTests: XCTestCase {
     func testShouldReturnRangeFromFiftyToFiftyTwo() {
         let expectedResult = [50, 51, 52]
 
-        let result = R.range(50)(to: 53)
+        let result = R.range(50)(53)
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -30,7 +30,7 @@ class RangeTests: XCTestCase {
     func testShouldReturnRangeFromOneToOneHundredWhereOneIsIncludedAndOneHundredIsExcluded() {
         let expectedLength = 99
 
-        let result = R.range(1)(to: 100)
+        let result = R.range(1)(100)
 
         XCTAssertEqual(1, result.first)
         XCTAssertEqual(99, result.last)

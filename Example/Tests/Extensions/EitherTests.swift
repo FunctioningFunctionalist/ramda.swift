@@ -13,16 +13,16 @@ class EitherTests: XCTestCase {
 
     func testShouldReturnTrueAndNotExecuteTheSecondFunctionWhenTheFirstPredicateIsTrue() {
         var executed = false
-        let isEven: Int -> Bool = {
+        let isEven: (Int) -> Bool = {
             return $0 % 2 == 0
         }
 
-        let isGreaterThan10: Int -> Bool = {
+        let isGreaterThan10: (Int) -> Bool = {
             executed = true
             return $0 > 10
         }
 
-        let either = R.either(isEven)(or: isGreaterThan10)
+        let either = R.either(isEven)(isGreaterThan10)
         let result = either(12)
 
         XCTAssertTrue(result)
@@ -31,16 +31,16 @@ class EitherTests: XCTestCase {
 
     func testShouldReturnTrueAndExecuteBothPredicatesWhenFirstPredicateIsFalse() {
         var executed = false
-        let isEven: Int -> Bool = {
+        let isEven: (Int) -> Bool = {
             return $0 % 2 == 0
         }
 
-        let isGreaterThan10: Int -> Bool = {
+        let isGreaterThan10: (Int) -> Bool = {
             executed = true
             return $0 > 10
         }
 
-        let either = R.either(isEven)(or: isGreaterThan10)
+        let either = R.either(isEven)(isGreaterThan10)
         let result = either(13)
 
         XCTAssertTrue(result)
@@ -49,16 +49,16 @@ class EitherTests: XCTestCase {
 
     func testShouldReturnFalseWhenBothPredicatesResultInFalse() {
         var executed = false
-        let isEven: Int -> Bool = {
+        let isEven: (Int) -> Bool = {
             return $0 % 2 == 0
         }
 
-        let isGreaterThan10: Int -> Bool = {
+        let isGreaterThan10: (Int) -> Bool = {
             executed = true
             return $0 > 10
         }
 
-        let either = R.either(isEven)(or: isGreaterThan10)
+        let either = R.either(isEven)(isGreaterThan10)
         let result = either(7)
 
         XCTAssertFalse(result)

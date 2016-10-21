@@ -14,7 +14,7 @@ class JoinTests: XCTestCase {
     func testShouldReturnStringCombinedWithSeparator() {
         let expectedResult = "This is an example"
 
-        let result = R.join(" ")(in: ["This", "is", "an", "example"])
+        let result = R.join(" ")(["This", "is", "an", "example"])
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -22,7 +22,7 @@ class JoinTests: XCTestCase {
     func testShouldReturnStringCombinedWithAnySeparator() {
         let expectedResult = "This not is not an not example"
 
-        let result = R.join(" not ")(in: ["This", "is", "an", "example"])
+        let result = R.join(" not ")(["This", "is", "an", "example"])
 
         XCTAssertEqual(expectedResult, result)
     }

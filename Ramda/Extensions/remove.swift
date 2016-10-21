@@ -21,9 +21,9 @@ extension R {
 
     */
 
-    public class func remove<T: RangeReplaceableCollectionType where T.Index == Int>(index: T.Index, for count: Int, in collection: T) -> T {
+    public class func remove<T: RangeReplaceableCollection>(_ index: T.Index, for count: Int, in collection: T) -> T where T.Index == Int {
         var newCollection = collection
-        newCollection.removeRange(index..<R.add(index, to: count))
+        newCollection.removeSubrange(index..<R.add(index, to: count))
         return newCollection
     }
 
@@ -39,7 +39,7 @@ extension R {
 
     */
 
-    public class func remove<T: RangeReplaceableCollectionType where T.Index == Int>(index: T.Index) -> (for: Int) -> (in: T) -> T {
+    public class func remove<T: RangeReplaceableCollection>(_ index: T.Index) -> (_ for: Int) -> (_ in: T) -> T where T.Index == Int {
         return curry(remove)(index)
     }
 

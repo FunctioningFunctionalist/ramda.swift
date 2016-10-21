@@ -14,7 +14,7 @@ class RepeatTests: XCTestCase {
     func testShouldReturnArrayOfFiveStrings() {
         let expectedResult = ["hi", "hi", "hi", "hi", "hi"]
 
-        let result = R._repeat("hi")(times: 5)
+        let result = R._repeat("hi")(5)
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -22,7 +22,7 @@ class RepeatTests: XCTestCase {
     func testShouldReturnArrayOfTenIntegers() {
         let expectedResult = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 
-        let result = R._repeat(1)(times: 10)
+        let result = R._repeat(1)(10)
 
         XCTAssertEqual(expectedResult, result)
     }

@@ -12,19 +12,19 @@ import Ramda
 class IfElseTests: XCTestCase {
 
     func testShouldExecuteTrueFunctionWhenConditionIsTrue() {
-        let trueFunction: [Int] -> String = { param in "Not Empty" }
-        let falseFunction: [Int] -> String = { param in "Empty" }
+        let trueFunction: ([Int]) -> String = { param in "Not Empty" }
+        let falseFunction: ([Int]) -> String = { param in "Empty" }
 
-        let result = R.ifElse(R.complement(R.isEmpty))(then: trueFunction)(else: falseFunction)
+        let result = R.ifElse(R.complement(R.isEmpty))(trueFunction)(falseFunction)
 
         XCTAssertEqual("Not Empty", result([1, 2, 3]))
     }
 
     func testShouldExecuteFalseFunctionWhenConditionIsFalse() {
-        let trueFunction: [Int] -> String = { param in "Not Empty" }
-        let falseFunction: [Int] -> String = { param in "Empty" }
+        let trueFunction: ([Int]) -> String = { param in "Not Empty" }
+        let falseFunction: ([Int]) -> String = { param in "Empty" }
 
-        let result = R.ifElse(R.complement(R.isEmpty))(then: trueFunction)(else: falseFunction)
+        let result = R.ifElse(R.complement(R.isEmpty))(trueFunction)(falseFunction)
 
         XCTAssertEqual("Empty", result([]))
     }

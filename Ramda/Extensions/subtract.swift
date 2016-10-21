@@ -17,7 +17,7 @@ extension R {
 
     */
 
-    public class func subtract<T: BasicArithmeticType>(lhs: T, minus rhs: T) -> T {
+    public class func subtract<T: BasicArithmeticType>(_ lhs: T, minus rhs: T) -> T {
         return lhs - rhs
     }
 
@@ -32,7 +32,7 @@ extension R {
 
     */
 
-    public class func subtract<T: BasicArithmeticType>(lhs: T) -> (minus: T) -> T {
+    public class func subtract<T: BasicArithmeticType>(_ lhs: T) -> (_ minus: T) -> T {
         return curry(subtract)(lhs)
     }
 

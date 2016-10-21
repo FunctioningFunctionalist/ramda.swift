@@ -26,9 +26,9 @@ extension R {
 
      */
 
-    public class func countBy<B: SequenceType, C: Hashable>(functionForKeys: B.Generator.Element -> C, in sequence: B) -> [C: Int] {
-        typealias Signature = ((B.Generator.Element) -> C) -> (B) -> [C: Int]
-        let result: Signature = R.reduceBy({ (acc, element) in acc + 1 })(startingWith: 0)
+    public class func countBy<B: Sequence, C: Hashable>(_ functionForKeys: @escaping (B.Iterator.Element) -> C, in sequence: B) -> [C: Int] {
+        typealias Signature = (@escaping (B.Iterator.Element) -> C) -> (B) -> [C: Int]
+        let result: Signature = R.reduceBy({ (acc, element) in acc + 1 })(0)
         return result(functionForKeys)(sequence)
     }
 
@@ -45,9 +45,9 @@ extension R {
 
      */
 
-    public class func countBy<B: SequenceType, C: Hashable>(functionForKeys: B.Generator.Element -> C) -> (in: B) -> [C: Int] {
-        typealias Signature = ((B.Generator.Element) -> C) -> (B) -> [C: Int]
-        let result: Signature = R.reduceBy({ (acc, element) in acc + 1 })(startingWith: 0)
+    public class func countBy<B: Sequence, C: Hashable>(_ functionForKeys: @escaping (B.Iterator.Element) -> C) -> (_ in: B) -> [C: Int] {
+        typealias Signature = (@escaping (B.Iterator.Element) -> C) -> (B) -> [C: Int]
+        let result: Signature = R.reduceBy({ (acc, element) in acc + 1 })(0)
         return result(functionForKeys)
     }
 }

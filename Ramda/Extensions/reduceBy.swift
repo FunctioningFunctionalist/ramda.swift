@@ -30,10 +30,10 @@ extension R {
 
      */
 
-    public class func reduceBy<A, B: SequenceType, C: Hashable>
-        (iterator: (A, B.Generator.Element) -> A, startingWith initialValue: A, functionForKeys keyFn: B.Generator.Element -> C, in sequence: B) -> [C: A] {
+    public class func reduceBy<A, B: Sequence, C: Hashable>
+        (_ iterator: @escaping (A, B.Iterator.Element) -> A, startingWith initialValue: A, functionForKeys keyFn: @escaping (B.Iterator.Element) -> C, in sequence: B) -> [C: A] {
 
-        typealias ReduceSignature = (startingWith: [C: A]) -> (in: B) -> [C: A]
+        typealias ReduceSignature = (_ startingWith: [C: A]) -> (_ in: B) -> [C: A]
 
         let reduceBy: ReduceSignature = R.reduce { (acc, element) in
             var result = acc
@@ -48,7 +48,7 @@ extension R {
             return result
         }
 
-        return reduceBy(startingWith: [C: A]())(in: sequence)
+        return reduceBy([C: A]())(sequence)
     }
 
     /**
@@ -66,8 +66,8 @@ extension R {
 
      */
 
-    public class func reduceBy<A, B: SequenceType, C: Hashable>
-        (iterator: (A, B.Generator.Element) -> A) -> (startingWith: A) -> (functionForKeys: B.Generator.Element -> C) -> (in: B) -> [C: A] {
+    public class func reduceBy<A, B: Sequence, C: Hashable>
+        (_ iterator: @escaping (A, B.Iterator.Element) -> A) -> (_ startingWith: A) -> (_ functionForKeys: @escaping (B.Iterator.Element) -> C) -> (_ in: B) -> [C: A] {
         return curry(reduceBy)(iterator)
     }
 }

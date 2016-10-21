@@ -23,13 +23,13 @@ class ReduceByTests: XCTestCase {
     ]
 
     func testGroupsStudentsCorrectly() {
-        typealias Signature = (Student -> String) -> [Student] -> [String: [String]]
+        typealias Signature = (@escaping (Student) -> String) -> ([Student]) -> [String: [String]]
 
         let reduceToNamesBy: Signature = R.reduceBy { arr, student in
             var append = arr
             append.append(student.name)
             return append
-        }(startingWith: [String]())
+        }([String]())
 
         let namesByPassRate = reduceToNamesBy { student in
             student.score > 60 ? "Pass" : "Fail"

@@ -14,7 +14,7 @@ class WithoutTests: XCTestCase {
     func testShouldReturnArrayWithoutElementsFromFirstArray() {
         let expectedResult = [1, 2, 1]
 
-        let result = R.without([3, 4])(from: [1, 2, 1, 3, 4])
+        let result = R.without([3, 4])([1, 2, 1, 3, 4])
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -22,7 +22,7 @@ class WithoutTests: XCTestCase {
     func testShouldReturnArrayWithElementsNotContainedInFirstArray() {
         let expectedResult = [3, 4]
 
-        let result = R.without([1, 2])(from: [1, 2, 1, 3, 4])
+        let result = R.without([1, 2])([1, 2, 1, 3, 4])
 
         XCTAssertEqual(expectedResult, result)
     }

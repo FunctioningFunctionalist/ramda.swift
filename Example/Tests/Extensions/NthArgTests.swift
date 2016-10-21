@@ -14,7 +14,7 @@ class NthArgTests: XCTestCase {
     func testShouldReturnTheSecondArgumentInTheReturnedFunction() {
         let expectedResult = 3
 
-        let result = R.nthArg(1)(in: 1, 3, 5, 7, 9)
+        let result = R.nthArg(1)(1, 3, 5, 7, 9)
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -22,7 +22,7 @@ class NthArgTests: XCTestCase {
     func testShouldReturnTheThirdArgumentInTheReturnedFunctionEvenWhenTheIndexIsNegative() {
         let expectedResult = 5
 
-        let result = R.nthArg(-1)(in: 1, 3, 5)
+        let result = R.nthArg(-1)(1, 3, 5)
 
         XCTAssertEqual(expectedResult, result)
     }

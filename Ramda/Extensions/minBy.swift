@@ -4,6 +4,8 @@
 
 import Foundation
 
+// swiftlint:disable line_length
+
 extension R {
 
     /**
@@ -19,7 +21,7 @@ extension R {
 
     */
 
-    public class func minBy<A, B: Comparable>(function: A -> B, with lhs: A, or rhs: A) -> B {
+    public class func minBy<A, B: Comparable>(_ function: (A) -> B, with lhs: A, or rhs: A) -> B {
         return R.min(function(lhs), or: function(rhs))
     }
 
@@ -35,8 +37,10 @@ extension R {
 
     */
 
-    public class func minBy<A, B: Comparable>(function: A -> B) -> (with: A) -> (or: A) -> B {
+    public class func minBy<A, B: Comparable>(_ function: (A) -> B) -> (_ with: A) -> (_ or: A) -> B {
         return curry(minBy)(function)
     }
 
 }
+
+// swiftlint:enable line_length

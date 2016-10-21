@@ -17,7 +17,7 @@ extension R {
 
     */
 
-    public class func equals<T: Equatable>(lhs: T, to rhs: T) -> Bool {
+    public class func equals<T: Equatable>(_ lhs: T, to rhs: T) -> Bool {
         return lhs == rhs
     }
 
@@ -32,7 +32,7 @@ extension R {
 
     */
 
-    public class func equals<T: Equatable>(lhs: T) -> (to: T) -> Bool {
+    public class func equals<T: Equatable>(_ lhs: T) -> (_ to: T) -> Bool {
         return curry(equals)(lhs)
     }
 

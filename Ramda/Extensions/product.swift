@@ -18,7 +18,7 @@ extension R {
 
     */
 
-    public class func product<A: BasicArithmeticType, B: SequenceType where A == B.Generator.Element>(sequence: B) -> A {
+    public class func product<A: BasicArithmeticType, B: Sequence>(_ sequence: B) -> A where A == B.Iterator.Element {
         return R.reduce(*, startingWith: A.one, in: sequence)
     }
 

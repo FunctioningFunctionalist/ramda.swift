@@ -21,7 +21,7 @@ extension R {
 
     */
 
-    public class func chain<A, B, C: SequenceType where C.Generator.Element == A>(transform: A throws -> B, for sequence: C) rethrows -> [B] {
+    public class func chain<A, B, C: Sequence>(transform: (A) throws -> B, for sequence: C) rethrows -> [B] where C.Iterator.Element == A {
         return try sequence.flatMap(transform)
     }
 
@@ -37,7 +37,7 @@ extension R {
 
     */
 
-    public class func chain<A, B>(transform: A throws -> B) -> (for: [A]) throws -> [B] {
+    public class func chain<A, B>(_ transform: (A) throws -> B) -> (_ for: [A]) throws -> [B] {
         return curry(chain)(transform)
     }
 
@@ -54,7 +54,7 @@ extension R {
 
     */
 
-    public class func chain<A, B, C: SequenceType where C.Generator.Element == A>(transform: A throws -> B?, for sequence: C) rethrows -> [B] {
+    public class func chain<A, B, C: Sequence>(transform: (A) throws -> B?, for sequence: C) rethrows -> [B] where C.Iterator.Element == A {
         return try sequence.flatMap(transform)
     }
 
@@ -70,7 +70,7 @@ extension R {
 
     */
 
-    public class func chain<A, B>(transform: A throws -> B?) -> (for: [A]) throws -> [B] {
+    public class func chain<A, B>(_ transform: (A) throws -> B?) -> (_ for: [A]) throws -> [B] {
         return curry(chain)(transform)
     }
 

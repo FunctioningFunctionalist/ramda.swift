@@ -19,7 +19,7 @@ extension R {
 
     */
 
-    public class func curry<A, B, C>(function: (A, B) -> C) -> A -> B -> C {
+    public class func curry<A, B, C>(_ function: @escaping (A, B) -> C) -> (A) -> (B) -> C {
         return { first in
             return { second in
                 return function(first, second)
@@ -37,7 +37,7 @@ extension R {
 
     */
 
-    public class func curry<A, B, C>(function: (A, B) throws -> C) -> A -> B throws -> C {
+    public class func curry<A, B, C>(_ function: @escaping (A, B) throws -> C) -> (A) -> (B) throws -> C {
         return { first in
             return { second in
                 return try function(first, second)
@@ -55,7 +55,7 @@ extension R {
 
     */
 
-    public class func curry<A, B, C, D>(function: (A, B, C) -> D) -> A -> B -> C -> D {
+    public class func curry<A, B, C, D>(_ function: @escaping (A, B, C) -> D) -> (A) -> (B) -> (C) -> D {
         return { first in
             return { second in
                 return { third in
@@ -75,7 +75,7 @@ extension R {
 
     */
 
-    public class func curry<A, B, C, D>(function: (A, B, C) throws -> D) -> A -> B -> C throws -> D {
+    public class func curry<A, B, C, D>(_ function: @escaping (A, B, C) throws -> D) -> (A) -> (B) -> (C) throws -> D {
         return { first in
             return { second in
                 return { third in
@@ -95,7 +95,7 @@ extension R {
 
     */
 
-    public class func curry<A, B, C, D, E>(function: (A, B, C, D) -> E) -> A -> B -> C -> D -> E {
+    public class func curry<A, B, C, D, E>(_ function: @escaping (A, B, C, D) -> E) -> (A) -> (B) -> (C) -> (D) -> E {
         return { first in
             return { second in
                 return { third in
@@ -117,7 +117,7 @@ extension R {
 
     */
 
-    public class func curry<A, B, C, D, E>(function: (A, B, C, D) throws -> E) -> A -> B -> C -> D throws -> E {
+    public class func curry<A, B, C, D, E>(_ function: @escaping (A, B, C, D) throws -> E) -> (A) -> (B) -> (C) -> (D) throws -> E {
         return { first in
             return { second in
                 return { third in
@@ -139,7 +139,7 @@ extension R {
 
     */
 
-    public class func curry<A, B, C, D, E, F>(function: (A, B, C, D, E) -> F) -> A -> B -> C -> D -> E -> F {
+    public class func curry<A, B, C, D, E, F>(_ function: @escaping (A, B, C, D, E) -> F) -> (A) -> (B) -> (C) -> (D) -> (E) -> F {
         return { first in
             return { second in
                 return { third in
@@ -163,7 +163,7 @@ extension R {
 
     */
 
-    public class func curry<A, B, C, D, E, F>(function: (A, B, C, D, E) throws -> F) -> A -> B -> C -> D -> E throws -> F {
+    public class func curry<A, B, C, D, E, F>(_ function: @escaping (A, B, C, D, E) throws -> F) -> (A) -> (B) -> (C) -> (D) -> (E) throws -> F {
         return { first in
             return { second in
                 return { third in

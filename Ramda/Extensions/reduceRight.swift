@@ -27,9 +27,9 @@ extension R {
 
      */
 
-    public class func reduceRight<A, B: SequenceType>
-        (iterator: (A, B.Generator.Element) -> A, startingWith initialValue: A, in sequence: B) -> A {
-        return sequence.reverse().reduce(initialValue, combine: iterator)
+    public class func reduceRight<A, B: Sequence>
+        (_ iterator: (A, B.Iterator.Element) -> A, startingWith initialValue: A, in sequence: B) -> A {
+        return sequence.reversed().reduce(initialValue, iterator)
     }
 
     /**
@@ -46,8 +46,8 @@ extension R {
 
      */
 
-    public class func reduceRight<A, B: SequenceType>
-        (iterator: (A, B.Generator.Element) -> A) -> (startingWith: A) -> (in: B) -> A {
+    public class func reduceRight<A, B: Sequence>
+        (_ iterator: (A, B.Iterator.Element) -> A) -> (_ startingWith: A) -> (_ in: B) -> A {
         return curry(reduceRight)(iterator)
     }
 

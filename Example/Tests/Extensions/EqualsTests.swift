@@ -12,25 +12,13 @@ import Ramda
 class EqualsTests: XCTestCase {
 
     func testShouldReturnTrueWhenIntegersAreEqual() {
-        let result = R.equals(1)(to: 1)
+        let result = R.equals(1)(1)
 
         XCTAssertTrue(result)
     }
 
     func testShouldReturnFalseWhenIntegersAreNotEqual() {
-        let result = R.equals(1)(to: 2)
-
-        XCTAssertFalse(result)
-    }
-
-    func testShouldReturnTrueWhenArraysAreEqual() {
-        let result = R.equals([1, 2, 3])(to: [1, 2, 3])
-
-        XCTAssertTrue(result)
-    }
-
-    func testShouldReturnFalseWhenArraysAreNotEqual() {
-        let result = R.equals([3, 2, 1])(to: [1, 2, 3])
+        let result = R.equals(1)(2)
 
         XCTAssertFalse(result)
     }

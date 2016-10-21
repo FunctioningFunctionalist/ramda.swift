@@ -14,7 +14,7 @@ class AllPassTests: XCTestCase {
     func testShouldReturnTrueWhenLessThanTenAndGreaterThanFive() {
         let predicates = [ { $0 < 10 }, { $0 > 5 }]
 
-        let result = R.allPass(predicates)(with: 6)
+        let result = R.allPass(predicates)(6)
 
         XCTAssertTrue(result)
     }
@@ -22,7 +22,7 @@ class AllPassTests: XCTestCase {
     func testShouldReturnFalseWhenLessThanTenOrGreaterThanFive() {
         let predicates = [ { $0 < 10 }, { $0 > 5 }]
 
-        let result = R.allPass(predicates)(with: 3)
+        let result = R.allPass(predicates)(3)
 
         XCTAssertFalse(result)
     }
@@ -30,7 +30,7 @@ class AllPassTests: XCTestCase {
     func testShouldReturnTrueWhenWhenTheSumOfTwoNumbersAreLessThanTenAndGreaterThanFive() {
         let predicates = [ { R.sum([$0, $1]) < 10 }, { R.sum([$0, $1]) > 5 }]
 
-        let result = R.allPass(predicates)(with: 5)(and: 3)
+        let result = R.allPass(predicates)(5)(3)
 
         XCTAssertTrue(result)
     }
@@ -38,7 +38,7 @@ class AllPassTests: XCTestCase {
     func testShouldReturnTrueWhenWhenTheSumOfThreeNumbersAreLessThanTenAndGreaterThanFive() {
         let predicates = [ { R.sum([$0, $1, $2]) < 10 }, { R.sum([$0, $1, $2]) > 5 }]
 
-        let result = R.allPass(predicates)(with: 5)(3)(and: 0)
+        let result = R.allPass(predicates)(5)(3)(0)
 
         XCTAssertTrue(result)
     }
@@ -46,7 +46,7 @@ class AllPassTests: XCTestCase {
     func testShouldReturnTrueWhenWhenTheSumOfFourNumbersAreLessThanTenAndGreaterThanFive() {
         let predicates = [ { R.sum([$0, $1, $2, $3]) < 10 }, { R.sum([$0, $1, $2, $3]) > 5 }]
 
-        let result = R.allPass(predicates)(with: 5)(3)(0)(and: 1)
+        let result = R.allPass(predicates)(5)(3)(0)(1)
 
         XCTAssertTrue(result)
     }

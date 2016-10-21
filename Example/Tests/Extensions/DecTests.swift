@@ -7,22 +7,9 @@
 //
 
 import XCTest
-import Fox
 import Ramda
 
 class DecTests: XCTestCase {
-
-    func testShouldDecrementIntegers() {
-        let integerGenerator = FoxGeneratorParam1(FOXInteger()) { (number: Int) in
-            let expectedResult = number - 1
-
-            let result = R.dec(number)
-
-            return expectedResult == result
-        }
-
-        FoxTester.assert(integerGenerator)
-    }
 
     func testShouldDecrementInteger8s() {
         let number: Int8 = 8
@@ -103,30 +90,6 @@ class DecTests: XCTestCase {
         let result = R.dec(number)
 
         XCTAssertEqual(expectedResult, result)
-    }
-
-    func testShouldDecrementFloats() {
-        let floatGenerator = FoxGeneratorParam1(FOXFloat()) { (number: Float) in
-            let expectedResult = number - 1
-
-            let result = R.dec(number)
-
-            return expectedResult == result
-        }
-
-        FoxTester.assert(floatGenerator)
-    }
-
-    func testShouldDecrementDoubles() {
-        let doubleGenerator = FoxGeneratorParam1(FOXDouble()) { (number: Double) in
-            let expectedResult = number - 1
-
-            let result = R.dec(number)
-
-            return expectedResult == result
-        }
-
-        FoxTester.assert(doubleGenerator)
     }
 
 }

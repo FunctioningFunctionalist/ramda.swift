@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import Fox
 import Ramda
 
 // swiftlint:disable line_length
@@ -15,39 +14,36 @@ import Ramda
 class SubtractTests: XCTestCase {
 
     func testShouldSubtractTwoIntegers() {
-        let integerGenerator = FoxGeneratorParam2(FOXInteger(), FOXInteger()) { (number1: Int, number2: Int) in
-            let expectedResult = number1 - number2
+        let number1 = 1
+        let number2 = 2
 
-            let result = R.subtract(number1)(minus: number2)
+        let expectedResult = number1 - number2
 
-            return expectedResult == result
-        }
+        let result = R.subtract(number1)(number2)
 
-        FoxTester.assert(integerGenerator)
+        XCTAssertTrue(expectedResult == result)
     }
 
     func testShouldSubtractTwoFloats() {
-        let floatGenerator = FoxGeneratorParam2(FOXFloat(), FOXFloat()) { (number1: Float, number2: Float) in
-            let expectedResult = number1 - number2
+        let number1: Float = 1.1
+        let number2: Float = 1.3
 
-            let result = R.subtract(number1)(minus: number2)
+        let expectedResult = number1 - number2
 
-            return expectedResult == result
-        }
+        let result = R.subtract(number1)(number2)
 
-        FoxTester.assert(floatGenerator)
+        XCTAssertTrue(expectedResult == result)
     }
 
     func testShouldSubtractTwoDoubles() {
-        let doubleGenerator = FoxGeneratorParam2(FOXDouble(), FOXDouble()) { (number1: Double, number2: Double) in
-            let expectedResult = number1 - number2
+        let number1: Double = 0.1
+        let number2: Double = 1.3
 
-            let result = R.subtract(number1)(minus: number2)
+        let expectedResult = number1 - number2
 
-            return expectedResult == result
-        }
+        let result = R.subtract(number1)(number2)
 
-        FoxTester.assert(doubleGenerator)
+        XCTAssertTrue(expectedResult == result)
     }
 
 }

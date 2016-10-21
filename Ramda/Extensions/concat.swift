@@ -17,7 +17,7 @@ extension R {
 
     */
 
-    public class func concat<T: Concatenate>(lhs: T, with rhs: T) -> T {
+    public class func concat<T: Concatenate>(_ lhs: T, with rhs: T) -> T {
         return lhs + rhs
     }
 
@@ -32,7 +32,7 @@ extension R {
 
     */
 
-    public class func concat<T: Concatenate>(lhs: T) -> (with: T) -> T {
+    public class func concat<T: Concatenate>(_ lhs: T) -> (_ with: T) -> T {
         return curry(concat)(lhs)
     }
 
@@ -57,7 +57,7 @@ public protocol Concatenate {
 
     */
 
-    func + (lhs: Self, rhs: Self) -> Self
+    static func + (lhs: Self, rhs: Self) -> Self
 
 }
 

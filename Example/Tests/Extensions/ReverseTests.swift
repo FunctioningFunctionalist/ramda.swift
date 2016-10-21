@@ -20,16 +20,16 @@ class ReverseTests: XCTestCase {
     }
 
     func testShouldReturnEmptyArrayWhenReversingEmptyArray() {
-        let expectedResult = []
+        let expectedResult = [Int]()
 
-        let result = R.reverse([])
+        let result = R.reverse([Int]())
 
         XCTAssertEqual(expectedResult, result)
     }
 
     func testShouldReturnReversedSet() {
         let input = Set(arrayLiteral: 1, 3, 5, 7, 9)
-        let expectedResult = input.reverse()
+        let expectedResult = input.reversed()
 
         let result = R.reverse(input)
 

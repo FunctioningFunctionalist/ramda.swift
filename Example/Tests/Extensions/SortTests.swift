@@ -14,7 +14,7 @@ class SortTests: XCTestCase {
     func testShouldReturnSortedArrayInAscendingOrderUsingIntegerComparator() {
         let expectedResult = [1, 3, 5, 7]
 
-        let result = R.sort { $0 - $1 } (for: [3, 5, 1, 7])
+        let result = R.sort { $0 - $1 } ([3, 5, 1, 7])
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -22,7 +22,7 @@ class SortTests: XCTestCase {
     func testShouldReturnSortedArrayInAscendingOrderUsingBooleanComparator() {
         let expectedResult = [1, 3, 5, 7]
 
-        let result = R.sort(R.lt)(for: [3, 5, 1, 7])
+        let result = R.sort(R.lt)([3, 5, 1, 7])
 
         XCTAssertEqual(expectedResult, result)
     }

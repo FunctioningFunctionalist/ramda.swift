@@ -17,7 +17,7 @@ extension R {
 
     */
 
-    public class func pair<T>(lhs: T, and rhs: T) -> [T] {
+    public class func pair<T>(_ lhs: T, and rhs: T) -> [T] {
         return [lhs, rhs]
     }
 
@@ -32,7 +32,7 @@ extension R {
 
     */
 
-    public class func pair<T>(lhs: T) -> (and: T) -> [T] {
+    public class func pair<T>(_ lhs: T) -> (_ and: T) -> [T] {
         return curry(pair)(lhs)
     }
 

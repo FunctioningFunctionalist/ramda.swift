@@ -17,7 +17,7 @@ extension R {
 
     */
 
-    public class func max<T: Comparable>(lhs: T, or rhs: T) -> T {
+    public class func max<T: Comparable>(_ lhs: T, or rhs: T) -> T {
         return R.gt(lhs, than: rhs) ? lhs : rhs
     }
 
@@ -32,7 +32,7 @@ extension R {
 
     */
 
-    public class func max<T: Comparable>(lhs: T) -> (or: T) -> T {
+    public class func max<T: Comparable>(_ lhs: T) -> (_ or: T) -> T {
         return curry(max)(lhs)
     }
 

@@ -16,7 +16,7 @@ extension R {
 
     */
 
-    public class func length<T: CollectionType>(collection: T) -> T.Index.Distance {
+    public class func length<T: Collection>(_ collection: T) -> T.IndexDistance {
         return collection.count
     }
 

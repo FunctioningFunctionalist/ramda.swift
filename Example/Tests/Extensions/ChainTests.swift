@@ -7,12 +7,11 @@
 //
 
 import XCTest
-import Fox
 import Ramda
 
 class ChainTests: XCTestCase {
 
-    func convert(string: String) -> Int {
+    func convert(_ string: String) -> Int {
         if let number = Int(string) {
             return number
         }
@@ -20,7 +19,7 @@ class ChainTests: XCTestCase {
         return 0
     }
 
-    func optionalConvert(string: String) -> Int? {
+    func optionalConvert(_ string: String) -> Int? {
         return Int(string)
     }
 
@@ -28,7 +27,7 @@ class ChainTests: XCTestCase {
         let expectedResult = [2, 4, 5, 3]
         let input = ["2", "4", "5", "3"]
 
-        let result = try R.chain(convert)(for: input)
+        let result = try R.chain(convert)(input)
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -37,7 +36,7 @@ class ChainTests: XCTestCase {
         let expectedResult = [2, 5]
         let input = ["2", "a", "5", "k"]
 
-        let result = try R.chain(optionalConvert)(for: input)
+        let result = try R.chain(optionalConvert)(input)
 
         XCTAssertEqual(expectedResult, result)
     }

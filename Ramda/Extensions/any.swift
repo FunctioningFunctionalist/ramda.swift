@@ -19,7 +19,7 @@ extension R {
 
      */
 
-    public class func any<A, B where B: SequenceType, A == B.Generator.Element>(function: A -> Bool, in sequence: B) -> Bool {
+    public class func any<A, B>(_ function: (A) -> Bool, in sequence: B) -> Bool where B: Sequence, A == B.Iterator.Element {
         for value in sequence {
             if function(value) {
                 return true
@@ -39,7 +39,7 @@ extension R {
 
      */
 
-    public class func any<T>(function: T -> Bool) -> (in: [T]) -> Bool {
+    public class func any<T>(_ function: (T) -> Bool) -> (_ in: [T]) -> Bool {
         return curry(any)(function)
     }
 

@@ -7,18 +7,17 @@
 //
 
 import XCTest
-import Fox
 import Ramda
 
 // swiftlint:disable line_length
 
 class ComposeTests: XCTestCase {
 
-    func increment(number: Int) -> Int {
+    func increment(_ number: Int) -> Int {
         return number + 1
     }
 
-    func square(number: Int) -> Int {
+    func square(_ number: Int) -> Int {
         return number * number
     }
 

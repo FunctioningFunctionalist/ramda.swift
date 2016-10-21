@@ -12,7 +12,7 @@ import Ramda
 class EmptyTests: XCTestCase {
 
     func testShouldReturnEmptyArray() {
-        let expectedResult = []
+        let expectedResult = [Int]()
 
         let result = R.empty([1, 2, 3, 4])
 

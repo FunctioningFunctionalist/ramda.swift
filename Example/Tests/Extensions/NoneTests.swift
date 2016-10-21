@@ -11,24 +11,24 @@ import Ramda
 
 class NoneTests: XCTestCase {
 
-    func isEven(number: Int) -> Bool {
+    func isEven(_ number: Int) -> Bool {
         return number % 2 == 0
     }
 
    func testShouldReturnTrueWhenAllElementsAreNotEven() {
-       let result = R.none(isEven)(in: [1, 3, 5, 7, 9])
+       let result = R.none(isEven)([1, 3, 5, 7, 9])
 
        XCTAssertTrue(result)
    }
 
     func testShouldReturnFalseWhenAnyElementIsEven() {
-        let result = R.none(isEven)(in: [1, 2, 3, 5, 7, 7])
+        let result = R.none(isEven)([1, 2, 3, 5, 7, 7])
 
         XCTAssertFalse(result)
     }
 
     func testShouldReturnFalseWhenAllElementsAreEven() {
-        let result = R.none(isEven)(in: [2, 4, 6, 8, 10])
+        let result = R.none(isEven)([2, 4, 6, 8, 10])
 
         XCTAssertFalse(result)
     }

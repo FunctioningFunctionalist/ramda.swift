@@ -6,6 +6,6 @@ import Foundation
 
 // swiftlint:disable type_name
 
-public class R {}
+open class R {}
 
 // swiftlint:enable type_name

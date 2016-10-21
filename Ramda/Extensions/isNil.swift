@@ -16,7 +16,7 @@ extension R {
 
     */
 
-    public class func isNil<T>(value: T?) -> Bool {
+    public class func isNil<T>(_ value: T?) -> Bool {
         return value == nil
     }
 

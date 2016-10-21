@@ -14,7 +14,7 @@ class DifferenceTests: XCTestCase {
     func testShouldReturnDifferenceBetweenTwoArrays() {
         let expectedResult = [1, 2]
 
-        let result = R.difference([1, 2, 3, 4])(from: [7, 6, 5, 4, 3])
+        let result = R.difference([1, 2, 3, 4])([7, 6, 5, 4, 3])
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -22,7 +22,7 @@ class DifferenceTests: XCTestCase {
     func testShouldReturnDifferenceBetweenTwoArraysSwappedAround() {
         let expectedResult = [7, 6, 5]
 
-        let result = R.difference([7, 6, 5, 4, 3])(from: [1, 2, 3, 4])
+        let result = R.difference([7, 6, 5, 4, 3])([1, 2, 3, 4])
 
         XCTAssertEqual(expectedResult, result)
     }

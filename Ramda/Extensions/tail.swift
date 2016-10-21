@@ -17,7 +17,7 @@ extension R {
 
     */
 
-    public class func tail<T: RangeReplaceableCollectionType>(collection: T) -> T {
+    public class func tail<T: RangeReplaceableCollection>(_ collection: T) -> T {
         var newCollection = collection
         newCollection.removeFirst()
         return newCollection

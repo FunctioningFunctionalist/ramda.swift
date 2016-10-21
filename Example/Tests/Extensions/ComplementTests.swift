@@ -7,32 +7,31 @@
 //
 
 import XCTest
-import Fox
 import Ramda
 
 class ComplementTests: XCTestCase {
 
-    func isEven(number: Int) -> Bool {
+    func isEven(_ number: Int) -> Bool {
         return number % 2 == 0
     }
 
-    func isEqual(first: String, second: String) -> Bool {
+    func isEqual(_ first: String, second: String) -> Bool {
         return first == second
     }
 
-    func isConsecutive(first: Int, second: Int, third: Int) -> Bool {
+    func isConsecutive(_ first: Int, second: Int, third: Int) -> Bool {
         return (third == (second + 1)) && (third == (first + 2))
     }
 
-    func isAllEqual(first: String, second: String, third: String, fourth: String) -> Bool {
+    func isAllEqual(_ first: String, second: String, third: String, fourth: String) -> Bool {
         return first == second && second == third && third == fourth
     }
 
-    func isAllEven(first: Int, second: Int, third: Int, fourth: Int, fifth: Int) -> Bool {
+    func isAllEven(_ first: Int, _ second: Int, _ third: Int, _ fourth: Int, _ fifth: Int) -> Bool {
         return isEven(first) && isEven(second) && isEven(third) && isEven(fourth) && isEven(fifth)
     }
 
-    func isAllOdd(numbers: Int...) -> Bool {
+    func isAllOdd(_ numbers: Int...) -> Bool {
         for number in numbers {
             if isEven(number) {
                 return false
@@ -82,7 +81,7 @@ class ComplementTests: XCTestCase {
     }
 
     func testShouldComplementIsAllEvenAndReturnAllOddResults() {
-        let expectedResult = !isAllEven(1, second: 3, third: 4, fourth: 5, fifth: 6)
+        let expectedResult = !isAllEven(1, 3, 4, 5, 6)
 
         let isNotAllEven = R.complement(isAllEven)
         let result = isNotAllEven(1, 3, 4, 5, 6)
@@ -90,13 +89,6 @@ class ComplementTests: XCTestCase {
         XCTAssertEqual(expectedResult, result)
     }
 
-    func testShouldComplementIsAllOddAndReturnAllEvenResults() {
-        let expectedResult = !isAllOdd(1, 3, 5, 7, 9, 11)
 
-        let isAllEven = R.complement(isAllOdd)
-        let result = isAllEven(1, 3, 5, 7, 9, 11)
-
-        XCTAssertEqual(expectedResult, result)
-    }
 
 }

@@ -18,7 +18,7 @@ extension R {
 
     */
 
-    public class func times<T>(function: (Int) -> T, for count: Int) -> [T] {
+    public class func times<T>(_ function: (Int) -> T, for count: Int) -> [T] {
         let composition = R.range(0) >>> R.map(function)
         return composition(count)
     }
@@ -35,7 +35,7 @@ extension R {
 
     */
 
-    public class func times<T>(function: (Int) -> T) -> (for: Int) -> [T] {
+    public class func times<T>(_ function: (Int) -> T) -> (_ for: Int) -> [T] {
         return curry(times)(function)
     }
 

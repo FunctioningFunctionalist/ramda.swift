@@ -22,11 +22,11 @@ extension R {
 
     */
 
-    public class func dropWhile<A, B: SequenceType, C: SequenceType
-                               where A == B.Generator.Element, C == B.SubSequence, A == B.Generator.Element, C == C.SubSequence>(predicate: A -> Bool, in sequence: B) -> C {
+    public class func dropWhile<A, B: Sequence, C: Sequence>(_ predicate: (A) -> Bool, in sequence: B) -> C
+                               where A == B.Iterator.Element, C == B.SubSequence, A == B.Iterator.Element, C == C.SubSequence {
         var newSequence = sequence.dropFirst(0)
         var reversed = R.reverse(sequence)
-        while let element = reversed.last where predicate(element) {
+        while let element = reversed.last, predicate(element) {
             newSequence = R.drop(1, in: newSequence)
             reversed.removeLast()
         }
@@ -48,8 +48,8 @@ extension R {
 
     */
 
-    public class func dropWhile<A, B: SequenceType, C: SequenceType
-                               where A == B.Generator.Element, C == B.SubSequence, A == B.Generator.Element, C == C.SubSequence>(predicate: A -> Bool) -> (in: B) -> C {
+    public class func dropWhile<A, B: Sequence, C: Sequence>(_ predicate: (A) -> Bool) -> (_ in: B) -> C
+                               where A == B.Iterator.Element, C == B.SubSequence, A == B.Iterator.Element, C == C.SubSequence {
         return curry(dropWhile)(predicate)
     }
 

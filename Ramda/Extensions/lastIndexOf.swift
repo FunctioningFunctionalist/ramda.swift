@@ -20,8 +20,8 @@ extension R {
 
     */
 
-    public class func lastIndexOf<A: Comparable, B: CollectionType where A == B.Generator.Element, B.Index.Distance == Int>(element: A, in collection: B) -> Int? {
-        guard let index = R.reverse(collection).indexOf(R.equals(element)) else { return nil }
+    public class func lastIndexOf<A: Comparable, B: Collection>(_ element: A, in collection: B) -> Int? where A == B.Iterator.Element, B.IndexDistance == Int {
+        guard let index = R.reverse(collection).index(where: R.equals(element)) else { return nil }
         return R.subtract(R.length(collection), minus:R.add(index, to: 1))
     }
 
@@ -36,7 +36,7 @@ extension R {
 
     */
 
-    public class func lastIndexOf<A: Comparable, B: CollectionType where A == B.Generator.Element, B.Index.Distance == Int>(element: A) -> (in: B) -> Int? {
+    public class func lastIndexOf<A: Comparable, B: Collection>(_ element: A) -> (_ in: B) -> Int? where A == B.Iterator.Element, B.IndexDistance == Int {
         return curry(lastIndexOf)(element)
     }
 

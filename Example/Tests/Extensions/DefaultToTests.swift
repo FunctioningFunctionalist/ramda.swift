@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import Fox
 import Ramda
 
 class DefaultToTests: XCTestCase {
@@ -16,7 +15,7 @@ class DefaultToTests: XCTestCase {
         let expectedResult = "Test"
         let input: String? = "Test"
 
-        let result = R.defaultTo("Default")(value: input)
+        let result = R.defaultTo("Default")(input)
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -25,7 +24,7 @@ class DefaultToTests: XCTestCase {
         let expectedResult = "Default"
         let input: String? = nil
 
-        let result = R.defaultTo("Default")(value: input)
+        let result = R.defaultTo("Default")(input)
 
         XCTAssertEqual(expectedResult, result)
     }

@@ -16,7 +16,7 @@ extension R {
 
     */
 
-    public class func not(value: Bool) -> Bool {
+    public class func not(_ value: Bool) -> Bool {
         return !value
     }
 

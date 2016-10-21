@@ -20,7 +20,7 @@ extension R {
 
     */
 
-    public class func map<A, B: SequenceType, C where A == B.Generator.Element>(function: A -> C, with functor: B) -> [C] {
+    public class func map<A, B: Sequence, C>(_ function: (A) -> C, with functor: B) -> [C] where A == B.Iterator.Element {
         return functor.map { element in
             function(element)
         }
@@ -38,7 +38,7 @@ extension R {
 
     */
 
-    public class func map<A, B: SequenceType, C where A == B.Generator.Element>(function: A -> C) -> (with: B) -> [C] {
+    public class func map<A, B: Sequence, C>(_ function: (A) -> C) -> (_ with: B) -> [C] where A == B.Iterator.Element {
         return curry(map)(function)
     }
 

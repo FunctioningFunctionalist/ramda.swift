@@ -14,7 +14,7 @@ class FindTests: XCTestCase {
     func testShouldReturnFirstElementThatIsEven() {
         let expectedResult = 6
 
-        let result = R.find { R.modulo($0, by: 2) == 0 } (in: [1, 3, 5, 6, 8, 10])
+        let result = R.find { R.modulo($0, by: 2) == 0 } ([1, 3, 5, 6, 8, 10])
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -23,7 +23,7 @@ class FindTests: XCTestCase {
         let expectedResult = 7
         let greaterThanSix = R.lt(6)
 
-        let result = R.find(greaterThanSix)(in: [1, 3, 5, 7, 9, 11])
+        let result = R.find(greaterThanSix)([1, 3, 5, 7, 9, 11])
 
         XCTAssertEqual(expectedResult, result)
     }

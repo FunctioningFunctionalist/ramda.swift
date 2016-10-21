@@ -19,7 +19,7 @@ extension R {
 
     */
 
-    public class func contains<A: Comparable, B: SequenceType where A == B.Generator.Element>(element: A, in sequence: B) -> Bool {
+    public class func contains<A: Comparable, B: Sequence>(_ element: A, in sequence: B) -> Bool where A == B.Iterator.Element {
         return any({ $0 == element }, in: sequence)
     }
 
@@ -34,7 +34,7 @@ extension R {
 
     */
 
-    public class func contains<T: Comparable>(element: T) -> (in: [T]) -> Bool {
+    public class func contains<T: Comparable>(_ element: T) -> (_ in: [T]) -> Bool {
         return curry(contains)(element)
     }
 

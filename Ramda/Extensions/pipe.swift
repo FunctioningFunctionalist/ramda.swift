@@ -8,11 +8,16 @@
 
 import Foundation
 
+// swiftlint:disable line_length
 // swiftlint:disable valid_docs
 
-infix operator |> { associativity left }
-infix operator |>! { associativity left }
-infix operator |>? { associativity left }
+precedencegroup Pipe {
+    associativity: left
+}
+
+infix operator |> : Pipe
+infix operator |>! : Pipe
+infix operator |>? : Pipe
 
 /**
 
@@ -26,7 +31,7 @@ infix operator |>? { associativity left }
 
  */
 
-public func |> <T, U>(lhs: T, rhs: T -> U) -> U {
+public func |> <T, U>(lhs: T, rhs: (T) -> U) -> U {
     return rhs(lhs)
 }
 
@@ -43,7 +48,7 @@ public func |> <T, U>(lhs: T, rhs: T -> U) -> U {
 
  */
 
-public func |>! <T, U>(lhs: T?, rhs: T -> U) -> U {
+public func |>! <T, U>(lhs: T?, rhs: (T) -> U) -> U {
     return rhs(lhs!)
 }
 
@@ -60,7 +65,7 @@ public func |>! <T, U>(lhs: T?, rhs: T -> U) -> U {
 
  */
 
-public func |>? <T, U>(lhs: T?, rhs: T -> U) -> U? {
+public func |>? <T, U>(lhs: T?, rhs: (T) -> U) -> U? {
     return lhs.map(rhs)
 }
 
@@ -78,7 +83,7 @@ extension R {
 
      */
 
-    public class func pipe<A, B, C>(first: A -> B, second: B -> C) -> A -> C {
+    public class func pipe<A, B, C>(_ first: @escaping (A) -> B, second: @escaping (B) -> C) -> (A) -> C {
         return { param in
             first(param) |> second
         }
@@ -97,7 +102,7 @@ extension R {
 
      */
 
-    public class func pipe<A, B, C>(first: A -> B?, second: B -> C) -> A -> C {
+    public class func pipe<A, B, C>(_ first: @escaping (A) -> B?, second: @escaping (B) -> C) -> (A) -> C {
         return { param in
             first(param) |>! second
         }
@@ -116,7 +121,7 @@ extension R {
 
      */
 
-    public class func pipe<A, B, C>(first: A -> B?, second: B -> C) -> A -> C? {
+    public class func pipe<A, B, C>(_ first: @escaping (A) -> B?, second: @escaping (B) -> C) -> (A) -> C? {
         return { param in
             first(param) |>? second
         }
@@ -135,7 +140,7 @@ extension R {
 
      */
 
-    public class func pipe<A, B, C, D>(first: A -> B, second: B -> C, third: C -> D) -> A -> D {
+    public class func pipe<A, B, C, D>(_ first: @escaping (A) -> B, second: @escaping (B) -> C, third: @escaping (C) -> D) -> (A) -> D {
         return { param in
             first(param) |> second |> third
         }
@@ -155,7 +160,7 @@ extension R {
 
      */
 
-    public class func pipe<A, B, C, D>(first: A -> B?, second: B -> C, third: C -> D) -> A -> D {
+    public class func pipe<A, B, C, D>(_ first: @escaping (A) -> B?, second: @escaping (B) -> C, third: @escaping (C) -> D) -> (A) -> D {
         return { param in
             first(param) |>! second |>! third
         }
@@ -175,7 +180,7 @@ extension R {
 
      */
 
-    public class func pipe<A, B, C, D>(first: A -> B?, second: B -> C, third: C -> D) -> A -> D? {
+    public class func pipe<A, B, C, D>(_ first: @escaping (A) -> B?, second: @escaping (B) -> C, third: @escaping (C) -> D) -> (A) -> D? {
         return { param in
             first(param) |>? second |>? third
         }
@@ -184,3 +189,4 @@ extension R {
 }
 
 // swiftlint:enable valid_docs
+// swiftlint:enable line_length

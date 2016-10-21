@@ -20,9 +20,9 @@ extension R {
 
     */
 
-    public class func difference<A: SequenceType, B: SequenceType where A.Generator.Element: Comparable, A.Generator.Element == B.Generator.Element>(sequence: A, from sequence2: B) -> [A.Generator.Element] {
-        let check: (A.Generator.Element, B) -> Bool = R.complement(R.contains)
-        return R.filter { (element: A.Generator.Element) -> Bool in check(element, sequence2) } (in: sequence)
+    public class func difference<A: Sequence, B: Sequence>(_ sequence: A, from sequence2: B) -> [A.Iterator.Element] where A.Iterator.Element: Comparable, A.Iterator.Element == B.Iterator.Element {
+        let check: (A.Iterator.Element, B) -> Bool = R.complement(R.contains)
+        return R.filter { (element: A.Iterator.Element) -> Bool in check(element, sequence2) } (sequence)
     }
 
     /**
@@ -37,7 +37,7 @@ extension R {
 
     */
 
-    public class func difference<T: Comparable>(array: [T]) -> (from: [T]) -> [T] {
+    public class func difference<T: Comparable>(_ array: [T]) -> (_ from: [T]) -> [T] {
         return curry(difference)(array)
     }
 

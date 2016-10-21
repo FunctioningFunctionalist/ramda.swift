@@ -17,7 +17,7 @@ extension R {
 
     */
 
-    public class func nthArg<T>(index: Int) -> (in: T...) -> T? {
+    public class func nthArg<T>(_ index: Int) -> (_ in: T...) -> T? {
         return { params in
             let array = params as [T]
             return nth(index, in: array)

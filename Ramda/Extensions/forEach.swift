@@ -20,7 +20,7 @@ extension R {
 
     */
 
-    public class func forEach<A, B: SequenceType where A == B.Generator.Element>(function: A -> (Void), in sequence: B) -> B {
+    public class func forEach<A, B: Sequence>(_ function: (A) -> (Void), in sequence: B) -> B where A == B.Iterator.Element {
         sequence.forEach(function)
         return sequence
     }
@@ -37,7 +37,7 @@ extension R {
 
     */
 
-    public class func forEach<A, B: CollectionType where A == B.Generator.Element>(function: A -> (Void)) -> (in: B) -> B {
+    public class func forEach<A, B: Collection>(_ function: (A) -> (Void)) -> (_ in: B) -> B where A == B.Iterator.Element {
         return curry(forEach)(function)
     }
 

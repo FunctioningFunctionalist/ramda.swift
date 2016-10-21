@@ -14,7 +14,7 @@ class MaxTests: XCTestCase {
     func testShouldReturnTheLargerIntegerOfTheTwo() {
         let expectedResult = 10
 
-        let result = R.max(5)(or: 10)
+        let result = R.max(5)(10)
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -22,7 +22,7 @@ class MaxTests: XCTestCase {
     func testShouldReturnTheLargerStringOfTheTwo() {
         let expectedResult = "z"
 
-        let result = R.max("a")(or: "z")
+        let result = R.max("a")("z")
 
         XCTAssertEqual(expectedResult, result)
     }

@@ -4,10 +4,15 @@
 
 import Foundation
 
+// swiftlint:disable line_length
 // swiftlint:disable valid_docs
 
-infix operator <<< { associativity left }
-infix operator >>> { associativity left }
+precedencegroup Compose {
+    associativity: left
+}
+
+infix operator <<< : Compose
+infix operator >>> : Compose
 
 /**
 
@@ -21,7 +26,7 @@ infix operator >>> { associativity left }
 
 */
 
-public func <<< <A, B, C>(lhs: B -> C, rhs: A -> B) -> A -> C {
+public func <<< <A, B, C>(lhs: @escaping (B) -> C, rhs: @escaping (A) -> B) -> (A) -> C {
     return { param in
         return lhs(rhs(param))
     }
@@ -39,7 +44,7 @@ public func <<< <A, B, C>(lhs: B -> C, rhs: A -> B) -> A -> C {
 
 */
 
-public func >>> <A, B, C>(lhs: A -> B, rhs: B -> C) -> A -> C {
+public func >>> <A, B, C>(lhs: @escaping (A) -> B, rhs: @escaping (B) -> C) -> (A) -> C {
     return { param in
         return rhs(lhs(param))
     }
@@ -59,7 +64,7 @@ extension R {
 
     */
 
-    public class func compose<A, B, C>(first: B -> C, second: A -> B) -> A -> C {
+    public class func compose<A, B, C>(_ first: @escaping (B) -> C, second: @escaping (A) -> B) -> (A) -> C {
         return first <<< second
     }
 
@@ -76,9 +81,10 @@ extension R {
 
     */
 
-    public class func compose<A, B, C, D>(first: C -> D, second: B -> C, third: A -> B) -> A -> D {
+    public class func compose<A, B, C, D>(_ first: @escaping (C) -> D, second: @escaping (B) -> C, third: @escaping (A) -> B) -> (A) -> D {
         return first <<< second <<< third
     }
 }
 
 // swiftlint:enable valid_docs
+// swiftlint:enable line_length

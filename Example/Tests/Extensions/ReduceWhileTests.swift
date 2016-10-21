@@ -13,14 +13,14 @@ import Ramda
 
 class ReduceWhileTests: XCTestCase {
 
-    func isOdd(acc: Int, element: Int) -> Bool {
+    func isOdd(_ acc: Int, element: Int) -> Bool {
         return element % 2 == 1
     }
 
     func testShouldOnlyReduceWhileThePredicatePasses() {
         let expectedResult = 9
 
-        let result = R.reduceWhile(isOdd)(iterator: +)(startingWith: 0)(in: [1, 3, 5, 60, 777, 800])
+        let result = R.reduceWhile(isOdd)(+)(0)([1, 3, 5, 60, 777, 800])
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -28,7 +28,7 @@ class ReduceWhileTests: XCTestCase {
     func testShouldReturnTheInitialValueIfTheFirstValueDoesNotPassThePredicateTest() {
         let expectedResult = 111
 
-        let result = R.reduceWhile(isOdd)(iterator: +)(startingWith: 111)(in: [2, 4, 6])
+        let result = R.reduceWhile(isOdd)(+)(111)([2, 4, 6])
 
         XCTAssertEqual(expectedResult, result)
     }
