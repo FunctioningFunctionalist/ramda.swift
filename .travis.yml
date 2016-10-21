@@ -9,10 +9,10 @@ install:
 script:
 - gem install xcpretty
 - swiftlint
-- cd Example 
+- cd Example
 - pod install
 - cd ..
-- xcodebuild -workspace Example/Ramda.xcworkspace -scheme Ramda_Tests -sdk iphonesimulator  ONLY_ACTIVE_ARCH=YES clean test | xcpretty
+- xcodebuild -workspace Example/Ramda.xcworkspace -scheme Ramda_Tests -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.0'  ONLY_ACTIVE_ARCH=YES clean test | xcpretty
 
 after_success:
   - bash <(curl -s https://codecov.io/bash) -J 'Ramda'
