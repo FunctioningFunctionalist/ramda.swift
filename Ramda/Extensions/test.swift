@@ -4,7 +4,11 @@
 
 import Foundation
 
-infix operator =~ { associativity left }
+precedencegroup Test {
+    associativity: left
+}
+
+infix operator =~ : Test
 
 public func =~ (string: String, regex: String) -> Bool {
     do {

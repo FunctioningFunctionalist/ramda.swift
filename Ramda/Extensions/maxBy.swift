@@ -4,6 +4,8 @@
 
 import Foundation
 
+// swiftlint:disable line_length
+
 extension R {
 
     /**
@@ -40,3 +42,5 @@ extension R {
     }
 
 }
+
+// swiftlint:enable line_length

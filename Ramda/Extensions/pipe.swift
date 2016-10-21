@@ -8,6 +8,7 @@
 
 import Foundation
 
+// swiftlint:disable line_length
 // swiftlint:disable valid_docs
 
 precedencegroup Pipe {
@@ -188,3 +189,4 @@ extension R {
 }
 
 // swiftlint:enable valid_docs
+// swiftlint:enable line_length

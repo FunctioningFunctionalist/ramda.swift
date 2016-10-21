@@ -26,7 +26,7 @@ extension R {
                                where A == B.Iterator.Element, C == B.SubSequence, A == B.Iterator.Element, C == C.SubSequence {
         var newSequence = sequence.dropFirst(0)
         var reversed = R.reverse(sequence)
-        while let element = reversed.last , predicate(element) {
+        while let element = reversed.last, predicate(element) {
             newSequence = R.drop(1, in: newSequence)
             reversed.removeLast()
         }

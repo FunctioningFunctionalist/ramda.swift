@@ -34,13 +34,8 @@ class BothTests: XCTestCase {
     func testShouldCreateFunctionThatComparesBothPassedInFunctionsAndReturnCorrectResultAndNotExecuteLastFunctionIfFirstIsFalse() {
         let number = 8
         let expectedResult = self.isGreaterThan10(number)
-        var result = false
-        let rhs: (Int) -> Bool = { _ in
-            result = true
-            return true
-        }
 
-        XCTAssertTrue(result == expectedResult)
+        XCTAssertFalse(expectedResult)
     }
 
     func testShouldCreateFunctionThatComparesBothPassedInFunctionsAndReturnCorrectResultUsingPartialFunctions() {
