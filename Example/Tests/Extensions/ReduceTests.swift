@@ -16,7 +16,7 @@ class ReduceTests: XCTestCase {
     func testShouldReturnTheTotalAmountFromTheArray() {
         let expectedResult = 16
 
-        let result = R.reduce(+)(startingWith: 10)(in: [1, 2, 3])
+        let result = R.reduce(+)(10)([1, 2, 3])
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -24,7 +24,7 @@ class ReduceTests: XCTestCase {
     func testShouldReturnTheMultipliedAmountFromTheSet() {
         let expectedResult = 2 * 3 * 4 * 5
 
-        let result = R.reduce(*)(startingWith: 1)(in: Set(arrayLiteral: 2, 3, 4, 5))
+        let result = R.reduce(*)(1)(Set(arrayLiteral: 2, 3, 4, 5))
 
         XCTAssertEqual(expectedResult, result)
     }

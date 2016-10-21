@@ -23,16 +23,4 @@ class EqualsTests: XCTestCase {
         XCTAssertFalse(result)
     }
 
-    func testShouldReturnTrueWhenArraysAreEqual() {
-        let result = R.equals([1, 2, 3])(to: [1, 2, 3])
-
-        XCTAssertTrue(result)
-    }
-
-    func testShouldReturnFalseWhenArraysAreNotEqual() {
-        let result = R.equals([3, 2, 1])(to: [1, 2, 3])
-
-        XCTAssertFalse(result)
-    }
-
 }

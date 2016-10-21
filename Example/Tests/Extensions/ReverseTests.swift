@@ -20,9 +20,9 @@ class ReverseTests: XCTestCase {
     }
 
     func testShouldReturnEmptyArrayWhenReversingEmptyArray() {
-        let expectedResult = []
+        let expectedResult = [Int]()
 
-        let result = R.reverse([])
+        let result = R.reverse([Int]())
 
         XCTAssertEqual(expectedResult, result)
     }

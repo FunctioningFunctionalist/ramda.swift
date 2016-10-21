@@ -14,7 +14,7 @@ class IndexOfTests: XCTestCase {
     func testShouldReturnIndexOfTheArrayElement() {
         let expectedResult = 2
 
-        let result = R.indexOf(5)(in: [1, 3, 5, 7, 9])
+        let result = R.indexOf(5)([1, 3, 5, 7, 9])
 
         XCTAssertEqual(expectedResult, result)
     }

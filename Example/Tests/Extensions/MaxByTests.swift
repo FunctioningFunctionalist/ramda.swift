@@ -14,7 +14,7 @@ class MaxByTests: XCTestCase {
     func testShouldReturnLargerDoubledInteger() {
         let expectedResult = 64
 
-        let result = R.maxBy { $0 * $0 } (with: 7)(or: 8)
+        let result = R.maxBy { $0 * $0 } (7)(8)
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -22,7 +22,7 @@ class MaxByTests: XCTestCase {
     func testShouldReturnTheLargerStringFromIntegerElements() {
         let expectedResult = "9"
 
-        let result = R.maxBy { String($0) } (with: 1)(or: 9)
+        let result = R.maxBy { String($0) } (1)(9)
 
         XCTAssertEqual(expectedResult, result)
     }

@@ -16,7 +16,7 @@ class ApTests: XCTestCase {
     func testShouldAllowFunctionsToBePassedAsVarargs() {
         let expectedResult = [11, 12, 13, 26, 27, 28]
         let values = [1, 2, 3]
-        let result = R.ap(R.add(10), to: R.add(25))(to: values)
+        let result = R.ap([R.add(10), R.add(25)])(values)
 
         XCTAssertEqual(expectedResult, result)
     }

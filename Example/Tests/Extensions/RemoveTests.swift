@@ -14,7 +14,7 @@ class RemoveTests: XCTestCase {
     func testShouldRemoveThreeElementsFromArray() {
         let expectedResult = [1, 2, 6, 7, 8]
 
-        let result = R.remove(2)(for: 3)(in: [1, 2, 3, 4, 5, 6, 7, 8])
+        let result = R.remove(2)(3)([1, 2, 3, 4, 5, 6, 7, 8])
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -22,7 +22,7 @@ class RemoveTests: XCTestCase {
     func testShouldRemoveFirstFourElementsFromArray() {
         let expectedResult = [5, 6, 7, 8]
 
-        let result = R.remove(0)(for: 4)(in: [1, 2, 3, 4, 5, 6, 7, 8])
+        let result = R.remove(0)(4)([1, 2, 3, 4, 5, 6, 7, 8])
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -30,7 +30,7 @@ class RemoveTests: XCTestCase {
     func testShouldRemoveLastFiveElementsFromArray() {
         let expectedResult = [1, 2, 3]
 
-        let result = R.remove(3)(for: 5)(in: [1, 2, 3, 4, 5, 6, 7, 8])
+        let result = R.remove(3)(5)([1, 2, 3, 4, 5, 6, 7, 8])
 
         XCTAssertEqual(expectedResult, result)
     }

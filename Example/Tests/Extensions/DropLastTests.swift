@@ -14,7 +14,7 @@ class DropLastTests: XCTestCase {
     func testShouldReturnSlicedArrayWithoutLastTwoElements() {
         let expectedResult: ArraySlice<Int> = [1, 2, 3]
 
-        let result = R.dropLast(2)(in: [1, 2, 3, 4, 5])
+        let result = R.dropLast(2)([1, 2, 3, 4, 5])
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -22,7 +22,7 @@ class DropLastTests: XCTestCase {
     func testShouldReturnSlicedArrayWithoutLastFiveElements() {
         let expectedResult: ArraySlice<Int> = [1]
 
-        let result = R.dropLast(5)(in: [1, 2, 3, 4, 5, 6])
+        let result = R.dropLast(5)([1, 2, 3, 4, 5, 6])
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -30,7 +30,7 @@ class DropLastTests: XCTestCase {
     func testShouldReturnEmptySlicedArrayWithoutLastTenElementsAndArrayOnlyContainsFive() {
         let expectedResult: ArraySlice<Int> = []
 
-        let result = R.dropLast(10)(in: [1, 2, 3, 4, 5])
+        let result = R.dropLast(10)([1, 2, 3, 4, 5])
 
         XCTAssertEqual(expectedResult, result)
     }

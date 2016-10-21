@@ -14,7 +14,7 @@ class PrependTests: XCTestCase {
     func testShouldReturnArrayWithPrependedString() {
         let expectedResult = ["This", "Is", "An", "Example"]
 
-        let result = R.prepend("This")(to: ["Is", "An", "Example"])
+        let result = R.prepend("This")(["Is", "An", "Example"])
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -22,7 +22,7 @@ class PrependTests: XCTestCase {
     func testShouldReturnArrayWithPrependedInteger() {
         let expectedResult = [1, 3, 5, 7, 9]
 
-        let result = R.prepend(1)(to: [3, 5, 7, 9])
+        let result = R.prepend(1)([3, 5, 7, 9])
 
         XCTAssertEqual(expectedResult, result)
     }

@@ -27,7 +27,7 @@ class ComplementTests: XCTestCase {
         return first == second && second == third && third == fourth
     }
 
-    func isAllEven(_ first: Int, second: Int, third: Int, fourth: Int, fifth: Int) -> Bool {
+    func isAllEven(_ first: Int, _ second: Int, _ third: Int, _ fourth: Int, _ fifth: Int) -> Bool {
         return isEven(first) && isEven(second) && isEven(third) && isEven(fourth) && isEven(fifth)
     }
 
@@ -81,7 +81,7 @@ class ComplementTests: XCTestCase {
     }
 
     func testShouldComplementIsAllEvenAndReturnAllOddResults() {
-        let expectedResult = !isAllEven(1, second: 3, third: 4, fourth: 5, fifth: 6)
+        let expectedResult = !isAllEven(1, 3, 4, 5, 6)
 
         let isNotAllEven = R.complement(isAllEven)
         let result = isNotAllEven(1, 3, 4, 5, 6)
@@ -89,13 +89,6 @@ class ComplementTests: XCTestCase {
         XCTAssertEqual(expectedResult, result)
     }
 
-    func testShouldComplementIsAllOddAndReturnAllEvenResults() {
-        let expectedResult = !isAllOdd(1, 3, 5, 7, 9, 11)
 
-        let isAllEven = R.complement(isAllOdd)
-        let result = isAllEven(1, 3, 5, 7, 9, 11)
-
-        XCTAssertEqual(expectedResult, result)
-    }
 
 }

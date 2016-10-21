@@ -15,7 +15,7 @@ class DropWhileTests: XCTestCase {
         let expectedResult: ArraySlice<Int> = [3, 4, 3, 2, 1]
         let lessThanOrEqualToThree = R.gte(2)
 
-        let result = R.dropWhile(lessThanOrEqualToThree)(in: [1, 2, 3, 4, 3, 2, 1])
+        let result = R.dropWhile(lessThanOrEqualToThree)([1, 2, 3, 4, 3, 2, 1])
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -24,7 +24,7 @@ class DropWhileTests: XCTestCase {
         let expectedResult: ArraySlice<Int> = [1, 2, 3, 4, 3, 2, 1]
         let greaterThanOrEqualToThree = R.lte(2)
 
-        let result = R.dropWhile(greaterThanOrEqualToThree)(in: [1, 2, 3, 4, 3, 2, 1])
+        let result = R.dropWhile(greaterThanOrEqualToThree)([1, 2, 3, 4, 3, 2, 1])
 
         XCTAssertEqual(expectedResult, result)
     }

@@ -12,13 +12,13 @@ import Ramda
 class TestTests: XCTestCase {
 
     func testShouldReturnTrueWhenTestingRegexAgainstStringAndDoesMatchRegex() {
-        let result = R.test("^x")(string: "xyz")
+        let result = R.test("^x")("xyz")
 
         XCTAssertTrue(result)
     }
 
     func testShouldReturnFalseWhenTestingRegexAgainstStringAndDoesNotMatchRegex() {
-        let result = R.test("^y")(string: "xyz")
+        let result = R.test("^y")("xyz")
 
         XCTAssertFalse(result)
     }

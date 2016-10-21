@@ -14,7 +14,7 @@ class MinTests: XCTestCase {
     func testShouldReturnTheSmallerIntegerOfTheTwo() {
         let expectedResult = 5
 
-        let result = R.min(5)(or: 10)
+        let result = R.min(5)(10)
 
         XCTAssertEqual(expectedResult, result)
     }
@@ -22,7 +22,7 @@ class MinTests: XCTestCase {
     func testShouldReturnTheSmallerStringOfTheTwo() {
         let expectedResult = "a"
 
-        let result = R.min("a")(or: "z")
+        let result = R.min("a")("z")
 
         XCTAssertEqual(expectedResult, result)
     }
