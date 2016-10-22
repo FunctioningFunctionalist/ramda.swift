@@ -25,6 +25,14 @@ class ReduceWhileTests: XCTestCase {
         XCTAssertEqual(expectedResult, result)
     }
 
+    func testShouldReturnResultsWhenPredicateIsTrue() {
+        let expectedResult = 22
+
+        let result = R.reduceWhile(isOdd)(+)(0)([1, 3, 7, 11])
+
+        XCTAssertEqual(expectedResult, result)
+    }
+
     func testShouldReturnTheInitialValueIfTheFirstValueDoesNotPassThePredicateTest() {
         let expectedResult = 111
 
