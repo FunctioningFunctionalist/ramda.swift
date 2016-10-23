@@ -46,4 +46,14 @@ class AndTests: XCTestCase {
         XCTAssertFalse(result)
         XCTAssertTrue(executed)
     }
+
+    func testShouldReturnTrueWhenBothConditionsAreTrue() {
+        let result = R.and(true)(true)
+        XCTAssertTrue(result)
+    }
+
+    func testShouldReturnFalseWhenOneOfTheConditionsAreFalse() {
+        let result = R.and(true)(false)
+        XCTAssertFalse(result)
+    }
 }

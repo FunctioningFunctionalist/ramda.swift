@@ -47,4 +47,16 @@ class OrTests: XCTestCase {
         XCTAssertTrue(executed)
     }
 
+    func testShouldReturnTrueIfEitherArgumentIsTrue() {
+        let result = R.or(false)(true)
+
+        XCTAssertTrue(result)
+    }
+
+    func testShouldReturnFalseIfBothArgumentsAreFalse() {
+        let result = R.or(false)(false)
+
+        XCTAssertFalse(result)
+    }
+
 }

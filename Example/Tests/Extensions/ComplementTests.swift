@@ -89,6 +89,4 @@ class ComplementTests: XCTestCase {
         XCTAssertEqual(expectedResult, result)
     }
 
-
-
 }

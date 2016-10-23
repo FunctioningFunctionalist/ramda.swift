@@ -11,6 +11,15 @@ import Ramda
 
 class DecTests: XCTestCase {
 
+    func testShouldDecrementIntegers() {
+        let number: Int = 8
+        let expectedResult = number - 1
+
+        let result = R.dec(number)
+
+        XCTAssertEqual(expectedResult, result)
+    }
+
     func testShouldDecrementInteger8s() {
         let number: Int8 = 8
         let expectedResult = number - 1
@@ -85,6 +94,24 @@ class DecTests: XCTestCase {
 
     func testShouldDecrementUnsignedInteger64s() {
         let number: UInt64 = 64
+        let expectedResult = number - 1
+
+        let result = R.dec(number)
+
+        XCTAssertEqual(expectedResult, result)
+    }
+
+    func testShouldDecrementFloats() {
+        let number: Float = 8
+        let expectedResult = number - 1
+
+        let result = R.dec(number)
+
+        XCTAssertEqual(expectedResult, result)
+    }
+
+    func testShouldDecrementDoubles() {
+        let number: Double = 8
         let expectedResult = number - 1
 
         let result = R.dec(number)
