@@ -23,7 +23,7 @@ extension R {
 
      */
 
-    public class func comparator<A>(predicate: @escaping (A, A) -> Bool) -> (_ firstElement: A, _ secondElement: A) -> Int {
+    public class func comparator<A>(_ predicate: @escaping (A, A) -> Bool) -> (_ firstElement: A, _ secondElement: A) -> Int {
         return { firstElement, secondElement in
             predicate(firstElement, secondElement) ? -1 : predicate(secondElement, firstElement) ? 1 : 0
         }
@@ -40,8 +40,8 @@ extension R {
 
      */
 
-    public class func comparator<A>(predicate: @escaping (A, A) -> Bool) -> (_ firstElement: A) -> (_ secondElement: A) -> Int {
-        return curry(comparator(predicate: predicate))
+    public class func comparator<A>(_ predicate: @escaping (A, A) -> Bool) -> (_ firstElement: A) -> (_ secondElement: A) -> Int {
+        return curry(comparator(predicate))
     }
 
 }

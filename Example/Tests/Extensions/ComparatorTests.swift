@@ -23,7 +23,7 @@ class ComparatorTests: XCTestCase {
             in firstElement < secondElement
         }
 
-        let result = R.comparator(predicate: predicate)(teen.age)(adult.age)
+        let result = R.comparator(predicate)(teen.age)(adult.age)
 
         XCTAssertTrue(expectedResult == result)
     }
