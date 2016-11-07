@@ -89,4 +89,13 @@ class ComplementTests: XCTestCase {
         XCTAssertEqual(expectedResult, result)
     }
 
+    func testShouldComplementIsAllOddAndReturnAllTheEvenResults() {
+        let expectedResult = !isAllOdd(1, 3, 5, 6)
+
+        let isNotAllOdd = R.complement(isAllOdd)
+        let result = isNotAllOdd((1, 3, 5, 6))
+
+        XCTAssertEqual(expectedResult, result)
+    }
+
 }

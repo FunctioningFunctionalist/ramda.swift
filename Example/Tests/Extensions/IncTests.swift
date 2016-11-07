@@ -11,6 +11,15 @@ import Ramda
 
 class IncTests: XCTestCase {
 
+    func testShouldIncrementIntegers() {
+        let number: Int = 4
+        let expectedResult = number + 1
+
+        let result = R.inc(number)
+
+        XCTAssertEqual(expectedResult, result)
+    }
+
     func testShouldIncrementInteger8s() {
         let number: Int8 = 8
         let expectedResult = number + 1
@@ -85,6 +94,24 @@ class IncTests: XCTestCase {
 
     func testShouldIncrementUnsignedInteger64s() {
         let number: UInt64 = 64
+        let expectedResult = number + 1
+
+        let result = R.inc(number)
+
+        XCTAssertEqual(expectedResult, result)
+    }
+
+    func testShouldIncrementFloats() {
+        let number: Float = 35.5
+        let expectedResult = number + 1
+
+        let result = R.inc(number)
+
+        XCTAssertEqual(expectedResult, result)
+    }
+
+    func testShouldIncrementDoubles() {
+        let number: Double = 67.3
         let expectedResult = number + 1
 
         let result = R.inc(number)

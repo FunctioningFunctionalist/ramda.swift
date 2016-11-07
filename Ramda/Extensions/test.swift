@@ -4,22 +4,18 @@
 
 import Foundation
 
-precedencegroup Test {
+precedencegroup RegexPrecedence {
     associativity: left
 }
 
-infix operator =~ : Test
+infix operator =~ : RegexPrecedence
 
 public func =~ (string: String, regex: String) -> Bool {
-    do {
-        let regex = try NSRegularExpression(pattern: regex, options: [])
-        let range = NSRange(location: 0, length: string.characters.count)
-        let matches = regex.matches(in: string, options: [], range: range)
-        let notEmpty: ([NSTextCheckingResult]) -> Bool = R.isEmpty >>> R.not
-        return notEmpty(matches)
-    } catch {
-        return false
-    }
+    let regex = try? NSRegularExpression(pattern: regex, options: [])
+    let range = NSRange(location: 0, length: string.characters.count)
+    let matches = regex?.matches(in: string, options: [], range: range)
+    let notEmpty: ([NSTextCheckingResult]) -> Bool = R.isEmpty >>> R.not
+    return matches != nil && notEmpty(matches!)
 }
 
 extension R {

@@ -88,24 +88,6 @@ extension R {
         }
     }
 
-    /**
-
-        Complements the passed in function by returning the opposite result.
-
-        - parameter function: Function with variable number of parameters.
-
-        - returns: Function with same signature that returns opposite result.
-
-    */
-
-    public class func complement<T>(_ function: @escaping (T...) -> Bool) -> (T...) -> Bool {
-        return { (parameters: T...) in
-            typealias ArrayFunction = ([T]) -> Bool
-            let newFunc = unsafeBitCast(function, to: ArrayFunction.self)
-            return !newFunc(parameters)
-        }
-    }
-
 }
 
 // swiftlint:enable line_length
