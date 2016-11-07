@@ -17,7 +17,7 @@ extension R {
 
     */
 
-    public class func _is<A, B>(_ type: A.Type, value: B) -> Bool {
+    public class func `is`<A, B>(_ type: A.Type, value: B) -> Bool {
         return value is A
     }
 
@@ -32,8 +32,8 @@ extension R {
 
     */
 
-    public class func _is<A, B>(_ type: A.Type) -> (_ value: B) -> Bool {
-        return curry(_is)(type)
+    public class func `is`<A, B>(_ type: A.Type) -> (_ value: B) -> Bool {
+        return curry(`is`)(type)
     }
 
 }

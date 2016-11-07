@@ -17,7 +17,7 @@ extension R {
 
     */
 
-    public class func _repeat<T>(_ element: T, times count: Int) -> [T] {
+    public class func `repeat`<T>(_ element: T, times count: Int) -> [T] {
         return Array(repeating: element, count: count)
     }
 
@@ -32,8 +32,8 @@ extension R {
 
     */
 
-    public class func _repeat<T>(_ element: T) -> (_ times: Int) -> [T] {
-        return curry(_repeat)(element)
+    public class func `repeat`<T>(_ element: T) -> (_ times: Int) -> [T] {
+        return curry(`repeat`)(element)
     }
 
 }

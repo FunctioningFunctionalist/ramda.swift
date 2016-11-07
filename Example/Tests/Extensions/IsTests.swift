@@ -12,13 +12,13 @@ import Ramda
 class IsTests: XCTestCase {
 
     func testShouldReturnTrueWhenTypeMatchesTheValue() {
-        let result = R._is(Int.self)(10)
+        let result = R.is(Int.self)(10)
 
         XCTAssertTrue(result)
     }
 
     func testShouldReturnFalseWhenTypeDoesNotMatchTheValue() {
-        let result = R._is(Int.self)("Example")
+        let result = R.is(Int.self)("Example")
 
         XCTAssertFalse(result)
     }
