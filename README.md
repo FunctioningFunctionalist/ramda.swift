@@ -30,91 +30,91 @@ Tyrone Avnit
 
 ## Progress
 
-- [ x ] add
-- [ x ] addIndex
-- [ x ] adjust
-- [ x ] all
-- [ x ] allPass
-- [ x ] always
-- [ x ] and
-- [ x ] any
-- [ x ] anyPass
-- [ x ] ap
-- [ x ] aperture
-- [ x ] append
-- [ x ] apply
+- [x] add
+- [x] addIndex
+- [x] adjust
+- [x] all
+- [x] allPass
+- [x] always
+- [x] and
+- [x] any
+- [x] anyPass
+- [x] ap
+- [x] aperture
+- [x] append
+- [x] apply
 - [ ] applySpec
 - [ ] ascend
 - [ ] assoc
 - [ ] assocPath
 - [ ] binary
-- [ x ] bind
-- [ x ] both
+- [x] bind
+- [x] both
 - [ ] call
-- [ x ] chain
-- [ x ] clamp
+- [x] chain
+- [x] clamp
 - [ ] clone
-- [ x ] comparator
-- [ x ] complement
-- [ x ] compose
+- [x] comparator
+- [x] complement
+- [x] compose
 - [ ] composeK
 - [ ] composeP
-- [ x ] concat
+- [x] concat
 - [ ] cond
 - [ ] construct
 - [ ] constructN
-- [ x ] contains
+- [x] contains
 - [ ] converge
-- [ x ] countBy
-- [ x ] curry
+- [x] countBy
+- [x] curry
 - [ ] curryN
-- [ x ] dec
-- [ x ] defaultTo
+- [x] dec
+- [x] defaultTo
 - [ ] descend
-- [ x ] difference
+- [x] difference
 - [ ] differenceWith
 - [ ] dissoc
 - [ ] dissocPath
-- [ x ] divide
-- [ x ] drop
-- [ x ] dropLast
+- [x] divide
+- [x] drop
+- [x] dropLast
 - [ ] dropLastWhile
 - [ ] dropRepeats
 - [ ] dropRepeatsWith
 - [ ] dropWhile
-- [ x ] either
-- [ x ] empty
+- [x] either
+- [x] empty
 - [ ] endsWith
 - [ ] eqBy
 - [ ] eqProps
-- [ x ] equals
+- [x] equals
 - [ ] evolve
-- [ x ] filter
-- [ x ] find
-- [ x ] findIndex
+- [x] filter
+- [x] find
+- [x] findIndex
 - [ ] findLast
 - [ ] findLastIndex
-- [ x ] flatten
+- [x] flatten
 - [ ] flip
-- [ x ] forEach
+- [x] forEach
 - [ ] forEachObjIndexed
 - [ ] fromPairs
 - [ ] groupBy
 - [ ] groupWith
-- [ x ] gt
-- [ x ] gte
+- [x] gt
+- [x] gte
 - [ ] has
 - [ ] hasIn
 - [ ] head
-- [ x ] identical
-- [ x ] identity
-- [ x ] ifElse
-- [ x ] inc
+- [x] identical
+- [x] identity
+- [x] ifElse
+- [x] inc
 - [ ] i ndexBy
-- [ x ] indexOf
+- [x] indexOf
 - [ ] init
 - [ ] innerJoin
-- [ x ] insert
+- [x] insert
 - [ ] insertAll
 - [ ] intersection
 - [ ] intersectionWith
@@ -123,33 +123,33 @@ Tyrone Avnit
 - [ ] invert
 - [ ] invertObj
 - [ ] invoker
-- [ x ] is
-- [ x ] isEmpty
-- [ x ] isNil
-- [ x ] join
+- [x] is
+- [x] isEmpty
+- [x] isNil
+- [x] join
 - [ ] juxt
 - [ ] keys
 - [ ] keysIn
-- [ x ] last
-- [ x ] lastIndexOf
-- [ x ] length
+- [x] last
+- [x] lastIndexOf
+- [x] length
 - [ ] lens
 - [ ] lensIndex
 - [ ] lensPath
 - [ ] lensProp
 - [ ] lift
 - [ ] liftN
-- [ x ] lt
-- [ x ] lte
-- [ x ] map
+- [x] lt
+- [x] lte
+- [x] map
 - [ ] mapAccum
 - [ ] mapAccumRight
 - [ ] mapObjIndexed
 - [ ] match
 - [ ] mathMod
-- [ x ] max
-- [ x ] maxBy
-- [ x ] mean
+- [x] max
+- [x] maxBy
+- [x] mean
 - [ ] median
 - [ ] memoize
 - [ ] memoizeWith
@@ -161,24 +161,24 @@ Tyrone Avnit
 - [ ] mergeDeepWithKey
 - [ ] mergeWith
 - [ ] mergeWithKey
-- [ x ] min
-- [ x ] minBy
-- [ x ] modulo
-- [ x ] multiply
+- [x] min
+- [x] minBy
+- [x] modulo
+- [x] multiply
 - [ ] nAry
-- [ x ] negate
-- [ x ] none
-- [ x ] not
-- [ x ] nth
-- [ x ] nthArg
+- [x] negate
+- [x] none
+- [x] not
+- [x] nth
+- [x] nthArg
 - [ ] o
 - [ ] objOf
 - [ ] of
 - [ ] omit
 - [ ] once
-- [ x ] or
+- [x] or
 - [ ] over
-- [ x ] pair
+- [x] pair
 - [ ] partial
 - [ ] partialRight
 - [ ] partition
@@ -189,12 +189,12 @@ Tyrone Avnit
 - [ ] pick
 - [ ] pickAll
 - [ ] pickBy
-- [ x ] pipe
+- [x] pipe
 - [ ] pipeK
 - [ ] pipeP
 - [ ] pluck
-- [ x ] prepend
-- [ x ] product
+- [x] prepend
+- [x] product
 - [ ] project
 - [ ] prop
 - [ ] propEq
@@ -202,22 +202,22 @@ Tyrone Avnit
 - [ ] propOr
 - [ ] propSatisfies
 - [ ] props
-- [ x ] range
+- [x] range
 - [ ] reduce
-- [ x ] reduceBy
-- [ x ] reduceRight
-- [ x ] reduceWhile
+- [x] reduceBy
+- [x] reduceRight
+- [x] reduceWhile
 - [ ] reduced
-- [ x ] reject
-- [ x ] remove
-- [ x ] repeat
+- [x] reject
+- [x] remove
+- [x] repeat
 - [ ] replace
-- [ x ] reverse
+- [x] reverse
 - [ ] scan
 - [ ] sequence
 - [ ] set
 - [ ] slice
-- [ x ] sort
+- [x] sort
 - [ ] sortBy
 - [ ] sortWith
 - [ ] split
@@ -225,27 +225,27 @@ Tyrone Avnit
 - [ ] splitEvery
 - [ ] splitWhen
 - [ ] startsWith
-- [ x ] subtract
-- [ x ] sum
+- [x] subtract
+- [x] sum
 - [ ] symmetricDifference
 - [ ] symmetricDifferenceWith
-- [ x ] tail
+- [x] tail
 - [ ] take
 - [ ] takeLast
 - [ ] takeLastWhile
 - [ ] takeWhile
 - [ ] tap
-- [ x ] test
+- [x] test
 - [ ] times
-- [ x ] toLower
+- [x] toLower
 - [ ] toPairs
 - [ ] toPairsIn
-- [ x ] toString
-- [ x ] toUpper
+- [x] toString
+- [x] toUpper
 - [ ] transduce
 - [ ] transpose
 - [ ] traverse
-- [ x ] trim
+- [x] trim
 - [ ] tryCatch
 - [ ] type
 - [ ] unapply
@@ -260,7 +260,7 @@ Tyrone Avnit
 - [ ] unless
 - [ ] unnest
 - [ ] until
-- [ x ] update
+- [x] update
 - [ ] useWith
 - [ ] values
 - [ ] valuesIn
@@ -268,7 +268,7 @@ Tyrone Avnit
 - [ ] when
 - [ ] where
 - [ ] whereEq
-- [ x ] without
+- [x] without
 - [ ] xprod
 - [ ] zip
 - [ ] zipObj
