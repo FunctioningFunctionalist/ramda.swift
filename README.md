@@ -8,6 +8,252 @@
 [![Code Climate](https://codeclimate.com/github/FunctioningFunctionalist/ramda.swift/badges/gpa.svg)](https://codeclimate.com/github/FunctioningFunctionalist/ramda.swift)
 [![Join the chat at https://gitter.im/ramda-swift/Lobby](https://badges.gitter.im/ramda-swift/Lobby.svg)](https://gitter.im/ramda-swift/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+## Progress
+
+- [x]add
+- [x]addIndex
+- [x]adjust
+- [x]all
+- [x]allPass
+- [x]always
+- [x]and
+- [x]any
+- [x]anyPass
+- [x]ap
+- [x]aperture
+- [x]append
+- [x]apply
+- [ ]applySpec
+- [ ]ascend
+- [ ]assoc
+- [ ]assocPath
+- [ ]binary
+- [x]bind
+- [x]both
+- [ ]call
+- [x]chain
+- [x]clamp
+- [ ]clone
+- [x]comparator
+- [x]complement
+- [x]compose
+- [ ]composeK
+- [ ]composeP
+- [x]concat
+- [ ]cond
+- [ ]construct
+- [ ]constructN
+- [x]contains
+- [ ]converge
+- [x]countBy
+- [x]curry
+- [ ]curryN
+- [x]dec
+- [x]defaultTo
+- [ ]descend
+- [x]difference
+- [ ]differenceWith
+- [ ]dissoc
+- [ ]dissocPath
+- [x]divide
+- [x]drop
+- [x]dropLast
+- [ ]dropLastWhile
+- [ ]dropRepeats
+- [ ]dropRepeatsWith
+- [ ]dropWhile
+- [x]either
+- [x]empty
+- [ ]endsWith
+- [ ]eqBy
+- [ ]eqProps
+- [x]equals
+- [ ]evolve
+- [x]filter
+- [x]find
+- [x]findIndex
+- [ ]findLast
+- [ ]findLastIndex
+- [x]flatten
+- [ ]flip
+- [x]forEach
+- [ ]forEachObjIndexed
+- [ ]fromPairs
+- [ ]groupBy
+- [ ]groupWith
+- [x]gt
+- [x]gte
+- [ ]has
+- [ ]hasIn
+- [ ]head
+- [x]identical
+- [x]identity
+- [x]ifElse
+- [x]inc
+- []indexBy
+- [x]indexOf
+- [ ]init
+- [ ]innerJoin
+- [x]insert
+- [ ]insertAll
+- [ ]intersection
+- [ ]intersectionWith
+- [ ]intersperse
+- [ ]into
+- [ ]invert
+- [ ]invertObj
+- [ ]invoker
+- [x]is
+- [x]isEmpty
+- [x]isNil
+- [x]join
+- [ ]juxt
+- [ ]keys
+- [ ]keysIn
+- [x]last
+- [x]lastIndexOf
+- [x]length
+- [ ]lens
+- [ ]lensIndex
+- [ ]lensPath
+- [ ]lensProp
+- [ ]lift
+- [ ]liftN
+- [x]lt
+- [x]lte
+- [x]map
+- [ ]mapAccum
+- [ ]mapAccumRight
+- [ ]mapObjIndexed
+- [ ]match
+- [ ]mathMod
+- [x]max
+- [x]maxBy
+- [x]mean
+- [ ]median
+- [ ]memoize
+- [ ]memoizeWith
+- [ ]merge
+- [ ]mergeAll
+- [ ]mergeDeepLeft
+- [ ]mergeDeepRight
+- [ ]mergeDeepWith
+- [ ]mergeDeepWithKey
+- [ ]mergeWith
+- [ ]mergeWithKey
+- [x]min
+- [x]minBy
+- [x]modulo
+- [x]multiply
+- [ ]nAry
+- [x]negate
+- [x]none
+- [x]not
+- [x]nth
+- [x]nthArg
+- [ ]o
+- [ ]objOf
+- [ ]of
+- [ ]omit
+- [ ]once
+- [x]or
+- [ ]over
+- [x]pair
+- [ ]partial
+- [ ]partialRight
+- [ ]partition
+- [ ]path
+- [ ]pathEq
+- [ ]pathOr
+- [ ]pathSatisfies
+- [ ]pick
+- [ ]pickAll
+- [ ]pickBy
+- [x]pipe
+- [ ]pipeK
+- [ ]pipeP
+- [ ]pluck
+- [x]prepend
+- [x]product
+- [ ]project
+- [ ]prop
+- [ ]propEq
+- [ ]propIs
+- [ ]propOr
+- [ ]propSatisfies
+- [ ]props
+- [x]range
+- [ ]reduce
+- [x]reduceBy
+- [x]reduceRight
+- [x]reduceWhile
+- [ ]reduced
+- [x]reject
+- [x]remove
+- [x]repeat
+- [ ]replace
+- [x]reverse
+- [ ]scan
+- [ ]sequence
+- [ ]set
+- [ ]slice
+- [x]sort
+- [ ]sortBy
+- [ ]sortWith
+- [ ]split
+- [ ]splitAt
+- [ ]splitEvery
+- [ ]splitWhen
+- [ ]startsWith
+- [x]subtract
+- [x]sum
+- [ ]symmetricDifference
+- [ ]symmetricDifferenceWith
+- [x]tail
+- [ ]take
+- [ ]takeLast
+- [ ]takeLastWhile
+- [ ]takeWhile
+- [ ]tap
+- [x]test
+- [ ]times
+- [x]toLower
+- [ ]toPairs
+- [ ]toPairsIn
+- [x]toString
+- [x]toUpper
+- [ ]transduce
+- [ ]transpose
+- [ ]traverse
+- [x]trim
+- [ ]tryCatch
+- [ ]type
+- [ ]unapply
+- [ ]unary
+- [ ]uncurryN
+- [ ]unfold
+- [ ]union
+- [ ]unionWith
+- [ ]uniq
+- [ ]uniqBy
+- [ ]uniqWith
+- [ ]unless
+- [ ]unnest
+- [ ]until
+- [x]update
+- [ ]useWith
+- [ ]values
+- [ ]valuesIn
+- [ ]view
+- [ ]when
+- [ ]where
+- [ ]whereEq
+- [x]without
+- [ ]xprod
+- [ ]zip
+- [ ]zipObj
+- [ ]zipWith
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.

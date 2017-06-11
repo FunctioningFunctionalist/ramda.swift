@@ -172,7 +172,8 @@ extension R {
     */
 
     public class func bind<A, B>(_ function: @escaping (A...) -> B) -> (_ with: A...) -> () -> B {
-        return curry(bind)(function)
+        let s = curry(bind)(function)
+        return s //curry(bind)(function)
     }
 
 }
