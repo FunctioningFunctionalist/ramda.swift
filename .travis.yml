@@ -18,3 +18,7 @@ notifications:
   email:
     - tyronemichael@gmail.com
     - justin.guedes@gmail.com
+
+before_install:
+  - gem install cocoapods --pre
+  - pod install --repo-update
