@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Ramda_Example' do
+  pod 'Ramda', :path => '../'
+
+  target 'Ramda_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

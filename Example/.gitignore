@@ -1,0 +1,9 @@
+# Xcode
+Example/Ramda.xcodeproj/xcuserdata
+Example/Ramda.xcodeproj/project.xcworkspace/xcuserdata
+Example/Ramda.xcworkspace/xcuserdata
+
+# Pods
+Example/Pods/
+Example/Podfile.lock
+Example/.idea
