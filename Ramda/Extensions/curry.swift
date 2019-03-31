@@ -4,20 +4,19 @@
 
 import Foundation
 
-// swiftlint:disable valid_docs
 // swiftlint:disable line_length
 
 extension R {
 
     /**
-
-        Curries supplied function.
-
-        - parameter function: Function with two parameters.
-
-        - returns: Curried function from supplied function.
-
-    */
+     
+     Curries supplied function.
+     
+     - parameter function: Function with two parameters.
+     
+     - returns: Curried function from supplied function.
+     
+     */
 
     public class func curry<A, B, C>(_ function: @escaping (A, B) -> C) -> (A) -> (B) -> C {
         return { first in
@@ -28,14 +27,14 @@ extension R {
     }
 
     /**
-
-        Curries supplied function.
-
-        - parameter function: Function with two parameters and can throw exceptions.
-
-        - returns: Curried function from supplied function.
-
-    */
+     
+     Curries supplied function.
+     
+     - parameter function: Function with two parameters and can throw exceptions.
+     
+     - returns: Curried function from supplied function.
+     
+     */
 
     public class func curry<A, B, C>(_ function: @escaping (A, B) throws -> C) -> (A) -> (B) throws -> C {
         return { first in
@@ -46,14 +45,14 @@ extension R {
     }
 
     /**
-
-        Curries supplied function.
-
-        - parameter function: Function with three parameters.
-
-        - returns: Curried function from supplied function.
-
-    */
+     
+     Curries supplied function.
+     
+     - parameter function: Function with three parameters.
+     
+     - returns: Curried function from supplied function.
+     
+     */
 
     public class func curry<A, B, C, D>(_ function: @escaping (A, B, C) -> D) -> (A) -> (B) -> (C) -> D {
         return { first in
@@ -66,14 +65,14 @@ extension R {
     }
 
     /**
-
-        Curries supplied function.
-
-        - parameter function: Function with three parameters and can throw exceptions.
-
-        - returns: Curried function from supplied function.
-
-    */
+     
+     Curries supplied function.
+     
+     - parameter function: Function with three parameters and can throw exceptions.
+     
+     - returns: Curried function from supplied function.
+     
+     */
 
     public class func curry<A, B, C, D>(_ function: @escaping (A, B, C) throws -> D) -> (A) -> (B) -> (C) throws -> D {
         return { first in
@@ -86,14 +85,14 @@ extension R {
     }
 
     /**
-
-        Curries supplied function.
-
-        - parameter function: Function with four parameters.
-
-        - returns: Curried function from supplied function.
-
-    */
+     
+     Curries supplied function.
+     
+     - parameter function: Function with four parameters.
+     
+     - returns: Curried function from supplied function.
+     
+     */
 
     public class func curry<A, B, C, D, E>(_ function: @escaping (A, B, C, D) -> E) -> (A) -> (B) -> (C) -> (D) -> E {
         return { first in
@@ -108,14 +107,14 @@ extension R {
     }
 
     /**
-
-        Curries supplied function.
-
-        - parameter function: Function with four parameters and can throw exceptions.
-
-        - returns: Curried function from supplied function.
-
-    */
+     
+     Curries supplied function.
+     
+     - parameter function: Function with four parameters and can throw exceptions.
+     
+     - returns: Curried function from supplied function.
+     
+     */
 
     public class func curry<A, B, C, D, E>(_ function: @escaping (A, B, C, D) throws -> E) -> (A) -> (B) -> (C) -> (D) throws -> E {
         return { first in
@@ -130,14 +129,14 @@ extension R {
     }
 
     /**
-
-        Curries supplied function.
-
-        - parameter function: Function with five parameters.
-
-        - returns: Curried function from supplied function.
-
-    */
+     
+     Curries supplied function.
+     
+     - parameter function: Function with five parameters.
+     
+     - returns: Curried function from supplied function.
+     
+     */
 
     public class func curry<A, B, C, D, E, F>(_ function: @escaping (A, B, C, D, E) -> F) -> (A) -> (B) -> (C) -> (D) -> (E) -> F {
         return { first in
@@ -154,14 +153,14 @@ extension R {
     }
 
     /**
-
-        Curries supplied function.
-
-        - parameter function: Function with five parameters and can throw exceptions.
-
-        - returns: Curried function from supplied function.
-
-    */
+     
+     Curries supplied function.
+     
+     - parameter function: Function with five parameters and can throw exceptions.
+     
+     - returns: Curried function from supplied function.
+     
+     */
 
     public class func curry<A, B, C, D, E, F>(_ function: @escaping (A, B, C, D, E) throws -> F) -> (A) -> (B) -> (C) -> (D) -> (E) throws -> F {
         return { first in
@@ -180,4 +179,3 @@ extension R {
 }
 
 // swiftlint:enable line_length
-// swiftlint:enable valid_docs

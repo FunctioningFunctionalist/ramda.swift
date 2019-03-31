@@ -1,18 +1,15 @@
-language: objective-c
-osx_image: xcode8
+language: swift
+osx_image: xcode10.1
 
 podfile: Example/Podfile
-
-install:
-  - ./swift-lint.sh
 
 script:
 - gem install xcpretty
 - swiftlint
 - cd Example
-- pod install
+- pod install --repo-update
 - cd ..
-- xcodebuild -workspace Example/Ramda.xcworkspace -scheme Ramda_Tests -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.0'  ONLY_ACTIVE_ARCH=YES clean test | xcpretty
+- xcodebuild -workspace Example/Ramda.xcworkspace -scheme Ramda_Tests -destination 'platform=iOS Simulator,name=iPhone 8,OS=12.1'  ONLY_ACTIVE_ARCH=YES clean test | xcpretty
 
 after_success:
   - bash <(curl -s https://codecov.io/bash) -J 'Ramda'
@@ -21,3 +18,6 @@ notifications:
   email:
     - tyronemichael@gmail.com
     - justin.guedes@gmail.com
+
+before_install:
+  - gem install cocoapods --pre

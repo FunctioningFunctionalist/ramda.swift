@@ -1,18 +1,42 @@
+#
+# Be sure to run `pod lib lint Ramda.podspec' to ensure this is a
+# valid spec before submitting.
+#
+# Any lines starting with a # are optional, but their use is encouraged
+# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
+#
+
 Pod::Spec.new do |s|
   s.name             = 'Ramda'
   s.version          = '0.1.0'
-  s.summary          = 'A practical functional library for Swift programmers.'
+  s.summary          = 'A short description of Ramda.'
+
+# This description is used to generate tags and improve search results.
+#   * Think: What does it do? Why did you write it? What is the focus?
+#   * Try to keep it short, snappy and to the point.
+#   * Write the description between the DESC delimiters below.
+#   * Finally, don't worry about the indent, CocoaPods strips it!
+
   s.description      = <<-DESC
--Ramda emphasizes a purer functional style. Immutability and side-effect free functions are at the heart of its design philosophy. This can help you get the job done with simple, elegant code.Ramda functions are automatically curried. This allows you to easily build up new functions from old ones simply by not supplying the final parameters.The parameters to Ramda functions are arranged to make it convenient for currying. The data to be operated on is generally supplied last.
+TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/JustinGuedes/ramda.swift'
+  s.homepage         = 'https://github.com/Tyrone Avnit/Ramda'
+  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = 'Justin Guedes', 'Tyrone Avnit'
-  s.source           = { :git => 'https://github.com/JustinGuedes/ramda.swift.git', :tag => s.version.to_s }
+  s.author           = { 'Tyrone Avnit' => 'tyronemichael@gmail.com' }
+  s.source           = { :git => 'https://github.com/Tyrone Avnit/Ramda.git', :tag => s.version.to_s }
+  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'Ramda/**/*'
+  
+  # s.resource_bundles = {
+  #   'Ramda' => ['Ramda/Assets/*.png']
+  # }
 
+  # s.public_header_files = 'Pod/Classes/**/*.h'
+  # s.frameworks = 'UIKit', 'MapKit'
+  # s.dependency 'AFNetworking', '~> 2.3'
 end

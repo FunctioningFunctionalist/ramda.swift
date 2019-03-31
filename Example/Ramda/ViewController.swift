@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  Ramda
 //
-//  Created by JustinGuedes on 09/05/2016.
-//  Copyright (c) 2016 JustinGuedes. All rights reserved.
+//  Created by Tyrone Avnit on 03/25/2019.
+//  Copyright (c) 2019 Tyrone Avnit. All rights reserved.
 //
 
 import UIKit
