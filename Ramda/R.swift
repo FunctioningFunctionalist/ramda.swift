@@ -117,7 +117,24 @@ open class R {
      */
     
     public class func all<T>(_ function: (T) -> Bool, _ list: [T]) -> Bool {
-        return list.first
+        return list.allSatisfy(function)
+    }
+
+    /**
+
+     Takes a function and a [functor](https://github.com/fantasyland/fantasy-land#functor),
+     applies the function to each of the functor's values, and returns
+     a functor of the same shape.
+
+     - parameter function: The function to be called on every element of the input `list`.
+     - parameter functor: The list to be iterated over.
+
+     - returns: The new list.
+
+     */
+
+    public class func all<T>(_ function: @escaping (T) -> Bool) -> ([T]) -> Bool {
+        return curry(all)(function)
     }
     
     /**
