@@ -59,4 +59,26 @@ class Tests: XCTestCase {
         XCTAssertFalse(result([3, 4, 3]))
     }
 
+    func testAllPassReturnsTrue() {
+        struct Card {
+            let rank: String
+            let suit: String
+        }
+        let isQueen: (Card) -> Bool = R.propEq(("rank", "Q"))
+        let isSpade: (Card) -> Bool = R.propEq(("suit", "♠︎"))
+        let isQueenOfSpades = R.allPass([isQueen, isSpade])
+        XCTAssertTrue(isQueenOfSpades(Card(rank: "Q", suit: "♠︎")))
+    }
+
+    func testAllPassReturnsFalse() {
+        struct Card {
+            let rank: String
+            let suit: String
+        }
+        let isQueen: (Card) -> Bool = R.propEq(("rank", "Q"))
+        let isSpade: (Card) -> Bool = R.propEq(("suit", "♠︎"))
+        let isQueenOfSpades = R.allPass([isQueen, isSpade])
+        XCTAssertFalse(isQueenOfSpades(Card(rank: "K", suit: "♠︎")))
+    }
+
 }
