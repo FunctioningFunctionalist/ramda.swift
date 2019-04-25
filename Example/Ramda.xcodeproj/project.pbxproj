@@ -14,6 +14,8 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* AddTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* AddTests.swift */; };
+		63EBF887224BC82500A5E347 /* MapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EBF885224BC78400A5E347 /* MapTests.swift */; };
+		63EBF889224BC88E00A5E347 /* AddIndexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EBF888224BC88E00A5E347 /* AddIndexTests.swift */; };
 		FC23D6D685BC12AF880E20E9 /* Pods_Ramda_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA96E82B5A5067718785481 /* Pods_Ramda_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,8 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* AddTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTests.swift; sourceTree = "<group>"; };
 		610FE13897F31E333C93B5FB /* Pods-Ramda_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ramda_Example.debug.xcconfig"; path = "Target Support Files/Pods-Ramda_Example/Pods-Ramda_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		63EBF885224BC78400A5E347 /* MapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTests.swift; sourceTree = "<group>"; };
+		63EBF888224BC88E00A5E347 /* AddIndexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIndexTests.swift; sourceTree = "<group>"; };
 		8784ADD68CC1B725152B350E /* Pods-Ramda_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ramda_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Ramda_Tests/Pods-Ramda_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		966FDF159DBFB2354A38BE34 /* Pods-Ramda_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ramda_Tests.release.xcconfig"; path = "Target Support Files/Pods-Ramda_Tests/Pods-Ramda_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		ADA96E82B5A5067718785481 /* Pods_Ramda_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ramda_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				607FACEB1AFB9204008FA782 /* AddTests.swift */,
+				63EBF885224BC78400A5E347 /* MapTests.swift */,
+				63EBF888224BC88E00A5E347 /* AddIndexTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -366,7 +372,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63EBF887224BC82500A5E347 /* MapTests.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* AddTests.swift in Sources */,
+				63EBF889224BC88E00A5E347 /* AddIndexTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
