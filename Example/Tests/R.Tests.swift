@@ -104,5 +104,10 @@ class Tests: XCTestCase {
         XCTAssertEqual(resultFunc(), "unchanged")
     }
 
+    func testRepeat() {
+        let result = R.repeat("unchanged")(3)
+        XCTAssertEqual(result, ["unchanged", "unchanged", "unchanged"])
+    }
+
 
 }
