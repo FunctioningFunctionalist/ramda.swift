@@ -365,6 +365,7 @@ open class R {
         return curry(map)(function)
     }
 
+
     /**
 
      Determines if an optional does not contain a value
@@ -427,6 +428,68 @@ open class R {
         return curry(range)(lhs)
     }
 
+    /**
+
+     Calls an input function `n` times, returning an array containing the results
+     of those function calls
+
+     - parameter functor: functor` is passed one argument: The current value of `n`, which begins at `0` and is gradually incremented to `n - 1`.
+     - parameter count: The right hand side operand.
+
+     - returns: The list of numbers in the set `[a, b)`.
+
+     */
+
+    public class func times<T: BasicArithmeticType & Comparable, U>(_ functor: ((T) -> U), count: T) -> [U] {
+        var result = [U]()
+        var n = T.zero
+        while n < count {
+            result.append(functor(n))
+            n = n + T.one
+        }
+        return result
+    }
+
+    /**
+
+     Calls an input function `n` times, returning an array containing the results
+     of those function calls
+
+     - parameter functor: functor` is passed one argument: The current value of `n`, which begins at `0` and is gradually incremented to `n - 1`.
+     - returns: Curried function
+
+     */
+
+    public class func times<T: BasicArithmeticType & Comparable, U>(_ functor: @escaping ((T) -> U)) -> (_ count: T) -> [U] {
+        return curry(times)(functor)
+    }
+
+    /**
+
+     A function that does nothing but return the parameter supplied to it. Good
+     as a default or placeholder function
+
+     - parameter value: The value to return
+     - returns: The input value, `x`.
+
+     */
+
+    public class func identity<T>(_ value: T) -> T {
+        return value
+    }
+
+    /**
+
+     Returns a function that always returns the given value.
+
+     - parameter value: The value to return
+     - returns: The constant function.
+
+     */
+
+    public class func always<T>(_ value: T) -> (() -> T) {
+        return { return value }
+    }
 
 }
 

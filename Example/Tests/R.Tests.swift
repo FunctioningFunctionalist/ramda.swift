@@ -81,11 +81,27 @@ class Tests: XCTestCase {
         XCTAssertFalse(isQueenOfSpades(Card(rank: "K", suit: "♠︎")))
     }
 
+    func testIdentity() {
+        let result = R.identity("unchanged")
+        XCTAssertEqual(result, "unchanged")
+    }
+
     func testRange() {
         let lhs = 1
         let rhs = 5
         let result = R.range(lhs)(rhs)
-        XCTAssertTrue(result == [1, 2, 3, 4])
+        XCTAssertEqual(result, [1, 2, 3, 4])
+    }
+
+    func testTimes() {
+        let result = R.times(R.add(10))(3)
+        XCTAssertEqual(result, [10, 11, 12])
+
+    }
+
+    func testAlways() {
+        let resultFunc = R.always("unchanged")
+        XCTAssertEqual(resultFunc(), "unchanged")
     }
 
 
