@@ -407,10 +407,13 @@ open class R {
 
     public class func range<T: BasicArithmeticType & Comparable>(_ lhs: T, to rhs: T) -> [T] {
         var result = [T]()
-        var n = lhs
-        while n < rhs {
-            result.append(n)
-            n = n + T.one
+        var index = lhs
+        while index < rhs {
+            result.append(index)
+// swiftlint:disable shorthand_operator
+            // swift rejects += here.
+            index = index + T.one
+// swiftlint:enable shorthand_operator
         }
         return result
     }
@@ -433,7 +436,8 @@ open class R {
      Calls an input function `n` times, returning an array containing the results
      of those function calls
 
-     - parameter functor: functor` is passed one argument: The current value of `n`, which begins at `0` and is gradually incremented to `n - 1`.
+     - parameter functor: functor` is passed one argument:
+       The current value of `n`, which begins at `0` and is gradually incremented to `n - 1`.
      - parameter count: The right hand side operand.
 
      - returns: The list of numbers in the set `[a, b)`.
@@ -442,10 +446,13 @@ open class R {
 
     public class func times<T: BasicArithmeticType & Comparable, U>(_ functor: ((T) -> U), count: T) -> [U] {
         var result = [U]()
-        var n = T.zero
-        while n < count {
-            result.append(functor(n))
-            n = n + T.one
+        var index = T.zero
+        while index < count {
+            result.append(functor(index))
+// swiftlint:disable shorthand_operator
+            // swift rejects += here.
+            index = index + T.one
+// swiftlint:enable shorthand_operator
         }
         return result
     }
@@ -455,12 +462,14 @@ open class R {
      Calls an input function `n` times, returning an array containing the results
      of those function calls
 
-     - parameter functor: functor` is passed one argument: The current value of `n`, which begins at `0` and is gradually incremented to `n - 1`.
+     - parameter functor: functor` is passed one argument:
+       The current value of `n`, which begins at `0` and is gradually incremented to `n - 1`.
      - returns: Curried function
 
      */
 
-    public class func times<T: BasicArithmeticType & Comparable, U>(_ functor: @escaping ((T) -> U)) -> (_ count: T) -> [U] {
+    public class func times<T: BasicArithmeticType & Comparable, U>(_ functor: @escaping ((T) -> U))
+        -> (_ count: T) -> [U] {
         return curry(times)(functor)
     }
 
@@ -549,8 +558,6 @@ open class R {
     public class func prop<T, U>(_ keyPath: KeyPath<T, U>) -> (_ object: T) -> U {
         return curry(prop)(keyPath)
     }
-
-
 }
 
 // swiftlint:enable type_name
