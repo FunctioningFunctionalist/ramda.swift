@@ -393,6 +393,41 @@ open class R {
         return optional != nil
     }
 
+    /**
+
+     Returns a list of numbers from `from` (inclusive) to `to` (exclusive).
+
+     - parameter lhs: The left hand side operand.
+     - parameter rhs: The right hand side operand.
+
+     - returns: The list of numbers in the set `[a, b)`.
+
+     */
+
+    public class func range<T: BasicArithmeticType & Comparable>(_ lhs: T, to rhs: T) -> [T] {
+        var result = [T]()
+        var n = lhs
+        while n < rhs {
+            result.append(n)
+            n = n + T.one
+        }
+        return result
+    }
+
+    /**
+
+     Returns a list of numbers from `from` (inclusive) to `to` (exclusive).
+
+     - parameter lhs: The left hand side operand.
+     - returns: Curried function
+
+     */
+
+    public class func range<T: BasicArithmeticType & Comparable>(_ lhs: T) -> (_ to: T) -> [T] {
+        return curry(range)(lhs)
+    }
+
+
 }
 
 // swiftlint:enable type_name
