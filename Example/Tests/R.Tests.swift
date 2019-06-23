@@ -109,5 +109,9 @@ class Tests: XCTestCase {
         XCTAssertEqual(result, ["unchanged", "unchanged", "unchanged"])
     }
 
+    func testProp() {
+        let result = R.prop(\String.count)("hello")
+        XCTAssertEqual(result, 5)
+    }
 
 }

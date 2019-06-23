@@ -35,7 +35,7 @@ Tyrone Avnit
 - [ ] adjust
 - [ ] all
 - [ ] allPass
-- [ ] always
+- [ X] always
 - [ ] and
 - [ ] any
 - [ ] anyPass
@@ -107,7 +107,7 @@ Tyrone Avnit
 - [ ] hasIn
 - [ ] head
 - [ ] identical
-- [ ] identity
+- [X ] identity
 - [ ] ifElse
 - [ ] inc
 - [ ] i ndexBy
@@ -196,13 +196,13 @@ Tyrone Avnit
 - [ ] prepend
 - [ ] product
 - [ ] project
-- [ ] prop
+- [ X] prop
 - [ ] propEq
 - [ ] propIs
 - [ ] propOr
 - [ ] propSatisfies
 - [ ] props
-- [ ] range
+- [X ] range
 - [ ] reduce
 - [ ] reduceBy
 - [ ] reduceRight
@@ -210,7 +210,7 @@ Tyrone Avnit
 - [ ] reduced
 - [ ] reject
 - [ ] remove
-- [ ] repeat
+- [X ] repeat
 - [ ] replace
 - [ ] reverse
 - [ ] scan
@@ -236,7 +236,7 @@ Tyrone Avnit
 - [ ] takeWhile
 - [ ] tap
 - [ ] test
-- [ ] times
+- [X ] times
 - [ ] toLower
 - [ ] toPairs
 - [ ] toPairsIn

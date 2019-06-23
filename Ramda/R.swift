@@ -521,6 +521,36 @@ open class R {
         return curry(`repeat`)(value)
     }
 
+    /**
+
+     Returns a function that when supplied an object returns the indicated
+     property of that object
+
+     - parameter keyPath: The keyPath of the property
+     - parameter object: The object to query
+
+     - returns: The value of the property
+
+     */
+    public class func prop<T, U>(_ keyPath: KeyPath<T, U>, object: T) -> U {
+        return object[keyPath: keyPath]
+    }
+
+    /**
+
+     Returns a function that when supplied an object returns the indicated
+     property of that object
+
+     - parameter keyPath: The keyPath of the property
+     - returns: Curried function
+
+     */
+
+    public class func prop<T, U>(_ keyPath: KeyPath<T, U>) -> (_ object: T) -> U {
+        return curry(prop)(keyPath)
+    }
+
+
 }
 
 // swiftlint:enable type_name
