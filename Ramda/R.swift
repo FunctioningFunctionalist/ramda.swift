@@ -365,6 +365,7 @@ open class R {
         return curry(map)(function)
     }
 
+
     /**
 
      Determines if an optional does not contain a value
@@ -393,6 +394,170 @@ open class R {
         return optional != nil
     }
 
+    /**
+
+     Returns a list of numbers from `from` (inclusive) to `to` (exclusive).
+
+     - parameter lhs: The left hand side operand.
+     - parameter rhs: The right hand side operand.
+
+     - returns: The list of numbers in the set `[a, b)`.
+
+     */
+
+    public class func range<T: BasicArithmeticType & Comparable>(_ lhs: T, to rhs: T) -> [T] {
+        var result = [T]()
+        var index = lhs
+        while index < rhs {
+            result.append(index)
+// swiftlint:disable shorthand_operator
+            // swift rejects += here.
+            index = index + T.one
+// swiftlint:enable shorthand_operator
+        }
+        return result
+    }
+
+    /**
+
+     Returns a list of numbers from `from` (inclusive) to `to` (exclusive).
+
+     - parameter lhs: The left hand side operand.
+     - returns: Curried function
+
+     */
+
+    public class func range<T: BasicArithmeticType & Comparable>(_ lhs: T) -> (_ to: T) -> [T] {
+        return curry(range)(lhs)
+    }
+
+    /**
+
+     Calls an input function `n` times, returning an array containing the results
+     of those function calls
+
+     - parameter functor: functor` is passed one argument:
+       The current value of `n`, which begins at `0` and is gradually incremented to `n - 1`.
+     - parameter count: The right hand side operand.
+
+     - returns: The list of numbers in the set `[a, b)`.
+
+     */
+
+    public class func times<T: BasicArithmeticType & Comparable, U>(_ functor: ((T) -> U), count: T) -> [U] {
+        var result = [U]()
+        var index = T.zero
+        while index < count {
+            result.append(functor(index))
+// swiftlint:disable shorthand_operator
+            // swift rejects += here.
+            index = index + T.one
+// swiftlint:enable shorthand_operator
+        }
+        return result
+    }
+
+    /**
+
+     Calls an input function `n` times, returning an array containing the results
+     of those function calls
+
+     - parameter functor: functor` is passed one argument:
+       The current value of `n`, which begins at `0` and is gradually incremented to `n - 1`.
+     - returns: Curried function
+
+     */
+
+    public class func times<T: BasicArithmeticType & Comparable, U>(_ functor: @escaping ((T) -> U))
+        -> (_ count: T) -> [U] {
+        return curry(times)(functor)
+    }
+
+    /**
+
+     A function that does nothing but return the parameter supplied to it. Good
+     as a default or placeholder function
+
+     - parameter value: The value to return
+     - returns: The input value, `x`.
+
+     */
+
+    public class func identity<T>(_ value: T) -> T {
+        return value
+    }
+
+    /**
+
+     Returns a function that always returns the given value.
+
+     - parameter value: The value to return
+     - returns: The constant function.
+
+     */
+
+    public class func always<T>(_ value: T) -> (() -> T) {
+        return { return value }
+    }
+
+    /**
+
+     Returns a fixed list of size `n` containing a specified identical value.
+
+     - parameter value: The value to repeat.
+     - parameter count: The desired size of the output list.
+
+     - returns: A new array containing `n` `value`s.
+
+     */
+
+    public class func `repeat`<T, U: BasicArithmeticType & Comparable>(_ value: T, count: U) -> [T] {
+        // the JS version uses 'always' here, but we can't becaue of stricter argument checking.
+        let functor: ((U) -> T) = { _ in value }
+        return R.times(functor, count: count)
+    }
+
+    /**
+
+     Returns a fixed list of size `n` containing a specified identical value.
+
+     - parameter value: The value to repeat.
+     - returns: Curried function
+
+     */
+
+    public class func `repeat`<T, U: BasicArithmeticType & Comparable>(_ value: T) -> (_ count: U) -> [T] {
+        return curry(`repeat`)(value)
+    }
+
+    /**
+
+     Returns a function that when supplied an object returns the indicated
+     property of that object
+
+     - parameter keyPath: The keyPath of the property
+     - parameter object: The object to query
+
+     - returns: The value of the property
+
+     */
+    public class func prop<T, U>(_ keyPath: KeyPath<T, U>, object: T) -> U {
+        return object[keyPath: keyPath]
+    }
+
+    /**
+
+     Returns a function that when supplied an object returns the indicated
+     property of that object
+
+     - parameter keyPath: The keyPath of the property
+     - returns: Curried function
+
+     */
+
+    public class func prop<T, U>(_ keyPath: KeyPath<T, U>) -> (_ object: T) -> U {
+        return curry(prop)(keyPath)
+    }
 }
 
 // swiftlint:enable type_name
