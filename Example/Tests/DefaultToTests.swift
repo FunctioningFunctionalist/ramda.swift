@@ -12,12 +12,12 @@ import Ramda
 
 class DefaultToTests: XCTestCase {
 
-    func defaultToWithValue() {
+    func testDefaultToWithValue() {
         let result = R.defaultTo(42)(420)
         XCTAssertEqual(result, 420)
     }
     
-    func defaultToWithNil() {
+    func testDefaultToWithNil() {
         let result = R.defaultTo(42)(nil)
         XCTAssertEqual(result, 42)
     }

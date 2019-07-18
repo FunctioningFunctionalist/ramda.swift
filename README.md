@@ -270,7 +270,7 @@ Tyrone Avnit
 - [ ] whereEq
 - [ ] without
 - [ ] xprod
-- [ ] zip
+- [x] zip
 - [ ] zipObj
 - [ ] zipWith
 
