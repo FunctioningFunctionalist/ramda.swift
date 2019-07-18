@@ -14,7 +14,7 @@ extension R {
      - parameter keyPath: The keyPaths of the properties
      - parameter item: The item to consider.
      
-     - returns: The list of values for the given key.
+     - returns: Tuple of values for thje given keypaths.
      
      */
     public class func pick<T, U, V>(_ keyPaths: (KeyPath<T, U>, KeyPath<T, V>), _ item: T) -> (U, V) {
@@ -44,8 +44,8 @@ extension R {
      - parameter keyPath: The keyPaths of the properties
      - parameter item: The item to consider.
      
-     - returns: The list of values for the given key.
-     
+     - returns: Tuple of values for thje given keypaths.
+
      */
     public class func pick<T, U, V, W>(_ keyPaths: (KeyPath<T, U>, KeyPath<T, V>, KeyPath<T, W>), _ item: T)
         -> (U, V, W) {
@@ -77,8 +77,8 @@ extension R {
      - parameter keyPath: The keyPaths of the properties
      - parameter item: The item to consider.
      
-     - returns: The list of values for the given key.
-     
+     - returns: Tuple of values for thje given keypaths.
+
      */
     public class func pick<T, U, V, W, X>(_ keyPaths: (KeyPath<T, U>, KeyPath<T, V>, KeyPath<T, W>, KeyPath<T, X>), _ item: T)
         -> (U, V, W, X) {
