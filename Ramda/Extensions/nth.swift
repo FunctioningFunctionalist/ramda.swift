@@ -22,7 +22,7 @@ extension R {
         let index = offset < 0 ? array.count + offset : offset
         return array[index]
     }
-    
+
     /**
      
      Returns a new list by plucking the same named property off all objects in
@@ -32,9 +32,9 @@ extension R {
      - returns: Curried function
      
      */
-    
+
     public class func nth<T>(_ offset: Int) -> (_ array: [T]) -> T {
         return curry(nth)(offset)
     }
-    
+
 }

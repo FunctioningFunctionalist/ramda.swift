@@ -10,7 +10,7 @@ import Foundation
 import XCTest
 import Ramda
 
-fileprivate struct TestObject {
+private struct TestObject {
     let one = "One"
     let two = 2
     let three = 3.0

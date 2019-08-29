@@ -5,7 +5,7 @@
 import Foundation
 
 // swiftlint:disable type_name
-
+// swiftlint:disable identifier_name
 open class R {
 
     /**
@@ -103,7 +103,7 @@ open class R {
     public class func adjust<A>(_ function: @escaping (A) -> A) -> (Int) -> ([A]) -> [A] {
         return curry(adjust)(function)
     }
-    
+
     /**
      
      Returns true if all elements of the list match the predicate, false if there are any that don't.
@@ -114,7 +114,7 @@ open class R {
      - returns: Bool
      
      */
-    
+
     public class func all<T>(_ function: (T) -> Bool, _ list: [T]) -> Bool {
         return list.allSatisfy(function)
     }
@@ -287,7 +287,6 @@ open class R {
         return curry(propEq)(property)
     }
 
-
     /**
 
      A function that returns the ! of its argument. It will return true when passed
@@ -313,11 +312,11 @@ open class R {
      - returns: Returns true if 'lhs' is equivalent to 'rhs', else false.
      
      */
-    
+
     public class func equals<T: Equatable>(_ lhs: T, _ rhs: T) -> Bool {
         return lhs == rhs
     }
-    
+
     /**
      
      Returns `true` if its arguments are equivalent, `false` otherwise.
@@ -327,7 +326,7 @@ open class R {
      - returns: Curried function
      
      */
-    
+
     public class func equals<T: Equatable>(_ lhs: T) -> (T) -> Bool {
         return curry(equals)(lhs)
     }
@@ -364,7 +363,6 @@ open class R {
     public class func map<A, B>(_ function: @escaping (A) -> B) -> (_ with: [A]) -> [B] {
         return curry(map)(function)
     }
-
 
     /**
 
@@ -561,3 +559,4 @@ open class R {
 }
 
 // swiftlint:enable type_name
+// swiftlint:enable identifier_name

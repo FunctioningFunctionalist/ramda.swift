@@ -10,9 +10,10 @@ import Foundation
 import XCTest
 import Ramda
 
-fileprivate struct TestObject {
+private struct TestObject {
     var value: Int?
 }
+
 class PropOrTests: XCTestCase {
 
     func testPropOrWithValue() {

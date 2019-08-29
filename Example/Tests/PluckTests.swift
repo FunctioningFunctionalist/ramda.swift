@@ -18,7 +18,7 @@ class PluckTests: XCTestCase {
     }
 
     func testPluckWithOffset() {
-        let result = R.pluck(1)([["a","b","c"], ["α", "β", "γ"], ["आ", "ब", "ग"]])
+        let result = R.pluck(1)([["a", "b", "c"], ["α", "β", "γ"], ["आ", "ब", "ग"]])
         XCTAssertEqual(result, ["b", "β", "ब"])
     }
 }

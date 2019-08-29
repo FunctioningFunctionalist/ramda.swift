@@ -1,8 +1,14 @@
 PODS:
   - Ramda (0.1.0)
+  - SwiftLint (0.34.0)
 
 DEPENDENCIES:
   - Ramda (from `../`)
+  - SwiftLint
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SwiftLint
 
 EXTERNAL SOURCES:
   Ramda:
@@ -10,7 +16,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Ramda: 1b61433bf5aec5a5dce0d21325f07109c6fbc4e2
+  SwiftLint: 79d48a17c6565dc286c37efb8322c7b450f95c67
 
-PODFILE CHECKSUM: d68275d787af8ec1272838025647f0d6c82638fd
+PODFILE CHECKSUM: 964055aaa779e87abbf3b29e6a8a2430f1223d42
 
 COCOAPODS: 1.7.5

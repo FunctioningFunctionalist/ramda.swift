@@ -25,7 +25,7 @@ extension R {
             return (element, array2[index])
         }
     }
-    
+
     /**
      
      Creates a new list out of the two supplied by pairing up equally-positioned
@@ -36,7 +36,7 @@ extension R {
      - returns: Curried function
      
      */
-    
+
     public class func zip<T, U>(_ array1: [T]) -> (_ array2: [U]) -> [(T, U)] {
         return curry(zip)(array1)
     }
