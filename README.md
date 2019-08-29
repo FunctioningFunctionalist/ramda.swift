@@ -35,7 +35,7 @@ Tyrone Avnit
 - [ ] adjust
 - [ ] all
 - [ ] allPass
-- [ X] always
+- [x] always
 - [ ] and
 - [ ] any
 - [ ] anyPass
@@ -69,7 +69,7 @@ Tyrone Avnit
 - [x] curry
 - [ ] curryN
 - [ ] dec
-- [ ] defaultTo
+- [x] defaultTo
 - [ ] descend
 - [ ] difference
 - [ ] differenceWith
@@ -107,7 +107,7 @@ Tyrone Avnit
 - [ ] hasIn
 - [ ] head
 - [ ] identical
-- [X ] identity
+- [x] identity
 - [ ] ifElse
 - [ ] inc
 - [ ] i ndexBy
@@ -169,7 +169,7 @@ Tyrone Avnit
 - [ ] negate
 - [ ] none
 - [ ] not
-- [ ] nth
+- [x] nth
 - [ ] nthArg
 - [ ] o
 - [ ] objOf
@@ -186,23 +186,23 @@ Tyrone Avnit
 - [ ] pathEq
 - [ ] pathOr
 - [ ] pathSatisfies
-- [ ] pick
+- [x] pick
 - [ ] pickAll
 - [ ] pickBy
 - [ ] pipe
 - [ ] pipeK
 - [ ] pipeP
-- [ ] pluck
+- [x] pluck
 - [ ] prepend
 - [ ] product
 - [ ] project
-- [ X] prop
+-[x] prop
 - [ ] propEq
 - [ ] propIs
-- [ ] propOr
+- [x] propOr
 - [ ] propSatisfies
 - [ ] props
-- [X ] range
+- [x] range
 - [ ] reduce
 - [ ] reduceBy
 - [ ] reduceRight
@@ -210,7 +210,7 @@ Tyrone Avnit
 - [ ] reduced
 - [ ] reject
 - [ ] remove
-- [X ] repeat
+- [x] repeat
 - [ ] replace
 - [ ] reverse
 - [ ] scan
@@ -236,7 +236,7 @@ Tyrone Avnit
 - [ ] takeWhile
 - [ ] tap
 - [ ] test
-- [X ] times
+- [x] times
 - [ ] toLower
 - [ ] toPairs
 - [ ] toPairsIn
@@ -270,7 +270,7 @@ Tyrone Avnit
 - [ ] whereEq
 - [ ] without
 - [ ] xprod
-- [ ] zip
+- [x] zip
 - [ ] zipObj
 - [ ] zipWith
 
