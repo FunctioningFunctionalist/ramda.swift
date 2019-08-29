@@ -7,7 +7,7 @@ script:
 - gem install xcpretty
 - swiftlint
 - cd Example
-- pod install --repo-update
+- pod update
 - cd ..
 - xcodebuild -workspace Example/Ramda.xcworkspace -scheme Ramda_Tests -destination 'platform=iOS Simulator,name=iPhone 8,OS=12.1'  ONLY_ACTIVE_ARCH=YES clean test | xcpretty
 
