@@ -21,7 +21,7 @@ extension R {
     public class func pluck<T, U>(_ keyPath: KeyPath<T, U>, _ array: [T]) -> [U] {
         return map(prop(keyPath), array)
     }
-    
+
     /**
      
      Returns a new list by plucking the same named property off all objects in
@@ -31,11 +31,11 @@ extension R {
      - returns: Curried function
      
      */
-    
+
     public class func pluck<T, U>(_ keyPath: KeyPath<T, U>) -> (_ array: [T]) -> [U] {
         return curry(pluck)(keyPath)
     }
-    
+
     /**
      
      Returns a new list by plucking the indexed item off allarrays in
@@ -50,7 +50,7 @@ extension R {
     public class func pluck<T>(_ offset: Int, _ array: [[T]]) -> [T] {
         return map(nth(offset), array)
     }
-    
+
     /**
      
      Returns a new list by plucking the indexed item off allarrays in
@@ -60,10 +60,9 @@ extension R {
      - returns: Curried function
      
      */
-    
+
     public class func pluck<T>(_ offset: Int) -> (_ array: [[T]]) -> [T] {
         return curry(pluck)(offset)
     }
-    
-    
+
 }

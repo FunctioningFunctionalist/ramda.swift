@@ -33,11 +33,11 @@ extension R {
      - returns: Curried function
      
      */
-    
+
     public class func propOr<T, U>(_ keyPath: KeyPath<T, U?>, _ `default`: U) -> (_ object: T) -> U {
         return curry(propOrImpl)(keyPath)(`default`)
     }
-    
+
     // just specifying curry(propOr) above confuses the Swift compiler, so extract a function
     // with an unambiguous name.
     private class func propOrImpl<T, U>(_ keyPath: KeyPath<T, U?>, _ `default`: U, _ object: T) -> U {

@@ -21,7 +21,7 @@ extension R {
     public class func defaultTo<T>(_ `default`: T, _ item: T?) -> T {
         return item ?? `default`
     }
-    
+
     /**
      
      Returns the second argument if it is not `nill`;
@@ -31,9 +31,9 @@ extension R {
      - returns: Curried function
      
      */
-    
+
     public class func defaultTo<T>(_ `default`: T) -> (_ item: T?) -> T {
         return curry(defaultTo)(`default`)
     }
-    
+
 }

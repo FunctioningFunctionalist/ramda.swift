@@ -6,5 +6,6 @@ end
 
 target 'Ramda_Tests' do
   inherit! :search_paths
+  pod 'SwiftLint'
   pod 'Ramda', :path => '../'
 end
