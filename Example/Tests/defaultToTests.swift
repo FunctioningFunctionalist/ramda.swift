@@ -16,7 +16,7 @@ class DefaultToTests: XCTestCase {
         let result = R.defaultTo(42)(420)
         XCTAssertEqual(result, 420)
     }
-    
+
     func testDefaultToWithNil() {
         let result = R.defaultTo(42)(nil)
         XCTAssertEqual(result, 42)

@@ -16,7 +16,7 @@ class NthTests: XCTestCase {
         let result = R.nth(1)(["hello", "hi", "hey"])
         XCTAssertEqual(result, "hi")
     }
-    
+
     func testNthNegativeOffset() {
         let result = R.nth(-1)(["hello", "hi", "hey"])
         XCTAssertEqual(result, "hey")
