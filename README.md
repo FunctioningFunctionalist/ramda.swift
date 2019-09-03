@@ -36,7 +36,7 @@ Tyrone Avnit
 - [ ] all
 - [ ] allPass
 - [x] always
-- [ ] and
+- [x] and
 - [ ] any
 - [ ] anyPass
 - [ ] ap
@@ -59,7 +59,7 @@ Tyrone Avnit
 - [ ] compose
 - [ ] composeK
 - [ ] composeP
-- [ ] concat
+- [x] concat
 - [ ] cond
 - [ ] construct
 - [ ] constructN
