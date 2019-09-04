@@ -31,13 +31,13 @@ Tyrone Avnit
 ## Progress
 
 - [x] add
-- [ ] addIndex
-- [ ] adjust
-- [ ] all
-- [ ] allPass
+- [x] addIndex
+- [x] adjust
+- [x] all
+- [x] allPass
 - [x] always
 - [x] and
-- [ ] any
+- [x] any
 - [ ] anyPass
 - [ ] ap
 - [ ] aperture
