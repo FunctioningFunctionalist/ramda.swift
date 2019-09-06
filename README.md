@@ -38,7 +38,7 @@ Tyrone Avnit
 - [x] always
 - [x] and
 - [x] any
-- [ ] anyPass
+- [x] anyPass
 - [ ] ap
 - [ ] aperture
 - [ ] append
