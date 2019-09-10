@@ -203,7 +203,7 @@ Tyrone Avnit
 - [ ] propSatisfies
 - [ ] props
 - [x] range
-- [ ] reduce
+- [x] reduce
 - [ ] reduceBy
 - [ ] reduceRight
 - [ ] reduceWhile
