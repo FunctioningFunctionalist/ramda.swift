@@ -41,7 +41,7 @@ Tyrone Avnit
 - [x] anyPass
 - [ ] ap
 - [ ] aperture
-- [ ] append
+- [x] append
 - [ ] apply
 - [ ] applySpec
 - [ ] ascend
@@ -193,7 +193,7 @@ Tyrone Avnit
 - [ ] pipeK
 - [ ] pipeP
 - [x] pluck
-- [ ] prepend
+- [x] prepend
 - [ ] product
 - [ ] project
 -[x] prop
