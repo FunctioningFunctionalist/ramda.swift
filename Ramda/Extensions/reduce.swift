@@ -1,5 +1,5 @@
 //
-//  ap.swift
+//  reduce.swift
 //  Ramda
 //
 //  Created by TYRONE AVNIT on 2019/09/04.
