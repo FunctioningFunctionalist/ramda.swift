@@ -40,7 +40,7 @@ Tyrone Avnit
 - [x] any
 - [x] anyPass
 - [ ] ap
-- [ ] aperture
+- [x] aperture
 - [x] append
 - [ ] apply
 - [ ] applySpec
