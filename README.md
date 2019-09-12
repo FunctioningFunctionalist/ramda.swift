@@ -38,10 +38,10 @@ Tyrone Avnit
 - [x] always
 - [x] and
 - [x] any
-- [ ] anyPass
+- [x] anyPass
 - [ ] ap
 - [ ] aperture
-- [ ] append
+- [x] append
 - [ ] apply
 - [ ] applySpec
 - [ ] ascend
@@ -193,7 +193,7 @@ Tyrone Avnit
 - [ ] pipeK
 - [ ] pipeP
 - [x] pluck
-- [ ] prepend
+- [x] prepend
 - [ ] product
 - [ ] project
 -[x] prop
@@ -203,7 +203,7 @@ Tyrone Avnit
 - [ ] propSatisfies
 - [ ] props
 - [x] range
-- [ ] reduce
+- [x] reduce
 - [ ] reduceBy
 - [ ] reduceRight
 - [ ] reduceWhile
