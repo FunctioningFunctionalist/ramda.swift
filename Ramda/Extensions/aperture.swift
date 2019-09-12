@@ -11,13 +11,14 @@ extension R {
 
     /**
 
-     ap applies a list of functions to a list of values.
+     Returns a new list, composed of n-tuples of consecutive elements.
+     If n is greater than the length of the list, the list is returned.
 
-     - parameter functions: The list of functions to be applied
+     - parameter split: The size of the tuples to create
      the accumulator and the current element from the array.
-     - parameter list: The list to iterate over.
+     - parameter list: The list to split into `split`-length tuples
 
-     - returns: A new list with each of the functions applied to the list of values
+     - returns: The resulting list of `n`-length tuples
 
      */
 
@@ -27,6 +28,22 @@ extension R {
         }
 
         return [Array(list[0..<split])] + aperture(split, Array(list[split..<list.count]))
+    }
+
+    /**
+
+     Returns a new list, composed of n-tuples of consecutive elements.
+     If n is greater than the length of the list, the list is returned.
+
+     - parameter split: The size of the tuples to create
+     the accumulator and the current element from the array.
+
+     - returns: A curried function
+
+     */
+
+    public class func aperture<A>(_ split: Int) -> (_ list: [A]) -> [[A]] {
+        return curry(aperture)(split)
     }
 
 }
