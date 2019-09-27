@@ -39,10 +39,10 @@ Tyrone Avnit
 - [x] and
 - [x] any
 - [x] anyPass
-- [ ] ap
-- [ ] aperture
+- [x] ap
+- [x] aperture
 - [x] append
-- [ ] apply
+- [x] apply
 - [ ] applySpec
 - [ ] ascend
 - [ ] assoc
@@ -83,7 +83,7 @@ Tyrone Avnit
 - [ ] dropRepeatsWith
 - [ ] dropWhile
 - [ ] either
-- [ ] empty
+- [x] empty
 - [ ] endsWith
 - [ ] eqBy
 - [ ] eqProps
