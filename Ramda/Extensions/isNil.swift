@@ -1,6 +1,6 @@
 //
 //  isNil.swift
-//  Pods-Ramda_Example
+//  Ramda
 //
 //  Created by Christian Leovido on 27/09/2019.
 //
@@ -13,15 +13,13 @@ extension R {
 
      Checks if the input value is nil
 
+     - parameter value: Any optional value
+
+     - returns: A boolean that confirms if the value is nil
+
      */
-
     public class func isNil(_ value: Any?) -> Bool {
-
-        guard value == nil else {
-            return false
-        }
-
-        return true
+        return value == nil ? true : false
     }
 
 }
