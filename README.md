@@ -76,8 +76,8 @@ Tyrone Avnit
 - [ ] dissoc
 - [ ] dissocPath
 - [ ] divide
-- [ ] drop
-- [ ] dropLast
+- [x] drop
+- [x] dropLast
 - [ ] dropLastWhile
 - [ ] dropRepeats
 - [ ] dropRepeatsWith
@@ -105,7 +105,7 @@ Tyrone Avnit
 - [ ] gte
 - [ ] has
 - [ ] hasIn
-- [ ] head
+- [x] head
 - [ ] identical
 - [x] identity
 - [ ] ifElse
@@ -125,7 +125,7 @@ Tyrone Avnit
 - [ ] invoker
 - [ ] is
 - [ ] isEmpty
-- [ ] isNil
+- [x] isNil
 - [ ] join
 - [ ] juxt
 - [ ] keys

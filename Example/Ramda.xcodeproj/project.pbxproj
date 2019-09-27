@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		2D69CA41233E29FB000BBA5C /* emptyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D69CA40233E29FB000BBA5C /* emptyTests.swift */; };
 		2D69CA46233E6985000BBA5C /* apertureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D69CA45233E6985000BBA5C /* apertureTests.swift */; };
+		2D69CA50233E92B1000BBA5C /* headTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D69CA4F233E92B1000BBA5C /* headTests.swift */; };
+		2D69CA52233E9648000BBA5C /* isNilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D69CA51233E9648000BBA5C /* isNilTests.swift */; };
+		2D69CA54233E982E000BBA5C /* dropTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D69CA53233E982E000BBA5C /* dropTests.swift */; };
+		2D69CA58233EA2F2000BBA5C /* dropLastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D69CA57233EA2F2000BBA5C /* dropLastTests.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -59,6 +63,10 @@
 		112D24CE7C89DFC4C79804A9 /* Pods-Ramda_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ramda_Tests.release.xcconfig"; path = "Target Support Files/Pods-Ramda_Tests/Pods-Ramda_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		2D69CA40233E29FB000BBA5C /* emptyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emptyTests.swift; sourceTree = "<group>"; };
 		2D69CA45233E6985000BBA5C /* apertureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apertureTests.swift; sourceTree = "<group>"; };
+		2D69CA4F233E92B1000BBA5C /* headTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = headTests.swift; sourceTree = "<group>"; };
+		2D69CA51233E9648000BBA5C /* isNilTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isNilTests.swift; sourceTree = "<group>"; };
+		2D69CA53233E982E000BBA5C /* dropTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dropTests.swift; sourceTree = "<group>"; };
+		2D69CA57233EA2F2000BBA5C /* dropLastTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dropLastTests.swift; sourceTree = "<group>"; };
 		384FD825F93E2D75D57748DB /* Pods-Ramda_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ramda_Example.release.xcconfig"; path = "Target Support Files/Pods-Ramda_Example/Pods-Ramda_Example.release.xcconfig"; sourceTree = "<group>"; };
 		3B76F62CE8DCA749E9E33C09 /* Pods-Ramda_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ramda_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Ramda_Tests/Pods-Ramda_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Ramda_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ramda_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -194,9 +202,13 @@
 				63F2E4EF232936D600768E6F /* appendTests.swift */,
 				2D69CA45233E6985000BBA5C /* apertureTests.swift */,
 				6311D33823182ACD00DE99AF /* applyTests.swift */,
+				2D69CA53233E982E000BBA5C /* dropTests.swift */,
+				2D69CA57233EA2F2000BBA5C /* dropLastTests.swift */,
 				638965F22328BE2600619FA7 /* apTests.swift */,
 				635BDC9D231ED86D00F8A314 /* concatTests.swift */,
 				6DA8001422E00916009D0FFA /* defaultToTests.swift */,
+				2D69CA4F233E92B1000BBA5C /* headTests.swift */,
+				2D69CA51233E9648000BBA5C /* isNilTests.swift */,
 				2D69CA40233E29FB000BBA5C /* emptyTests.swift */,
 				63DA4271231AC37C00315FD7 /* IdentityTests.swift */,
 				6311D322231825CB00DE99AF /* mapTests.swift */,
@@ -472,14 +484,18 @@
 				638965F42328BE8700619FA7 /* apTests.swift in Sources */,
 				6311D323231825CB00DE99AF /* mapTests.swift in Sources */,
 				63DA4274231AC3C000315FD7 /* timeTests.swift in Sources */,
+				2D69CA52233E9648000BBA5C /* isNilTests.swift in Sources */,
 				6311D33523182A2A00DE99AF /* allPassTests.swift in Sources */,
 				63DA427A231AC40B00315FD7 /* propTests.swift in Sources */,
+				2D69CA50233E92B1000BBA5C /* headTests.swift in Sources */,
 				63DA4266231AC29B00315FD7 /* rangeTests.swift in Sources */,
 				6DA8000822DEE39E009D0FFA /* pluckTests.swift in Sources */,
 				6DA8001522E00916009D0FFA /* defaultToTests.swift in Sources */,
 				6310AD1D23223E1E008FCAC0 /* anyPassTests.swift in Sources */,
 				6311D3312318290400DE99AF /* allTests.swift in Sources */,
+				2D69CA54233E982E000BBA5C /* dropTests.swift in Sources */,
 				63DA427E231D703700315FD7 /* andTests.swift in Sources */,
+				2D69CA58233EA2F2000BBA5C /* dropLastTests.swift in Sources */,
 				6DA8001922E00AB0009D0FFA /* propOrTests.swift in Sources */,
 				2D69CA41233E29FB000BBA5C /* emptyTests.swift in Sources */,
 				63DC8036231FEACE00511D91 /* anyTests.swift in Sources */,
