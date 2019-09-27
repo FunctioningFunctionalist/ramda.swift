@@ -19,13 +19,7 @@ extension R {
 
      */
     public class func head(_ string: String) -> String {
-
-        guard let char = string.first else {
-            return ""
-        }
-
-        return String(char)
-
+        return string.first == nil ? "" : String(string.first!)
     }
 
     /**
