@@ -11,13 +11,17 @@ extension R {
 
     /**
 
-     Returns all but the first n elements
-     of the given list, string, or transducer/transformer (or object with a drop method).
+     Returns a list containing all but the last n elements of the given list.
 
-     Dispatches to the drop method of the second argument, if present.
+     Acts as a transducer if a transformer is given in list position.
+     See also takeLast, drop, dropWhile, dropLastWhile.
+
+     - parameter iteration: Number of last elements to remove
+     - parameter string: The string to remove the values from
+
+     - returns: A new string with the last n elements removed
 
      */
-
     public class func dropLast(_ iteration: Int, _ string: String) -> String {
 
         var newString = string
@@ -33,6 +37,19 @@ extension R {
         return newString
     }
 
+    /**
+
+    Returns a list containing all but the last n elements of the given list.
+
+    Acts as a transducer if a transformer is given in list position.
+    See also takeLast, drop, dropWhile, dropLastWhile.
+
+    - parameter iteration: Number of last elements to remove
+    - parameter arrayString: The array of strings to remove the values from
+
+    - returns: A new array of strings with the last n elements removed
+
+    */
     public class func dropLast(_ iteration: Int, _ arrayString: [String]) -> [String] {
 
         var newArrayString = arrayString

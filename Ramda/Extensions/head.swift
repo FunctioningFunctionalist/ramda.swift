@@ -11,17 +11,16 @@ extension R {
 
     /**
 
-     Returns the first element of the given list or string.
+     Returns the first element of the given string.
 
-     - parameter value: String
+     - parameter value: String to check
 
-     - returns: String
+     - returns: The first element of the given string.
 
      */
+    public class func head(_ string: String) -> String {
 
-    public class func head(_ value: String) -> String {
-
-        guard let char = value.first else {
+        guard let char = string.first else {
             return ""
         }
 
@@ -31,15 +30,15 @@ extension R {
 
     /**
 
-    Returns the first element of the given list or string.
+    Returns the first element of the given array of strings or nil
 
-    - parameter value: [String]
+    - parameter arrayString: Array of strings to check
 
-    - returns: String?
+    - returns: The first element of the given array of strings or nil
 
     */
-    public class func head(_ value: [String]) -> String? {
-        return value.first
+    public class func head(_ arrayString: [String]) -> String? {
+        return arrayString.first
     }
 
 }
