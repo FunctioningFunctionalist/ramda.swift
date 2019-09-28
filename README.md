@@ -40,10 +40,11 @@ Tyrone Avnit
 - [x] any
 - [x] anyPass
 - [ ] ap
-- [ ] aperture
+- [x] aperture
 - [x] append
 - [ ] apply
 - [ ] applySpec
+- [x] applyTo
 - [ ] ascend
 - [ ] assoc
 - [ ] assocPath
@@ -95,7 +96,7 @@ Tyrone Avnit
 - [ ] findLast
 - [ ] findLastIndex
 - [ ] flatten
-- [ ] flip
+- [x] flip
 - [ ] forEach
 - [ ] forEachObjIndexed
 - [ ] fromPairs
