@@ -1,6 +1,6 @@
 //
 //  eqBy.swift
-//  Pods-Ramda_Example
+//  Ramda
 //
 //  Created by Christian Leovido on 28/09/2019.
 //
