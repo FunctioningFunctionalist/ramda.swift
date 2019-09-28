@@ -68,7 +68,7 @@ Tyrone Avnit
 - [ ] countBy
 - [x] curry
 - [ ] curryN
-- [ ] dec
+- [x] dec
 - [x] defaultTo
 - [ ] descend
 - [ ] difference
@@ -85,9 +85,9 @@ Tyrone Avnit
 - [ ] either
 - [x] empty
 - [ ] endsWith
-- [ ] eqBy
-- [ ] eqProps
-- [ ] equals
+- [x] eqBy
+- [x] eqProps
+- [x] equals
 - [ ] evolve
 - [ ] filter
 - [ ] find
@@ -103,13 +103,13 @@ Tyrone Avnit
 - [ ] groupWith
 - [ ] gt
 - [ ] gte
-- [ ] has
+- [x] has
 - [ ] hasIn
 - [x] head
 - [ ] identical
 - [x] identity
 - [ ] ifElse
-- [ ] inc
+- [x] inc
 - [ ] i ndexBy
 - [ ] indexOf
 - [ ] init
