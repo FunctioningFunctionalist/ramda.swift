@@ -43,4 +43,24 @@ extension R {
 
         }
     }
+
+    /**
+
+     Returns whether or not an object has an own property with the specified name
+
+     - parameter prop: Property to check
+     
+     - returns: True if the property exists; false is it doesn't
+
+     */
+    public class func has(propObjStruct: String) -> (Any) -> Bool {
+
+        return { anyObject in
+
+            let mirror = Mirror(reflecting: anyObject)
+
+            return mirror.children.contains(where: { $0.label == propObjStruct })
+
+        }
+    }
 }
