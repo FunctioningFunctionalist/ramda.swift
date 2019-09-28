@@ -44,6 +44,7 @@ Tyrone Avnit
 - [x] append
 - [x] apply
 - [ ] applySpec
+- [x] applyTo
 - [ ] ascend
 - [ ] assoc
 - [ ] assocPath
@@ -95,7 +96,7 @@ Tyrone Avnit
 - [ ] findLast
 - [ ] findLastIndex
 - [ ] flatten
-- [ ] flip
+- [x] flip
 - [ ] forEach
 - [ ] forEachObjIndexed
 - [ ] fromPairs
