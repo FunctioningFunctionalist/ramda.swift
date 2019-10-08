@@ -21,12 +21,7 @@ extension R {
 
      */
     public class func dec<A: BasicArithmeticType>(_ number: A) -> A {
-
-        guard let one = 1 as? A else {
-            fatalError()
-        }
-
-        return number - one
+        return number - A.one
     }
 
 }
