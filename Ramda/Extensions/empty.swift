@@ -10,7 +10,6 @@ import Foundation
 public protocol EmptyDefinable {
 
     associatedtype CollectionType: Collection
-    associatedtype SubCollectionType: Collection
 
     mutating func emptyCollection() -> CollectionType
 }
