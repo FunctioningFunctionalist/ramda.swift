@@ -29,4 +29,24 @@ class DropLastTests: XCTestCase {
         XCTAssertEqual(result, [])
     }
 
+    func testDropLastArray_OtherType() {
+        let result = R.dropLast(2, [1, 2, 3])
+        XCTAssertEqual(result, [1])
+    }
+
+    func testDropLastArray_OtherType_All() {
+        let result = R.dropLast(3, [1, 2, 3])
+        XCTAssertEqual(result, [])
+    }
+
+    func testDropLastArray_OtherType2() {
+        let result = R.dropLast(2, [1.1, 2.2, 3.3])
+        XCTAssertEqual(result, [1.1])
+    }
+
+    func testDropLastArray_OtherType2_All() {
+        let result = R.dropLast(3, [1.1, 2.2, 3.3])
+        XCTAssertEqual(result, [])
+    }
+
 }
