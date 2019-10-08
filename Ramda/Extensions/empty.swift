@@ -36,7 +36,7 @@ extension R {
 
 extension Array: EmptyDefinable {
 
-    public typealias CollectionType = [Any]
+    public typealias CollectionType = [Element]
     public typealias SubCollectionType = CollectionType.SubSequence
 
     mutating public func emptyCollection() -> CollectionType {
