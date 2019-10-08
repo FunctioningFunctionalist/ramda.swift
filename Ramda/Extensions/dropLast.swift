@@ -50,11 +50,11 @@ extension R {
     - returns: A new array of strings with the last n elements removed
 
     */
-    public class func dropLast(_ iteration: Int, _ arrayString: [String]) -> [String] {
+    public class func dropLast<T: Equatable>(_ iteration: Int, _ array: [T]) -> [T] {
 
-        var newArrayString = arrayString
+        var newArrayString = array
 
-        for index in 0..<iteration where arrayString.count > index {
+        for index in 0..<iteration where array.count > index {
 
             newArrayString.removeLast()
 
