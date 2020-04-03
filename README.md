@@ -141,7 +141,7 @@ Tyrone Avnit
 - [ ] lift
 - [ ] liftN
 - [ ] lt
-- [ ] lte
+- [x] lte
 - [ ] map
 - [ ] mapAccum
 - [ ] mapAccumRight
