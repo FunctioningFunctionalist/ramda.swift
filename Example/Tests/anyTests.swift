@@ -2,7 +2,7 @@ import Foundation
 import XCTest
 import Ramda
 
-final class AnyTests: XCTest {
+final class AnyTests: XCTestCase {
 
     func testAnyReturnsTrueIfElementPassesThePredicateTest() {
         let lessThen0: (Int) -> Bool = { value in value < 0 }

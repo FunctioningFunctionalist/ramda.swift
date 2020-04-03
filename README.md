@@ -28,6 +28,11 @@ pod "Ramda"
 Justin Guedes
 Tyrone Avnit
 
+## Contributors
+
+Christian Ray Leovido
+Adrian Koren
+
 ## Progress
 
 - [x] add
@@ -50,7 +55,7 @@ Tyrone Avnit
 - [ ] assocPath
 - [ ] binary
 - [ ] bind
-- [ ] both
+- [x] both
 - [ ] call
 - [ ] chain
 - [ ] clamp
@@ -102,8 +107,8 @@ Tyrone Avnit
 - [ ] fromPairs
 - [ ] groupBy
 - [ ] groupWith
-- [ ] gt
-- [ ] gte
+- [x] gt
+- [x] gte
 - [x] has
 - [ ] hasIn
 - [x] head
@@ -140,8 +145,8 @@ Tyrone Avnit
 - [ ] lensProp
 - [ ] lift
 - [ ] liftN
-- [ ] lt
-- [ ] lte
+- [x] lt
+- [x] lte
 - [ ] map
 - [ ] mapAccum
 - [ ] mapAccumRight
