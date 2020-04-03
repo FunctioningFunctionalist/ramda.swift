@@ -2,7 +2,7 @@ import Foundation
 import XCTest
 import Ramda
 
-final class ConcatTests: XCTest {
+final class ConcatTests: XCTestCase {
 
     func testConcatTwoStrings() {
         let result = R.concat("ABC", "DEF")

@@ -2,7 +2,7 @@ import Foundation
 import XCTest
 import Ramda
 
-final class AndTests: XCTest {
+final class AndTests: XCTestCase {
 
     func testAndReturnsTrueIfBothArgumentsAreTrue() {
         let result = R.and(true, true)
