@@ -102,8 +102,8 @@ Tyrone Avnit
 - [ ] fromPairs
 - [ ] groupBy
 - [ ] groupWith
-- [ ] gt
 - [ ] gte
+- [x] gt
 - [x] has
 - [ ] hasIn
 - [x] head
