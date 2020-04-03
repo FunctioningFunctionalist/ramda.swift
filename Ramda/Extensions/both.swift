@@ -29,7 +29,7 @@ extension R {
                               _ function2: @escaping (T) -> Bool) -> (T) -> Bool {
 
         return { newValue in
-            return f1(newValue) && f2(newValue)
+            return function1(newValue) && function2(newValue)
         }
 
     }
