@@ -16,4 +16,11 @@ class GteTests: XCTestCase {
         XCTAssertEqual(R.gt("z", "a"), true)
     }
 
+    func testGteAsFunction() {
+        let greaterThanNumber = R.gte(100)
+
+        XCTAssertEqual(greaterThanNumber(10), true)
+        XCTAssertEqual(greaterThanNumber(100), true)
+    }
+
 }

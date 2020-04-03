@@ -9,7 +9,6 @@ import Foundation
 
 extension R {
 
-
     /// Returns true if the first argument is greater than or equal to the second; false otherwise.
     /// - Parameters:
     ///   - firstValue: any Comparable value
