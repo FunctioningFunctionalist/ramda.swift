@@ -140,7 +140,7 @@ Tyrone Avnit
 - [ ] lensProp
 - [ ] lift
 - [ ] liftN
-- [ ] lt
+- [x] lt
 - [x] lte
 - [ ] map
 - [ ] mapAccum
