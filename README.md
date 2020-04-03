@@ -50,7 +50,7 @@ Tyrone Avnit
 - [ ] assocPath
 - [ ] binary
 - [ ] bind
-- [ ] both
+- [x] both
 - [ ] call
 - [ ] chain
 - [ ] clamp
