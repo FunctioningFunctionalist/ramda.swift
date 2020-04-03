@@ -23,7 +23,7 @@ extension R {
     ///   - value: the value to be compared
     public class func gt<T: Comparable>(_ value: T) -> (T) -> Bool {
         return { newValue in
-            return value > newValue
+            return newValue > value
         }
     }
 
