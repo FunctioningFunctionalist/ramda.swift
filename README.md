@@ -22,11 +22,13 @@ pod "Ramda"
 ## Authors
 
 Justin Guedes
+
 Tyrone Avnit
 
 ## Contributors
 
 Christian Ray Leovido
+
 Adrian Koren
 
 ## Progress
