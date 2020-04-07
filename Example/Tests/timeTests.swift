@@ -2,7 +2,7 @@ import Foundation
 import XCTest
 import Ramda
 
-final class TimeTests: XCTest {
+final class TimeTests: XCTestCase {
 
     func testTimes() {
         let result = R.times(R.add(10))(3)

@@ -7,7 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		41EE88DB5D0EF79C54BC9A43 /* Pods_Ramda_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7F0EC9E04C44B8453C1963A /* Pods_Ramda_Example.framework */; };
+		2D5B21612437C4D90043B9BD /* gtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5B215D2437C4AA0043B9BD /* gtTests.swift */; };
+		2D5B21622437C4DD0043B9BD /* gteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5B215F2437C4B60043B9BD /* gteTests.swift */; };
+		2D5B21672437E1420043B9BD /* bothTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5B21652437E13F0043B9BD /* bothTests.swift */; };
+		2D5B21722437E21C0043B9BD /* lteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5B21702437E21A0043B9BD /* lteTests.swift */; };
+		2D5B21732437E21E0043B9BD /* ltTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5B216E2437E2110043B9BD /* ltTests.swift */; };
+		2D69CA41233E29FB000BBA5C /* emptyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D69CA40233E29FB000BBA5C /* emptyTests.swift */; };
+		2D69CA50233E92B1000BBA5C /* headTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D69CA4F233E92B1000BBA5C /* headTests.swift */; };
+		2D69CA52233E9648000BBA5C /* isNilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D69CA51233E9648000BBA5C /* isNilTests.swift */; };
+		2D69CA54233E982E000BBA5C /* dropTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D69CA53233E982E000BBA5C /* dropTests.swift */; };
+		2D69CA58233EA2F2000BBA5C /* dropLastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D69CA57233EA2F2000BBA5C /* dropLastTests.swift */; };
+		2DDBCF2C234D241B005EEA3F /* decTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBCF2B234D241B005EEA3F /* decTests.swift */; };
+		2DE7E04A233F32910014A3E4 /* eqPropsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE7E049233F32910014A3E4 /* eqPropsTests.swift */; };
+		2DE7E04C233FD8340014A3E4 /* eqByTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE7E04B233FD8340014A3E4 /* eqByTests.swift */; };
+		2DE7E055233FE8D30014A3E4 /* incTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE7E054233FE8D30014A3E4 /* incTests.swift */; };
+		2DE7E05A233FF9A20014A3E4 /* hasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE7E059233FF9A20014A3E4 /* hasTests.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -44,7 +58,8 @@
 		6DA8001522E00916009D0FFA /* defaultToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA8001422E00916009D0FFA /* defaultToTests.swift */; };
 		6DA8001922E00AB0009D0FFA /* propOrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA8001822E00AB0009D0FFA /* propOrTests.swift */; };
 		6DA8001D22E01B89009D0FFA /* zipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA8001C22E01B89009D0FFA /* zipTests.swift */; };
-		FC23D6D685BC12AF880E20E9 /* Pods_Ramda_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA96E82B5A5067718785481 /* Pods_Ramda_Tests.framework */; };
+		B2D0BD7E0087DBD2512D1B1A /* Pods_Ramda_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA5FE6C07DA6362A045B5C6 /* Pods_Ramda_Tests.framework */; };
+		DE9E7C347E782A9960DC2322 /* Pods_Ramda_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F137199A7264F881C6FEFE09 /* Pods_Ramda_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +73,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		112D24CE7C89DFC4C79804A9 /* Pods-Ramda_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ramda_Tests.release.xcconfig"; path = "Target Support Files/Pods-Ramda_Tests/Pods-Ramda_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		2D5B215D2437C4AA0043B9BD /* gtTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gtTests.swift; sourceTree = "<group>"; };
+		2D5B215F2437C4B60043B9BD /* gteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gteTests.swift; sourceTree = "<group>"; };
+		2D5B21652437E13F0043B9BD /* bothTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bothTests.swift; sourceTree = "<group>"; };
+		2D5B216E2437E2110043B9BD /* ltTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ltTests.swift; sourceTree = "<group>"; };
+		2D5B21702437E21A0043B9BD /* lteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lteTests.swift; sourceTree = "<group>"; };
+		2D69CA40233E29FB000BBA5C /* emptyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emptyTests.swift; sourceTree = "<group>"; };
+		2D69CA4F233E92B1000BBA5C /* headTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = headTests.swift; sourceTree = "<group>"; };
+		2D69CA51233E9648000BBA5C /* isNilTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isNilTests.swift; sourceTree = "<group>"; };
+		2D69CA53233E982E000BBA5C /* dropTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dropTests.swift; sourceTree = "<group>"; };
+		2D69CA57233EA2F2000BBA5C /* dropLastTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dropLastTests.swift; sourceTree = "<group>"; };
+		2DDBCF2B234D241B005EEA3F /* decTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decTests.swift; sourceTree = "<group>"; };
+		2DE7E049233F32910014A3E4 /* eqPropsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eqPropsTests.swift; sourceTree = "<group>"; };
+		2DE7E04B233FD8340014A3E4 /* eqByTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eqByTests.swift; sourceTree = "<group>"; };
+		2DE7E054233FE8D30014A3E4 /* incTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = incTests.swift; sourceTree = "<group>"; };
+		2DE7E059233FF9A20014A3E4 /* hasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hasTests.swift; sourceTree = "<group>"; };
+		384FD825F93E2D75D57748DB /* Pods-Ramda_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ramda_Example.release.xcconfig"; path = "Target Support Files/Pods-Ramda_Example/Pods-Ramda_Example.release.xcconfig"; sourceTree = "<group>"; };
+		3B76F62CE8DCA749E9E33C09 /* Pods-Ramda_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ramda_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Ramda_Tests/Pods-Ramda_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Ramda_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ramda_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,7 +100,6 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* Ramda_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Ramda_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		610FE13897F31E333C93B5FB /* Pods-Ramda_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ramda_Example.debug.xcconfig"; path = "Target Support Files/Pods-Ramda_Example/Pods-Ramda_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		630089D823276644002464C9 /* reduceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reduceTests.swift; sourceTree = "<group>"; };
 		6310AD1B23223DAE008FCAC0 /* anyPassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = anyPassTests.swift; sourceTree = "<group>"; };
 		6311D31F2318258300DE99AF /* addTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addTests.swift; sourceTree = "<group>"; };
@@ -99,14 +131,12 @@
 		6DA8001422E00916009D0FFA /* defaultToTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = defaultToTests.swift; sourceTree = "<group>"; };
 		6DA8001822E00AB0009D0FFA /* propOrTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = propOrTests.swift; sourceTree = "<group>"; };
 		6DA8001C22E01B89009D0FFA /* zipTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = zipTests.swift; sourceTree = "<group>"; };
-		8784ADD68CC1B725152B350E /* Pods-Ramda_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ramda_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Ramda_Tests/Pods-Ramda_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		966FDF159DBFB2354A38BE34 /* Pods-Ramda_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ramda_Tests.release.xcconfig"; path = "Target Support Files/Pods-Ramda_Tests/Pods-Ramda_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		ADA96E82B5A5067718785481 /* Pods_Ramda_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ramda_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		834BE5D56D04CFB233D9A7FD /* Pods-Ramda_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ramda_Example.debug.xcconfig"; path = "Target Support Files/Pods-Ramda_Example/Pods-Ramda_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C10AA41856A55BF71F0E26F5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		C15DF3B7188A756D43599B1B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		EA4578BE36F637D2BCA00B73 /* Pods-Ramda_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ramda_Example.release.xcconfig"; path = "Target Support Files/Pods-Ramda_Example/Pods-Ramda_Example.release.xcconfig"; sourceTree = "<group>"; };
-		EE1791CE7E3AC1BE4EF573AC /* Ramda.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Ramda.podspec; path = ../Ramda.podspec; sourceTree = "<group>"; };
-		F7F0EC9E04C44B8453C1963A /* Pods_Ramda_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ramda_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFA5FE6C07DA6362A045B5C6 /* Pods_Ramda_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ramda_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE1791CE7E3AC1BE4EF573AC /* Ramda.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Ramda.podspec; path = ../Ramda.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F137199A7264F881C6FEFE09 /* Pods_Ramda_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ramda_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41EE88DB5D0EF79C54BC9A43 /* Pods_Ramda_Example.framework in Frameworks */,
+				DE9E7C347E782A9960DC2322 /* Pods_Ramda_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC23D6D685BC12AF880E20E9 /* Pods_Ramda_Tests.framework in Frameworks */,
+				B2D0BD7E0087DBD2512D1B1A /* Pods_Ramda_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,10 +162,10 @@
 		1809C677333EB8AAC2B41A68 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				610FE13897F31E333C93B5FB /* Pods-Ramda_Example.debug.xcconfig */,
-				EA4578BE36F637D2BCA00B73 /* Pods-Ramda_Example.release.xcconfig */,
-				8784ADD68CC1B725152B350E /* Pods-Ramda_Tests.debug.xcconfig */,
-				966FDF159DBFB2354A38BE34 /* Pods-Ramda_Tests.release.xcconfig */,
+				834BE5D56D04CFB233D9A7FD /* Pods-Ramda_Example.debug.xcconfig */,
+				384FD825F93E2D75D57748DB /* Pods-Ramda_Example.release.xcconfig */,
+				3B76F62CE8DCA749E9E33C09 /* Pods-Ramda_Tests.debug.xcconfig */,
+				112D24CE7C89DFC4C79804A9 /* Pods-Ramda_Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -148,7 +178,7 @@
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				1809C677333EB8AAC2B41A68 /* Pods */,
-				6645DFB46151D50AA2DC6479 /* Frameworks */,
+				ABAEB03F5658275717ACEA72 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -186,38 +216,53 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				6DA8000722DEE39E009D0FFA /* pluckTests.swift */,
-				6DA8001C22E01B89009D0FFA /* zipTests.swift */,
-				6DA8001822E00AB0009D0FFA /* propOrTests.swift */,
-				6DA8001022E002B3009D0FFA /* pickTests.swift */,
-				6DA8000C22DFFF37009D0FFA /* nthTests.swift */,
-				6DA8001422E00916009D0FFA /* defaultToTests.swift */,
-				6311D31F2318258300DE99AF /* addTests.swift */,
-				6311D322231825CB00DE99AF /* mapTests.swift */,
 				6311D3282318276F00DE99AF /* addIndexTests.swift */,
+				6311D31F2318258300DE99AF /* addTests.swift */,
 				6311D32C2318280600DE99AF /* adjustTests.swift */,
-				6311D3302318290400DE99AF /* allTests.swift */,
 				6311D33423182A2A00DE99AF /* allPassTests.swift */,
-				6311D33823182ACD00DE99AF /* applyTests.swift */,
-				63DA4265231AC29B00315FD7 /* rangeTests.swift */,
-				63DA4271231AC37C00315FD7 /* IdentityTests.swift */,
-				63DA4273231AC3C000315FD7 /* timeTests.swift */,
+				6311D3302318290400DE99AF /* allTests.swift */,
 				63DA4275231AC3EF00315FD7 /* alwaysTests.swift */,
-				63DA4277231AC3FB00315FD7 /* repeatTests.swift */,
-				63DA4279231AC40B00315FD7 /* propTests.swift */,
+				2D5B21652437E13F0043B9BD /* bothTests.swift */,
+				2DE7E054233FE8D30014A3E4 /* incTests.swift */,
 				63DA427D231D703700315FD7 /* andTests.swift */,
-				635BDC9D231ED86D00F8A314 /* concatTests.swift */,
-				63DC8034231FEAC500511D91 /* anyTests.swift */,
 				6310AD1B23223DAE008FCAC0 /* anyPassTests.swift */,
-				630089D823276644002464C9 /* reduceTests.swift */,
-				638965F22328BE2600619FA7 /* apTests.swift */,
+				63DC8034231FEAC500511D91 /* anyTests.swift */,
 				63F2E4EF232936D600768E6F /* appendTests.swift */,
+				6311D33823182ACD00DE99AF /* applyTests.swift */,
+				638965F22328BE2600619FA7 /* apTests.swift */,
+				635BDC9D231ED86D00F8A314 /* concatTests.swift */,
+				6DA8001422E00916009D0FFA /* defaultToTests.swift */,
+				2DDBCF2B234D241B005EEA3F /* decTests.swift */,
+				2D69CA57233EA2F2000BBA5C /* dropLastTests.swift */,
+				2D69CA53233E982E000BBA5C /* dropTests.swift */,
+				2D69CA40233E29FB000BBA5C /* emptyTests.swift */,
+				2DE7E049233F32910014A3E4 /* eqPropsTests.swift */,
+				2D5B215D2437C4AA0043B9BD /* gtTests.swift */,
+				2DE7E04B233FD8340014A3E4 /* eqByTests.swift */,
+				2D5B215F2437C4B60043B9BD /* gteTests.swift */,
+				2DE7E059233FF9A20014A3E4 /* hasTests.swift */,
+				2D69CA4F233E92B1000BBA5C /* headTests.swift */,
+				63DA4271231AC37C00315FD7 /* IdentityTests.swift */,
+				2D5B216E2437E2110043B9BD /* ltTests.swift */,
+				2D5B21702437E21A0043B9BD /* lteTests.swift */,
+				2D69CA51233E9648000BBA5C /* isNilTests.swift */,
+				6311D322231825CB00DE99AF /* mapTests.swift */,
+				6DA8000C22DFFF37009D0FFA /* nthTests.swift */,
+				6DA8001022E002B3009D0FFA /* pickTests.swift */,
+				6DA8000722DEE39E009D0FFA /* pluckTests.swift */,
 				63F2E4F12329372300768E6F /* prependTests.swift */,
+				6DA8001822E00AB0009D0FFA /* propOrTests.swift */,
+				63DA4279231AC40B00315FD7 /* propTests.swift */,
+				63DA4265231AC29B00315FD7 /* rangeTests.swift */,
+				630089D823276644002464C9 /* reduceTests.swift */,
+				63DA4277231AC3FB00315FD7 /* repeatTests.swift */,
 				63369DA0232A8C860096F3BA /* apertureTests.swift */,
 				63AA2135232EAAF600035123 /* flipTests.swift */,
 				63AA2137232EADCA00035123 /* applyToTests.swift */,
 				63F8A6C5232FD19A00D7429D /* sortTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
+				63DA4273231AC3C000315FD7 /* timeTests.swift */,
+				6DA8001C22E01B89009D0FFA /* zipTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -240,11 +285,11 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		6645DFB46151D50AA2DC6479 /* Frameworks */ = {
+		ABAEB03F5658275717ACEA72 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F7F0EC9E04C44B8453C1963A /* Pods_Ramda_Example.framework */,
-				ADA96E82B5A5067718785481 /* Pods_Ramda_Tests.framework */,
+				F137199A7264F881C6FEFE09 /* Pods_Ramda_Example.framework */,
+				DFA5FE6C07DA6362A045B5C6 /* Pods_Ramda_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -256,12 +301,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Ramda_Example" */;
 			buildPhases = (
-				4BBEA15323F199571690898A /* [CP] Check Pods Manifest.lock */,
+				2E9B8FA8135C00FA1EAE8EBE /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				D9C24C64EFC602ED6D82435B /* [CP] Embed Pods Frameworks */,
 				63DB3F7B2318095F001D8C04 /* SwiftLint */,
+				9AC927AD9EC425321BDE071A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -276,11 +321,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Ramda_Tests" */;
 			buildPhases = (
-				28F800B5D9EC08B0DCD62163 /* [CP] Check Pods Manifest.lock */,
+				213477AAC1A40356634849FA /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				E7340920EED5754DD502F3C8 /* [CP] Embed Pods Frameworks */,
+				27F75FA4D5ADAF38C7F9935C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -309,6 +354,7 @@
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Manual;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -354,7 +400,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		28F800B5D9EC08B0DCD62163 /* [CP] Check Pods Manifest.lock */ = {
+		213477AAC1A40356634849FA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -376,7 +422,25 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4BBEA15323F199571690898A /* [CP] Check Pods Manifest.lock */ = {
+		27F75FA4D5ADAF38C7F9935C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ramda_Tests/Pods-Ramda_Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Ramda/Ramda.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Ramda.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ramda_Tests/Pods-Ramda_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2E9B8FA8135C00FA1EAE8EBE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -416,7 +480,7 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd .. && \"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
-		D9C24C64EFC602ED6D82435B /* [CP] Embed Pods Frameworks */ = {
+		9AC927AD9EC425321BDE071A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -432,24 +496,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ramda_Example/Pods-Ramda_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E7340920EED5754DD502F3C8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Ramda_Tests/Pods-Ramda_Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Ramda/Ramda.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Ramda.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ramda_Tests/Pods-Ramda_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -470,22 +516,35 @@
 			files = (
 				63DA4276231AC3EF00315FD7 /* alwaysTests.swift in Sources */,
 				6DA8001122E002B3009D0FFA /* pickTests.swift in Sources */,
+				2DE7E055233FE8D30014A3E4 /* incTests.swift in Sources */,
 				635BDC9F231ED89300F8A314 /* concatTests.swift in Sources */,
+				2D5B21612437C4D90043B9BD /* gtTests.swift in Sources */,
 				63AA2138232EADCA00035123 /* applyToTests.swift in Sources */,
 				63F2E4F0232936D600768E6F /* appendTests.swift in Sources */,
 				6311D32D2318280600DE99AF /* adjustTests.swift in Sources */,
+				2DDBCF2C234D241B005EEA3F /* decTests.swift in Sources */,
+				2D5B21722437E21C0043B9BD /* lteTests.swift in Sources */,
 				638965F42328BE8700619FA7 /* apTests.swift in Sources */,
 				6311D323231825CB00DE99AF /* mapTests.swift in Sources */,
 				63DA4274231AC3C000315FD7 /* timeTests.swift in Sources */,
+				2D69CA52233E9648000BBA5C /* isNilTests.swift in Sources */,
 				6311D33523182A2A00DE99AF /* allPassTests.swift in Sources */,
 				63DA427A231AC40B00315FD7 /* propTests.swift in Sources */,
+				2D69CA50233E92B1000BBA5C /* headTests.swift in Sources */,
 				63DA4266231AC29B00315FD7 /* rangeTests.swift in Sources */,
 				6DA8000822DEE39E009D0FFA /* pluckTests.swift in Sources */,
+				2D5B21732437E21E0043B9BD /* ltTests.swift in Sources */,
 				6DA8001522E00916009D0FFA /* defaultToTests.swift in Sources */,
+				2DE7E04A233F32910014A3E4 /* eqPropsTests.swift in Sources */,
+				2D5B21622437C4DD0043B9BD /* gteTests.swift in Sources */,
 				6310AD1D23223E1E008FCAC0 /* anyPassTests.swift in Sources */,
+				2D5B21672437E1420043B9BD /* bothTests.swift in Sources */,
 				6311D3312318290400DE99AF /* allTests.swift in Sources */,
+				2D69CA54233E982E000BBA5C /* dropTests.swift in Sources */,
 				63DA427E231D703700315FD7 /* andTests.swift in Sources */,
+				2D69CA58233EA2F2000BBA5C /* dropLastTests.swift in Sources */,
 				6DA8001922E00AB0009D0FFA /* propOrTests.swift in Sources */,
+				2D69CA41233E29FB000BBA5C /* emptyTests.swift in Sources */,
 				63F8A6C7232FD23100D7429D /* sortTests.swift in Sources */,
 				63DC8036231FEACE00511D91 /* anyTests.swift in Sources */,
 				6311D33923182ACD00DE99AF /* applyTests.swift in Sources */,
@@ -493,7 +552,9 @@
 				63AA2136232EAAF600035123 /* flipTests.swift in Sources */,
 				63F2E4F22329372300768E6F /* prependTests.swift in Sources */,
 				63DA4272231AC37C00315FD7 /* IdentityTests.swift in Sources */,
+				2DE7E04C233FD8340014A3E4 /* eqByTests.swift in Sources */,
 				6311D321231825A900DE99AF /* addTests.swift in Sources */,
+				2DE7E05A233FF9A20014A3E4 /* hasTests.swift in Sources */,
 				630089D923276644002464C9 /* reduceTests.swift in Sources */,
 				6311D3292318276F00DE99AF /* addIndexTests.swift in Sources */,
 				63369DA2232A8D010096F3BA /* apertureTests.swift in Sources */,
@@ -633,38 +694,42 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 610FE13897F31E333C93B5FB /* Pods-Ramda_Example.debug.xcconfig */;
+			baseConfigurationReference = 834BE5D56D04CFB233D9A7FD /* Pods-Ramda_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Ramda/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA4578BE36F637D2BCA00B73 /* Pods-Ramda_Example.release.xcconfig */;
+			baseConfigurationReference = 384FD825F93E2D75D57748DB /* Pods-Ramda_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Ramda/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8784ADD68CC1B725152B350E /* Pods-Ramda_Tests.debug.xcconfig */;
+			baseConfigurationReference = 3B76F62CE8DCA749E9E33C09 /* Pods-Ramda_Tests.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -677,16 +742,20 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ramda_Example.app/Ramda_Example";
 			};
 			name = Debug;
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 966FDF159DBFB2354A38BE34 /* Pods-Ramda_Tests.release.xcconfig */;
+			baseConfigurationReference = 112D24CE7C89DFC4C79804A9 /* Pods-Ramda_Tests.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -695,8 +764,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ramda_Example.app/Ramda_Example";
 			};
 			name = Release;

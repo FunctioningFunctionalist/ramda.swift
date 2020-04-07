@@ -2,10 +2,6 @@
 
 [![Build Status](https://travis-ci.org/FunctioningFunctionalist/ramda.swift.svg?branch=master)](https://travis-ci.org/FunctioningFunctionalist/ramda.swift)
 [![codecov](https://codecov.io/gh/FunctioningFunctionalist/ramda.swift/branch/master/graph/badge.svg)](https://codecov.io/gh/FunctioningFunctionalist/ramda.swift)
-[![Version](https://img.shields.io/cocoapods/v/Ramda.svg?style=flat)](http://cocoapods.org/pods/Ramda)
-[![License](https://img.shields.io/cocoapods/l/Ramda.svg?style=flat)](http://cocoapods.org/pods/Ramda)
-[![Platform](https://img.shields.io/cocoapods/p/Ramda.svg?style=flat)](http://cocoapods.org/pods/Ramda)
-[![Code Climate](https://codeclimate.com/github/FunctioningFunctionalist/ramda.swift/badges/gpa.svg)](https://codeclimate.com/github/FunctioningFunctionalist/ramda.swift)
 [![Join the chat at https://gitter.im/ramda-swift/Lobby](https://badges.gitter.im/ramda-swift/Lobby.svg)](https://gitter.im/ramda-swift/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## Example
@@ -26,7 +22,14 @@ pod "Ramda"
 ## Authors
 
 Justin Guedes
+
 Tyrone Avnit
+
+## Contributors
+
+Christian Ray Leovido
+
+Adrian Koren
 
 ## Progress
 
@@ -39,10 +42,10 @@ Tyrone Avnit
 - [x] and
 - [x] any
 - [x] anyPass
-- [ ] ap
+- [x] ap
 - [x] aperture
 - [x] append
-- [ ] apply
+- [x] apply
 - [ ] applySpec
 - [x] applyTo
 - [ ] ascend
@@ -50,7 +53,7 @@ Tyrone Avnit
 - [ ] assocPath
 - [ ] binary
 - [ ] bind
-- [ ] both
+- [x] both
 - [ ] call
 - [ ] chain
 - [ ] clamp
@@ -69,7 +72,7 @@ Tyrone Avnit
 - [ ] countBy
 - [x] curry
 - [ ] curryN
-- [ ] dec
+- [x] dec
 - [x] defaultTo
 - [ ] descend
 - [ ] difference
@@ -77,18 +80,18 @@ Tyrone Avnit
 - [ ] dissoc
 - [ ] dissocPath
 - [ ] divide
-- [ ] drop
-- [ ] dropLast
+- [x] drop
+- [x] dropLast
 - [ ] dropLastWhile
 - [ ] dropRepeats
 - [ ] dropRepeatsWith
 - [ ] dropWhile
 - [ ] either
-- [ ] empty
+- [x] empty
 - [ ] endsWith
-- [ ] eqBy
-- [ ] eqProps
-- [ ] equals
+- [x] eqBy
+- [x] eqProps
+- [x] equals
 - [ ] evolve
 - [ ] filter
 - [ ] find
@@ -102,15 +105,15 @@ Tyrone Avnit
 - [ ] fromPairs
 - [ ] groupBy
 - [ ] groupWith
-- [ ] gt
-- [ ] gte
-- [ ] has
+- [x] gt
+- [x] gte
+- [x] has
 - [ ] hasIn
-- [ ] head
+- [x] head
 - [ ] identical
 - [x] identity
 - [ ] ifElse
-- [ ] inc
+- [x] inc
 - [ ] i ndexBy
 - [ ] indexOf
 - [ ] init
@@ -126,7 +129,7 @@ Tyrone Avnit
 - [ ] invoker
 - [ ] is
 - [ ] isEmpty
-- [ ] isNil
+- [x] isNil
 - [ ] join
 - [ ] juxt
 - [ ] keys
@@ -140,8 +143,8 @@ Tyrone Avnit
 - [ ] lensProp
 - [ ] lift
 - [ ] liftN
-- [ ] lt
-- [ ] lte
+- [x] lt
+- [x] lte
 - [ ] map
 - [ ] mapAccum
 - [ ] mapAccumRight

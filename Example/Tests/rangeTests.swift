@@ -2,7 +2,7 @@ import Foundation
 import XCTest
 import Ramda
 
-final class RangeTests: XCTest {
+final class RangeTests: XCTestCase {
 
     func testRange() {
         let lhs = 1
