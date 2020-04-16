@@ -149,7 +149,7 @@ Adrian Koren
 - [ ] mapAccum
 - [ ] mapAccumRight
 - [ ] mapObjIndexed
-- [ ] match
+- [x] match
 - [ ] mathMod
 - [ ] max
 - [ ] maxBy
