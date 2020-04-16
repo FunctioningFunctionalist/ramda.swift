@@ -121,7 +121,6 @@ Adrian Koren
 - [ ] insert
 - [ ] insertAll
 - [ ] intersection
-- [ ] intersectionWith
 - [ ] intersperse
 - [ ] into
 - [ ] invert
@@ -155,7 +154,6 @@ Adrian Koren
 - [ ] maxBy
 - [ ] mean
 - [ ] median
-- [ ] memoize
 - [ ] memoizeWith
 - [ ] merge
 - [ ] mergeAll
