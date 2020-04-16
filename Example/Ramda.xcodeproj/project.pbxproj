@@ -17,6 +17,7 @@
 		2D69CA52233E9648000BBA5C /* isNilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D69CA51233E9648000BBA5C /* isNilTests.swift */; };
 		2D69CA54233E982E000BBA5C /* dropTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D69CA53233E982E000BBA5C /* dropTests.swift */; };
 		2D69CA58233EA2F2000BBA5C /* dropLastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D69CA57233EA2F2000BBA5C /* dropLastTests.swift */; };
+		2D939E072448C6BE00214CB8 /* FunctionTypes.md in Resources */ = {isa = PBXBuildFile; fileRef = 2D939E062448C6BE00214CB8 /* FunctionTypes.md */; };
 		2D939E0E2448D79700214CB8 /* matchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D939E0B2448D62A00214CB8 /* matchTests.swift */; };
 		2DDBCF2C234D241B005EEA3F /* decTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBCF2B234D241B005EEA3F /* decTests.swift */; };
 		2DE7E04A233F32910014A3E4 /* eqPropsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE7E049233F32910014A3E4 /* eqPropsTests.swift */; };
@@ -85,6 +86,7 @@
 		2D69CA51233E9648000BBA5C /* isNilTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isNilTests.swift; sourceTree = "<group>"; };
 		2D69CA53233E982E000BBA5C /* dropTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dropTests.swift; sourceTree = "<group>"; };
 		2D69CA57233EA2F2000BBA5C /* dropLastTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dropLastTests.swift; sourceTree = "<group>"; };
+		2D939E062448C6BE00214CB8 /* FunctionTypes.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FunctionTypes.md; sourceTree = "<group>"; };
 		2D939E0B2448D62A00214CB8 /* matchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = matchTests.swift; sourceTree = "<group>"; };
 		2DDBCF2B234D241B005EEA3F /* decTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decTests.swift; sourceTree = "<group>"; };
 		2DE7E049233F32910014A3E4 /* eqPropsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eqPropsTests.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 			children = (
 				EE1791CE7E3AC1BE4EF573AC /* Ramda.podspec */,
 				C15DF3B7188A756D43599B1B /* README.md */,
+				2D939E062448C6BE00214CB8 /* FunctionTypes.md */,
 				C10AA41856A55BF71F0E26F5 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
@@ -389,6 +392,7 @@
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				2D939E072448C6BE00214CB8 /* FunctionTypes.md in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
