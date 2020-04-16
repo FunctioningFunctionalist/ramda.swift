@@ -1,6 +1,5 @@
 # FUNCTION TYPES
 
-
 ## Object
 
 - [ ] assoc
@@ -43,7 +42,7 @@
 - [ ] pickAll
 - [ ] pickBy
 - [ ] project
--[x] prop
+- [x] prop
 - [x] propOr
 - [ ] propSatisfies
 - [ ] props
