@@ -213,7 +213,7 @@ Adrian Koren
 - [ ] reject
 - [ ] remove
 - [x] repeat
-- [ ] replace
+- [x] replace
 - [ ] reverse
 - [ ] scan
 - [ ] sequence
