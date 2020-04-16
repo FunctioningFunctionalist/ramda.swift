@@ -31,6 +31,18 @@ Christian Ray Leovido
 
 Adrian Koren
 
+## Functions by category
+
+[Here](../blob/master/FunctionTypes.md) is a list of all the functions categorised by
+- List
+- Object
+- String
+- Math
+- Logic
+- Type
+- Relation
+- Function
+
 ## Progress
 
 - [x] add
