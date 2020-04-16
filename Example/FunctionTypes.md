@@ -205,7 +205,7 @@
 ## String
 
 - [x] match
-- [ ] replace
+- [x] replace
 - [ ] split
 - [ ] test
 - [ ] toLower
