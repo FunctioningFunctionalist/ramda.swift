@@ -5,7 +5,8 @@ import Ramda
 class SplitTests: XCTestCase {
 
     func testSplit() {
-        let result = R.split("/", "/usr/local/bin/node")
+        let char = Character("/")
+        let result = R.split(char, "/usr/local/bin/node")
         XCTAssertEqual(result, ["usr", "local", "bin", "node"])
     }
 
