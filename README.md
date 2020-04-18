@@ -31,6 +31,18 @@ Christian Ray Leovido
 
 Adrian Koren
 
+## Functions by category
+
+[Here](../blob/master/FunctionTypes.md) is a list of all the functions categorised by
+- List
+- Object
+- String
+- Math
+- Logic
+- Type
+- Relation
+- Function
+
 ## Progress
 
 - [x] add
@@ -121,7 +133,6 @@ Adrian Koren
 - [ ] insert
 - [ ] insertAll
 - [ ] intersection
-- [ ] intersectionWith
 - [ ] intersperse
 - [ ] into
 - [ ] invert
@@ -155,7 +166,6 @@ Adrian Koren
 - [ ] maxBy
 - [ ] mean
 - [ ] median
-- [ ] memoize
 - [ ] memoizeWith
 - [ ] merge
 - [ ] mergeAll
@@ -215,7 +225,7 @@ Adrian Koren
 - [ ] reject
 - [ ] remove
 - [x] repeat
-- [ ] replace
+- [x] replace
 - [ ] reverse
 - [ ] scan
 - [ ] sequence

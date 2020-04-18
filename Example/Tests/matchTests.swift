@@ -5,13 +5,13 @@ import Ramda
 class MatchTests: XCTestCase {
 
     func testMatchEmail() {
-        let actual = R.match("^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$", "ramda@swift.com")
-        XCTAssertEqual(actual, ["ramda@swift.com"])
+        let result = R.match("^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$", "ramda@swift.com")
+        XCTAssertEqual(result, ["ramda@swift.com"])
     }
 
     func testMatch() {
-        let actual = R.match("/a/", "b")
-        XCTAssertEqual(actual, [])
+        let result = R.match("/a/", "b")
+        XCTAssertEqual(result, [])
     }
 
     func testMatchCurried() {
